@@ -1,0 +1,626 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B2531C4D2860CD0900EFB2ED /* MercuryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2531C4C2860CD0900EFB2ED /* MercuryApp.swift */; };
+		B2531C4F2860CD0900EFB2ED /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2531C4E2860CD0900EFB2ED /* Persistence.swift */; };
+		B2531C522860CD0900EFB2ED /* Mercury.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2531C502860CD0900EFB2ED /* Mercury.xcdatamodeld */; };
+		B2531C542860CD0900EFB2ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2531C532860CD0900EFB2ED /* ContentView.swift */; };
+		B2531C562860CD0A00EFB2ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2531C552860CD0A00EFB2ED /* Assets.xcassets */; };
+		B2531C5A2860CD0A00EFB2ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2531C592860CD0A00EFB2ED /* Preview Assets.xcassets */; };
+		B2531C642860CD0B00EFB2ED /* MercuryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2531C632860CD0B00EFB2ED /* MercuryTests.swift */; };
+		B2531C6E2860CD0B00EFB2ED /* MercuryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2531C6D2860CD0B00EFB2ED /* MercuryUITests.swift */; };
+		B2531C702860CD0B00EFB2ED /* MercuryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2531C6F2860CD0B00EFB2ED /* MercuryUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B2531C602860CD0B00EFB2ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2531C412860CD0900EFB2ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2531C482860CD0900EFB2ED;
+			remoteInfo = Mercury;
+		};
+		B2531C6A2860CD0B00EFB2ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2531C412860CD0900EFB2ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2531C482860CD0900EFB2ED;
+			remoteInfo = Mercury;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B2531C492860CD0900EFB2ED /* Mercury.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mercury.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2531C4C2860CD0900EFB2ED /* MercuryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercuryApp.swift; sourceTree = "<group>"; };
+		B2531C4E2860CD0900EFB2ED /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		B2531C512860CD0900EFB2ED /* Mercury.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mercury.xcdatamodel; sourceTree = "<group>"; };
+		B2531C532860CD0900EFB2ED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B2531C552860CD0A00EFB2ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B2531C572860CD0A00EFB2ED /* Mercury.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mercury.entitlements; sourceTree = "<group>"; };
+		B2531C592860CD0A00EFB2ED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B2531C5F2860CD0B00EFB2ED /* MercuryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MercuryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2531C632860CD0B00EFB2ED /* MercuryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercuryTests.swift; sourceTree = "<group>"; };
+		B2531C692860CD0B00EFB2ED /* MercuryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MercuryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2531C6D2860CD0B00EFB2ED /* MercuryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercuryUITests.swift; sourceTree = "<group>"; };
+		B2531C6F2860CD0B00EFB2ED /* MercuryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercuryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B2531C462860CD0900EFB2ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2531C5C2860CD0B00EFB2ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2531C662860CD0B00EFB2ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B2531C402860CD0900EFB2ED = {
+			isa = PBXGroup;
+			children = (
+				B2531C4B2860CD0900EFB2ED /* Mercury */,
+				B2531C622860CD0B00EFB2ED /* MercuryTests */,
+				B2531C6C2860CD0B00EFB2ED /* MercuryUITests */,
+				B2531C4A2860CD0900EFB2ED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B2531C4A2860CD0900EFB2ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2531C492860CD0900EFB2ED /* Mercury.app */,
+				B2531C5F2860CD0B00EFB2ED /* MercuryTests.xctest */,
+				B2531C692860CD0B00EFB2ED /* MercuryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2531C4B2860CD0900EFB2ED /* Mercury */ = {
+			isa = PBXGroup;
+			children = (
+				B2531C4C2860CD0900EFB2ED /* MercuryApp.swift */,
+				B2531C4E2860CD0900EFB2ED /* Persistence.swift */,
+				B2531C532860CD0900EFB2ED /* ContentView.swift */,
+				B2531C552860CD0A00EFB2ED /* Assets.xcassets */,
+				B2531C572860CD0A00EFB2ED /* Mercury.entitlements */,
+				B2531C502860CD0900EFB2ED /* Mercury.xcdatamodeld */,
+				B2531C582860CD0A00EFB2ED /* Preview Content */,
+			);
+			path = Mercury;
+			sourceTree = "<group>";
+		};
+		B2531C582860CD0A00EFB2ED /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B2531C592860CD0A00EFB2ED /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B2531C622860CD0B00EFB2ED /* MercuryTests */ = {
+			isa = PBXGroup;
+			children = (
+				B2531C632860CD0B00EFB2ED /* MercuryTests.swift */,
+			);
+			path = MercuryTests;
+			sourceTree = "<group>";
+		};
+		B2531C6C2860CD0B00EFB2ED /* MercuryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B2531C6D2860CD0B00EFB2ED /* MercuryUITests.swift */,
+				B2531C6F2860CD0B00EFB2ED /* MercuryUITestsLaunchTests.swift */,
+			);
+			path = MercuryUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B2531C482860CD0900EFB2ED /* Mercury */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2531C732860CD0B00EFB2ED /* Build configuration list for PBXNativeTarget "Mercury" */;
+			buildPhases = (
+				B2531C452860CD0900EFB2ED /* Sources */,
+				B2531C462860CD0900EFB2ED /* Frameworks */,
+				B2531C472860CD0900EFB2ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mercury;
+			productName = Mercury;
+			productReference = B2531C492860CD0900EFB2ED /* Mercury.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B2531C5E2860CD0B00EFB2ED /* MercuryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2531C762860CD0B00EFB2ED /* Build configuration list for PBXNativeTarget "MercuryTests" */;
+			buildPhases = (
+				B2531C5B2860CD0B00EFB2ED /* Sources */,
+				B2531C5C2860CD0B00EFB2ED /* Frameworks */,
+				B2531C5D2860CD0B00EFB2ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2531C612860CD0B00EFB2ED /* PBXTargetDependency */,
+			);
+			name = MercuryTests;
+			productName = MercuryTests;
+			productReference = B2531C5F2860CD0B00EFB2ED /* MercuryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B2531C682860CD0B00EFB2ED /* MercuryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2531C792860CD0B00EFB2ED /* Build configuration list for PBXNativeTarget "MercuryUITests" */;
+			buildPhases = (
+				B2531C652860CD0B00EFB2ED /* Sources */,
+				B2531C662860CD0B00EFB2ED /* Frameworks */,
+				B2531C672860CD0B00EFB2ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2531C6B2860CD0B00EFB2ED /* PBXTargetDependency */,
+			);
+			name = MercuryUITests;
+			productName = MercuryUITests;
+			productReference = B2531C692860CD0B00EFB2ED /* MercuryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B2531C412860CD0900EFB2ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					B2531C482860CD0900EFB2ED = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					B2531C5E2860CD0B00EFB2ED = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = B2531C482860CD0900EFB2ED;
+					};
+					B2531C682860CD0B00EFB2ED = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = B2531C482860CD0900EFB2ED;
+					};
+				};
+			};
+			buildConfigurationList = B2531C442860CD0900EFB2ED /* Build configuration list for PBXProject "Mercury" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B2531C402860CD0900EFB2ED;
+			productRefGroup = B2531C4A2860CD0900EFB2ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B2531C482860CD0900EFB2ED /* Mercury */,
+				B2531C5E2860CD0B00EFB2ED /* MercuryTests */,
+				B2531C682860CD0B00EFB2ED /* MercuryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B2531C472860CD0900EFB2ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2531C5A2860CD0A00EFB2ED /* Preview Assets.xcassets in Resources */,
+				B2531C562860CD0A00EFB2ED /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2531C5D2860CD0B00EFB2ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2531C672860CD0B00EFB2ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B2531C452860CD0900EFB2ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2531C4D2860CD0900EFB2ED /* MercuryApp.swift in Sources */,
+				B2531C522860CD0900EFB2ED /* Mercury.xcdatamodeld in Sources */,
+				B2531C542860CD0900EFB2ED /* ContentView.swift in Sources */,
+				B2531C4F2860CD0900EFB2ED /* Persistence.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2531C5B2860CD0B00EFB2ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2531C642860CD0B00EFB2ED /* MercuryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2531C652860CD0B00EFB2ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2531C702860CD0B00EFB2ED /* MercuryUITestsLaunchTests.swift in Sources */,
+				B2531C6E2860CD0B00EFB2ED /* MercuryUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B2531C612860CD0B00EFB2ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2531C482860CD0900EFB2ED /* Mercury */;
+			targetProxy = B2531C602860CD0B00EFB2ED /* PBXContainerItemProxy */;
+		};
+		B2531C6B2860CD0B00EFB2ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2531C482860CD0900EFB2ED /* Mercury */;
+			targetProxy = B2531C6A2860CD0B00EFB2ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B2531C712860CD0B00EFB2ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B2531C722860CD0B00EFB2ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		B2531C742860CD0B00EFB2ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Mercury/Mercury.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Mercury/Preview Content\"";
+				DEVELOPMENT_TEAM = M27L5G35Q6;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = flyzerosky.Mercury;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B2531C752860CD0B00EFB2ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Mercury/Mercury.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Mercury/Preview Content\"";
+				DEVELOPMENT_TEAM = M27L5G35Q6;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = flyzerosky.Mercury;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B2531C772860CD0B00EFB2ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M27L5G35Q6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = flyzerosky.MercuryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mercury.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mercury";
+			};
+			name = Debug;
+		};
+		B2531C782860CD0B00EFB2ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M27L5G35Q6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = flyzerosky.MercuryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mercury.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mercury";
+			};
+			name = Release;
+		};
+		B2531C7A2860CD0B00EFB2ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M27L5G35Q6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = flyzerosky.MercuryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mercury;
+			};
+			name = Debug;
+		};
+		B2531C7B2860CD0B00EFB2ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M27L5G35Q6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = flyzerosky.MercuryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mercury;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B2531C442860CD0900EFB2ED /* Build configuration list for PBXProject "Mercury" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2531C712860CD0B00EFB2ED /* Debug */,
+				B2531C722860CD0B00EFB2ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2531C732860CD0B00EFB2ED /* Build configuration list for PBXNativeTarget "Mercury" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2531C742860CD0B00EFB2ED /* Debug */,
+				B2531C752860CD0B00EFB2ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2531C762860CD0B00EFB2ED /* Build configuration list for PBXNativeTarget "MercuryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2531C772860CD0B00EFB2ED /* Debug */,
+				B2531C782860CD0B00EFB2ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2531C792860CD0B00EFB2ED /* Build configuration list for PBXNativeTarget "MercuryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2531C7A2860CD0B00EFB2ED /* Debug */,
+				B2531C7B2860CD0B00EFB2ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B2531C502860CD0900EFB2ED /* Mercury.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B2531C512860CD0900EFB2ED /* Mercury.xcdatamodel */,
+			);
+			currentVersion = B2531C512860CD0900EFB2ED /* Mercury.xcdatamodel */;
+			path = Mercury.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B2531C412860CD0900EFB2ED /* Project object */;
+}

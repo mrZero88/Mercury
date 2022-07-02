@@ -14,6 +14,7 @@ struct MercuryApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(MainViewModel())
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

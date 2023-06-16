@@ -26,7 +26,7 @@ public let DefaultWidgetCardText2 = "It is a terrestrial planet with a heavily c
 public let DefaultNoTopicTitle = "No Topics"
 public let DefaultNoTopicSubtitle = "Welcome to Mercury!"
 public let DefaultNoTopicText1 = "Hello" + (UserName.isEmpty ? "" : " " + UserName) + "! At the moment you don't have any topics to be shown here in the widgets."
-public let DefaultNoTopicText2 = "To be able to see your created topic widgets, please create them in the app interface.\nYou can click here in the widget to open the app and start customizing it with useful information.\nHave Fun! :-D"
+public let DefaultNoTopicText2 = "To be able to see your created topic widgets, please create them in the app interface.\n\nYou can click here in the widget to open the app and start customizing it with useful information."
 
 class Config {
     static func getPriorityColor(priority: Int16) -> Color {

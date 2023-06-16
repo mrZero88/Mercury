@@ -739,18 +739,18 @@
 			isa = PBXGroup;
 			children = (
 				B27D81162A3C44E60071FDAC /* Settings */,
-				B27D81202A3C44E60071FDAC /* NavigationLinkThemeView.swift */,
 				B27D81212A3C44E60071FDAC /* Sheets */,
-				B27D81262A3C44E60071FDAC /* SectionView.swift */,
-				B27D81272A3C44E60071FDAC /* ThemeView.swift */,
 				B27D81282A3C44E60071FDAC /* Controls */,
 				B27D812E2A3C44E60071FDAC /* Backgrounds */,
 				B27D81302A3C44E60071FDAC /* Icons */,
-				B27D81342A3C44E60071FDAC /* TopicView.swift */,
-				B27D81352A3C44E60071FDAC /* NavigationLinkTopicView.swift */,
 				B27D81362A3C44E60071FDAC /* Iphone */,
 				B27D81392A3C44E60071FDAC /* Ipad */,
 				B27D813C2A3C44E60071FDAC /* Onboarding */,
+				B27D81202A3C44E60071FDAC /* NavigationLinkThemeView.swift */,
+				B27D81272A3C44E60071FDAC /* ThemeView.swift */,
+				B27D81352A3C44E60071FDAC /* NavigationLinkTopicView.swift */,
+				B27D81342A3C44E60071FDAC /* TopicView.swift */,
+				B27D81262A3C44E60071FDAC /* SectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

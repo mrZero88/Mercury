@@ -149,6 +149,34 @@
 		B27D81CF2A3C461E0071FDAC /* TopicsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81C82A3C461E0071FDAC /* TopicsController.swift */; };
 		B27D81D02A3C461E0071FDAC /* DrawingCanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81C92A3C461E0071FDAC /* DrawingCanvasViewController.swift */; };
 		B27D81D12A3C461E0071FDAC /* ThemesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81CA2A3C461E0071FDAC /* ThemesController.swift */; };
+		B27D81D92A3C481F0071FDAC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27D81D82A3C481F0071FDAC /* WidgetKit.framework */; };
+		B27D81DB2A3C481F0071FDAC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27D81DA2A3C481F0071FDAC /* SwiftUI.framework */; };
+		B27D81DE2A3C481F0071FDAC /* MercuryWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81DD2A3C481F0071FDAC /* MercuryWidgetBundle.swift */; };
+		B27D81E02A3C481F0071FDAC /* MercuryWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81DF2A3C481F0071FDAC /* MercuryWidgetLiveActivity.swift */; };
+		B27D81E22A3C481F0071FDAC /* MercuryWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81E12A3C481F0071FDAC /* MercuryWidget.swift */; };
+		B27D81E52A3C481F0071FDAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B27D81E42A3C481F0071FDAC /* Assets.xcassets */; };
+		B27D81E72A3C481F0071FDAC /* MercuryWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B27D81E32A3C481F0071FDAC /* MercuryWidget.intentdefinition */; };
+		B27D81E82A3C481F0071FDAC /* MercuryWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B27D81E32A3C481F0071FDAC /* MercuryWidget.intentdefinition */; };
+		B27D81EB2A3C481F0071FDAC /* MercuryWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B27D81D62A3C481F0071FDAC /* MercuryWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B27D81F72A3C48690071FDAC /* WidgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81F42A3C48500071FDAC /* WidgetViewModel.swift */; };
+		B27D81F82A3C486D0071FDAC /* WidgetCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81F22A3C48500071FDAC /* WidgetCardView.swift */; };
+		B27D81F92A3C48780071FDAC /* Mercury.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B27D80722A3C44970071FDAC /* Mercury.xcdatamodeld */; };
+		B27D81FA2A3C48930071FDAC /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80CA2A3C44E50071FDAC /* Config.swift */; };
+		B27D81FB2A3C48B10071FDAC /* STopicExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80AD2A3C44E50071FDAC /* STopicExtension.swift */; };
+		B27D81FC2A3C48B40071FDAC /* SSectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80AC2A3C44E50071FDAC /* SSectionExtension.swift */; };
+		B27D81FD2A3C48BA0071FDAC /* SThemeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80AE2A3C44E50071FDAC /* SThemeExtension.swift */; };
+		B27D81FE2A3C49220071FDAC /* SettingsControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80A52A3C44E50071FDAC /* SettingsControllerExtension.swift */; };
+		B27D81FF2A3C493A0071FDAC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81C62A3C461E0071FDAC /* Persistence.swift */; };
+		B27D82002A3C494A0071FDAC /* ToArrayUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81052A3C44E50071FDAC /* ToArrayUtils.swift */; };
+		B27D82012A3C49630071FDAC /* ThemeDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D810F2A3C44E60071FDAC /* ThemeDao.swift */; };
+		B27D82022A3C49720071FDAC /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81C42A3C461E0071FDAC /* SettingsController.swift */; };
+		B27D82032A3C497D0071FDAC /* SectionDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81102A3C44E60071FDAC /* SectionDao.swift */; };
+		B27D82042A3C49890071FDAC /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81082A3C44E60071FDAC /* AppGroup.swift */; };
+		B27D82052A3C49960071FDAC /* SettingDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81112A3C44E60071FDAC /* SettingDao.swift */; };
+		B27D82062A3C499E0071FDAC /* SettingsGroupDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81132A3C44E60071FDAC /* SettingsGroupDao.swift */; };
+		B27D82072A3C49A70071FDAC /* TopicDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81142A3C44E60071FDAC /* TopicDao.swift */; };
+		B27D82082A3C49B50071FDAC /* SSettingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80AB2A3C44E50071FDAC /* SSettingExtension.swift */; };
+		B27D82092A3C49C00071FDAC /* SSettingsGroupExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80AF2A3C44E50071FDAC /* SSettingsGroupExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,7 +194,28 @@
 			remoteGlobalIDString = B27D806A2A3C44970071FDAC;
 			remoteInfo = Mercury;
 		};
+		B27D81E92A3C481F0071FDAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B27D80632A3C44970071FDAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B27D81D52A3C481F0071FDAC;
+			remoteInfo = MercuryWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B27D81EF2A3C48200071FDAC /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B27D81EB2A3C481F0071FDAC /* MercuryWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B27D806B2A3C44970071FDAC /* Mercury.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mercury.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -315,6 +364,18 @@
 		B27D81C82A3C461E0071FDAC /* TopicsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsController.swift; sourceTree = "<group>"; };
 		B27D81C92A3C461E0071FDAC /* DrawingCanvasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingCanvasViewController.swift; sourceTree = "<group>"; };
 		B27D81CA2A3C461E0071FDAC /* ThemesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemesController.swift; sourceTree = "<group>"; };
+		B27D81D62A3C481F0071FDAC /* MercuryWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MercuryWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B27D81D82A3C481F0071FDAC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		B27D81DA2A3C481F0071FDAC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		B27D81DD2A3C481F0071FDAC /* MercuryWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercuryWidgetBundle.swift; sourceTree = "<group>"; };
+		B27D81DF2A3C481F0071FDAC /* MercuryWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercuryWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		B27D81E12A3C481F0071FDAC /* MercuryWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercuryWidget.swift; sourceTree = "<group>"; };
+		B27D81E32A3C481F0071FDAC /* MercuryWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = MercuryWidget.intentdefinition; sourceTree = "<group>"; };
+		B27D81E42A3C481F0071FDAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B27D81E62A3C481F0071FDAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B27D81F02A3C48290071FDAC /* MercuryWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MercuryWidgetExtension.entitlements; sourceTree = "<group>"; };
+		B27D81F22A3C48500071FDAC /* WidgetCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetCardView.swift; sourceTree = "<group>"; };
+		B27D81F42A3C48500071FDAC /* WidgetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -339,15 +400,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B27D81D32A3C481F0071FDAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B27D81DB2A3C481F0071FDAC /* SwiftUI.framework in Frameworks */,
+				B27D81D92A3C481F0071FDAC /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		B27D80622A3C44970071FDAC = {
 			isa = PBXGroup;
 			children = (
+				B27D81F02A3C48290071FDAC /* MercuryWidgetExtension.entitlements */,
 				B27D806D2A3C44970071FDAC /* Mercury */,
 				B27D80842A3C44980071FDAC /* MercuryTests */,
 				B27D808E2A3C44980071FDAC /* MercuryUITests */,
+				B27D81DC2A3C481F0071FDAC /* MercuryWidget */,
+				B27D81D72A3C481F0071FDAC /* Frameworks */,
 				B27D806C2A3C44970071FDAC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -358,6 +431,7 @@
 				B27D806B2A3C44970071FDAC /* Mercury.app */,
 				B27D80812A3C44980071FDAC /* MercuryTests.xctest */,
 				B27D808B2A3C44980071FDAC /* MercuryUITests.xctest */,
+				B27D81D62A3C481F0071FDAC /* MercuryWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -413,6 +487,7 @@
 		B27D809E2A3C44E50071FDAC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B27D80AA2A3C44E50071FDAC /* Structural */,
 				B27D809F2A3C44E50071FDAC /* NSSetExtension.swift */,
 				B27D80A02A3C44E50071FDAC /* ArrayExtension.swift */,
 				B27D80A12A3C44E50071FDAC /* UIApplicationExtension.swift */,
@@ -423,7 +498,6 @@
 				B27D80A72A3C44E50071FDAC /* UIDeviceExtension.swift */,
 				B27D80A82A3C44E50071FDAC /* DrawingCanvasViewControllerExtension.swift */,
 				B27D80A92A3C44E50071FDAC /* StringExtension.swift */,
-				B27D80AA2A3C44E50071FDAC /* Structural */,
 				B27D80B02A3C44E50071FDAC /* DateExtension.swift */,
 			);
 			path = Extensions;
@@ -782,6 +856,46 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		B27D81D72A3C481F0071FDAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B27D81D82A3C481F0071FDAC /* WidgetKit.framework */,
+				B27D81DA2A3C481F0071FDAC /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B27D81DC2A3C481F0071FDAC /* MercuryWidget */ = {
+			isa = PBXGroup;
+			children = (
+				B27D81F32A3C48500071FDAC /* ViewModels */,
+				B27D81F12A3C48500071FDAC /* Views */,
+				B27D81DD2A3C481F0071FDAC /* MercuryWidgetBundle.swift */,
+				B27D81DF2A3C481F0071FDAC /* MercuryWidgetLiveActivity.swift */,
+				B27D81E12A3C481F0071FDAC /* MercuryWidget.swift */,
+				B27D81E32A3C481F0071FDAC /* MercuryWidget.intentdefinition */,
+				B27D81E42A3C481F0071FDAC /* Assets.xcassets */,
+				B27D81E62A3C481F0071FDAC /* Info.plist */,
+			);
+			path = MercuryWidget;
+			sourceTree = "<group>";
+		};
+		B27D81F12A3C48500071FDAC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B27D81F22A3C48500071FDAC /* WidgetCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B27D81F32A3C48500071FDAC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B27D81F42A3C48500071FDAC /* WidgetViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -792,10 +906,12 @@
 				B27D80672A3C44970071FDAC /* Sources */,
 				B27D80682A3C44970071FDAC /* Frameworks */,
 				B27D80692A3C44970071FDAC /* Resources */,
+				B27D81EF2A3C48200071FDAC /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B27D81EA2A3C481F0071FDAC /* PBXTargetDependency */,
 			);
 			name = Mercury;
 			productName = Mercury;
@@ -838,6 +954,23 @@
 			productReference = B27D808B2A3C44980071FDAC /* MercuryUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		B27D81D52A3C481F0071FDAC /* MercuryWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B27D81EC2A3C48200071FDAC /* Build configuration list for PBXNativeTarget "MercuryWidgetExtension" */;
+			buildPhases = (
+				B27D81D22A3C481F0071FDAC /* Sources */,
+				B27D81D32A3C481F0071FDAC /* Frameworks */,
+				B27D81D42A3C481F0071FDAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MercuryWidgetExtension;
+			productName = MercuryWidgetExtension;
+			productReference = B27D81D62A3C481F0071FDAC /* MercuryWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -858,6 +991,9 @@
 					B27D808A2A3C44980071FDAC = {
 						CreatedOnToolsVersion = 14.3.1;
 						TestTargetID = B27D806A2A3C44970071FDAC;
+					};
+					B27D81D52A3C481F0071FDAC = {
+						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
 			};
@@ -880,6 +1016,7 @@
 				B27D806A2A3C44970071FDAC /* Mercury */,
 				B27D80802A3C44980071FDAC /* MercuryTests */,
 				B27D808A2A3C44980071FDAC /* MercuryUITests */,
+				B27D81D52A3C481F0071FDAC /* MercuryWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -932,6 +1069,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B27D81D42A3C481F0071FDAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B27D81E52A3C481F0071FDAC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1008,6 +1153,7 @@
 				B27D81622A3C44E60071FDAC /* AppIcons.swift in Sources */,
 				B27D814D2A3C44E60071FDAC /* SSettingExtension.swift in Sources */,
 				B27D816D2A3C44E60071FDAC /* Transportation.swift in Sources */,
+				B27D81E82A3C481F0071FDAC /* MercuryWidget.intentdefinition in Sources */,
 				B27D81712A3C44E60071FDAC /* ClothesAndAccessory.swift in Sources */,
 				B27D81AC2A3C44E60071FDAC /* TopicSheetView.swift in Sources */,
 				B27D81BE2A3C44E60071FDAC /* OnboardingPage1View.swift in Sources */,
@@ -1072,6 +1218,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B27D81D22A3C481F0071FDAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B27D81F82A3C486D0071FDAC /* WidgetCardView.swift in Sources */,
+				B27D81F72A3C48690071FDAC /* WidgetViewModel.swift in Sources */,
+				B27D82082A3C49B50071FDAC /* SSettingExtension.swift in Sources */,
+				B27D81E02A3C481F0071FDAC /* MercuryWidgetLiveActivity.swift in Sources */,
+				B27D81FC2A3C48B40071FDAC /* SSectionExtension.swift in Sources */,
+				B27D81FD2A3C48BA0071FDAC /* SThemeExtension.swift in Sources */,
+				B27D81F92A3C48780071FDAC /* Mercury.xcdatamodeld in Sources */,
+				B27D82002A3C494A0071FDAC /* ToArrayUtils.swift in Sources */,
+				B27D81FE2A3C49220071FDAC /* SettingsControllerExtension.swift in Sources */,
+				B27D82022A3C49720071FDAC /* SettingsController.swift in Sources */,
+				B27D82072A3C49A70071FDAC /* TopicDao.swift in Sources */,
+				B27D82092A3C49C00071FDAC /* SSettingsGroupExtension.swift in Sources */,
+				B27D81FF2A3C493A0071FDAC /* Persistence.swift in Sources */,
+				B27D82032A3C497D0071FDAC /* SectionDao.swift in Sources */,
+				B27D82062A3C499E0071FDAC /* SettingsGroupDao.swift in Sources */,
+				B27D81FB2A3C48B10071FDAC /* STopicExtension.swift in Sources */,
+				B27D81E22A3C481F0071FDAC /* MercuryWidget.swift in Sources */,
+				B27D82042A3C49890071FDAC /* AppGroup.swift in Sources */,
+				B27D82052A3C49960071FDAC /* SettingDao.swift in Sources */,
+				B27D82012A3C49630071FDAC /* ThemeDao.swift in Sources */,
+				B27D81FA2A3C48930071FDAC /* Config.swift in Sources */,
+				B27D81E72A3C481F0071FDAC /* MercuryWidget.intentdefinition in Sources */,
+				B27D81DE2A3C481F0071FDAC /* MercuryWidgetBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1084,6 +1260,11 @@
 			isa = PBXTargetDependency;
 			target = B27D806A2A3C44970071FDAC /* Mercury */;
 			targetProxy = B27D808C2A3C44980071FDAC /* PBXContainerItemProxy */;
+		};
+		B27D81EA2A3C481F0071FDAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B27D81D52A3C481F0071FDAC /* MercuryWidgetExtension */;
+			targetProxy = B27D81E92A3C481F0071FDAC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1235,6 +1416,7 @@
 		B27D80962A3C44980071FDAC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Mercury/Mercury.entitlements;
@@ -1273,6 +1455,7 @@
 		B27D80972A3C44980071FDAC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Mercury/Mercury.entitlements;
@@ -1398,6 +1581,67 @@
 			};
 			name = Release;
 		};
+		B27D81ED2A3C48200071FDAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = MercuryWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M27L5G35Q6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MercuryWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MercuryWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flyzerosky.Mercury.MercuryWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B27D81EE2A3C48200071FDAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = MercuryWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M27L5G35Q6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MercuryWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MercuryWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flyzerosky.Mercury.MercuryWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1433,6 +1677,15 @@
 			buildConfigurations = (
 				B27D809C2A3C44980071FDAC /* Debug */,
 				B27D809D2A3C44980071FDAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B27D81EC2A3C48200071FDAC /* Build configuration list for PBXNativeTarget "MercuryWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B27D81ED2A3C48200071FDAC /* Debug */,
+				B27D81EE2A3C48200071FDAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

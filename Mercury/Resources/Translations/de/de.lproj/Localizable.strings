@@ -1,0 +1,155 @@
+/* No comment provided by engineer. */
+"New Board" = "Neue Board";
+
+/* No comment provided by engineer. */
+"Edit Board" = "Board bearbeiten";
+
+/* No comment provided by engineer. */
+"Board name" = "Boardname";
+
+/* No comment provided by engineer. */
+"Phase name" = "Phasenname";
+
+/* No comment provided by engineer. */
+"Task name" = "Aufgabenname";
+
+/* No comment provided by engineer. */
+"New Phase" = "Neue Phase";
+
+/* No comment provided by engineer. */
+"New Task" = "Neue Aufgabe";
+
+/* No comment provided by engineer. */
+"Edit Task" = "Aufgabe bearbeiten";
+
+/* No comment provided by engineer. */
+"Planned" = "Geplant";
+
+/* No comment provided by engineer. */
+"In Work" = "In Arbeit";
+
+/* No comment provided by engineer. */
+"In Review" = "In Prüfung";
+
+/* No comment provided by engineer. */
+"Finished" = "Erledigt";
+
+/* No comment provided by engineer. */
+"Finish" = "Fertig";
+
+/* No comment provided by engineer. */
+"Settings" = "Einstellungen";
+
+/* No comment provided by engineer. */
+"User" = "Benutzer";
+
+/* No comment provided by engineer. */
+"Customization" = "Personalisierung";
+
+/* No comment provided by engineer. */
+"Username" = "Benutzername";
+
+/* No comment provided by engineer. */
+"Beginning Date" = "Anfangsdatum";
+
+/* No comment provided by engineer. */
+"Background" = "Hintergrund";
+
+/* No comment provided by engineer. */
+"Sounds" = "Sounds";
+
+/* No comment provided by engineer. */
+"Volume" = "Lautstärke";
+
+/* No comment provided by engineer. */
+"Skip" = "Überspringen";
+
+/* No comment provided by engineer. */
+"Cancel" = "Abbrechen";
+
+/* No comment provided by engineer. */
+"Save" = "Speichern";
+
+/* No comment provided by engineer. */
+"Next" = "Weiter";
+
+/* No comment provided by engineer. */
+"Previous" = "Vorherige";
+
+/* No comment provided by engineer. */
+"Welcome" = "Willkommen";
+
+/* No comment provided by engineer. */
+"Delete" = "Entfernen";
+
+/* No comment provided by engineer. */
+"Create and delete Boards" = "Boards erstellen und entfernen";
+
+/* No comment provided by engineer. */
+"Create and delete Phases" = "Phasen erstellen und entfernen";
+
+/* No comment provided by engineer. */
+"Create, move and delete Tasks" = "Aufgaben erstellen, verschieben und entfernen";
+
+/* No comment provided by engineer. */
+"Welcome to Alien, your simple kanban board." = "Willkommen bei Alien, Ihrer einfachen Kanban-Board.";
+
+/* No comment provided by engineer. */
+"Enter your name..." = "Geben Sie Ihren Namen ein...";
+
+/* No comment provided by engineer. */
+"Here you can plan your tasks and move them around the phases you customize. By default there are four phases (Planned, In Work, In Review and Finished), but you can rename them and add/remove phases as you want to a minimum of 2 and a maximum of 8." =
+"Hier können Sie Ihre Aufgaben planen und sie in den von Ihnen angepassten Phasen verschieben. Standardmäßig gibt es 4 Phasen (Geplant, In Arbeit, In Prüfung und Erledigt). Diese können Sie nach Ihren Wünschen umbenennen und nach Belieben Phasen hinzufügen/entfernen, bis zu einem Minimum von 2 und einem Maximum von 8 Phasen.";
+
+/* No comment provided by engineer. */
+"In the below textfield please enter your name so that we can refer to you when needed (You can always change it in the settings later). In the next slides you will see a simple tutorial around the possible actions you can do here in Alien." =
+"Bitte geben Sie in das untere Textfeld Ihren Namen ein, damit wir uns bei Bedarf auf Sie beziehen können (Sie können ihn später in den Einstellungen jederzeit ändern). Auf den nächsten Folien sehen Sie eine einfache Anleitung zu den möglichen Aktionen, die Sie hier in Alien durchführen können.";
+
+/* No comment provided by engineer. */
+"In the settings you can give a different look to the app like changing the color or enabling sounds, as well as changing the wallpapers." =
+"In den Einstellungen können Sie der App ein anderes Aussehen verleihen, z. B. die Farbe ändern oder Töne aktivieren, sowie die Hintergrundbilder ändern.";
+
+/* No comment provided by engineer. */
+"Delete Board" = "Board entfernen";
+
+/* No comment provided by engineer. */
+"Are you sure you want to delete this board? All It's phases and tasks will be deleted." = "Sind Sie sicher, dass Sie dieses Board entfernen wollen? Es werden alle Phasen und Aufgaben in diesem Board entfernt.";
+
+/* No comment provided by engineer. */
+"Delete Phase" = "Phase entfernen";
+
+/* No comment provided by engineer. */
+"Are you sure you want to delete this Phase? All It's tasks will be deleted." = "Sind Sie sicher, dass Sie diese Phase entfernen wollen? Es werden alle Aufgaben in dieser Phase entfernt.";
+
+/* No comment provided by engineer. */
+"Delete Task" = "Aufgabe entfernen";
+
+/* No comment provided by engineer. */
+"Are you sure you want to delete this task?" = "Sind Sie sicher, dass Sie diese Aufgabe entfernen wollen?";
+
+/* No comment provided by engineer. */
+"Board from the last finished task" = "Board von letzter erledigter Aufgabe";
+
+/* No comment provided by engineer. */
+"No Tasks Finished" = "Keine erledigten Aufgaben";
+
+/* No comment provided by engineer. */
+"Total Finished Tasks" = "Erledigte Aufgaben insgesamt";
+
+/* No comment provided by engineer. */
+"today" = "heute";
+
+/* No comment provided by engineer. */
+"week" = "woche";
+
+/* No comment provided by engineer. */
+"month" = "monat";
+
+/* No comment provided by engineer. */
+"year" = "jahr";
+
+/* No comment provided by engineer. */
+"Reset" = "Zurücksetzen";
+
+/* No comment provided by engineer. */
+"Are you sure you want to delete all the boards, phases and tasks?" = "Sind Sie sicher, dass Sie alle Boards, Phasen und Aufgaben löschen wollen?";

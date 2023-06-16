@@ -1,0 +1,72 @@
+//
+//  EngineerAndConstruction.swift
+//  Saturn
+//
+//  Created by Daniel Correia on 18.03.23.
+//
+
+import Foundation
+
+public let EngineerAndConstruction: (String, [String]) =
+("Engineer & Construction", [
+    "6960557_gear_gearshift_car_shift",
+    "6960548_bar_steel_metal_alloy",
+    "6960549_pliers_work_tool_tools",
+    "6960550_scissor_lift_construction_work",
+    "6960551_robotic_production_assembly_factory",
+    "6960552_hand_industry_robotic_factory",
+    "6960553_engine_power_car_mechanic",
+    "6960554_hook_lift_construction_crane",
+    "6960555_hardware_nails_tools_hammer",
+    "6960556_shirt_change_car_gear",
+    "6960558_cooler_engineer_ventilate_fan",
+    "6960559_mechanic_oil_engine_machine",
+    "6960560_factory_conveyor_industry_product",
+    "6960561_tire_car_wheel_mechanics",
+    "6960562_construction_caterpillar_excavator_work",
+    "6960563_build_scaffold_scaffolding_construction",
+    "6960564_laser_cut_cutting_cutter",
+    "6960565_mechanics_engineer_avatar_worker",
+    "6960566_pipes_drain_pipe_water",
+    "6960567_drawing_computer_blueprint_design",
+    "6960568_site_field_construction_building",
+    "6960569_tools_screwdriver_mechanics_construction",
+    "6960570_harbor_container_shipping_cargo",
+    "6960571_model_3d_printer_print",
+    "6960572_construction_forklift_transport_transportation",
+    "6960573_construction_engineer_glue_mechanics",
+    "6960574_sand_construction_paper_sandpaper",
+    "6960575_factory_mechanics_workshop_saw",
+    "6960576_construction_harbor_crane_tower",
+    "6960577_tire_wheel_car_service",
+    "6960578_mechanics_mechanic_chain_gears",
+    "6960579_construction_equipment_heavy_truck",
+    "6960580_portable_generator_electric_power",
+    "6960581_construction_closed_road_stop",
+    "6960582_gasoline_oil_fuel_petrol",
+    "6960583_household_ladders_steel_ladder",
+    "6960584_warning_danger_constructuion_signs",
+    "6960585_electrical_distribution_fuseboard_switch",
+    "6960586_pin_nails_hardware_nail",
+    "6960587_helmet_safety_hat_worker",
+    "6960588_screw_engineer_expansion_pin",
+    "6960589_gear_settings_mechanics_process",
+    "6960590_factory_conveyor_produce_product",
+    "6960591_ruler_engineer_measure_mechanics",
+    "6960592_ring_nut_bolt_screw",
+    "6960593_hammer_jack_construction_tool",
+    "6960594_factory_lathe_machine_mechanics",
+    "6960595_air_spray_painting_gun",
+    "6960596_miter_compound_workshop_saw",
+    "6960597_lithium_power_battery_charge",
+    "6960598_tools_box_tool_worker",
+    "6960599_sander_equipment_construction_tool",
+    "6960600_car_oil_engine_mechanic",
+    "6960601_mask_weld_welding_gun",
+    "6960602_construction_road_cone_traffic",
+    "6960603_head_types_screwdriver_screw",
+    "6960604_construction_wrench_spanner_tools",
+    "6960605_hand_drill_screwdriver_driver",
+    "6960606_zone_construction_sign_work",
+    "6960607_blueprint_drawing_design_plan"
+])

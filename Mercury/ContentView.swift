@@ -2,86 +2,90 @@
 //  ContentView.swift
 //  Mercury
 //
-//  Created by Daniel Correia on 16.06.23.
+//  Created by Daniel Correia on 20.06.22.
 //
 
 import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
+    @EnvironmentObject var settingsChangedTrigger: SettingsChangedTrigger
+    @EnvironmentObject var viewModel: ViewModel
+    @State var showCreateSheet: Bool = false
+    @State private var presentedStack: [String] = []
+    
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+        NavigationStack(path: $presentedStack) {
+            VStack {
+                if(!viewModel.themesController.themes.isEmpty) {
+                    List {
+                        ForEach(viewModel.themesController.activeThemes) { theme in
+                            NavigationLinkThemeView(theme: theme)
+                        }
+                        .onMove(perform: move)
                     }
+                    .navigationDestination(for: String.self) { link in
+                        let items = link.split(separator: "//")
+                        let type = String(items[0])
+                        let id = String(items[1])
+                        if(type == "theme") {
+                            ThemeView(theme: viewModel.themesController.getThemeById(id: id)!)
+                        } else if(type == "topic") {
+                            TopicView(topic: viewModel.topicsController.getTopicById(id: id))
+                        }
+                    }
+                    .scrollContentBackground(.hidden)
                 }
-                .onDelete(perform: deleteItems)
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(SvgBackgroundView())
             .toolbar {
-#if os(iOS)
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        showCreateSheet = true
+                    } label: {
+                        Label("Add Theme", systemImage: "plus")
+                    }
                 }
-#endif
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink {
+                        if(UIDevice.isIPad) {
+                            SettingsViewT()
+                        } else if(UIDevice.isIPhone) {
+                            SettingsViewP()
+                        }
+                    } label: {
+                        Label("Settings", systemImage: "gear")
                     }
                 }
             }
-            Text("Select an item")
+            .sheet(isPresented: $showCreateSheet) {
+                ThemeSheetView(theme: Theme.createEmptyTheme(), isCreating: true)
+                    .accentColor(Color.Color)
+            }
+            .navigationTitle("Mercury")
+            .navigationBarTitleDisplayMode(.inline)
         }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        .accentColor(Color.Color)
+        .onOpenURL { url in
+            let topicId = url.absoluteString.split(separator: "//")[1]
+            let topics = TopicDao.fetchTopics()
+            let selectedTopic = topics.first(where: {$0.id!.description == topicId})
+            if(selectedTopic != nil) {
+                presentedStack = []
+                presentedStack.append("theme//" + selectedTopic!.theme!.id!.description)
+                presentedStack.append("topic//" + selectedTopic!.id!.description)
             }
         }
     }
-
-    private func deleteItems(offsets: IndexSet) {
+    
+    func move(from source: IndexSet, to destination: Int) {
         withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
+            viewModel.themesController.moveTheme(originIndex: source.first!, destinationIndex: destination)
         }
     }
+    
 }
-
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

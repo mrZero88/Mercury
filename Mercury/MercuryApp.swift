@@ -2,19 +2,21 @@
 //  MercuryApp.swift
 //  Mercury
 //
-//  Created by Daniel Correia on 16.06.23.
+//  Created by Daniel Correia on 20.06.22.
 //
 
 import SwiftUI
 
 @main
 struct MercuryApp: App {
-    let persistenceController = PersistenceController.shared
+    @StateObject var viewModel = ViewModel()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(viewModel)
+                .environmentObject(viewModel.settingsViewModel)
+                .environmentObject(SettingsChangedTrigger())
         }
     }
 }

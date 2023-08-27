@@ -57,6 +57,7 @@
 		B26E43562A9B9EA800A982BF /* MedicalAndHealthcare.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E433B2A9B9EA800A982BF /* MedicalAndHealthcare.swift */; };
 		B26E43572A9B9EA800A982BF /* LoveAndWedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E433C2A9B9EA800A982BF /* LoveAndWedding.swift */; };
 		B26E43592A9B9EDF00A982BF /* AppIconGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E43582A9B9EDF00A982BF /* AppIconGroups.swift */; };
+		B26E435B2A9BA1BE00A982BF /* SvgBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E435A2A9BA1BE00A982BF /* SvgBackgroundView.swift */; };
 		B27D806F2A3C44970071FDAC /* MercuryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D806E2A3C44970071FDAC /* MercuryApp.swift */; };
 		B27D80742A3C44970071FDAC /* Mercury.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B27D80722A3C44970071FDAC /* Mercury.xcdatamodeld */; };
 		B27D80762A3C44970071FDAC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80752A3C44970071FDAC /* ContentView.swift */; };
@@ -152,7 +153,6 @@
 		B27D81B12A3C44E60071FDAC /* SheetButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D812B2A3C44E60071FDAC /* SheetButtonView.swift */; };
 		B27D81B22A3C44E60071FDAC /* IconFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D812C2A3C44E60071FDAC /* IconFieldView.swift */; };
 		B27D81B32A3C44E60071FDAC /* TextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D812D2A3C44E60071FDAC /* TextEditorView.swift */; };
-		B27D81B42A3C44E60071FDAC /* SvgBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D812F2A3C44E60071FDAC /* SvgBackgroundView.swift */; };
 		B27D81B52A3C44E60071FDAC /* IconsPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81312A3C44E60071FDAC /* IconsPanelView.swift */; };
 		B27D81B62A3C44E60071FDAC /* IconSearchPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81322A3C44E60071FDAC /* IconSearchPanelView.swift */; };
 		B27D81B72A3C44E60071FDAC /* IconGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81332A3C44E60071FDAC /* IconGroupView.swift */; };
@@ -286,6 +286,7 @@
 		B26E433B2A9B9EA800A982BF /* MedicalAndHealthcare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalAndHealthcare.swift; sourceTree = "<group>"; };
 		B26E433C2A9B9EA800A982BF /* LoveAndWedding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoveAndWedding.swift; sourceTree = "<group>"; };
 		B26E43582A9B9EDF00A982BF /* AppIconGroups.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIconGroups.swift; sourceTree = "<group>"; };
+		B26E435A2A9BA1BE00A982BF /* SvgBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SvgBackgroundView.swift; sourceTree = "<group>"; };
 		B27D806B2A3C44970071FDAC /* Mercury.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mercury.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27D806E2A3C44970071FDAC /* MercuryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercuryApp.swift; sourceTree = "<group>"; };
 		B27D80732A3C44970071FDAC /* Mercury.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mercury.xcdatamodel; sourceTree = "<group>"; };
@@ -385,7 +386,6 @@
 		B27D812B2A3C44E60071FDAC /* SheetButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetButtonView.swift; sourceTree = "<group>"; };
 		B27D812C2A3C44E60071FDAC /* IconFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconFieldView.swift; sourceTree = "<group>"; };
 		B27D812D2A3C44E60071FDAC /* TextEditorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextEditorView.swift; sourceTree = "<group>"; };
-		B27D812F2A3C44E60071FDAC /* SvgBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SvgBackgroundView.swift; sourceTree = "<group>"; };
 		B27D81312A3C44E60071FDAC /* IconsPanelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconsPanelView.swift; sourceTree = "<group>"; };
 		B27D81322A3C44E60071FDAC /* IconSearchPanelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconSearchPanelView.swift; sourceTree = "<group>"; };
 		B27D81332A3C44E60071FDAC /* IconGroupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconGroupView.swift; sourceTree = "<group>"; };
@@ -872,7 +872,7 @@
 		B27D812E2A3C44E60071FDAC /* Backgrounds */ = {
 			isa = PBXGroup;
 			children = (
-				B27D812F2A3C44E60071FDAC /* SvgBackgroundView.swift */,
+				B26E435A2A9BA1BE00A982BF /* SvgBackgroundView.swift */,
 			);
 			path = Backgrounds;
 			sourceTree = "<group>";
@@ -1145,6 +1145,7 @@
 			files = (
 				B26E431E2A9B9CAF00A982BF /* Ccchaos.swift in Sources */,
 				B27D81602A3C44E60071FDAC /* AlertInfo.swift in Sources */,
+				B26E435B2A9BA1BE00A982BF /* SvgBackgroundView.swift in Sources */,
 				B27D81482A3C44E60071FDAC /* SettingsControllerExtension.swift in Sources */,
 				B26E431F2A9B9CAF00A982BF /* Wwwhirl.swift in Sources */,
 				B27D815F2A3C44E60071FDAC /* Sound.swift in Sources */,
@@ -1180,7 +1181,6 @@
 				B27D815B2A3C44E60071FDAC /* Sounds.swift in Sources */,
 				B27D81582A3C44E60071FDAC /* DrawingCanvasView.swift in Sources */,
 				B26E43502A9B9EA800A982BF /* SportAndFitness.swift in Sources */,
-				B27D81B42A3C44E60071FDAC /* SvgBackgroundView.swift in Sources */,
 				B27D81A82A3C44E60071FDAC /* NavigationLinkThemeView.swift in Sources */,
 				B27D818D2A3C44E60071FDAC /* DateRangeUtils.swift in Sources */,
 				B27D815D2A3C44E60071FDAC /* Month.swift in Sources */,

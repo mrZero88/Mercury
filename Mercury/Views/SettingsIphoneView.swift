@@ -17,9 +17,8 @@ struct SettingsIphoneView: View {
                 SwiftUI.Section(settingGroup.title ?? "") {
                     SettingGroupIphoneView(settingGroup: settingGroup)
                 }
+                .listRowBackground(Color("PanelColor"))
             }
-            .listRowBackground(Color("PanelColor"))
-            .scrollContentBackground(.hidden)
             .scrollContentBackground(.hidden)
         }
         .navigationBarTitleDisplayMode(.inline)

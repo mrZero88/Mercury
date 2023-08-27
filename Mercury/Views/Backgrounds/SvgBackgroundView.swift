@@ -37,7 +37,7 @@ struct SvgBackgroundView: View {
     
     var body: some View {
         if(ShowBg1) {
-            Image(svgName).resizable().opacity(0.5).ignoresSafeArea().foregroundColor(Color.accentColor)
+            Image(Background).resizable().scaledToFill().opacity(0.25).ignoresSafeArea().foregroundColor(Color.accentColor)
         }
     }
 }

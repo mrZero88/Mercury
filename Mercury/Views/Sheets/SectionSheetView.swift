@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SectionSheetView: View {
+    @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var viewModel: ViewModel
     @StateObject var section: Section
@@ -16,7 +17,13 @@ struct SectionSheetView: View {
     var body: some View {
         Grid(horizontalSpacing: BorderPadding, verticalSpacing: BorderPadding) {
             GridRow {
-                Text(isCreating ? "New Section" : "Edit Section").font(.title)
+                HStack {
+                    Text(section.createdAt?.formatted(date: .numeric, time: .omitted) ?? "").font(.footnote).foregroundColor(.secondary)
+                    Spacer()
+                    Text(isCreating ? "New Section" : "Edit Section").font(.title)
+                    Spacer()
+                    Text(section.updatedAt?.formatted(date: .numeric, time: .omitted) ?? "").font(.footnote).foregroundColor(.secondary)
+                }
             }
             GridRow {
                 TextFieldView(inSheet: false, textValue: Binding<String> (
@@ -52,7 +59,7 @@ struct SectionSheetView: View {
         }
         .padding()
         .frame(maxHeight: .infinity)
-        .background(Color.accentColor.opacity(0.5).ignoresSafeArea())
+        .background(Color.getColor(colorScheme: colorScheme).gradient.opacity(colorScheme == .dark ? 0.5 : 1.0))
         .onDisappear {
             onCloseSheet()
         }

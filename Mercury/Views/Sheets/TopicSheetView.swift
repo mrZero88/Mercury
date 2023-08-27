@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TopicSheetView: View {
+    @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var viewModel: ViewModel
     @StateObject var topic: Topic
@@ -16,7 +17,13 @@ struct TopicSheetView: View {
     var body: some View {
         Grid(horizontalSpacing: BorderPadding, verticalSpacing: BorderPadding) {
             GridRow {
-                Text(isCreating ? "New Topic" : "Edit Topic").font(.title)
+                HStack {
+                    Text(topic.createdAt?.formatted(date: .numeric, time: .omitted) ?? "").font(.footnote).foregroundColor(.secondary)
+                    Spacer()
+                    Text(isCreating ? "New Topic" : "Edit Topic").font(.title)
+                    Spacer()
+                    Text(topic.updatedAt?.formatted(date: .numeric, time: .omitted) ?? "").font(.footnote).foregroundColor(.secondary)
+                }
             }
             GridRow {
                 TextFieldIconView(inSheet: false, textValue: Binding<String> (
@@ -66,7 +73,7 @@ struct TopicSheetView: View {
         }
         .padding()
         .frame(maxHeight: .infinity)
-        .background(Color.accentColor.opacity(0.5).ignoresSafeArea())
+        .background(Color.getColor(colorScheme: colorScheme).gradient.opacity(colorScheme == .dark ? 0.5 : 1.0))
         .onDisappear {
             onCloseSheet()
         }

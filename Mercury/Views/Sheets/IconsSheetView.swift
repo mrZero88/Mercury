@@ -6,23 +6,27 @@
 //
 
 import SwiftUI
+import Combine
 
 struct IconsSheetView: View {
+    @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
     @Binding var iconName: String
     @State var searchText: String = ""
-    @State var selectedIconsPanel: String = "Appliance & Electronic"
+    @State var selectedIconsGroup: String = DefautSelectedGroup
+    @State var iconNames: [String] = []
+    @State var searchTextPublisher = PassthroughSubject<String, Never>()
     
     var body: some View {
         Grid(alignment: .topLeading, horizontalSpacing: BorderPadding, verticalSpacing: BorderPadding) {
             GridRow {
-                TextFieldView(inSheet: false, textValue: $searchText, help: "Search Icons", visible: true)
+                TextFieldView(textValue: $searchText, help: "Search Icons", visible: true)
             }
             GridRow {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
                         ForEach(AppIconGroups, id: \.1) { iconGroup in
-                            IconGroupView(title: iconGroup.0, selectedIconsPanel: $selectedIconsPanel)
+                            IconGroupView(title: iconGroup.0, selectedIconsGroup: $selectedIconsGroup, searchText: $searchText, iconNames: $iconNames)
                                 .disabled(!searchText.isEmpty)
                         }
                     }
@@ -30,23 +34,50 @@ struct IconsSheetView: View {
             }
             GridRow {
                 if(searchText.isEmpty) {
-                    IconsPanelView(selectedIconsPanel: selectedIconsPanel, iconName: $iconName)
+                    IconsGroupView(iconName: $iconName, iconNames: $iconNames)
                 } else {
-                    IconSearchPanelView(searchText: searchText, iconName: $iconName)
+                    IconSearchPanelView(searchText: $searchText, iconName: $iconName, iconNames: $iconNames)
                 }
             }
             GridRow {
-                SheetButtonView(inSheet: false, title: "Cancel", clickFunction: cancel).fixedSize(horizontal: false, vertical: true)
+                SheetButtonView(title: "Cancel", clickFunction: cancel).fixedSize(horizontal: false, vertical: true)
+            }
+        }
+        .searchable(text: $searchText)
+        .onChange(of: searchText, perform: { newValue in
+            searchTextPublisher.send(newValue)
+        })
+        .onReceive(
+            searchTextPublisher
+                .debounce(for: .milliseconds(1000), scheduler: DispatchQueue.main)
+        ) { debouncedSearchText in
+            if(!debouncedSearchText.isEmpty) {
+                self.iconNames = getAllIcons().filter({$0.contains(debouncedSearchText.lowercased())})
+            } else {
+                self.iconNames = AppIconGroups.first(where: {$0.0 == selectedIconsGroup})?.1 ?? []
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding()
-        .background(Color.accentColor.opacity(0.5).ignoresSafeArea())
+        .background(Color.getColor(colorScheme: colorScheme).gradient.opacity(colorScheme == .dark ? 0.5 : 1.0))
+        .onAppear {
+            self.iconNames = AppIconGroups.first(where: {$0.0 == selectedIconsGroup})?.1 ?? []
+        }
+    }
+    
+    var icons: [String] {
+        get {
+            return AppIconGroups.first(where: {$0.0 == selectedIconsGroup})?.1 ?? []
+        }
     }
     
     func cancel() {
         PlaySound(sound: .confirm)
         dismiss()
+    }
+    
+    func isEmpty(text: String) async -> Bool {
+        return text.isEmpty
     }
     
 }

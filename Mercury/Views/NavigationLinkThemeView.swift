@@ -26,7 +26,10 @@ struct NavigationLinkThemeView: View {
                 if(!(theme.iconName?.isEmpty ?? true)) {
                     Image(theme.iconName ?? "").resizable().scaledToFit().foregroundColor(Color.accentColor).frame(width: 40, height: 40, alignment: .center).padding(.vertical)
                 }
-                Text(theme.title ?? "").padding(.leading, BorderPadding).foregroundColor(colorTheme)
+                VStack(alignment: .leading) {
+                    Text(theme.title ?? "").padding(.leading, BorderPadding).foregroundColor(colorTheme)
+                    Text(String(theme.activeTopics.count)).padding(.leading, BorderPadding).foregroundColor(.secondary).font(.footnote)
+                }
                 Spacer()
             }
         }

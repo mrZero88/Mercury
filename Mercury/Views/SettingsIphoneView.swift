@@ -19,6 +19,7 @@ struct SettingsIphoneView: View {
                 }
                 .listRowBackground(Color("PanelColor"))
             }
+            .scrollIndicators(.hidden)
             .scrollContentBackground(.hidden)
         }
         .navigationBarTitleDisplayMode(.inline)

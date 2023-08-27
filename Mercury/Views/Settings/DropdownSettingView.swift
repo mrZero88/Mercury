@@ -16,7 +16,7 @@ struct DropdownSettingView: View {
     var body: some View {
         HStack {
             Menu {
-                ForEach(["blob", "stackedpeaks", "layeredwaves", "layeredsteps"], id: \.self) { bg in
+                ForEach(getAllBackgrounds(), id: \.self) { bg in
                     Button {
                         value = bg.lowercased()
                         PlaySound(sound: .confirm)

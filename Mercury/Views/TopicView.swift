@@ -22,6 +22,7 @@ struct TopicView: View {
                     .onMove(perform: move)
                 }
                 .scrollContentBackground(.hidden)
+                .scrollIndicators(.hidden)
             }
         }
         .toolbar {

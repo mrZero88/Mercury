@@ -23,6 +23,7 @@ struct ThemeView: View {
                     .onMove(perform: move)
                 }
                 .scrollContentBackground(.hidden)
+                .scrollIndicators(.hidden)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -35,27 +35,28 @@ struct ContentView: View {
                         }
                     }
                     .scrollContentBackground(.hidden)
+                    .scrollIndicators(.hidden)
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(SvgBackgroundView())
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
+                    NavigationLink {
+                        if(UIDevice.isIPad) {
+                            SettingsView()
+                        } else if(UIDevice.isIPhone) {
+                            SettingsIphoneView()
+                        }
+                    } label: {
+                        Label("Settings", systemImage: "gear")
+                    }
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         showCreateSheet = true
                     } label: {
                         Label("Add Theme", systemImage: "plus")
-                    }
-                }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink {
-                        if(UIDevice.isIPad) {
-                            SettingsViewT()
-                        } else if(UIDevice.isIPhone) {
-                            SettingsViewP()
-                        }
-                    } label: {
-                        Label("Settings", systemImage: "gear")
                     }
                 }
             }

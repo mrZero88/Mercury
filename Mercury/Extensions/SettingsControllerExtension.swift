@@ -65,8 +65,8 @@ extension SettingsController {
         return SettingDao.fetchOrCreateSetting(title: title, key: key, dataType: dataType, group: group, dateValue: value, type: type, order: order, isVisible: isVisible, enabled: enabled)
     }
     
-    func addButtonSetting(key: String, title: String, group: SettingsGroup, order: Int16, isVisible: Bool = true, enabled: Bool = true) -> Setting {
-        return SettingDao.fetchOrCreateSetting(title: title, key: key, dataType: "", group: group, type: "Button", order: order, isVisible: isVisible, enabled: enabled)
+    func addButtonSetting(key: String, title: String, group: SettingsGroup, order: Int16, isVisible: Bool = true, enabled: Bool = true, function: String) -> Setting {
+        return SettingDao.fetchOrCreateSetting(title: title, key: key, dataType: "", group: group, type: "Button", order: order, isVisible: isVisible, enabled: enabled, function: function)
     }
     
     func addStringSetting(key: String, title: String, group: SettingsGroup, value: String = "", type: String = "", order: Int16, isVisible: Bool = true, dataType: String = "String", enabled: Bool = true) -> Setting {

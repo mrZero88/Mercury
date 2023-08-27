@@ -5,8 +5,6 @@
 //  Created by Daniel Correia on 18.03.23.
 //
 
-import Foundation
-
 public let InteriorAndHomedecor: (String, [String]) =
 ("Interior & Homedecor", [
     "5935261_chair_desk_office_interior",

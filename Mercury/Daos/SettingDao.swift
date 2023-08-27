@@ -50,12 +50,12 @@ public class SettingDao {
         return objects ?? []
     }
     
-    public static func fetchOrCreateSetting(title: String, key: String, dataType: String, group: SettingsGroup, boolValue: Bool = false, intValue: Int = 0, dateValue: Date? = Date(), stringValue: String = "", uuidValue: UUID = UUID(), doubleValue: Double = 0.0, minDouble: Double = 0.0, maxDouble: Double = 0.0, type: String = "", order: Int16, dependentOn: Setting? = nil, isVisible: Bool = true, enabled: Bool = true) -> Setting {
+    public static func fetchOrCreateSetting(title: String, key: String, dataType: String, group: SettingsGroup, boolValue: Bool = false, intValue: Int = 0, dateValue: Date? = Date(), stringValue: String = "", uuidValue: UUID = UUID(), doubleValue: Double = 0.0, minDouble: Double = 0.0, maxDouble: Double = 0.0, type: String = "", order: Int16, dependentOn: Setting? = nil, isVisible: Bool = true, enabled: Bool = true, function: String = "") -> Setting {
         let setting = self.fetchSetting(key: key)
-        return setting != nil ? setting! : createSetting(title: title, key: key, dataType: dataType, group: group, boolValue: boolValue, intValue: intValue, dateValue: dateValue, stringValue: stringValue, uuidValue: uuidValue, doubleValue: doubleValue, minDouble: minDouble, maxDouble: maxDouble, type: type, order: order, isVisible: isVisible, enabled: enabled)
+        return setting != nil ? setting! : createSetting(title: title, key: key, dataType: dataType, group: group, boolValue: boolValue, intValue: intValue, dateValue: dateValue, stringValue: stringValue, uuidValue: uuidValue, doubleValue: doubleValue, minDouble: minDouble, maxDouble: maxDouble, type: type, order: order, isVisible: isVisible, enabled: enabled, function: function)
     }
     
-    public static func createSetting(title: String, key: String, dataType: String, group: SettingsGroup, boolValue: Bool = false, intValue: Int = 0, dateValue: Date? = Date(), stringValue: String = "", uuidValue: UUID = UUID(), doubleValue: Double = 0.0, minDouble: Double = 0.0, maxDouble: Double = 0.0, type: String = "", order: Int16, isVisible: Bool = true, enabled: Bool = true) -> Setting {
+    public static func createSetting(title: String, key: String, dataType: String, group: SettingsGroup, boolValue: Bool = false, intValue: Int = 0, dateValue: Date? = Date(), stringValue: String = "", uuidValue: UUID = UUID(), doubleValue: Double = 0.0, minDouble: Double = 0.0, maxDouble: Double = 0.0, type: String = "", order: Int16, isVisible: Bool = true, enabled: Bool = true, function: String = "") -> Setting {
         let newSetting = Setting(context: PersistenceController.shared.container.viewContext)
         let now = Date()
         newSetting.id = UUID()
@@ -78,6 +78,7 @@ public class SettingDao {
         newSetting.doubleValue = doubleValue
         newSetting.minDouble = minDouble
         newSetting.maxDouble = maxDouble
+        newSetting.function = function
         PersistenceController.save()
         return newSetting
     }

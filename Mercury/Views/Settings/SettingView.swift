@@ -13,6 +13,8 @@ struct SettingView: View {
     @EnvironmentObject var viewModel: ViewModel
     @ObservedObject var setting: Setting
     @State var alertInfo: AlertInfo?
+    @State private var isExporting: Bool = false
+    @State private var isImporting: Bool = false
     
     var body: some View {
         HStack(spacing: 0) {
@@ -25,9 +27,11 @@ struct SettingView: View {
             }
             if(setting.type! == "Button") {
                 Button {
-                    alertInfo = ShowResetAlert()
+                    doFunction(function: setting.function)
                 } label: {
-                    Label(setting.title ?? "", systemImage: "").labelStyle(.titleOnly).foregroundColor(.red).frame(maxWidth: .infinity)
+                    Label(setting.title ?? "", systemImage: "").labelStyle(.titleOnly)
+                        .foregroundColor(setting.function == "reset" ? .red : .primary)
+                        .frame(maxWidth: .infinity)
                 }
                 .buttonStyle(.bordered)
             } else if(setting.type! == "Color") {
@@ -139,10 +143,23 @@ struct SettingView: View {
         })
         .padding(BorderPadding)
         .cornerRadius(CornerRadius)
-        .listRowSeparatorTint(Color.accentColor)
-        .listRowBackground(
-            Color(uiColor: UIColor.tertiarySystemBackground)
-        )
+    }
+    
+    func doFunction(function: String?) {
+        print("Hello")
+        switch(function) {
+        case "reset":
+            alertInfo = ShowResetAlert()
+            break
+        case "export":
+            isExporting = true
+            break
+        case "import":
+            isImporting = true
+            break
+        default:
+            break
+        }
     }
 }
 

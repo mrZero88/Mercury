@@ -8,11 +8,20 @@
 import CoreData
 
 public class SettingsGroupDao {
-    
+
     public static func fetchSettingGroups() -> [SettingsGroup] {
         let fetchRequest: NSFetchRequest<SettingsGroup>
         fetchRequest = SettingsGroup.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "isActive == true")
+        let sort = NSSortDescriptor(key: #keyPath(SettingsGroup.order), ascending: true)
+        fetchRequest.sortDescriptors = [sort]
+        let objects = try? PersistenceController.shared.container.viewContext.fetch(fetchRequest)
+        return objects!
+    }
+    
+    public static func fetchAllSettingGroups() -> [SettingsGroup] {
+        let fetchRequest: NSFetchRequest<SettingsGroup>
+        fetchRequest = SettingsGroup.fetchRequest()
         let sort = NSSortDescriptor(key: #keyPath(SettingsGroup.order), ascending: true)
         fetchRequest.sortDescriptors = [sort]
         let objects = try? PersistenceController.shared.container.viewContext.fetch(fetchRequest)

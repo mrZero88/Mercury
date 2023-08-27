@@ -1,0 +1,60 @@
+//
+//  ChartAndGraph.swift
+//  Alien
+//
+//  Created by Daniel Correia on 18.07.23.
+//
+
+public let ChartAndGraph: (String, [String]) =
+("Chart & Graph", [
+    "6552400_statistics_dot_plot_chart",
+    "6552401_process_loop_diagram_graph",
+    "6552402_diagram_stream_graph_chart",
+    "6552403_venn_business_graph_diagram",
+    "6552404_stock_diagram_candlestick_market",
+    "6552405_chart_decrease_loss_diagram",
+    "6552406_chart_plot_diagram_violin",
+    "6552407_presentation_graph_flow_history",
+    "6552408_diagram_graph_plot_spiral",
+    "6552409_graph_business_area_chart",
+    "6552410_jigsaw_puzzle_graph_solution",
+    "6552411_line_trend_diagram_graph",
+    "6552412_diagram_bar_histogram_chart",
+    "6552413_pie_finance_diagram_chart",
+    "6552414_infograph_data_diagram_treemap",
+    "6552415_data_bubble_big_chart",
+    "6552416_proportion_circle_chart_pie",
+    "6552417_growth_profit_increase_presentation",
+    "6552418_pie_diagram_chart_report",
+    "6552419_mind_map_ontology_network",
+    "6552420_chart_analytics_trend_growth",
+    "6552421_algorithm_flowchat_workflow_program",
+    "6552422_chart_donut_diagram_proportion",
+    "6552423_data_record_graphing_graph",
+    "6552424_network_connecting_infograph_graph",
+    "6552425_statistic_infographic_gantt_chart",
+    "6552426_plan_hierarchy_workflow_diagram",
+    "6552427_down_decrease_loss_presentation",
+    "6552428_timeline_line_graph_time",
+    "6552429_diagram_analysis_workflow_chart",
+    "6552430_theory_game_plan_strategy",
+    "6552431_career_level_structure_pyramid",
+    "6552432_chart_graph_diagram_rader",
+    "6552433_bar_contrast_compare_chart",
+    "6552434_chart_waterfall_diagram_infograph",
+    "6552435_chart_compare_bar_statistic",
+    "6552436_chart_analysis_diagram_quadrant",
+    "6552437_histogram_analysis_diagram_chart",
+    "6552438_report_area_trend_chart",
+    "6552439_histogram_contrast_graph_diagram",
+    "6552440_gauge_diagram_meter_graph",
+    "6552441_chart_graph_meter_proportion",
+    "6552442_chart_infographic_diagram_contour",
+    "6552443_schedule_timetable_event_calendar",
+    "6552444_increase_finance_diagram_growth",
+    "6552445_sitemap_flow_chart_work",
+    "6552446_state_gdp_statistics_revenue",
+    "6552447_market_analytics_stock_chart",
+    "6552448_planning_map_plan_programme",
+    "6552449_table_chart_statistics_numbers"
+])

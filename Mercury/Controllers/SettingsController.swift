@@ -12,25 +12,7 @@ class SettingsController: ObservableObject {
     
     func addSettings() {
         
-        deleteSettingGroup(key: "userInfo");
-        deleteSettingGroup(key: "customization0");
-        deleteSettingGroup(key: "customization");
-        
-        deleteSetting(key: "username");
-        deleteSetting(key: "useruuid");
-        deleteSetting(key: "onboard");
-        deleteSetting(key: "beginningDate");
-        
-        deleteSetting(key: "soundsOn")
-        deleteSetting(key: "soundsVolume")
-        deleteSetting(key: "background")
-        
-        deleteSetting(key: "showBackground1")
-        deleteSetting(key: "showBackground2")
-        deleteSetting(key: "animateBg2")
-        deleteSetting(key: "accentColor")
-        deleteSetting(key: "background1Opacity")
-        deleteSetting(key: "background2Opacity")
+        DeleteAllSettings()
         
         let userInfo = fetchOrCreateSettingGroup(key: "userInfo", title: "User", order: 1, iconName: "")
         let customization1 = fetchOrCreateSettingGroup(key: "customization", title: "Customization", order: 2, iconName: "")
@@ -39,13 +21,15 @@ class SettingsController: ObservableObject {
         _ = addUuidSetting(key: "useruuid", title: "UUUID", group: userInfo, order: 2)
         _ = addBoolSetting(key: "onboard", title: "Onboarding", group: userInfo, value: false, order: 3)
         _ = addDateSetting(key: "beginningDate", title: "Beginning Date", group: userInfo, order: 4)
-        _ = addButtonSetting(key: "reset", title: "Reset", group: userInfo, order: 5)
+        _ = addButtonSetting(key: "export", title: "Export", group: userInfo, order: 5, function: "export")
+        _ = addButtonSetting(key: "import", title: "Import", group: userInfo, order: 6, function: "import")
+        _ = addButtonSetting(key: "reset", title: "Reset", group: userInfo, order: 7, function: "reset")
         
         let _ = addBoolSetting(key: "showBg1", title: "Background", group: customization1, value: true, order: 1)
-        let _ = addStringSetting(key: "background", title: "Background", group: customization1, value: "blob", type: "Dropdown", order: 2)
+        let _ = addStringSetting(key: "background", title: "Background", group: customization1, value: "wwwhirl", type: "Dropdown", order: 2)
         //let sB2 = addBoolSetting(key: "showBg2", title: "Show Bg. 2", group: customization1, value: false, order: 2)
         //let aBg2 = addBoolSetting(key: "animateBg2", title: "Animate Bg 2", group: customization1, value: false, order: 3)
-        _ = addStringSetting(key: "accentColor", title: "Accent Color", group: customization1, value: "Red", type: "Color", order: 3)
+        _ = addStringSetting(key: "accentColor", title: "Accent Color", group: customization1, value: "Green", type: "Color", order: 3)
         //let bg1Opacity = addDoubleSetting(key: "bg1Opacity", title: "Bg. 1 Opacity", group: customization1, value: 0.5, minDouble: 0.0, maxDouble: 0.5, type: "Slider", order: 5)
         //let bg2Opacity  = addDoubleSetting(key: "bg2Opacity", title: "Bg. 2 Opacity", group: customization1, value: 0.5, minDouble: 0.0, maxDouble: 1.0, type: "Slider", order: 6, enabled: false)
         
@@ -73,6 +57,18 @@ class SettingsController: ObservableObject {
         setting?.dateValue = date
         PersistenceController.save()
     }
+}
+
+func DeleteAllSettings() {
+    let groups = SettingsGroupDao.fetchAllSettingGroups()
+    for group in groups {
+        group.delete()
+    }
+    let settings = SettingDao.fetchAllSettings()
+    for setting in settings {
+        setting.delete()
+    }
+    PersistenceController.save()
 }
 
 public var UserName: String {

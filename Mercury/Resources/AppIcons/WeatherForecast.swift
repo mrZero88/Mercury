@@ -1,0 +1,60 @@
+//
+//  WeatherForecaset.swift
+//  Alien
+//
+//  Created by Daniel Correia on 18.07.23.
+//
+
+public let WeatherForecast: (String, [String]) =
+("Weather Forecast", [
+    "7083288_blow_forecast_wind_windy",
+    "7083289_snow_forecast_weather_snowy",
+    "7083290_precipitation_humidity_rain_water",
+    "7083291_cloud_clouds_moon_night",
+    "7083292_snow_sun_weather_snowy",
+    "7083293_sky_evening_moon_night",
+    "7083294_thermometer_temperature_hot",
+    "7083295_storm_tornado_hurricane_cyclone",
+    "7083296_eclipse_sun_astronomy_moon",
+    "7083297_thunder_forecast_weather_lightning",
+    "7083298_forecast_weather_hail_snow",
+    "7083299_cloud_snow_rain_weather",
+    "7083300_weather_rain_thunder_storm",
+    "7083301_wet_drops_water_weather",
+    "7083302_temperature_degree_celsius",
+    "7083303_moon_weather_rain_lightning",
+    "7083304_rain_sun_clouds_rainy",
+    "7083305_weather_wind_clouds_moon",
+    "7083306_snowflakes_cold_snow_snowflake",
+    "7083307_cloud_wet_rainy_weather",
+    "7083308_rainbow_colorful_childhood_cloud",
+    "7083309_snow_hail_sun_weather",
+    "7083310_temperature_cold_thermometer",
+    "7083311_snowy_weather_snow_moon",
+    "7083312_moon_weather_planet_luna",
+    "7083313_rainy_clouds_rain_moon",
+    "7083314_dusk_sun_sunset_weather",
+    "7083315_cyclone_hurricane_typhoon_storm",
+    "7083316_direction_wind_windy_weather",
+    "7083317_weather_haze_misty_fog",
+    "7083318_hail_forecast_rain_weather",
+    "7083319_clouds_wind_sun_weather",
+    "7083320_temperature_weather_thermometer",
+    "7083321_foggy_weather_fog",
+    "7083322_cloud_sun_clouds_weather",
+    "7083323_snow_snowy_weather_cloud",
+    "7083324_weather_sun_sunrise_morning",
+    "7083325_cloud_cloudy_overcast_clouds",
+    "7083326_solar_sunny_sun_weather",
+    "7083327_snowflake_winter_frost_snow",
+    "7083328_rain_sun_weather_lightning",
+    "7083329_cloud_rain_rainy_weather",
+    "7083330_ice_hail_snowball_weather",
+    "7083331_wind_cock_direction",
+    "7083332_temperature_fahrenheit_degree",
+    "7083333_clouds_forecast_cloud",
+    "7083334_heavy_weather_rain_clouds",
+    "7083335_wind_flag_direction",
+    "7083336_moon_hail_snow_weather",
+    "7083337_weather_rain_umbrella"
+])

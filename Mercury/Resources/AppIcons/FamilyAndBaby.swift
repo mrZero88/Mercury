@@ -1,0 +1,60 @@
+//
+//  FamilyAndBaby.swift
+//  Alien
+//
+//  Created by Daniel Correia on 18.06.23.
+//
+
+public let FamilyAndBaby: (String, [String]) =
+("Family & Baby", [
+    "7108173_unicorn_magic_childhood_fairytale",
+    "7108174_nipple_baby_child_dummy",
+    "7108175_girl_young_teenage_woman",
+    "7108176_play_playground_childhood_swing",
+    "7108177_medical_baby_embryo_biology",
+    "7108178_male_gender_sign",
+    "7108179_education_bricks_early_toy",
+    "7108180_parent_family_daughter_mother",
+    "7108181_mom_female_woman_mother",
+    "7108182_female_gender_sign",
+    "7108183_crib_baby_child_bed",
+    "7108184_grandmother_old_lady_grandma",
+    "7108185_medical_baby_diagnostics_ultrasound",
+    "7108186_cat_pet_food_dog",
+    "7108187_child_baby_newborn_infant",
+    "7108188_pregnant_baby_pregnancy_mother",
+    "7108189_family_parents_children_love",
+    "7108190_dog_pet_puppy_doggy",
+    "7108191_kitten_pet_animal_cat",
+    "7108192_house_building_home",
+    "7108193_children_baby_boy_child",
+    "7108194_people_tree_family_members",
+    "7108195_childhood_rocking_toy_horse",
+    "7108196_toys_pet_toy_dog",
+    "7108197_carriage_baby_buggy_pram",
+    "7108198_bib_clothes_infant_baby",
+    "7108199_camping_bag_backpack_school",
+    "7108200_veterinary_pet_animal_vet",
+    "7108201_vacation_car_travel_trip",
+    "7108202_love_heart_private_privacy",
+    "7108203_diaper_baby_nappy",
+    "7108204_man_grandpa_old_grandfather",
+    "7108205_childhood_baby_toy_toys",
+    "7108206_street_neighborhood_community_neighbor",
+    "7108207_dog_kennel_doghouse_house",
+    "7108208_clinic_animal_vet_hospital_veterinary",
+    "7108209_dinner_table_family_members",
+    "7108210_son_father_sports_parent",
+    "7108211_furniture_baby_chair_toys",
+    "7108212_home_protection_insurance_house",
+    "7108213_building_high_school_education",
+    "7108214_bone_fishbone_pet_treats",
+    "7108215_bed_cattery_cave_cat",
+    "7108216_bottle_baby_milk_infant",
+    "7108217_carrier_box_pet_cage",
+    "7108218_food_baby_spoon_preserves",
+    "7108219_breast_milk_feeding_mother",
+    "7108220_man_dad_father_male",
+    "7108221_child_baby_children_girl",
+    "7108222_teenage_boy_young_man"
+])

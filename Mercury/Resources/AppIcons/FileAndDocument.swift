@@ -1,0 +1,60 @@
+//
+//  FileAndDocument.swift
+//  Alien
+//
+//  Created by Daniel Correia on 18.07.23.
+//
+
+public let FileAndDocument: (String, [String]) =
+("File & Document", [
+    "6518268_photo_picture_document_file",
+    "6518255_file_document_favorite_like",
+    "6518256_file_document_upload_up",
+    "6518257_file_sound_audio_wave",
+    "6518258_language_translate_document_file",
+    "6518259_file_document_edit_write",
+    "6518260_film_media_video_file",
+    "6518261_find_search_question_help",
+    "6518262_tape_paste_document_file",
+    "6518263_document_duplicate_copy_file",
+    "6518264_fonts_type_font_file",
+    "6518265_idea_creative_document_file",
+    "6518266_send_message_document_file",
+    "6518267_document_text_word_file",
+    "6518269_balance_accouting_calculate_file",
+    "6518270_sycn_share_internet_file",
+    "6518271_coraldraw_illustration_file_adobe",
+    "6518272_design_3d_modle_file",
+    "6518273_ebook_read_document_file",
+    "6518274_system_program_coding_code",
+    "6518275_scissors_cut_document_file",
+    "6518276_page_text_document_file",
+    "6518277_archive_personal_identification_file",
+    "6518278_choose_mark_check_file",
+    "6518279_media_movie_film_file",
+    "6518280_data_statistic_chart_file",
+    "6518281_choose_open_click_file",
+    "6518282_mark_favorite_star_file",
+    "6518283_zip_archive_rar_compress",
+    "6518284_bookmark_mark_file_collection",
+    "6518285_image_photograph_photo_file",
+    "6518286_mobile_app_document_file",
+    "6518287_playlist_player_music_file",
+    "6518288_danger_alert_warning_file",
+    "6518289_delete_close_document_file",
+    "6518290_new_add_document_file",
+    "6518291_system_setup_document_file",
+    "6518292_attach_file_document_clip",
+    "6518293_account_business_finance_file",
+    "6518294_save_diskette_document_file",
+    "6518295_print_printer_document_file",
+    "6518296_delete_trash_remove_file",
+    "6518297_wireless_wifi_document_file",
+    "6518298_download_down_document_file",
+    "6518299_email_mail_document_file",
+    "6518300_view_preview_read_file",
+    "6518301_online_cloud_internet_file",
+    "6518302_network_url_link_file",
+    "6518303_delete_close_remove_file",
+    "6518304_protect_security_locked_file"
+])

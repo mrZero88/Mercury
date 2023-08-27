@@ -1,0 +1,60 @@
+//
+//  SpaceAndAstronomy.swift
+//  Alien
+//
+//  Created by Daniel Correia on 18.06.23.
+//
+
+public let SpaceAndAstronomy: (String, [String]) =
+("Space & Astronomy", [
+    "5884118_flag_spaceman_space_astronaut",
+    "5884119_earth_world_planet_globe",
+    "5884120_helmet_space_astronaut_astronomy",
+    "5884121_solar_galaxy_planets_system",
+    "5884122_launching_space_rocket_launch",
+    "5884123_star_astronomy_telescope_space",
+    "5884124_universe_spce_venus_planet",
+    "5884125_uranus_universe_planet_space",
+    "5884126_interstellar_ufo_spaceship_space",
+    "5884127_solar_sun_helios_space",
+    "5884128_galaxy_starry_astronomy_sky",
+    "5884129_shuttle_space_astronaut_spaceship",
+    "5884130_station_astonaut_technology_space",
+    "5884131_interstellar_shuttle_travel_space",
+    "5884132_space_universe_planet_saturn",
+    "5884133_astronaut_space_signal_satellite",
+    "5884134_roving_rover_astronomy_moon",
+    "5884135_rocket_orbit_astronaut_space",
+    "5884136_interstellar_techonology_spaceship_rocket",
+    "5884137_artificial_machine_robot_robotic",
+    "5884138_observatory_planetarium_building_astronomy",
+    "5884139_galaxy_nebula_astronomy_space",
+    "5884140_moon_space_planet_lunar",
+    "5884141_land_landing_moon_space",
+    "5884142_light_astronomy_distance_year",
+    "5884143_landing_capsule_astronaut_space",
+    "5884144_collision_meteor_crater_impact",
+    "5884145_milky_universe_space_way_galaxy",
+    "5884146_moon_eclipse_astronomy_sun",
+    "5884147_space_starwars_star_death_death star",
+    "5884148_astronomy_crescent_eclipse_moon",
+    "5884149_room_control_astronaut_space",
+    "5884150_contact_aliens_interstellar_space",
+    "5884151_astronomy_dipper_big_zodiac_constellation",
+    "5884152_comet_astronomy_meteorite_meteor",
+    "5884153_astronomy_disaster_meteor_collision",
+    "5884154_astronaut_spaceship_capsule_space",
+    "5884155_camera_space_spaceman_astronaut",
+    "5884156_astronomy_universe_space_blackhole",
+    "5884157_astronomy_core_struture_earth",
+    "5884158_moonwalk_space_astronaut_suit",
+    "5884159_astronomy_asteroids_belt_space",
+    "5884160_space_life_creature_alien",
+    "5884161_abduction_spaceship_ufo_alien",
+    "5884162_satellite_signal_radar_antenna",
+    "5884163_space_universe_planet_jupiter",
+    "5884164_planet_mars_space_universe",
+    "5884165_planet_mercury_space_universe",
+    "5884166_space_neptune_planet_universe",
+    "5884167_planet_orbit_space_satellite"
+])

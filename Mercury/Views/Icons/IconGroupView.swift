@@ -8,20 +8,22 @@
 import SwiftUI
 
 struct IconGroupView: View {
+    @Environment(\.colorScheme) var colorScheme
     var title: String
-    @Binding var selectedIconsPanel: String
+    @Binding var selectedIconsGroup: String
+    @Binding var searchText: String
+    @Binding var iconNames: [String]
     
     var body: some View {
         ZStack {
             Button {
-                withAnimation {
-                    selectedIconsPanel = title
-                }
+                selectedIconsGroup = title
+                self.iconNames = AppIconGroups.first(where: {$0.0 == selectedIconsGroup})?.1 ?? []
             } label: {
-                if(selectedIconsPanel == title) {
-                    Label(title, systemImage: "checkmark.circle.fill").foregroundColor(Color("White"))
+                if(selectedIconsGroup == title) {
+                    Label(title, systemImage: "checkmark.circle.fill").foregroundColor(ColorUtils.getColor(colorScheme: colorScheme, colorName: "White"))
                 } else {
-                    Label(title, systemImage: "checkmark.circle.fill").foregroundColor(Color("White")).labelStyle(.titleOnly)
+                    Label(title, systemImage: "checkmark.circle.fill").foregroundColor(ColorUtils.getColor(colorScheme: colorScheme, colorName: "White")).labelStyle(.titleOnly)
                 }
             }
             .font(.footnote)
@@ -35,6 +37,6 @@ struct IconGroupView: View {
 
 struct IconGroupView_Previews: PreviewProvider {
     static var previews: some View {
-        IconGroupView(title: "", selectedIconsPanel: .constant(""))
+        IconGroupView(title: "", selectedIconsGroup: .constant(""), searchText: .constant(""), iconNames: .constant([]))
     }
 }

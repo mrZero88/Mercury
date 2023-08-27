@@ -28,6 +28,8 @@ public let DefaultNoTopicSubtitle = "Welcome to Mercury!"
 public let DefaultNoTopicText1 = "Hello" + (UserName.isEmpty ? "" : " " + UserName) + "! At the moment you don't have any topics to be shown here in the widgets."
 public let DefaultNoTopicText2 = "To be able to see your created topic widgets, please create them in the app interface.\n\nYou can click here in the widget to open the app and start customizing it with useful information."
 
+public let DefautSelectedGroup: String = "Animal Kingdom"
+
 class Config {
     static func getPriorityColor(priority: Int16) -> Color {
         switch(priority) {

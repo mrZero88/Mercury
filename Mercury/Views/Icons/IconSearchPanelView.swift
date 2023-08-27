@@ -6,22 +6,19 @@
 //
 
 import SwiftUI
+import Combine
 
 struct IconSearchPanelView: View {
+    @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
-    var searchText: String
+    @Binding var searchText: String
     @Binding var iconName: String
-    
-    var icons: [String] {
-        get {
-            return getAllIcons().filter({$0.contains(searchText.lowercased())})
-        }
-    }
+    @Binding var iconNames: [String]
     
     var body: some View {
         ScrollView(showsIndicators: false) {
             Grid(horizontalSpacing: BorderPadding, verticalSpacing: BorderPadding) {
-                ForEach(icons.chunked(into: 5), id: \.self) { iconsChunk in
+                ForEach(iconNames.chunked(into: 5), id: \.self) { iconsChunk in
                     GridRow {
                         ForEach(iconsChunk, id: \.self) { icon in
                             Button {
@@ -29,7 +26,7 @@ struct IconSearchPanelView: View {
                                 dismiss()
                             } label: {
                                 if(!icon.isEmpty) {
-                                    Image(icon).resizable().scaledToFit().frame(maxWidth: .infinity).padding().foregroundColor(Color("White"))
+                                    Image(icon).resizable().scaledToFit().frame(maxWidth: .infinity).padding().foregroundColor(ColorUtils.getColor(colorScheme: colorScheme, colorName: "White"))
                                 }
                             }
                         }
@@ -46,6 +43,6 @@ struct IconSearchPanelView: View {
 
 struct IconSearchPanelView_Previews: PreviewProvider {
     static var previews: some View {
-        IconSearchPanelView(searchText: "", iconName: .constant(""))
+        IconSearchPanelView(searchText: .constant(""), iconName: .constant(""), iconNames: .constant([]))
     }
 }

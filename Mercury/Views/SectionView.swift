@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SectionView: View {
+    @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var viewModel: ViewModel
     @ObservedObject var section: Section
     @State var showEditSheet: Bool = false
@@ -26,7 +27,7 @@ struct SectionView: View {
             } label: {
                 Label("Delete", systemImage: "minus.circle").labelStyle(.iconOnly)
             }
-            .tint(Color("Red").opacity(0.5))
+            .tint(ColorUtils.getColor(colorScheme: colorScheme, colorName: "Red").opacity(0.5))
         }
         .swipeActions(edge: .leading, allowsFullSwipe: true) {
             Button {
@@ -35,14 +36,14 @@ struct SectionView: View {
             } label: {
                 Label("Edit", systemImage: "pencil.circle").labelStyle(.iconOnly)
             }
-            .tint(Color.accentColor.opacity(0.5))
+            .tint(ColorUtils.getColor(colorScheme: colorScheme, colorName: "Yellow").opacity(0.5))
         }
         .onTapGesture(count: 2) {
             showEditSheet = true
         }
         .sheet(isPresented: $showEditSheet) {
             SectionSheetView(section: section, isCreating: false)
-                .accentColor(Color.Color)
+                .accentColor(Color.getColor(colorScheme: colorScheme))
         }
         .alert(item: $alertInfo, content: { info in
             showAlert(info: info, viewModel: viewModel, section: section)

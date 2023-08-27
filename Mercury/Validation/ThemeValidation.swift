@@ -9,7 +9,7 @@ import Foundation
 
 public class ThemeValidation {
     
-    static var titleMaxChars = 50
+    static var titleMaxChars = 100
     static var textMaxChars = 20000
     
     public static func validate(title: String, text: String) -> Bool {

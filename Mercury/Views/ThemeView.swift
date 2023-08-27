@@ -9,6 +9,7 @@ import SwiftUI
 import UniformTypeIdentifiers
 
 struct ThemeView: View {
+    @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var viewModel: ViewModel
     @ObservedObject var theme: Theme
     @State var showCreateSheet: Bool = false
@@ -39,7 +40,7 @@ struct ThemeView: View {
         }
         .sheet(isPresented: $showCreateSheet) {
             TopicSheetView(topic: Topic.createEmptyTopic(theme: theme), isCreating: true)
-                .accentColor(Color.Color)
+                .accentColor(Color.getColor(colorScheme: colorScheme))
         }
         .navigationTitle(theme.title ?? "")
     }

@@ -58,6 +58,10 @@
 		B26E43572A9B9EA800A982BF /* LoveAndWedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E433C2A9B9EA800A982BF /* LoveAndWedding.swift */; };
 		B26E43592A9B9EDF00A982BF /* AppIconGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E43582A9B9EDF00A982BF /* AppIconGroups.swift */; };
 		B26E435B2A9BA1BE00A982BF /* SvgBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E435A2A9BA1BE00A982BF /* SvgBackgroundView.swift */; };
+		B26E435F2A9BA7C400A982BF /* IconSearchPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E435C2A9BA7C400A982BF /* IconSearchPanelView.swift */; };
+		B26E43602A9BA7C400A982BF /* IconsGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E435D2A9BA7C400A982BF /* IconsGroupView.swift */; };
+		B26E43612A9BA7C400A982BF /* IconGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E435E2A9BA7C400A982BF /* IconGroupView.swift */; };
+		B26E43632A9BA7E200A982BF /* IconsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E43622A9BA7E200A982BF /* IconsSheetView.swift */; };
 		B27D806F2A3C44970071FDAC /* MercuryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D806E2A3C44970071FDAC /* MercuryApp.swift */; };
 		B27D80742A3C44970071FDAC /* Mercury.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B27D80722A3C44970071FDAC /* Mercury.xcdatamodeld */; };
 		B27D80762A3C44970071FDAC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80752A3C44970071FDAC /* ContentView.swift */; };
@@ -142,7 +146,6 @@
 		B27D819D2A3C44E60071FDAC /* SettingsGroupDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81132A3C44E60071FDAC /* SettingsGroupDao.swift */; };
 		B27D819E2A3C44E60071FDAC /* TopicDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81142A3C44E60071FDAC /* TopicDao.swift */; };
 		B27D81A82A3C44E60071FDAC /* NavigationLinkThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81202A3C44E60071FDAC /* NavigationLinkThemeView.swift */; };
-		B27D81A92A3C44E60071FDAC /* IconsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81222A3C44E60071FDAC /* IconsSheetView.swift */; };
 		B27D81AA2A3C44E60071FDAC /* ThemeSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81232A3C44E60071FDAC /* ThemeSheetView.swift */; };
 		B27D81AB2A3C44E60071FDAC /* SectionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81242A3C44E60071FDAC /* SectionSheetView.swift */; };
 		B27D81AC2A3C44E60071FDAC /* TopicSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81252A3C44E60071FDAC /* TopicSheetView.swift */; };
@@ -153,9 +156,6 @@
 		B27D81B12A3C44E60071FDAC /* SheetButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D812B2A3C44E60071FDAC /* SheetButtonView.swift */; };
 		B27D81B22A3C44E60071FDAC /* IconFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D812C2A3C44E60071FDAC /* IconFieldView.swift */; };
 		B27D81B32A3C44E60071FDAC /* TextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D812D2A3C44E60071FDAC /* TextEditorView.swift */; };
-		B27D81B52A3C44E60071FDAC /* IconsPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81312A3C44E60071FDAC /* IconsPanelView.swift */; };
-		B27D81B62A3C44E60071FDAC /* IconSearchPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81322A3C44E60071FDAC /* IconSearchPanelView.swift */; };
-		B27D81B72A3C44E60071FDAC /* IconGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81332A3C44E60071FDAC /* IconGroupView.swift */; };
 		B27D81B82A3C44E60071FDAC /* TopicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81342A3C44E60071FDAC /* TopicView.swift */; };
 		B27D81B92A3C44E60071FDAC /* NavigationLinkTopicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81352A3C44E60071FDAC /* NavigationLinkTopicView.swift */; };
 		B27D81BE2A3C44E60071FDAC /* OnboardingPage1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D813D2A3C44E60071FDAC /* OnboardingPage1View.swift */; };
@@ -287,6 +287,10 @@
 		B26E433C2A9B9EA800A982BF /* LoveAndWedding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoveAndWedding.swift; sourceTree = "<group>"; };
 		B26E43582A9B9EDF00A982BF /* AppIconGroups.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIconGroups.swift; sourceTree = "<group>"; };
 		B26E435A2A9BA1BE00A982BF /* SvgBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SvgBackgroundView.swift; sourceTree = "<group>"; };
+		B26E435C2A9BA7C400A982BF /* IconSearchPanelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconSearchPanelView.swift; sourceTree = "<group>"; };
+		B26E435D2A9BA7C400A982BF /* IconsGroupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconsGroupView.swift; sourceTree = "<group>"; };
+		B26E435E2A9BA7C400A982BF /* IconGroupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconGroupView.swift; sourceTree = "<group>"; };
+		B26E43622A9BA7E200A982BF /* IconsSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconsSheetView.swift; sourceTree = "<group>"; };
 		B27D806B2A3C44970071FDAC /* Mercury.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mercury.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27D806E2A3C44970071FDAC /* MercuryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercuryApp.swift; sourceTree = "<group>"; };
 		B27D80732A3C44970071FDAC /* Mercury.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mercury.xcdatamodel; sourceTree = "<group>"; };
@@ -375,7 +379,6 @@
 		B27D81132A3C44E60071FDAC /* SettingsGroupDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsGroupDao.swift; sourceTree = "<group>"; };
 		B27D81142A3C44E60071FDAC /* TopicDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicDao.swift; sourceTree = "<group>"; };
 		B27D81202A3C44E60071FDAC /* NavigationLinkThemeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationLinkThemeView.swift; sourceTree = "<group>"; };
-		B27D81222A3C44E60071FDAC /* IconsSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconsSheetView.swift; sourceTree = "<group>"; };
 		B27D81232A3C44E60071FDAC /* ThemeSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeSheetView.swift; sourceTree = "<group>"; };
 		B27D81242A3C44E60071FDAC /* SectionSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionSheetView.swift; sourceTree = "<group>"; };
 		B27D81252A3C44E60071FDAC /* TopicSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicSheetView.swift; sourceTree = "<group>"; };
@@ -386,9 +389,6 @@
 		B27D812B2A3C44E60071FDAC /* SheetButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetButtonView.swift; sourceTree = "<group>"; };
 		B27D812C2A3C44E60071FDAC /* IconFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconFieldView.swift; sourceTree = "<group>"; };
 		B27D812D2A3C44E60071FDAC /* TextEditorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextEditorView.swift; sourceTree = "<group>"; };
-		B27D81312A3C44E60071FDAC /* IconsPanelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconsPanelView.swift; sourceTree = "<group>"; };
-		B27D81322A3C44E60071FDAC /* IconSearchPanelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconSearchPanelView.swift; sourceTree = "<group>"; };
-		B27D81332A3C44E60071FDAC /* IconGroupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconGroupView.swift; sourceTree = "<group>"; };
 		B27D81342A3C44E60071FDAC /* TopicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicView.swift; sourceTree = "<group>"; };
 		B27D81352A3C44E60071FDAC /* NavigationLinkTopicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationLinkTopicView.swift; sourceTree = "<group>"; };
 		B27D813D2A3C44E60071FDAC /* OnboardingPage1View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPage1View.swift; sourceTree = "<group>"; };
@@ -849,7 +849,7 @@
 		B27D81212A3C44E60071FDAC /* Sheets */ = {
 			isa = PBXGroup;
 			children = (
-				B27D81222A3C44E60071FDAC /* IconsSheetView.swift */,
+				B26E43622A9BA7E200A982BF /* IconsSheetView.swift */,
 				B27D81232A3C44E60071FDAC /* ThemeSheetView.swift */,
 				B27D81242A3C44E60071FDAC /* SectionSheetView.swift */,
 				B27D81252A3C44E60071FDAC /* TopicSheetView.swift */,
@@ -880,9 +880,9 @@
 		B27D81302A3C44E60071FDAC /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				B27D81312A3C44E60071FDAC /* IconsPanelView.swift */,
-				B27D81322A3C44E60071FDAC /* IconSearchPanelView.swift */,
-				B27D81332A3C44E60071FDAC /* IconGroupView.swift */,
+				B26E435E2A9BA7C400A982BF /* IconGroupView.swift */,
+				B26E435C2A9BA7C400A982BF /* IconSearchPanelView.swift */,
+				B26E435D2A9BA7C400A982BF /* IconsGroupView.swift */,
 			);
 			path = Icons;
 			sourceTree = "<group>";
@@ -1145,6 +1145,7 @@
 			files = (
 				B26E431E2A9B9CAF00A982BF /* Ccchaos.swift in Sources */,
 				B27D81602A3C44E60071FDAC /* AlertInfo.swift in Sources */,
+				B26E435F2A9BA7C400A982BF /* IconSearchPanelView.swift in Sources */,
 				B26E435B2A9BA1BE00A982BF /* SvgBackgroundView.swift in Sources */,
 				B27D81482A3C44E60071FDAC /* SettingsControllerExtension.swift in Sources */,
 				B26E431F2A9B9CAF00A982BF /* Wwwhirl.swift in Sources */,
@@ -1157,8 +1158,8 @@
 				B26E430B2A9B99DE00A982BF /* SettingsView.swift in Sources */,
 				B27D81612A3C44E60071FDAC /* Trapezoid.swift in Sources */,
 				B26E42FE2A9B99AC00A982BF /* StringSettingView.swift in Sources */,
+				B26E43612A9BA7C400A982BF /* IconGroupView.swift in Sources */,
 				B27D81B82A3C44E60071FDAC /* TopicView.swift in Sources */,
-				B27D81B72A3C44E60071FDAC /* IconGroupView.swift in Sources */,
 				B27D81942A3C44E60071FDAC /* AppGroup.swift in Sources */,
 				B27D81442A3C44E60071FDAC /* UIApplicationExtension.swift in Sources */,
 				B26E433F2A9B9EA800A982BF /* FamilyAndBaby.swift in Sources */,
@@ -1168,7 +1169,6 @@
 				B26E43072A9B99AC00A982BF /* UUIDSettingView.swift in Sources */,
 				B27D81452A3C44E60071FDAC /* SceneViewExtension.swift in Sources */,
 				B27D81B92A3C44E60071FDAC /* NavigationLinkTopicView.swift in Sources */,
-				B27D81B62A3C44E60071FDAC /* IconSearchPanelView.swift in Sources */,
 				B27D814B2A3C44E60071FDAC /* DrawingCanvasViewControllerExtension.swift in Sources */,
 				B27D81432A3C44E60071FDAC /* ArrayExtension.swift in Sources */,
 				B27D806F2A3C44970071FDAC /* MercuryApp.swift in Sources */,
@@ -1190,6 +1190,7 @@
 				B26E43442A9B9EA800A982BF /* EnergyAndEnvironment.swift in Sources */,
 				B26E430D2A9B9A4700A982BF /* SettingsController.swift in Sources */,
 				B27D81C02A3C44E60071FDAC /* OnboardingPage2View.swift in Sources */,
+				B26E43632A9BA7E200A982BF /* IconsSheetView.swift in Sources */,
 				B26E434E2A9B9EA800A982BF /* EngineerAndConstruction.swift in Sources */,
 				B27D81572A3C44E60071FDAC /* Period.swift in Sources */,
 				B27D81D02A3C461E0071FDAC /* DrawingCanvasViewController.swift in Sources */,
@@ -1214,7 +1215,6 @@
 				B26E43592A9B9EDF00A982BF /* AppIconGroups.swift in Sources */,
 				B26E434F2A9B9EA800A982BF /* ClothesAndAccessory.swift in Sources */,
 				B27D81AF2A3C44E60071FDAC /* TextFieldIconView.swift in Sources */,
-				B27D81A92A3C44E60071FDAC /* IconsSheetView.swift in Sources */,
 				B27D814D2A3C44E60071FDAC /* SSettingExtension.swift in Sources */,
 				B27D81E82A3C481F0071FDAC /* MercuryWidget.intentdefinition in Sources */,
 				B26E434A2A9B9EA800A982BF /* EducationAndScience.swift in Sources */,
@@ -1255,6 +1255,7 @@
 				B26E430A2A9B99DE00A982BF /* SettingsIphoneView.swift in Sources */,
 				B27D81492A3C44E60071FDAC /* ColorExtension.swift in Sources */,
 				B26E43132A9B9BFE00A982BF /* ViewModifierBackground.swift in Sources */,
+				B26E43602A9BA7C400A982BF /* IconsGroupView.swift in Sources */,
 				B26E433E2A9B9EA800A982BF /* BusinessAndFinance.swift in Sources */,
 				B26E43512A9B9EA800A982BF /* Japan.swift in Sources */,
 				B26E43452A9B9EA800A982BF /* LifestyleAndEntertainment.swift in Sources */,
@@ -1266,7 +1267,6 @@
 				B27D81982A3C44E60071FDAC /* TopicValidation.swift in Sources */,
 				B26E43062A9B99AC00A982BF /* SettingView.swift in Sources */,
 				B27D81532A3C44E60071FDAC /* SettingsViewModel.swift in Sources */,
-				B27D81B52A3C44E60071FDAC /* IconsPanelView.swift in Sources */,
 				B27D81952A3C44E60071FDAC /* UserValidation.swift in Sources */,
 				B27D81AD2A3C44E60071FDAC /* SectionView.swift in Sources */,
 				B27D81CD2A3C461E0071FDAC /* Persistence.swift in Sources */,

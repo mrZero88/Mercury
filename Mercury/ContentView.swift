@@ -9,6 +9,7 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var settingsChangedTrigger: SettingsChangedTrigger
     @EnvironmentObject var viewModel: ViewModel
     @State var showCreateSheet: Bool = false
@@ -62,12 +63,12 @@ struct ContentView: View {
             }
             .sheet(isPresented: $showCreateSheet) {
                 ThemeSheetView(theme: Theme.createEmptyTheme(), isCreating: true)
-                    .accentColor(Color.Color)
+                    .accentColor(Color.getColor(colorScheme: colorScheme))
             }
             .navigationTitle("Mercury")
             .navigationBarTitleDisplayMode(.inline)
         }
-        .accentColor(Color.Color)
+        .accentColor(Color.getColor(colorScheme: colorScheme))
         .onOpenURL { url in
             let topicId = url.absoluteString.split(separator: "//")[1]
             let topics = TopicDao.fetchTopics()

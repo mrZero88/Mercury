@@ -41,7 +41,7 @@ struct NavigationLinkTopicView: View {
             } label: {
                 Label("Delete", systemImage: "minus.circle").labelStyle(.iconOnly)
             }
-            .tint(Color("Red").opacity(0.5))
+            .tint(ColorUtils.getColor(colorScheme: colorScheme, colorName: "Red").opacity(0.5))
         }
         .swipeActions(edge: .leading, allowsFullSwipe: true) {
             Button {
@@ -50,11 +50,11 @@ struct NavigationLinkTopicView: View {
             } label: {
                 Label("Edit", systemImage: "pencil.circle").labelStyle(.iconOnly)
             }
-            .tint(Color.accentColor.opacity(0.5))
+            .tint(ColorUtils.getColor(colorScheme: colorScheme, colorName: "Yellow").opacity(0.5))
         }
         .sheet(isPresented: $showEditSheet) {
             TopicSheetView(topic: topic, isCreating: false)
-                .accentColor(Color.Color)
+                .accentColor(Color.getColor(colorScheme: colorScheme))
         }
         .alert(item: $alertInfo, content: { info in
             showAlert(info: info, viewModel: viewModel, topic: topic)

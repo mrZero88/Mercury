@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct IconFieldView: View {
+    @Environment(\.colorScheme) var colorScheme
     var inSheet: Bool = false
     @Binding var iconName: String
     @State private var showingIconstSheet = false
@@ -23,11 +24,11 @@ struct IconFieldView: View {
             showingIconstSheet = true
         } label: {
             if(!iconName.isEmpty) {
-                Image(iconName).resizable().padding(5.0).frame(width: 40, height: 40, alignment: .center).foregroundColor(Color.Color)
+                Image(iconName).resizable().padding(5.0).frame(width: 40, height: 40, alignment: .center).foregroundColor(Color.getColor(colorScheme: colorScheme))
             }
         }
         .sheet(isPresented: $showingIconstSheet) {
-            IconsSheetView(iconName: $iconName).accentColor(Color.Color)
+            IconsSheetView(iconName: $iconName).accentColor(Color.getColor(colorScheme: colorScheme))
         }
         .padding(.horizontal)
         .frame(maxHeight: .infinity)

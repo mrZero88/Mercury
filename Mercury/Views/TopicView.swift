@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TopicView: View {
+    @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var viewModel: ViewModel
     @ObservedObject var topic: Topic
     @State var showCreateSheet: Bool = false
@@ -36,7 +37,7 @@ struct TopicView: View {
         }
         .sheet(isPresented: $showCreateSheet) {
             SectionSheetView(section: Section.createEmptySection(topic: topic), isCreating: true)
-                .accentColor(Color.Color)
+                .accentColor(Color.getColor(colorScheme: colorScheme))
         }
         .scrollContentBackground(.hidden)
         .frame(maxWidth: .infinity, maxHeight: .infinity)

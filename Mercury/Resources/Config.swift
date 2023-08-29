@@ -20,6 +20,7 @@ public let DefaultTopicIconName = "7082272_image_photo_photography_picture"
 
 public let DefaultWidgetCardTitle = "Mercury"
 public let DefaultWidgetCardSubtitle = "planet"
+public let DefaultWidgetCardThemeTitle = "Universe"
 public let DefaultWidgetCardText1 = "Mercury is the first planet from the Sun and the smallest planet in the Solar System."
 public let DefaultWidgetCardText2 = "It is a terrestrial planet with a heavily cratered surface due to the planet having no geological activity and an extremely tenuous atmosphere (called an exosphere)."
 

@@ -9,27 +9,16 @@ import SwiftUI
 import Foundation
 
 class ThemesController: ObservableObject {
-    @Published var themes: [Theme] = []
     
-    var activeThemes: [Theme] {
-        get {
-            themes.sorted(by: {first, second in
-                return first.order < second.order
-            })
-        }
-    }
-    
-    func getThemeById(id: String) -> Theme? {
-        return self.activeThemes.first(where: {$0.id!.description == id})
+    func getThemeById(themes: FetchedResults<Theme>, id: String) -> Theme? {
+        return themes.first(where: {$0.id!.description == id})
     }
     
     func saveTheme(theme: Theme, isCreating: Bool) {
         theme.isActive = true
         theme.updatedAt = Date()
         if(isCreating) {
-            if(ThemeValidation.validate(title: theme.title ?? "", text: theme.text ?? "")) {
-                self.themes.append(theme)
-            } else {
+            if(!ThemeValidation.validate(title: theme.title ?? "", text: theme.text ?? "")) {
                 self.deleteTheme(theme: theme)
             }
         }
@@ -65,14 +54,13 @@ class ThemesController: ObservableObject {
     }
     
     func deleteAllThemes() {
-        for theme in themes {
+        for theme in ThemeDao.fetchThemes() {
             self.deleteTheme(theme: theme)
         }
     }
     
     func deleteTheme(theme: Theme?) {
         theme?.delete()
-        themes.removeAll(where: {$0.id == theme?.id})
         theme?.objectWillChange.send()
     }
 }

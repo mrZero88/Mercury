@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B2679E012A9E751600F34EC6 /* JsonDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2679E002A9E751600F34EC6 /* JsonDocument.swift */; };
+		B2679E042A9E758300F34EC6 /* MercuryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2679E032A9E758300F34EC6 /* MercuryData.swift */; };
+		B2679E092A9E765B00F34EC6 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2679E082A9E765B00F34EC6 /* Theme.swift */; };
+		B2679E0B2A9E775F00F34EC6 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2679E0A2A9E775F00F34EC6 /* Topic.swift */; };
+		B2679E0D2A9E77F900F34EC6 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2679E0C2A9E77F900F34EC6 /* Section.swift */; };
+		B2679E0E2A9E789E00F34EC6 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2679E082A9E765B00F34EC6 /* Theme.swift */; };
+		B2679E0F2A9E789E00F34EC6 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2679E0C2A9E77F900F34EC6 /* Section.swift */; };
+		B2679E102A9E789E00F34EC6 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2679E0A2A9E775F00F34EC6 /* Topic.swift */; };
 		B26E42FD2A9B99AC00A982BF /* SliderSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E42F22A9B99AC00A982BF /* SliderSettingView.swift */; };
 		B26E42FE2A9B99AC00A982BF /* StringSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E42F32A9B99AC00A982BF /* StringSettingView.swift */; };
 		B26E42FF2A9B99AC00A982BF /* DateSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E42F42A9B99AC00A982BF /* DateSettingView.swift */; };
@@ -62,6 +70,8 @@
 		B26E43602A9BA7C400A982BF /* IconsGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E435D2A9BA7C400A982BF /* IconsGroupView.swift */; };
 		B26E43612A9BA7C400A982BF /* IconGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E435E2A9BA7C400A982BF /* IconGroupView.swift */; };
 		B26E43632A9BA7E200A982BF /* IconsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E43622A9BA7E200A982BF /* IconsSheetView.swift */; };
+		B26E43642A9BC7A800A982BF /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80A62A3C44E50071FDAC /* ColorExtension.swift */; };
+		B26E43652A9BC7D500A982BF /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81042A3C44E50071FDAC /* ColorUtils.swift */; };
 		B27D806F2A3C44970071FDAC /* MercuryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D806E2A3C44970071FDAC /* MercuryApp.swift */; };
 		B27D80742A3C44970071FDAC /* Mercury.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B27D80722A3C44970071FDAC /* Mercury.xcdatamodeld */; };
 		B27D80762A3C44970071FDAC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80752A3C44970071FDAC /* ContentView.swift */; };
@@ -237,6 +247,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B2679E002A9E751600F34EC6 /* JsonDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonDocument.swift; sourceTree = "<group>"; };
+		B2679E032A9E758300F34EC6 /* MercuryData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MercuryData.swift; sourceTree = "<group>"; };
+		B2679E082A9E765B00F34EC6 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		B2679E0A2A9E775F00F34EC6 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
+		B2679E0C2A9E77F900F34EC6 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		B26E42F22A9B99AC00A982BF /* SliderSettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderSettingView.swift; sourceTree = "<group>"; };
 		B26E42F32A9B99AC00A982BF /* StringSettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringSettingView.swift; sourceTree = "<group>"; };
 		B26E42F42A9B99AC00A982BF /* DateSettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateSettingView.swift; sourceTree = "<group>"; };
@@ -450,6 +465,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B2679E022A9E756400F34EC6 /* ImportExport */ = {
+			isa = PBXGroup;
+			children = (
+				B2679E032A9E758300F34EC6 /* MercuryData.swift */,
+				B2679E002A9E751600F34EC6 /* JsonDocument.swift */,
+			);
+			path = ImportExport;
+			sourceTree = "<group>";
+		};
+		B2679E072A9E762200F34EC6 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				B2679E082A9E765B00F34EC6 /* Theme.swift */,
+				B2679E0A2A9E775F00F34EC6 /* Topic.swift */,
+				B2679E0C2A9E77F900F34EC6 /* Section.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
 		B26E43112A9B9BFE00A982BF /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
@@ -620,6 +654,8 @@
 		B27D80B42A3C44E50071FDAC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B2679E072A9E762200F34EC6 /* DataModels */,
+				B2679E022A9E756400F34EC6 /* ImportExport */,
 				B27D80B52A3C44E50071FDAC /* InfoItem.swift */,
 				B27D80B62A3C44E50071FDAC /* DesignPatternS.swift */,
 				B27D80B72A3C44E50071FDAC /* Period.swift */,
@@ -1189,6 +1225,7 @@
 				B26E43462A9B9EA800A982BF /* Transportation.swift in Sources */,
 				B26E43442A9B9EA800A982BF /* EnergyAndEnvironment.swift in Sources */,
 				B26E430D2A9B9A4700A982BF /* SettingsController.swift in Sources */,
+				B2679E0B2A9E775F00F34EC6 /* Topic.swift in Sources */,
 				B27D81C02A3C44E60071FDAC /* OnboardingPage2View.swift in Sources */,
 				B26E43632A9BA7E200A982BF /* IconsSheetView.swift in Sources */,
 				B26E434E2A9B9EA800A982BF /* EngineerAndConstruction.swift in Sources */,
@@ -1227,6 +1264,7 @@
 				B27D80742A3C44970071FDAC /* Mercury.xcdatamodeld in Sources */,
 				B27D815E2A3C44E60071FDAC /* DayItem.swift in Sources */,
 				B27D80762A3C44970071FDAC /* ContentView.swift in Sources */,
+				B2679E0D2A9E77F900F34EC6 /* Section.swift in Sources */,
 				B26E43422A9B9EA800A982BF /* NatureAndLandscape.swift in Sources */,
 				B27D81542A3C44E60071FDAC /* ViewModel.swift in Sources */,
 				B27D81B02A3C44E60071FDAC /* TextFieldView.swift in Sources */,
@@ -1242,6 +1280,7 @@
 				B27D81AB2A3C44E60071FDAC /* SectionSheetView.swift in Sources */,
 				B27D81C12A3C44E60071FDAC /* OnboardingPage4View.swift in Sources */,
 				B26E43492A9B9EA800A982BF /* BasicDesign.swift in Sources */,
+				B2679E042A9E758300F34EC6 /* MercuryData.swift in Sources */,
 				B27D818E2A3C44E60071FDAC /* SettingsChangeTrigger.swift in Sources */,
 				B27D819D2A3C44E60071FDAC /* SettingsGroupDao.swift in Sources */,
 				B27D814A2A3C44E60071FDAC /* UIDeviceExtension.swift in Sources */,
@@ -1265,6 +1304,7 @@
 				B27D81462A3C44E60071FDAC /* BundleExtension.swift in Sources */,
 				B26E43572A9B9EA800A982BF /* LoveAndWedding.swift in Sources */,
 				B27D81982A3C44E60071FDAC /* TopicValidation.swift in Sources */,
+				B2679E012A9E751600F34EC6 /* JsonDocument.swift in Sources */,
 				B26E43062A9B99AC00A982BF /* SettingView.swift in Sources */,
 				B27D81532A3C44E60071FDAC /* SettingsViewModel.swift in Sources */,
 				B27D81952A3C44E60071FDAC /* UserValidation.swift in Sources */,
@@ -1273,6 +1313,7 @@
 				B27D815A2A3C44E60071FDAC /* Range.swift in Sources */,
 				B27D81AA2A3C44E60071FDAC /* ThemeSheetView.swift in Sources */,
 				B26E43032A9B99AC00A982BF /* BoolSettingView.swift in Sources */,
+				B2679E092A9E765B00F34EC6 /* Theme.swift in Sources */,
 				B26E431D2A9B9CAF00A982BF /* Ooorganize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1301,18 +1342,23 @@
 				B27D81F82A3C486D0071FDAC /* WidgetCardView.swift in Sources */,
 				B27D81F72A3C48690071FDAC /* WidgetViewModel.swift in Sources */,
 				B27D82082A3C49B50071FDAC /* SSettingExtension.swift in Sources */,
+				B26E43642A9BC7A800A982BF /* ColorExtension.swift in Sources */,
 				B27D81E02A3C481F0071FDAC /* MercuryWidgetLiveActivity.swift in Sources */,
 				B27D81FC2A3C48B40071FDAC /* SSectionExtension.swift in Sources */,
 				B27D81FD2A3C48BA0071FDAC /* SThemeExtension.swift in Sources */,
 				B27D81F92A3C48780071FDAC /* Mercury.xcdatamodeld in Sources */,
 				B27D82002A3C494A0071FDAC /* ToArrayUtils.swift in Sources */,
+				B2679E0F2A9E789E00F34EC6 /* Section.swift in Sources */,
 				B27D81FE2A3C49220071FDAC /* SettingsControllerExtension.swift in Sources */,
 				B27D82072A3C49A70071FDAC /* TopicDao.swift in Sources */,
+				B26E43652A9BC7D500A982BF /* ColorUtils.swift in Sources */,
+				B2679E102A9E789E00F34EC6 /* Topic.swift in Sources */,
 				B27D82092A3C49C00071FDAC /* SSettingsGroupExtension.swift in Sources */,
 				B27D81FF2A3C493A0071FDAC /* Persistence.swift in Sources */,
 				B27D82032A3C497D0071FDAC /* SectionDao.swift in Sources */,
 				B27D82062A3C499E0071FDAC /* SettingsGroupDao.swift in Sources */,
 				B27D81FB2A3C48B10071FDAC /* STopicExtension.swift in Sources */,
+				B2679E0E2A9E789E00F34EC6 /* Theme.swift in Sources */,
 				B27D81E22A3C481F0071FDAC /* MercuryWidget.swift in Sources */,
 				B27D82042A3C49890071FDAC /* AppGroup.swift in Sources */,
 				B27D82052A3C49960071FDAC /* SettingDao.swift in Sources */,
@@ -1511,8 +1557,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -1550,8 +1596,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";

@@ -13,17 +13,19 @@ struct Provider: IntentTimelineProvider {
     let vm: WidgetViewModel = WidgetViewModel()
     
     func placeholder(in context: Context) -> SimpleEntry {
-        return SimpleEntry(id: nil, title: DefaultWidgetCardTitle, subtitle: DefaultWidgetCardSubtitle, text1: DefaultWidgetCardText1, text2: DefaultWidgetCardText2, date: Date(), currentWidgetIndex: 1, totalWidgetsCount: 1, configuration: ConfigurationIntent())
+        return SimpleEntry(id: nil, title: DefaultWidgetCardTitle, subtitle: DefaultWidgetCardSubtitle, themeTitle: DefaultWidgetCardThemeTitle, text1: DefaultWidgetCardText1, text2: DefaultWidgetCardText2, date: Date(), currentWidgetIndex: 1, totalWidgetsCount: 1, icon: "", configuration: ConfigurationIntent())
     }
     
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
         let topic = vm.randomTopics.randomElement()
         let title = topic?.title ?? DefaultWidgetCardTitle
         let type = topic?.subtitle ?? DefaultWidgetCardSubtitle
+        let themeTitle = topic?.theme?.title ?? DefaultWidgetCardThemeTitle
         let text1 = topic?.activeSections.first(where: {$0.order == 1})?.text ?? DefaultWidgetCardText1
         let text2 = topic?.activeSections.first(where: {$0.order == 2})?.text ?? DefaultWidgetCardText2
+        let icon = topic?.theme?.iconName ?? ""
         
-        let entry = SimpleEntry(id: nil, title: title, subtitle: type, text1: text1!, text2: text2!, date: Date(), currentWidgetIndex: 1, totalWidgetsCount: 1, configuration: configuration)
+        let entry = SimpleEntry(id: nil, title: title, subtitle: type, themeTitle: themeTitle, text1: text1!, text2: text2!, date: Date(), currentWidgetIndex: 1, totalWidgetsCount: 1, icon: icon, configuration: configuration)
         
         completion(entry)
     }
@@ -37,7 +39,7 @@ struct Provider: IntentTimelineProvider {
         let topicsCount = topics.count
         
         if(topicsCount == 0) {
-            let entry = SimpleEntry(id: nil, title: DefaultNoTopicTitle, subtitle: DefaultNoTopicSubtitle, text1: DefaultNoTopicText1, text2: DefaultNoTopicText2, date: Date(), currentWidgetIndex: 1, totalWidgetsCount: 1, configuration: configuration)
+            let entry = SimpleEntry(id: nil, title: DefaultNoTopicTitle, subtitle: DefaultNoTopicSubtitle, themeTitle: DefaultWidgetCardThemeTitle, text1: DefaultNoTopicText1, text2: DefaultNoTopicText2, date: Date(), currentWidgetIndex: 1, totalWidgetsCount: 1, icon: "", configuration: configuration)
             entries.append(entry)
         }
         
@@ -47,10 +49,12 @@ struct Provider: IntentTimelineProvider {
             
             let title = topic.title ?? ""
             let type = topic.subtitle ?? ""
+            let themeTitle = topic.theme?.title ?? ""
             let text1 = topic.activeSections.first(where: {$0.order == 1})?.text ?? ""
             let text2 = topic.activeSections.first(where: {$0.order == 2})?.text ?? ""
+            let icon = topic.theme?.iconName ?? ""
             
-            let entry = SimpleEntry(id: topic.id, title: title, subtitle: type, text1: text1, text2: text2, date: entryDate, currentWidgetIndex: hourOffset + 1, totalWidgetsCount: topicsCount, configuration: configuration)
+            let entry = SimpleEntry(id: topic.id, title: title, subtitle: type, themeTitle: themeTitle, text1: text1, text2: text2, date: entryDate, currentWidgetIndex: hourOffset + 1, totalWidgetsCount: topicsCount, icon: icon, configuration: configuration)
             entries.append(entry)
         }
         
@@ -63,11 +67,13 @@ struct SimpleEntry: TimelineEntry {
     let id: UUID?
     let title: String
     let subtitle: String
+    let themeTitle: String
     let text1: String
     let text2: String
     let date: Date
     let currentWidgetIndex: Int
     let totalWidgetsCount: Int
+    let icon: String
     let configuration: ConfigurationIntent
 }
 
@@ -75,7 +81,7 @@ struct MercuryWidgetEntryView : View {
     var entry: Provider.Entry
     
     var body: some View {
-        WidgetCardView(id: entry.id, title: entry.title, subtitle: entry.subtitle, text1: entry.text1, text2: entry.text2, date: entry.date, currentWidgetIndex: entry.currentWidgetIndex, totalWidgetsCount: entry.totalWidgetsCount)
+        WidgetCardView(id: entry.id, title: entry.title, subtitle: entry.subtitle, themeTitle: entry.themeTitle, text1: entry.text1, text2: entry.text2, date: entry.date, currentWidgetIndex: entry.currentWidgetIndex, totalWidgetsCount: entry.totalWidgetsCount, icon: entry.icon)
     }
 }
 
@@ -99,10 +105,12 @@ struct DesignPatternsWidget_Previews: PreviewProvider {
         let topic = vm.randomTopics.randomElement()
         let title = topic?.title ?? DefaultWidgetCardTitle
         let type = topic?.subtitle ?? DefaultWidgetCardSubtitle
+        let themeTitle = topic?.theme?.title ?? DefaultWidgetCardThemeTitle
         let text1 = topic?.activeSections.first(where: {$0.order == 1})?.text ?? DefaultWidgetCardText1
         let text2 = topic?.activeSections.first(where: {$0.order == 2})?.text ?? DefaultWidgetCardText2
+        let icon = topic?.theme?.iconName ?? ""
         
-        MercuryWidgetEntryView(entry: SimpleEntry(id: nil, title: title, subtitle: type, text1: text1, text2: text2, date: Date(), currentWidgetIndex: 1, totalWidgetsCount: 1, configuration: ConfigurationIntent()))
+        MercuryWidgetEntryView(entry: SimpleEntry(id: nil, title: title, subtitle: type, themeTitle: themeTitle, text1: text1, text2: text2, date: Date(), currentWidgetIndex: 1, totalWidgetsCount: 1, icon: icon, configuration: ConfigurationIntent()))
             .previewContext(WidgetPreviewContext(family: .systemExtraLarge))
     }
 }

@@ -17,6 +17,7 @@ struct MercuryApp: App {
                 .environmentObject(viewModel)
                 .environmentObject(viewModel.settingsViewModel)
                 .environmentObject(SettingsChangedTrigger())
+                .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
         }
     }
 }

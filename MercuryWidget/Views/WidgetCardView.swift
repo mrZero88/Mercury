@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct WidgetCardView: View {
+    @Environment(\.colorScheme) var colorScheme
     var id: UUID?
     var title: String
     var subtitle: String
+    var themeTitle: String
     var text1: String
     var text2: String
     var date: Date
     var currentWidgetIndex: Int
     var totalWidgetsCount: Int
+    var icon: String
     
     var body: some View {
         VStack {
@@ -24,7 +27,11 @@ struct WidgetCardView: View {
                     Link(destination: URL(string: "widget://" + id!.description)!) {
                         HStack {
                             VStack(alignment: .leading) {
-                                Text(title).font(.title)
+                                HStack {
+                                    Text(title).font(.title)
+                                    Spacer()
+                                }
+                                Text(themeTitle).font(.subheadline).foregroundColor(Color.yellow)
                                 HStack {
                                     Text(subtitle).font(.subheadline).foregroundColor(.secondary)
                                     Spacer()
@@ -46,6 +53,7 @@ struct WidgetCardView: View {
                     HStack {
                         VStack(alignment: .leading) {
                             Text(title).font(.title)
+                            Text(themeTitle).font(.subheadline).foregroundColor(Color.yellow)
                             HStack {
                                 Text(subtitle).font(.subheadline).foregroundColor(.secondary)
                                 Spacer()
@@ -73,6 +81,6 @@ struct WidgetCardView: View {
 
 struct WidgetCardView_Previews: PreviewProvider {
     static var previews: some View {
-        WidgetCardView(title: "Hello", subtitle: "World", text1: "This is hello world", text2: "This is how it is", date: Date(), currentWidgetIndex: 1, totalWidgetsCount: 1)
+        WidgetCardView(title: "Hello", subtitle: "World", themeTitle: "", text1: "This is hello world", text2: "This is how it is", date: Date(), currentWidgetIndex: 1, totalWidgetsCount: 1, icon: "")
     }
 }

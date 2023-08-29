@@ -15,6 +15,7 @@ struct SettingView: View {
     @State var alertInfo: AlertInfo?
     @State private var isExporting: Bool = false
     @State private var isImporting: Bool = false
+    @State private var document = JsonDocument(Data())
     
     var body: some View {
         HStack(spacing: 0) {
@@ -34,6 +35,26 @@ struct SettingView: View {
                         .frame(maxWidth: .infinity)
                 }
                 .buttonStyle(.bordered)
+                .fileExporter(isPresented: $isExporting,
+                              document: document,
+                              contentType: .json,
+                              defaultFilename: "Mercury_" + Date().localDateTimeZoneDateDescription) { result in
+                    switch result {
+                    case .success(_):
+                        break
+                    case .failure(let error):
+                        print(error)
+                    }
+                }
+                              .fileImporter(isPresented: $isImporting,
+                                            allowedContentTypes: [.json]) { result in
+                                  switch(result){
+                                  case .success(let url):
+                                      importData(from: url)
+                                  case .failure(let error):
+                                      print(error.localizedDescription)
+                                  }
+                              }
             } else if(setting.type! == "Color") {
                 ColorSettingView(value: Binding<String> (
                     get: {
@@ -159,6 +180,27 @@ struct SettingView: View {
             break
         default:
             break
+        }
+    }
+    
+    private func importData(from url: URL) {
+        let accessing = url.startAccessingSecurityScopedResource()
+        defer {
+            if accessing {
+                url.stopAccessingSecurityScopedResource()
+            }
+        }
+        
+        do {
+            
+            let data = try Data(contentsOf: url)
+            let decoder = JSONDecoder()
+            let mercuryData = try decoder.decode(MercuryData.self, from: data)
+            withAnimation {
+                viewModel.objectWillChange.send()
+            }
+        } catch {
+            print("Error on Import!", error.localizedDescription)
         }
     }
 }

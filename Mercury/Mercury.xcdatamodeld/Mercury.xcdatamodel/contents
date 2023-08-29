@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22F82" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
-    <entity name="Section" representedClassName="Section" syncable="YES" codeGenerationType="class">
+    <entity name="Section" representedClassName="Section" syncable="YES" codeGenerationType="category">
         <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="image" optional="YES" attributeType="Binary"/>
@@ -47,7 +47,7 @@
         <attribute name="updatedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="settings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Setting" inverseName="group" inverseEntity="Setting"/>
     </entity>
-    <entity name="Theme" representedClassName="Theme" syncable="YES" codeGenerationType="class">
+    <entity name="Theme" representedClassName="Theme" syncable="YES" codeGenerationType="category">
         <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="iconName" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
@@ -58,7 +58,7 @@
         <attribute name="updatedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="topics" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Topic" inverseName="theme" inverseEntity="Topic"/>
     </entity>
-    <entity name="Topic" representedClassName="Topic" syncable="YES" codeGenerationType="class">
+    <entity name="Topic" representedClassName="Topic" syncable="YES" codeGenerationType="category">
         <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="iconName" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>

@@ -17,9 +17,7 @@ class ViewModel: ObservableObject {
     @Published var sectionsController: SectionsController = SectionsController()
     @Published var usersController: UsersController = UsersController()
     
-    init() {
-        self.themesController.themes = ThemeDao.fetchThemes()
-        
+    init() {        
         themesController.objectWillChange.sink(receiveValue: {self.objectWillChange.send()}).store(in: &ViewModel.cancellables)
         topicsController.objectWillChange.sink(receiveValue: {self.objectWillChange.send()}).store(in: &ViewModel.cancellables)
         sectionsController.objectWillChange.sink(receiveValue: {self.objectWillChange.send()}).store(in: &ViewModel.cancellables)

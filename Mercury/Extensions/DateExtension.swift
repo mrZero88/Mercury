@@ -245,6 +245,13 @@ extension Date {
         return dateFormatter.string(from: self)
     }
     
+    var localDateTimeZoneDateDescription: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = .current
+        dateFormatter.dateFormat = "dd_MM_YY_HH_mm_ss"
+        return dateFormatter.string(from: self)
+    }
+    
     var weekDayDescription: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE"

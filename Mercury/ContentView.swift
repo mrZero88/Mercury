@@ -15,12 +15,19 @@ struct ContentView: View {
     @State var showCreateSheet: Bool = false
     @State private var presentedStack: [String] = []
     
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: .forward)
+        ],
+        predicate: NSPredicate(format: "isActive == true")
+    ) var themes: FetchedResults<Theme>
+    
     var body: some View {
         NavigationStack(path: $presentedStack) {
             VStack {
-                if(!viewModel.themesController.themes.isEmpty) {
+                if(!themes.isEmpty) {
                     List {
-                        ForEach(viewModel.themesController.activeThemes) { theme in
+                        ForEach(themes) { theme in
                             NavigationLinkThemeView(theme: theme)
                         }
                         .onMove(perform: move)
@@ -30,7 +37,7 @@ struct ContentView: View {
                         let type = String(items[0])
                         let id = String(items[1])
                         if(type == "theme") {
-                            ThemeView(theme: viewModel.themesController.getThemeById(id: id)!)
+                            ThemeView(theme: viewModel.themesController.getThemeById(themes: themes, id: id)!)
                         } else if(type == "topic") {
                             TopicView(topic: viewModel.topicsController.getTopicById(id: id))
                         }

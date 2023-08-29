@@ -33,11 +33,9 @@ public class Section: NSManagedObject, Encodable, Decodable {
         case id,
              title,
              text,
-             subtitle,
              createdAt,
              updatedAt,
              isActive,
-             iconName,
              order,
              image
     }

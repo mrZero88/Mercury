@@ -20,7 +20,11 @@ struct ThemeSheetView: View {
                 HStack {
                     Text(theme.createdAt?.formatted(date: .numeric, time: .omitted) ?? "").font(.footnote).foregroundColor(.secondary)
                     Spacer()
-                    Text(isCreating ? "New Theme" : "Edit Theme").font(.title)
+                    if(UIDevice.isIPad) {
+                        Text(isCreating ? "New Theme" : "Edit Theme").font(.title)
+                    } else {
+                        Text(isCreating ? "New Theme" : "Edit Theme")
+                    }
                     Spacer()
                     Text(theme.updatedAt?.formatted(date: .numeric, time: .omitted) ?? "").font(.footnote).foregroundColor(.secondary)
                 }

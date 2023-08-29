@@ -20,7 +20,11 @@ struct TopicSheetView: View {
                 HStack {
                     Text(topic.createdAt?.formatted(date: .numeric, time: .omitted) ?? "").font(.footnote).foregroundColor(.secondary)
                     Spacer()
-                    Text(isCreating ? "New Topic" : "Edit Topic").font(.title)
+                    if(UIDevice.isIPad) {
+                        Text(isCreating ? "New Topic" : "Edit Topic").font(.title)
+                    } else {
+                        Text(isCreating ? "New Topic" : "Edit Topic")
+                    }
                     Spacer()
                     Text(topic.updatedAt?.formatted(date: .numeric, time: .omitted) ?? "").font(.footnote).foregroundColor(.secondary)
                 }

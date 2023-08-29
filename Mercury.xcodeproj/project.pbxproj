@@ -887,8 +887,8 @@
 			children = (
 				B26E43622A9BA7E200A982BF /* IconsSheetView.swift */,
 				B27D81232A3C44E60071FDAC /* ThemeSheetView.swift */,
-				B27D81242A3C44E60071FDAC /* SectionSheetView.swift */,
 				B27D81252A3C44E60071FDAC /* TopicSheetView.swift */,
+				B27D81242A3C44E60071FDAC /* SectionSheetView.swift */,
 			);
 			path = Sheets;
 			sourceTree = "<group>";

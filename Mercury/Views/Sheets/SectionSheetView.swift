@@ -20,7 +20,11 @@ struct SectionSheetView: View {
                 HStack {
                     Text(section.createdAt?.formatted(date: .numeric, time: .omitted) ?? "").font(.footnote).foregroundColor(.secondary)
                     Spacer()
-                    Text(isCreating ? "New Section" : "Edit Section").font(.title)
+                    if(UIDevice.isIPad) {
+                        Text(isCreating ? "New Section" : "Edit Section").font(.title)
+                    } else {
+                        Text(isCreating ? "New Section" : "Edit Section")
+                    }
                     Spacer()
                     Text(section.updatedAt?.formatted(date: .numeric, time: .omitted) ?? "").font(.footnote).foregroundColor(.secondary)
                 }

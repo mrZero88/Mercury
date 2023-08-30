@@ -173,6 +173,7 @@ struct SettingView: View {
             alertInfo = ShowResetAlert()
             break
         case "export":
+            document = JsonDocument(ExportUtils.exportAllData()!)
             isExporting = true
             break
         case "import":

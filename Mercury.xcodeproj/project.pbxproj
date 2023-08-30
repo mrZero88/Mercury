@@ -206,6 +206,7 @@
 		B27D82072A3C49A70071FDAC /* TopicDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81142A3C44E60071FDAC /* TopicDao.swift */; };
 		B27D82082A3C49B50071FDAC /* SSettingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80AB2A3C44E50071FDAC /* SSettingExtension.swift */; };
 		B27D82092A3C49C00071FDAC /* SSettingsGroupExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80AF2A3C44E50071FDAC /* SSettingsGroupExtension.swift */; };
+		B2C25D412A9F52F3005415E7 /* ExportUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C25D402A9F52F3005415E7 /* ExportUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -429,6 +430,7 @@
 		B27D81F02A3C48290071FDAC /* MercuryWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MercuryWidgetExtension.entitlements; sourceTree = "<group>"; };
 		B27D81F22A3C48500071FDAC /* WidgetCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetCardView.swift; sourceTree = "<group>"; };
 		B27D81F42A3C48500071FDAC /* WidgetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetViewModel.swift; sourceTree = "<group>"; };
+		B2C25D402A9F52F3005415E7 /* ExportUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -802,6 +804,7 @@
 		B27D80FF2A3C44E50071FDAC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B2C25D402A9F52F3005415E7 /* ExportUtils.swift */,
 				B27D81002A3C44E50071FDAC /* DateRangeUtils.swift */,
 				B27D81012A3C44E50071FDAC /* SettingsChangeTrigger.swift */,
 				B27D81022A3C44E50071FDAC /* MonthUtils.swift */,
@@ -1224,6 +1227,7 @@
 				B27D81902A3C44E60071FDAC /* DateUtils.swift in Sources */,
 				B26E43462A9B9EA800A982BF /* Transportation.swift in Sources */,
 				B26E43442A9B9EA800A982BF /* EnergyAndEnvironment.swift in Sources */,
+				B2C25D412A9F52F3005415E7 /* ExportUtils.swift in Sources */,
 				B26E430D2A9B9A4700A982BF /* SettingsController.swift in Sources */,
 				B2679E0B2A9E775F00F34EC6 /* Topic.swift in Sources */,
 				B27D81C02A3C44E60071FDAC /* OnboardingPage2View.swift in Sources */,

@@ -16,7 +16,7 @@ public class Topic: NSManagedObject, Encodable, Decodable {
     }
     
     public required init(from decoder: Decoder) throws {
-        super.init(entity: Theme.entity(), insertInto: PersistenceController.shared.container.viewContext)
+        super.init(entity: Topic.entity(), insertInto: PersistenceController.shared.container.viewContext)
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decode(UUID.self, forKey: .id)
         title = try values.decode(String.self, forKey: .title)

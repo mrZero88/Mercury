@@ -8,16 +8,33 @@
 import WidgetKit
 import SwiftUI
 import Intents
+import CoreData
 
 struct Provider: IntentTimelineProvider {
     let vm: WidgetViewModel = WidgetViewModel()
+    
+    var managedObjectContext : NSManagedObjectContext
+    
+    var topics: [Topic]
+     
+    init(context : NSManagedObjectContext) {
+      self.managedObjectContext = context        
+        let fetchRequest: NSFetchRequest<Topic>
+        fetchRequest = Topic.fetchRequest()
+        let sort = NSSortDescriptor(key: #keyPath(Topic.order), ascending: true)
+        fetchRequest.sortDescriptors = [sort]
+        fetchRequest.predicate = NSPredicate(format: "isActive == true")
+        let objects = try? self.managedObjectContext.fetch(fetchRequest)
+        self.topics = objects ?? []
+    }
     
     func placeholder(in context: Context) -> SimpleEntry {
         return SimpleEntry(id: nil, title: DefaultWidgetCardTitle, subtitle: DefaultWidgetCardSubtitle, themeTitle: DefaultWidgetCardThemeTitle, text1: DefaultWidgetCardText1, text2: DefaultWidgetCardText2, date: Date(), currentWidgetIndex: 1, totalWidgetsCount: 1, icon: "", configuration: ConfigurationIntent())
     }
     
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let topic = vm.randomTopics.randomElement()
+        
+        let topic = self.topics.first
         let title = topic?.title ?? DefaultWidgetCardTitle
         let type = topic?.subtitle ?? DefaultWidgetCardSubtitle
         let themeTitle = topic?.theme?.title ?? DefaultWidgetCardThemeTitle
@@ -35,7 +52,10 @@ struct Provider: IntentTimelineProvider {
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         
-        let topics = vm.randomTopics
+        let topics = self.topics
+        
+        print("Daniel", topics.count)
+        
         let topicsCount = topics.count
         
         if(topicsCount == 0) {
@@ -89,12 +109,13 @@ struct MercuryWidget: Widget {
     let kind: String = "DesignPatternsWidget"
     
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
+        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider(context: PersistenceController.shared.container.viewContext)) { entry in
             MercuryWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
         .supportedFamilies([.systemLarge])
+        .contentMarginsDisabled()
     }
 }
 

@@ -16,8 +16,9 @@ public class Section: NSManagedObject, Encodable, Decodable {
     }
     
     public required init(from decoder: Decoder) throws {
-        super.init(entity: Theme.entity(), insertInto: PersistenceController.shared.container.viewContext)
+        super.init(entity: Section.entity(), insertInto: PersistenceController.shared.container.viewContext)
         let values = try decoder.container(keyedBy: CodingKeys.self)
+        
         id = try values.decode(UUID.self, forKey: .id)
         title = try values.decode(String.self, forKey: .title)
         text = try values.decode(String.self, forKey: .text)
@@ -25,7 +26,7 @@ public class Section: NSManagedObject, Encodable, Decodable {
         updatedAt = try values.decode(Date.self, forKey: .updatedAt)
         isActive = try values.decode(Bool.self, forKey: .isActive)
         order = try values.decode(Int16.self, forKey: .order)
-        image = try values.decode(Data.self, forKey: .image)
+        //image = try values.decode(Data.self, forKey: .image)
     }
     
     private enum CodingKeys: String, CodingKey

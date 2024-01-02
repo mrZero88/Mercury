@@ -105,12 +105,10 @@
 		B27D81592A3C44E60071FDAC /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80B92A3C44E50071FDAC /* Array.swift */; };
 		B27D815A2A3C44E60071FDAC /* Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80BA2A3C44E50071FDAC /* Range.swift */; };
 		B27D815B2A3C44E60071FDAC /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80BB2A3C44E50071FDAC /* Sounds.swift */; };
-		B27D815C2A3C44E60071FDAC /* RoundedTrapezoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80BC2A3C44E50071FDAC /* RoundedTrapezoid.swift */; };
 		B27D815D2A3C44E60071FDAC /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80BD2A3C44E50071FDAC /* Month.swift */; };
 		B27D815E2A3C44E60071FDAC /* DayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80BE2A3C44E50071FDAC /* DayItem.swift */; };
 		B27D815F2A3C44E60071FDAC /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80BF2A3C44E50071FDAC /* Sound.swift */; };
 		B27D81602A3C44E60071FDAC /* AlertInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80C02A3C44E50071FDAC /* AlertInfo.swift */; };
-		B27D81612A3C44E60071FDAC /* Trapezoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80C12A3C44E50071FDAC /* Trapezoid.swift */; };
 		B27D81632A3C44E60071FDAC /* designPatterns.json in Resources */ = {isa = PBXBuildFile; fileRef = B27D80C42A3C44E50071FDAC /* designPatterns.json */; };
 		B27D81642A3C44E60071FDAC /* PrototypePattern.png in Resources */ = {isa = PBXBuildFile; fileRef = B27D80C72A3C44E50071FDAC /* PrototypePattern.png */; };
 		B27D81652A3C44E60071FDAC /* builderPattern.png in Resources */ = {isa = PBXBuildFile; fileRef = B27D80C82A3C44E50071FDAC /* builderPattern.png */; };
@@ -248,6 +246,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B25BEBA52B4322F4008F387B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B2679E002A9E751600F34EC6 /* JsonDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonDocument.swift; sourceTree = "<group>"; };
 		B2679E032A9E758300F34EC6 /* MercuryData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MercuryData.swift; sourceTree = "<group>"; };
 		B2679E082A9E765B00F34EC6 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -344,12 +343,10 @@
 		B27D80B92A3C44E50071FDAC /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		B27D80BA2A3C44E50071FDAC /* Range.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Range.swift; sourceTree = "<group>"; };
 		B27D80BB2A3C44E50071FDAC /* Sounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
-		B27D80BC2A3C44E50071FDAC /* RoundedTrapezoid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedTrapezoid.swift; sourceTree = "<group>"; };
 		B27D80BD2A3C44E50071FDAC /* Month.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
 		B27D80BE2A3C44E50071FDAC /* DayItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayItem.swift; sourceTree = "<group>"; };
 		B27D80BF2A3C44E50071FDAC /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		B27D80C02A3C44E50071FDAC /* AlertInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertInfo.swift; sourceTree = "<group>"; };
-		B27D80C12A3C44E50071FDAC /* Trapezoid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trapezoid.swift; sourceTree = "<group>"; };
 		B27D80C42A3C44E50071FDAC /* designPatterns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = designPatterns.json; sourceTree = "<group>"; };
 		B27D80C72A3C44E50071FDAC /* PrototypePattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PrototypePattern.png; sourceTree = "<group>"; };
 		B27D80C82A3C44E50071FDAC /* builderPattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = builderPattern.png; sourceTree = "<group>"; };
@@ -542,12 +539,12 @@
 		B27D80622A3C44970071FDAC = {
 			isa = PBXGroup;
 			children = (
-				B27D81F02A3C48290071FDAC /* MercuryWidgetExtension.entitlements */,
 				B27D806D2A3C44970071FDAC /* Mercury */,
 				B27D80842A3C44980071FDAC /* MercuryTests */,
 				B27D808E2A3C44980071FDAC /* MercuryUITests */,
 				B27D81DC2A3C481F0071FDAC /* MercuryWidget */,
 				B27D81D72A3C481F0071FDAC /* Frameworks */,
+				B27D81F02A3C48290071FDAC /* MercuryWidgetExtension.entitlements */,
 				B27D806C2A3C44970071FDAC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -566,6 +563,7 @@
 		B27D806D2A3C44970071FDAC /* Mercury */ = {
 			isa = PBXGroup;
 			children = (
+				B25BEBA52B4322F4008F387B /* Info.plist */,
 				B26E43112A9B9BFE00A982BF /* Modifiers */,
 				B27D81C32A3C461E0071FDAC /* Controllers */,
 				B27D810E2A3C44E60071FDAC /* Daos */,
@@ -665,12 +663,10 @@
 				B27D80B92A3C44E50071FDAC /* Array.swift */,
 				B27D80BA2A3C44E50071FDAC /* Range.swift */,
 				B27D80BB2A3C44E50071FDAC /* Sounds.swift */,
-				B27D80BC2A3C44E50071FDAC /* RoundedTrapezoid.swift */,
 				B27D80BD2A3C44E50071FDAC /* Month.swift */,
 				B27D80BE2A3C44E50071FDAC /* DayItem.swift */,
 				B27D80BF2A3C44E50071FDAC /* Sound.swift */,
 				B27D80C02A3C44E50071FDAC /* AlertInfo.swift */,
-				B27D80C12A3C44E50071FDAC /* Trapezoid.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1075,7 +1071,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					B27D806A2A3C44970071FDAC = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -1193,9 +1189,7 @@
 				B27D819B2A3C44E60071FDAC /* SettingDao.swift in Sources */,
 				B27D81522A3C44E60071FDAC /* DateExtension.swift in Sources */,
 				B26E43412A9B9EA800A982BF /* BeautyAndCosmetics.swift in Sources */,
-				B27D815C2A3C44E60071FDAC /* RoundedTrapezoid.swift in Sources */,
 				B26E430B2A9B99DE00A982BF /* SettingsView.swift in Sources */,
-				B27D81612A3C44E60071FDAC /* Trapezoid.swift in Sources */,
 				B26E42FE2A9B99AC00A982BF /* StringSettingView.swift in Sources */,
 				B26E43612A9BA7C400A982BF /* IconGroupView.swift in Sources */,
 				B27D81B82A3C44E60071FDAC /* TopicView.swift in Sources */,
@@ -1434,6 +1428,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1463,9 +1459,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1492,6 +1490,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1521,9 +1521,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1548,11 +1550,13 @@
 				CODE_SIGN_ENTITLEMENTS = Mercury/Mercury.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Mercury/Preview Content\"";
 				DEVELOPMENT_TEAM = M27L5G35Q6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Mercury/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -1563,10 +1567,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flyzerosky.Mercury;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1587,11 +1591,13 @@
 				CODE_SIGN_ENTITLEMENTS = Mercury/Mercury.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Mercury/Preview Content\"";
 				DEVELOPMENT_TEAM = M27L5G35Q6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Mercury/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -1602,10 +1608,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flyzerosky.Mercury;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1624,6 +1630,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = M27L5G35Q6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
@@ -1647,6 +1654,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = M27L5G35Q6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
@@ -1669,6 +1677,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = M27L5G35Q6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
@@ -1691,6 +1700,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = M27L5G35Q6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
@@ -1720,7 +1730,7 @@
 				INFOPLIST_FILE = MercuryWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MercuryWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1750,7 +1760,7 @@
 				INFOPLIST_FILE = MercuryWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MercuryWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

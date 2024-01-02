@@ -34,11 +34,12 @@ public struct PersistenceController {
         let description = NSPersistentStoreDescription(url: storeURL)
 
         container = NSPersistentCloudKitContainer(name: "Mercury")
-        container.persistentStoreDescriptions = [description]
+        //container.persistentStoreDescriptions = [description]
         
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
+        
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
@@ -59,7 +60,7 @@ public struct PersistenceController {
 #if DEBUG
         //do {
         // Use the container to initialize the development schema.
-        //    try container.initializeCloudKitSchema(options: [])
+          //  try container.initializeCloudKitSchema(options: [])
         //} catch {
         // Handle any errors.
         //}

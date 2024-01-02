@@ -44,9 +44,9 @@ struct IconsSheetView: View {
             }
         }
         .searchable(text: $searchText)
-        .onChange(of: searchText, perform: { newValue in
-            searchTextPublisher.send(newValue)
-        })
+        .onChange(of: searchText) {
+            searchTextPublisher.send(searchText)
+        }
         .onReceive(
             searchTextPublisher
                 .debounce(for: .milliseconds(1000), scheduler: DispatchQueue.main)

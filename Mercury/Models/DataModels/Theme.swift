@@ -28,7 +28,7 @@ public class Theme: NSManagedObject, Encodable, Decodable {
         text = try values.decode(String.self, forKey: .text)
         let topics = try values.decode([Topic].self, forKey: .topics)
         for topic in topics {
-            self.addToTopics(topic)
+          self.addToTopics(topic)
         }
     }
     

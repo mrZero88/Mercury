@@ -196,10 +196,11 @@ struct SettingView: View {
             
             let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
-            let mercuryData = try decoder.decode(MercuryData.self, from: data)
+            _ = try decoder.decode(MercuryData.self, from: data)
             withAnimation {
                 viewModel.objectWillChange.send()
             }
+            PersistenceController.save()
         } catch {
             print("Error on Import!", error.localizedDescription)
         }

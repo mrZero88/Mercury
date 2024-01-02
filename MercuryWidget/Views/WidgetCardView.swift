@@ -76,6 +76,7 @@ struct WidgetCardView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding()
         .background(PanelColor)
+        .containerBackground(colorScheme == .dark ? .black : .white, for: .widget)
     }
 }
 

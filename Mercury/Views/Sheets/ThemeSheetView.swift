@@ -14,6 +14,13 @@ struct ThemeSheetView: View {
     @StateObject var theme: Theme
     var isCreating: Bool
     
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
+        predicate: NSPredicate(format: "key == %@", "tertiaryColorOpacity")
+    ) var settingsTertiaryOpacity: FetchedResults<Setting>
+    
     var body: some View {
         Grid(horizontalSpacing: BorderPadding, verticalSpacing: BorderPadding) {
             GridRow {
@@ -30,7 +37,7 @@ struct ThemeSheetView: View {
                 }
             }
             GridRow {
-                TextFieldIconView(inSheet: false, textValue: Binding<String> (
+                TextFieldIconView(textValue: Binding<String> (
                     get: {
                         return theme.title ?? ""
                     },
@@ -58,8 +65,8 @@ struct ThemeSheetView: View {
             }
             GridRow {
                 HStack {
-                    SheetButtonView(inSheet: false, title: "Cancel", clickFunction: cancel)
-                    SheetButtonView(inSheet: false, title: "Save", clickFunction: saveTheme)
+                    SheetButtonView(title: "Cancel", clickFunction: cancel)
+                    SheetButtonView(title: "Save", clickFunction: saveTheme)
                         .disabled(theme.title?.isEmpty ?? true && (theme.title?.count ?? 0) <= ThemeValidation.titleMaxChars)
                 }
                 .fixedSize(horizontal: false, vertical: true)
@@ -67,7 +74,7 @@ struct ThemeSheetView: View {
         }
         .padding()
         .frame(maxHeight: .infinity)
-        .background(Color.getColor(colorScheme: colorScheme).gradient.opacity(colorScheme == .dark ? 0.5 : 1.0))
+        .background(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
         .onDisappear {
             onCloseSheet()
         }

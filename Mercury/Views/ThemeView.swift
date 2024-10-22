@@ -14,6 +14,13 @@ struct ThemeView: View {
     @ObservedObject var theme: Theme
     @State var showCreateSheet: Bool = false
     
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
+        predicate: NSPredicate(format: "key == %@", "accentColor")
+    ) var settings: FetchedResults<Setting>
+    
     var body: some View {
         VStack {
             if(!theme.activeTopics.isEmpty) {
@@ -40,7 +47,7 @@ struct ThemeView: View {
         }
         .sheet(isPresented: $showCreateSheet) {
             TopicSheetView(topic: Topic.createEmptyTopic(theme: theme), isCreating: true)
-                .accentColor(Color.getColor(colorScheme: colorScheme))
+                .accentColor(Color.getColor(colorScheme: colorScheme, setting: self.settings.first))
         }
         .navigationTitle(theme.title ?? "")
     }

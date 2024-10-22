@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Utils
 
 public class MonthUtils {
     
@@ -24,53 +25,43 @@ public class MonthUtils {
         Month(number: 12),
     ]
     
-    static func getMonthsAfterStart() -> [Month] {
-        return months.filter({Date().getMonthFirstDateByYear(by: $0.number) >= BeginningDate.startOfYear() && $0.number <= Date().month})
+    static func getMonthsAfterStart(viewModel: ViewModel) -> [Month] {
+        let months = months.filter({Date().getMonthFirstDateByYear(by: $0.number) >= FirstOnDate.startOfYear() && $0.number <= Date().month})
+        
+        for month in months {
+            month.days = getMonth(viewModel: viewModel, year: Date().year, monthNumber: month.number)
+        }
+        
+        return months
     }
     
-    static func getMonth(by date: Date) -> [DayItem] {
-        let startDate = date.startOfMonth()
+    static func getMonth(viewModel: ViewModel, year: Int, monthNumber: Int) -> [DayItem] {
+        let date = DateUtils.getDate(year: year, month: monthNumber, day: 1)
+        let startDate = date
         let endDate = date.endOfMonth()
         let daysRange = DateRangeUtils.getDaysRange(startDate: startDate, endDate: endDate)
+        let count: Int16 = 0
         
         var days: [DayItem] = []
         
         for day in daysRange {
-            days.append(DayItem(dayOfTheWeek: 1, description: String(day.startDate.day), date: day.startDate.date))
+            days.append(DayItem(dayOfTheWeek: 1, description: String(day.startDate.day), date: day.startDate.date, count: count))
         }
         
         return days
     }
     
-    static func addSixtEmptyWeek(days: inout [DayItem], date: Date) {
-        let numberOfLines = days.chunked(into: 7).count
-        if(numberOfLines == 6) {
-            days.append(DayItem(dayOfTheWeek: 1, description: "", date: date.endOfMonth()))
-        }
-        let lastChunk = days.chunked(into: 7).last!
-        let lastChunkCount = lastChunk.count
-        if(lastChunkCount < 7) {
-            let size = 7 - lastChunkCount
-            for i in 1...size {
-                days.append(DayItem(dayOfTheWeek: (i+1), description: "", date: date.endOfMonth()))
-            }
-        }
+    static func addCountToDayItemByDate(months: [Month], date: Date) {
+        let month = months.first(where: {$0.number == date.month})!
+        let day = month.days.first(where: {$0.date.date == date.date})!
+        day.count += 1
+        day.objectWillChange.send()
     }
     
-    static func addMonthMinDescription(days: inout [DayItem], monthDescription: String) {
-        let daysCount = days.count
-        let monthLetters = monthDescription.prefix(3)
-        
-        let firstChar: String = String(Array(monthLetters)[0])
-        let secondChar: String = String(Array(monthLetters)[1])
-        let thirdChar: String = String(Array(monthLetters)[2])
-        
-        days[daysCount-3].description = firstChar
-        days[daysCount-3].isMonthDescription = true
-        days[daysCount-2].description = secondChar
-        days[daysCount-2].isMonthDescription = true
-        days[daysCount-1].description = thirdChar
-        days[daysCount-1].isMonthDescription = true
-        
+    static func subtractCountToDayItemByDate(months: [Month], date: Date) {
+        let month = months.first(where: {$0.number == date.month})!
+        let day = month.days.first(where: {$0.date.date == date.date})!
+        day.count -= day.count > 0 ? 1 : 0
+        day.objectWillChange.send()
     }
 }

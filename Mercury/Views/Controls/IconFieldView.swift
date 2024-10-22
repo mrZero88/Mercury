@@ -9,30 +9,32 @@ import SwiftUI
 
 struct IconFieldView: View {
     @Environment(\.colorScheme) var colorScheme
-    var inSheet: Bool = false
     @Binding var iconName: String
     @State private var showingIconstSheet = false
     
-    var background: Color {
-        get {
-            return inSheet && !ShowBg1 && !ShowBg2 ? Color("Black") : PanelColor
-        }
-    }
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
+        predicate: NSPredicate(format: "key == %@", "accentColor")
+    ) var settings: FetchedResults<Setting>
     
     var body: some View {
         Button {
             showingIconstSheet = true
+            PlaySound(sound: .openSheet)
+            PlayHaptic()
         } label: {
             if(!iconName.isEmpty) {
-                Image(iconName).resizable().padding(5.0).frame(width: 40, height: 40, alignment: .center).foregroundColor(Color.getColor(colorScheme: colorScheme))
+                Image(iconName).resizable().padding(Border5).frame(width: 40, height: 40, alignment: .center).foregroundColor(Color.primary)
             }
         }
         .sheet(isPresented: $showingIconstSheet) {
-            IconsSheetView(iconName: $iconName).accentColor(Color.getColor(colorScheme: colorScheme))
+            IconsSheetView(iconName: $iconName).accentColor(Color.getColor(colorScheme: colorScheme, setting: settings.first))
         }
         .padding(.horizontal)
         .frame(maxHeight: .infinity)
-        .background(background)
+        .background(PanelColor)
         .cornerRadius(CornerRadius)
     }
 }

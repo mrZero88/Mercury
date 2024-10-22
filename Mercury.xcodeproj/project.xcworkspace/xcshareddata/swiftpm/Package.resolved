@@ -1,0 +1,15 @@
+{
+  "originHash" : "f4194b8510870ba9e6e3b6d822d6f3d5648b59b0e65a158b3c8d48c916eeeafa",
+  "pins" : [
+    {
+      "identity" : "utils",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mrZero88/Utils.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "1739be63619ce9dc6af65c40c93fb62fcd4a5f14"
+      }
+    }
+  ],
+  "version" : 3
+}

@@ -26,25 +26,7 @@ extension Topic {
     }
     
     func delete() {
-        self.isActive = false
-        self.updatedAt = Date()
-        self.deleteAllSections()
         PersistenceController.delete(object: self)
-        PersistenceController.save()
-    }
-    func deleteAllSections() {
-        for section in TopicUtils.sections(set: self.sections) {
-            section.delete()
-        }
-    }
-    func activate() {
-        self.updatedAt = Date()
-        self.isActive = true
-        PersistenceController.save()
-    }
-    func deactivate() {
-        self.updatedAt = Date()
-        self.isActive = false
         PersistenceController.save()
     }
     

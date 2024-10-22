@@ -7,22 +7,9 @@
 
 import Foundation
 
-extension SettingsGroup {
+extension SettingsGroup: Encodable {
     func delete() {
-        self.isActive = false
-        self.updatedAt = Date()
-        self.deleteSettings()
         PersistenceController.delete(object: self)
-        PersistenceController.save()
-    }
-    func activate() {
-        self.isActive = true
-        self.updatedAt = Date()
-        PersistenceController.save()
-    }
-    func deactivate() {
-        self.isActive = false
-        self.updatedAt = Date()
         PersistenceController.save()
     }
     func deleteSettings() {
@@ -35,9 +22,26 @@ extension SettingsGroup {
             return SettingsUtils.settings(set: self.settings)
         }
     }
-    var activeSettings: [Setting] {
-        get {
-            return SettingsUtils.settings(set: self.settings).filter({$0.isActive})
-        }
+    
+    private enum CodingKeys: String, CodingKey
+    {
+        case id,
+             key,
+             title,
+             iconName,
+             order,
+             createdAt,
+             updatedAt
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(id, forKey: .id)
+        try container.encode(key, forKey: .key)
+        try container.encode(title, forKey: .title)
+        try container.encode(iconName, forKey: .iconName)
+        try container.encode(order, forKey: .order)
+        try container.encode(createdAt, forKey: .createdAt)
+        try container.encode(updatedAt, forKey: .updatedAt)
     }
 }

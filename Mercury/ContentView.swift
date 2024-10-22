@@ -17,6 +17,13 @@ struct ContentView: View {
     
     @FetchRequest(
         sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
+        predicate: NSPredicate(format: "key == %@", "accentColor")
+    ) var settings: FetchedResults<Setting>
+    
+    @FetchRequest(
+        sortDescriptors: [
             SortDescriptor(\.order, order: .forward)
         ],
         predicate: NSPredicate(format: "isActive == true")
@@ -70,12 +77,12 @@ struct ContentView: View {
             }
             .sheet(isPresented: $showCreateSheet) {
                 ThemeSheetView(theme: Theme.createEmptyTheme(), isCreating: true)
-                    .accentColor(Color.getColor(colorScheme: colorScheme))
+                    .accentColor(Color.getColor(colorScheme: colorScheme, setting: self.settings.first))
             }
             .navigationTitle("Mercury")
             .navigationBarTitleDisplayMode(.inline)
         }
-        .accentColor(Color.getColor(colorScheme: colorScheme))
+        .accentColor(Color.getColor(colorScheme: colorScheme, setting: self.settings.first))
         .onOpenURL { url in
             let topicId = url.absoluteString.split(separator: "//")[1]
             let topics = TopicDao.fetchTopics()

@@ -11,6 +11,7 @@ class Month: Hashable, Identifiable, ObservableObject, Equatable {
     
     public var id: UUID = UUID()
     var number: Int = 0
+    var days: [DayItem] = []
     
     init(number: Int) {
         self.number = number

@@ -6,34 +6,36 @@
 //
 
 import SwiftUI
+import Utils
 
 struct SheetButtonView: View {
-    var inSheet: Bool = false
     var title: String
-    var clickFunction: (() -> ())!
-    
-    var background: Color {
-        get {
-            return inSheet && !ShowBg1 && !ShowBg2 ? Color("Black") : PanelColor
-        }
-    }
+    var clickFunction: (() -> ())?
+    var longClickFunction: (() -> ())?
     
     var body: some View {
-        ZStack {
-            Button {
-                    clickFunction()
-            } label: {
-                ZStack {
-                    Label(String(localized: String.LocalizationValue(title)), systemImage: "").labelStyle(.titleOnly)
-                    Toggle("", isOn: .constant(false)).opacity(0)
-                }
-                .padding()
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(background)
-                .cornerRadius(CornerRadius)
-                
+        Button(action: {}) {
+            ZStack {
+                Label(String(localized: String.LocalizationValue(title)), systemImage: "").labelStyle(.titleOnly)
+                Toggle("", isOn: .constant(false)).opacity(0)
             }
+            .padding()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(PanelColor)
+            .cornerRadius(CornerRadius)
         }
+        .simultaneousGesture(
+            LongPressGesture()
+                .onEnded { _ in
+                    longClickFunction?()
+                }
+        )
+        .simultaneousGesture(
+            TapGesture()
+                .onEnded({
+                    clickFunction?()
+                })
+        )
     }
 }
 

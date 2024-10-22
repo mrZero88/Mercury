@@ -6,18 +6,18 @@
 //
 
 import SwiftUI
+import Utils
 
 struct IconsGroupView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
     @Binding var iconName: String
-    @Binding var iconNames: [String]
     
     var body: some View {
         ScrollView(showsIndicators: false) {
-            Grid(horizontalSpacing: BorderPadding, verticalSpacing: BorderPadding) {
-                ForEach(iconNames.chunked(into: 5), id: \.self) { iconsChunk in
-                    GridRow {
+            LazyVStack(spacing: BorderPadding) {
+                ForEach(Array(AllIcons[0...199]).chunked(into: IconsPerRow), id: \.self) { iconsChunk in
+                    HStack(spacing: BorderPadding) {
                         ForEach(iconsChunk, id: \.self) { icon in
                             Button {
                                 iconName = icon
@@ -41,6 +41,6 @@ struct IconsGroupView: View {
 
 struct IconsGroupView_Previews: PreviewProvider {
     static var previews: some View {
-        IconsGroupView(iconName: .constant(""), iconNames: .constant([]))
+        IconsGroupView(iconName: .constant(""))
     }
 }

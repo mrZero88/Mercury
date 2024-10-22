@@ -8,11 +8,9 @@
 import Foundation
 
 enum Sound: String {
-    case navigation = "click1"
-    case confirm = "click2"
-    case cancel = "click3"
-    case delete = "click4"
-    case openModal = "click5"
-    case moveTask = "click6"
-    case finishTask = "click7"
+    case navigation = "SoundPack4 - Select 3Variation_01"
+    case delete = "SoundPack4 - Back 4Variation_01"
+    case openSheet = "openSheet3"
+    case alert = "SoundPack4 - Back 1Variation_01"
+    case finishTask = "UI_soundPack5_Back_v1_01"
 }

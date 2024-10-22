@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Utils
 
 struct NavigationLinkTopicView: View {
     @Environment(\.colorScheme) var colorScheme
@@ -13,6 +14,13 @@ struct NavigationLinkTopicView: View {
     @ObservedObject var topic: Topic
     @State var alertInfo: AlertInfo?
     @State var showEditSheet = false
+    
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
+        predicate: NSPredicate(format: "key == %@", "accentColor")
+    ) var settings: FetchedResults<Setting>
     
     var colorTheme: Color {
         get {
@@ -46,7 +54,7 @@ struct NavigationLinkTopicView: View {
         .swipeActions(edge: .leading, allowsFullSwipe: true) {
             Button {
                 showEditSheet = true
-                PlaySound(sound: .openModal)
+                PlaySound(sound: .openSheet)
             } label: {
                 Label("Edit", systemImage: "pencil.circle").labelStyle(.iconOnly)
             }
@@ -54,7 +62,7 @@ struct NavigationLinkTopicView: View {
         }
         .sheet(isPresented: $showEditSheet) {
             TopicSheetView(topic: topic, isCreating: false)
-                .accentColor(Color.getColor(colorScheme: colorScheme))
+                .accentColor(Color.getColor(colorScheme: colorScheme, setting: self.settings.first))
         }
         .alert(item: $alertInfo, content: { info in
             showAlert(info: info, viewModel: viewModel, topic: topic)

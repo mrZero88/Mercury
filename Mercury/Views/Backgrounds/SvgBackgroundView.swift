@@ -11,6 +11,20 @@ struct SvgBackgroundView: View {
     @EnvironmentObject var settingsChangedTrigger: SettingsChangedTrigger
     @Environment(\.colorScheme) var colorScheme
     
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
+        predicate: NSPredicate(format: "key == %@", "background")
+    ) var settingsBg: FetchedResults<Setting>
+    
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
+        predicate: NSPredicate(format: "key == %@", "opacity")
+    ) var settingsOp: FetchedResults<Setting>
+    
     var svgName: String {
         get {
             switch(AccentColor) {
@@ -36,8 +50,8 @@ struct SvgBackgroundView: View {
     }
     
     var body: some View {
-        if(ShowBg1) {
-            Image(Background).resizable().scaledToFill().opacity(0.25).ignoresSafeArea().foregroundColor(Color.accentColor)
+        if(ShowBg) {
+            Image(settingsBg.first?.stringValue ?? Background).resizable().ignoresSafeArea().scaledToFill().opacity(settingsOp.first?.doubleValue ?? Opacity).foregroundColor(Color.accentColor)
         }
     }
 }

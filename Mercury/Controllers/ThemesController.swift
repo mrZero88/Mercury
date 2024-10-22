@@ -22,13 +22,13 @@ class ThemesController: ObservableObject {
                 self.deleteTheme(theme: theme)
             }
         }
-        PlaySound(sound: .confirm)
+        PlaySound(sound: .navigation)
         PersistenceController.save()
         self.objectWillChange.send()
     }
     
     func cancelSaveTheme(theme: Theme) {
-        PlaySound(sound: .cancel)
+        PlaySound(sound: .navigation)
         theme.objectWillChange.send()
     }
     
@@ -40,7 +40,7 @@ class ThemesController: ObservableObject {
             themes = Rearrange(array: themes, fromIndex: originIndex, toIndex: destinationIndex)
         }
         orderThemes(themes: themes)
-        PlaySound(sound: .confirm)
+        PlaySound(sound: .navigation)
         PersistenceController.save()
         self.objectWillChange.send()
     }

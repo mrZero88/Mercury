@@ -11,6 +11,7 @@ import SwiftUI
 public let PanelHeight = CGFloat(280)
 public let BorderPadding = CGFloat(10)
 public let CornerRadius = CGFloat(5)
+public let Border5 = CGFloat(5)
 public let Bg2Description = "Stars"
 public let MinPhasesCountPerBoard = 2
 public let MaxPhasesCountPerBoard = 8
@@ -31,6 +32,24 @@ public let DefaultNoTopicText2 = "To be able to see your created topic widgets, 
 
 public let DefautSelectedGroup: String = "Animal Kingdom"
 
+#if os(iOS)
+public let TertiaryColor: Color = Color(uiColor: UIColor.tertiarySystemBackground)
+#else
+public let TertiaryColor: Color = Color.secondary
+#endif
+
+public var IconsPerPage: Int {
+    get {
+        return UIDevice.isIPad ? 15 : 24
+    }
+}
+
+public var IconsPerRow: Int {
+    get {
+        return UIDevice.isIPad ? 5 : 4
+    }
+}
+
 class Config {
     static func getPriorityColor(priority: Int16) -> Color {
         switch(priority) {
@@ -43,6 +62,14 @@ class Config {
             return Color("green1")
         }
     }
+    
+    static var periods: [Period] =
+    [
+        Period(id: 1, description: "Daily", period: .day),
+        Period(id: 2, description: "Weekly", period: .week),
+        Period(id: 3, description: "Monthly", period: .month),
+        Period(id: 4, description: "Yearly", period: .year)
+    ]
 }
 
 public enum EPeriod {

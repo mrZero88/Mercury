@@ -7,40 +7,40 @@
 
 public let AppIconGroups: [(String, [String])] =
 [
-    AnimalKingdom,
+    //AnimalKingdom,
     ApplianceAndEletronic,
-    BasicDesign,
-    BeautyAndCosmetics,
+    //BasicDesign,
+    //BeautyAndCosmetics,
     BusinessAndFinance,
-    ChartAndGraph,
-    ChristmasAndNewYear,
+    //ChartAndGraph,
+    //ChristmasAndNewYear,
     ClothesAndAccessory,
     CommunicationAndMultimedia,
-    EducationAndScience,
-    EnergyAndEnvironment,
-    EngineerAndConstruction,
+    //EducationAndScience,
+    //EnergyAndEnvironment,
+    //EngineerAndConstruction,
     FamilyAndBaby,
-    FileAndDocument,
-    HumanCivilization,
+    //FileAndDocument,
+    //HumanCivilization,
     InteriorAndHomedecor,
-    Japan,
-    LifestyleAndEntertainment,
-    LoveAndWedding,
-    MedicalAndHealthcare,
-    MusicAndInstrument,
+    //Japan,
+    //LifestyleAndEntertainment,
+    //LoveAndWedding,
+    //MedicalAndHealthcare,
+    //MusicAndInstrument,
     NatureAndLandscape,
     SpaceAndAstronomy,
     SportAndFitness,
-    Tasks,
     Transportation,
-    WeatherForecast
+    //WeatherForecast
 ]
+
+public let AllIcons = getAllIcons()
 
 public func getAllIcons() -> [String] {
     var icons: [String] = []
     for iconGroup in AppIconGroups {
-        icons.append(contentsOf: iconGroup.1)
+        icons.append(contentsOf: iconGroup.1.prefix(upTo: 20))
     }
-    
     return icons
 }

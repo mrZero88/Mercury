@@ -14,6 +14,13 @@ struct TopicSheetView: View {
     @StateObject var topic: Topic
     var isCreating: Bool
     
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
+        predicate: NSPredicate(format: "key == %@", "tertiaryColorOpacity")
+    ) var settingsTertiaryOpacity: FetchedResults<Setting>
+    
     var body: some View {
         Grid(horizontalSpacing: BorderPadding, verticalSpacing: BorderPadding) {
             GridRow {
@@ -30,7 +37,7 @@ struct TopicSheetView: View {
                 }
             }
             GridRow {
-                TextFieldIconView(inSheet: false, textValue: Binding<String> (
+                TextFieldIconView(textValue: Binding<String> (
                     get: {
                         return topic.title ?? ""
                     },
@@ -47,7 +54,7 @@ struct TopicSheetView: View {
                 ), help: String(localized: String.LocalizationValue("Topic title")), textLimit: TopicValidation.titleMaxChars)
             }
             GridRow {
-                TextFieldView(inSheet: false, textValue: Binding<String> (
+                TextFieldView(textValue: Binding<String> (
                     get: {
                         return topic.subtitle ?? ""
                     },
@@ -68,8 +75,8 @@ struct TopicSheetView: View {
             }
             GridRow {
                 HStack {
-                    SheetButtonView(inSheet: false, title: "Cancel", clickFunction: cancel)
-                    SheetButtonView(inSheet: false, title: "Save", clickFunction: saveTopic)
+                    SheetButtonView(title: "Cancel", clickFunction: cancel)
+                    SheetButtonView(title: "Save", clickFunction: saveTopic)
                         .disabled(topic.title?.isEmpty ?? true && (topic.title?.count ?? 0) <= TopicValidation.titleMaxChars)
                 }
                 .fixedSize(horizontal: false, vertical: true)
@@ -77,7 +84,7 @@ struct TopicSheetView: View {
         }
         .padding()
         .frame(maxHeight: .infinity)
-        .background(Color.getColor(colorScheme: colorScheme).gradient.opacity(colorScheme == .dark ? 0.5 : 1.0))
+        .background(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
         .onDisappear {
             onCloseSheet()
         }

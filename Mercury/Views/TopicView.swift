@@ -13,6 +13,13 @@ struct TopicView: View {
     @ObservedObject var topic: Topic
     @State var showCreateSheet: Bool = false
     
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
+        predicate: NSPredicate(format: "key == %@", "accentColor")
+    ) var settings: FetchedResults<Setting>
+    
     var body: some View {
         VStack {
             if(!topic.activeSections.isEmpty) {
@@ -37,7 +44,7 @@ struct TopicView: View {
         }
         .sheet(isPresented: $showCreateSheet) {
             SectionSheetView(section: Section.createEmptySection(topic: topic), isCreating: true)
-                .accentColor(Color.getColor(colorScheme: colorScheme))
+                .accentColor(Color.getColor(colorScheme: colorScheme, setting: settings.first))
         }
         .scrollContentBackground(.hidden)
         .frame(maxWidth: .infinity, maxHeight: .infinity)

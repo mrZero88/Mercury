@@ -17,13 +17,13 @@ class SectionsController: ObservableObject {
                 self.deleteSection(section: section)
             }
         }
-        PlaySound(sound: .confirm)
+        PlaySound(sound: .navigation)
         PersistenceController.save()
         self.objectWillChange.send()
     }
     
     func cancelSaveSection(section: Section) {
-        PlaySound(sound: .cancel)
+        PlaySound(sound: .navigation)
         section.objectWillChange.send()
     }
     
@@ -35,7 +35,7 @@ class SectionsController: ObservableObject {
             sections = Rearrange(array: sections, fromIndex: originIndex, toIndex: destinationIndex)
         }
         orderSections(sections: sections)
-        PlaySound(sound: .confirm)
+        PlaySound(sound: .navigation)
         PersistenceController.save()
         self.objectWillChange.send()
     }

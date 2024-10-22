@@ -31,7 +31,7 @@ public struct PersistenceController {
     
     init(inMemory: Bool = false) {
         let storeURL = AppGroup.facts.containerURL.appendingPathComponent("Mercury.plist")
-        let description = NSPersistentStoreDescription(url: storeURL)
+        let _ = NSPersistentStoreDescription(url: storeURL)
 
         container = NSPersistentCloudKitContainer(name: "Mercury")
         //container.persistentStoreDescriptions = [description]

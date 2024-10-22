@@ -8,18 +8,11 @@
 import SwiftUI
 
 struct TextFieldIconView: View {
-    var inSheet: Bool = false
     @Binding var textValue: String
     @Binding var iconValue: String
     var help: String? = ""
     var visible: Bool = true
     var textLimit: Int = 0
-    
-    var background: Color {
-        get {
-            return inSheet && !ShowBg1 && !ShowBg2 ? Color("Black") : PanelColor
-        }
-    }
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -33,9 +26,9 @@ struct TextFieldIconView: View {
                         Toggle("", isOn: .constant(false)).opacity(0)
                     }
                     .padding()
-                    .background(background)
+                    .background(PanelColor)
                     .cornerRadius(CornerRadius)
-                    IconFieldView(inSheet: inSheet, iconName: $iconValue)
+                    IconFieldView(iconName: $iconValue)
                 }
             }
             .fixedSize(horizontal: false, vertical: true)

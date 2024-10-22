@@ -14,6 +14,20 @@ struct SectionSheetView: View {
     @StateObject var section: Section
     var isCreating: Bool
     
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
+        predicate: NSPredicate(format: "key == %@", "accentColor")
+    ) var settings: FetchedResults<Setting>
+    
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
+        predicate: NSPredicate(format: "key == %@", "tertiaryColorOpacity")
+    ) var settingsTertiaryOpacity: FetchedResults<Setting>
+    
     var body: some View {
         Grid(horizontalSpacing: BorderPadding, verticalSpacing: BorderPadding) {
             GridRow {
@@ -30,7 +44,7 @@ struct SectionSheetView: View {
                 }
             }
             GridRow {
-                TextFieldView(inSheet: false, textValue: Binding<String> (
+                TextFieldView(textValue: Binding<String> (
                     get: {
                         return section.title ?? ""
                     },
@@ -54,8 +68,8 @@ struct SectionSheetView: View {
             }
             GridRow {
                 HStack {
-                    SheetButtonView(inSheet: false, title: "Cancel", clickFunction: cancel)
-                    SheetButtonView(inSheet: false, title: "Save", clickFunction: saveSection)
+                    SheetButtonView(title: "Cancel", clickFunction: cancel)
+                    SheetButtonView(title: "Save", clickFunction: saveSection)
                         .disabled((section.title?.count ?? 0) <= SectionValidation.titleMaxChars && ((section.title?.isEmpty ?? true) || (section.text?.isEmpty ?? true)))
                 }
                 .fixedSize(horizontal: false, vertical: true)
@@ -63,7 +77,7 @@ struct SectionSheetView: View {
         }
         .padding()
         .frame(maxHeight: .infinity)
-        .background(Color.getColor(colorScheme: colorScheme).gradient.opacity(colorScheme == .dark ? 0.5 : 1.0))
+        .background(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
         .onDisappear {
             onCloseSheet()
         }

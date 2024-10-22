@@ -8,26 +8,29 @@
 import SwiftUI
 
 struct TextFieldView: View {
-    var inSheet: Bool = false
     @Binding var textValue: String
     var help: String? = ""
     var visible: Bool = true
     var textLimit: Int = 0
-    
-    var background: Color {
-        get {
-            return inSheet && !ShowBg1 && !ShowBg2 ? Color("Black") : PanelColor
-        }
-    }
+    var isFocused: FocusState<Bool>.Binding?
+    var background = PanelColor
     
     var body: some View {
         VStack {
             HStack {
                 ZStack{
-                    TextField(String(localized: String.LocalizationValue(help ?? "")), text: $textValue).opacity(visible ? 1 : 0)
-                        .onReceive(textValue.publisher) { _ in
-                            limitText(textLimit)
-                        }
+                    if(isFocused != nil) {
+                        TextField(String(localized: String.LocalizationValue(help ?? "")), text: $textValue).opacity(visible ? 1 : 0)
+                            .onReceive(textValue.publisher) { _ in
+                                limitText(textLimit)
+                            }
+                            .focused(isFocused!)
+                    } else {
+                        TextField(String(localized: String.LocalizationValue(help ?? "")), text: $textValue).opacity(visible ? 1 : 0)
+                            .onReceive(textValue.publisher) { _ in
+                                limitText(textLimit)
+                            }
+                    }
                     Toggle("", isOn: .constant(false)).opacity(0)
                 }
                 .padding()

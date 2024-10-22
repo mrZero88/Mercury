@@ -20,21 +20,21 @@ class SettingsController: ObservableObject {
         _ = addStringSetting(key: "username", title: "Username", group: userInfo, order: 1)
         _ = addUuidSetting(key: "useruuid", title: "UUUID", group: userInfo, order: 2)
         _ = addBoolSetting(key: "onboard", title: "Onboarding", group: userInfo, value: false, order: 3)
-        _ = addDateSetting(key: "beginningDate", title: "Beginning Date", group: userInfo, order: 4)
-        _ = addButtonSetting(key: "export", title: "Export", group: userInfo, order: 5, function: "export")
-        _ = addButtonSetting(key: "import", title: "Import", group: userInfo, order: 6, function: "import")
-        _ = addButtonSetting(key: "reset", title: "Reset", group: userInfo, order: 7, function: "reset")
+        _ = addDateSetting(key: "firstOnDate", title: "First Use Date", group: userInfo, order: 4)
+        _ = addDateSetting(key: "lastOnDate", title: "Last Use Date", group: userInfo, order: 5)
+        //_ = addIntSetting(key: "defaultPeriod", title: "Default Period", group: userInfo, value: 3, type: "Period", order: 6)
         
-        let _ = addBoolSetting(key: "showBg1", title: "Background", group: customization1, value: true, order: 1)
-        let _ = addStringSetting(key: "background", title: "Background", group: customization1, value: "wwwhirl", type: "Dropdown", order: 2)
-        //let sB2 = addBoolSetting(key: "showBg2", title: "Show Bg. 2", group: customization1, value: false, order: 2)
-        //let aBg2 = addBoolSetting(key: "animateBg2", title: "Animate Bg 2", group: customization1, value: false, order: 3)
-        _ = addStringSetting(key: "accentColor", title: "Accent Color", group: customization1, value: "Green", type: "Color", order: 3)
-        //let bg1Opacity = addDoubleSetting(key: "bg1Opacity", title: "Bg. 1 Opacity", group: customization1, value: 0.5, minDouble: 0.0, maxDouble: 0.5, type: "Slider", order: 5)
-        //let bg2Opacity  = addDoubleSetting(key: "bg2Opacity", title: "Bg. 2 Opacity", group: customization1, value: 0.5, minDouble: 0.0, maxDouble: 1.0, type: "Slider", order: 6, enabled: false)
-        
-        let sO = addBoolSetting(key: "soundsOn", title: "Sounds", group: customization1, order: 4)
-        let v = addDoubleSetting(key: "soundsVolume", title: "Volume", group: customization1, value: 0.5, minDouble: 0.01, maxDouble: 0.5, type: "Slider", order: 5, enabled: false)
+        let _ = addBoolSetting(key: "showBg", title: "Background", group: customization1, value: false, order: 1)
+        let _ = addStringSetting(key: "background", title: "Background", group: customization1, value: "wwwhirl", type: "Background", order: 2)
+        let _ = addDoubleSetting(key: "opacity", title: "Opacity", group: customization1, value: 0.5, minDouble: 0.2, maxDouble: 0.8, type: "Slider", order: 3)
+        let _ = addDoubleSetting(key: "tertiaryColorOpacity", title: "Tertiary Opacity", group: customization1, value: 1.0, minDouble: 0.8, maxDouble: 1.0, type: "Slider", order: 4)
+        _ = addStringSetting(key: "accentColor", title: "Accent Color", group: customization1, value: "Orange", type: "Color", order: 5)
+        _ = addBoolSetting(key: "hapticsOn", title: "Haptics", group: customization1, order: 6)
+        let sO = addBoolSetting(key: "soundsOn", title: "Sounds", group: customization1, order: 7)
+        let v = addDoubleSetting(key: "soundsVolume", title: "Volume", group: customization1, value: 0.5, minDouble: 0.01, maxDouble: 0.5, type: "Slider", order: 8, enabled: false)
+        _ = addButtonSetting(key: "export", title: "Export Data", group: customization1, order: 9, function: "export")
+        _ = addButtonSetting(key: "import", title: "Import Data", group: customization1, order: 10, function: "import")
+        _ = addButtonSetting(key: "reset", title: "Reset Data", group: customization1, order: 11, function: "reset")
         
         sO.addToDependents(v)
         
@@ -60,15 +60,14 @@ class SettingsController: ObservableObject {
 }
 
 func DeleteAllSettings() {
-    let groups = SettingsGroupDao.fetchAllSettingGroups()
-    for group in groups {
-        group.delete()
-    }
     let settings = SettingDao.fetchAllSettings()
     for setting in settings {
         setting.delete()
     }
-    PersistenceController.save()
+    let groups = SettingsGroupDao.fetchAllSettingGroups()
+    for group in groups {
+        group.delete()
+    }
 }
 
 public var UserName: String {
@@ -83,6 +82,12 @@ public var UserUuid: UUID {
     }
 }
 
+public func SetUserUuid(uuid: UUID) {
+    let setting = SettingsController.getSetting(key: "useruuid")
+    setting?.uuidValue = uuid
+    PersistenceController.save()
+}
+
 public var OnBoard: Bool {
     get {
         return SettingsController.getBoolValue(key: "onboard") ?? false
@@ -95,15 +100,39 @@ public func SetOnboard(onboard: Bool) {
     PersistenceController.save()
 }
 
-public var BeginningDate: Date {
+public var FirstOnDate: Date {
     get {
-        return SettingsController.getDateValue(key: "beginningDate") ?? Date()
+        return SettingsController.getDateValue(key: "firstOnDate") ?? Date()
     }
+}
+
+public func SetFirstOnDate(date: Date) {
+    let setting = SettingsController.getSetting(key: "firstOnDate")
+    setting?.dateValue = date
+    PersistenceController.save()
+}
+
+public var LastOnDate: Date {
+    get {
+        return SettingsController.getDateValue(key: "lastOnDate") ?? Date()
+    }
+}
+
+public func SetLastOnDate(date: Date) {
+    let setting = SettingsController.getSetting(key: "lastOnDate")
+    setting?.dateValue = date
+    PersistenceController.save()
 }
 
 public var SoundsOn: Bool {
     get {
         return SettingsController.getBoolValue(key: "soundsOn") ?? false
+    }
+}
+
+public var HapticsOn: Bool {
+    get {
+        return SettingsController.getBoolValue(key: "hapticsOn") ?? false
     }
 }
 
@@ -119,21 +148,9 @@ public var Background: String {
     }
 }
 
-public var ShowBg1: Bool {
+public var ShowBg: Bool {
     get {
-        return SettingsController.getBoolValue(key: "showBg1") ?? false
-    }
-}
-
-public var ShowBg2: Bool {
-    get {
-        return SettingsController.getBoolValue(key: "showBg2") ?? false
-    }
-}
-
-public var AnimateBg2: Bool {
-    get {
-        return SettingsController.getBoolValue(key: "animateBg2") ?? false
+        return SettingsController.getBoolValue(key: "showBg") ?? false
     }
 }
 
@@ -143,14 +160,20 @@ public var AccentColor: String {
     }
 }
 
-public var Bg1Opacity: Double {
+public var Opacity: Double {
     get {
-        return SettingsController.getDoubleValue(key: "bg1Opacity") ?? 0.5
+        return SettingsController.getDoubleValue(key: "opacity") ?? 0.5
     }
 }
 
-public var Bg2Opacity: Double {
+public var TertiaryColorOpacity: Double {
     get {
-        return SettingsController.getDoubleValue(key: "bg2Opacity") ?? 0.5
+        return SettingsController.getDoubleValue(key: "tertiaryColorOpacity") ?? 1.0
+    }
+}
+
+public var DefaultPeriod: Int16 {
+    get {
+        return Int16(SettingsController.getIntValue(key: "defaultPeriod") ?? 3)
     }
 }

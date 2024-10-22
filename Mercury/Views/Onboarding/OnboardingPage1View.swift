@@ -35,7 +35,7 @@ struct OnboardingPage1View: View {
             }
             Divider()
             GridRow {
-                TextFieldView(inSheet: false, textValue: Binding<String> (
+                TextFieldView(textValue: Binding<String> (
                     get: {
                         return UserName
                     },
@@ -47,8 +47,8 @@ struct OnboardingPage1View: View {
             Divider()
             GridRow {
                 HStack {
-                    SheetButtonView(inSheet: false, title: "Skip", clickFunction: skip)
-                    SheetButtonView(inSheet: false, title: "Next", clickFunction: next)
+                    SheetButtonView(title: "Skip", clickFunction: skip)
+                    SheetButtonView(title: "Next", clickFunction: next)
                 }
                 .fixedSize(horizontal: false, vertical: true)
             }

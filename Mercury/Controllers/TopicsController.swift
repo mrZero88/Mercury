@@ -22,7 +22,7 @@ class TopicsController: ObservableObject {
                 self.deleteTopic(topic: topic)
             }
         }
-        PlaySound(sound: .confirm)
+        PlaySound(sound: .navigation)
         PersistenceController.save()
         self.objectWillChange.send()
     }
@@ -39,7 +39,7 @@ class TopicsController: ObservableObject {
             topics = Rearrange(array: topics, fromIndex: originIndex, toIndex: destinationIndex)
         }
         orderTopics(topics: topics)
-        PlaySound(sound: .confirm)
+        PlaySound(sound: .navigation)
         PersistenceController.save()
         self.objectWillChange.send()
     }

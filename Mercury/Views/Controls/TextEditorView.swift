@@ -8,23 +8,24 @@
 import SwiftUI
 
 struct TextEditorView: View {
-    var inSheet: Bool = false
     @Binding var text: String
-    
-    var background: Color {
-        get {
-            return inSheet && !ShowBg1 && !ShowBg2 ? Color("Black") : PanelColor
-        }
-    }
+    var isFocused: FocusState<Bool>.Binding?
     
     var body: some View {
         VStack(alignment: .leading) {
-            TextEditor(text: $text)
-                .scrollContentBackground(.hidden)
-                .lineLimit(3)
+            if(isFocused != nil) {
+                TextEditor(text: $text)
+                    .scrollContentBackground(.hidden)
+                    .lineLimit(3)
+                    .focused(isFocused!)
+            } else {
+                TextEditor(text: $text)
+                    .scrollContentBackground(.hidden)
+                    .lineLimit(3)
+            }
         }
         .padding()
-        .background(background)
+        .background(PanelColor)
         .cornerRadius(CornerRadius)
     }
 }

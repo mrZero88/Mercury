@@ -30,8 +30,8 @@ struct OnboardingPage2View: View {
             }
             GridRow {
                 HStack {
-                    SheetButtonView(inSheet: false, title: "Previous", clickFunction: previous)
-                    SheetButtonView(inSheet: false, title: "Next", clickFunction: next)
+                    SheetButtonView(title: "Previous", clickFunction: previous)
+                    SheetButtonView(title: "Next", clickFunction: next)
                 }
                 .fixedSize(horizontal: false, vertical: true)
             }

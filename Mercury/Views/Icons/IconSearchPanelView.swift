@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import Utils
 
 struct IconSearchPanelView: View {
     @Environment(\.colorScheme) var colorScheme

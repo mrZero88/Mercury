@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Utils
 
 struct NavigationLinkThemeView: View {
     @Environment(\.colorScheme) var colorScheme
@@ -13,6 +14,20 @@ struct NavigationLinkThemeView: View {
     @ObservedObject var theme: Theme
     @State var alertInfo: AlertInfo?
     @State var showEditSheet = false
+    
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
+        predicate: NSPredicate(format: "key == %@", "accentColor")
+    ) var settings: FetchedResults<Setting>
+    
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
+        predicate: NSPredicate(format: "key == %@", "tertiaryColorOpacity")
+    ) var settingsTertiaryOpacity: FetchedResults<Setting>
     
     var colorTheme: Color {
         get {
@@ -44,15 +59,15 @@ struct NavigationLinkThemeView: View {
         .swipeActions(edge: .leading, allowsFullSwipe: true) {
             Button {
                 showEditSheet = true
-                PlaySound(sound: .openModal)
+                PlaySound(sound: .openSheet)
             } label: {
                 Label("Edit", systemImage: "pencil.circle").labelStyle(.iconOnly)
             }
-            .tint(ColorUtils.getColor(colorScheme: colorScheme, colorName: "Yellow").opacity(0.5))
+            .tint((colorScheme == .dark) ? Color("Yellow").opacity(0.5) : Color("yellow4").opacity(0.5))
         }
         .sheet(isPresented: $showEditSheet) {
             ThemeSheetView(theme: theme, isCreating: false)
-                .accentColor(Color.getColor(colorScheme: colorScheme))
+                .accentColor(Color.getColor(colorScheme: colorScheme, setting: self.settings.first))
         }
         .alert(item: $alertInfo, content: { info in
             showAlert(info: info, viewModel: viewModel, theme: theme)

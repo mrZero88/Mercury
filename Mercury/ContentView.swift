@@ -19,6 +19,13 @@ struct ContentView: View {
         sortDescriptors: [
             SortDescriptor(\.order, order: SortOrder.forward)
         ],
+        predicate: NSPredicate(format: "key == %@", "tertiaryColorOpacity")
+    ) var settingsTertiaryOpacity: FetchedResults<Setting>
+    
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
         predicate: NSPredicate(format: "key == %@", "accentColor")
     ) var settings: FetchedResults<Setting>
     
@@ -31,55 +38,88 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack(path: $presentedStack) {
-            VStack {
-                if(!themes.isEmpty) {
-                    List {
-                        ForEach(themes) { theme in
-                            NavigationLinkThemeView(theme: theme)
-                        }
-                        .onMove(perform: move)
-                    }
-                    .navigationDestination(for: String.self) { link in
-                        let items = link.split(separator: "//")
-                        let type = String(items[0])
-                        let id = String(items[1])
-                        if(type == "theme") {
-                            ThemeView(theme: viewModel.themesController.getThemeById(themes: themes, id: id)!)
-                        } else if(type == "topic") {
-                            TopicView(topic: viewModel.topicsController.getTopicById(id: id))
+            VStack(spacing: BorderPadding) {
+                HStack {
+                    Button {
+                        PlaySound(sound: .navigation)
+                        PlayHaptic()
+                        presentedStack = []
+                        presentedStack.append("settings//settings")
+                    } label: {
+                        ZStack {
+                            Label("Settings", systemImage: "gear").labelStyle(.iconOnly).frame(maxHeight: .infinity).foregroundColor(Color.accentColor)
+                            Label("", systemImage: "star").labelStyle(.iconOnly).opacity(0)
                         }
                     }
-                    .scrollContentBackground(.hidden)
-                    .scrollIndicators(.hidden)
+                    .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
+                    Spacer()
+                    Button {
+                        PlaySound(sound: .navigation)
+                        PlayHaptic()
+                        presentedStack = []
+                        presentedStack.append("home//home")
+                    } label: {
+                        ZStack {
+                            Label("Mercury", systemImage: "house").frame(maxWidth: .infinity, maxHeight: .infinity).foregroundColor(Color.accentColor)
+                            Label("", systemImage: "star").labelStyle(.iconOnly).opacity(0)
+                        }
+                    }
+                    .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
+                    Spacer()
+                    Button {
+                        PlaySound(sound: .openSheet)
+                        PlayHaptic()
+                        showCreateSheet = true
+                    } label: {
+                        ZStack {
+                            Label("Add Board", systemImage: "plus").labelStyle(.iconOnly).frame(maxHeight: .infinity).foregroundColor(Color.accentColor)
+                            Label("", systemImage: "star").labelStyle(.iconOnly).opacity(0)
+                        }
+                    }
+                    .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
+                }
+                .buttonStyle(.borderedProminent)
+                .frame(maxWidth: .infinity)
+                .padding(BorderPadding)
+                .bgPanelStyle()
+                .fixedSize(horizontal: false, vertical: true)
+                
+                
+                List {
+                    ForEach(themes) { theme in
+                        NavigationLinkThemeView(theme: theme)
+                    }
+                }
+                .padding(BorderPadding)
+                .bgPanelStyle()
+                .scrollIndicators(.hidden)
+                .listStyle(.plain)
+                .listRowSpacing(BorderPadding)
+            }
+            .padding(.horizontal, BorderPadding)
+            .navigationDestination(for: String.self) { link in
+                let items = link.split(separator: "//")
+                let type = String(items[0])
+                let id = String(items[1])
+                if(type == "theme") {
+                    ThemeView(theme: viewModel.themesController.getThemeById(themes: themes, id: id)!)
+                } else if(type == "topic") {
+                    TopicView(topic: viewModel.topicsController.getTopicById(id: id))
+                } else if (type == "settings") {
+                    SettingsView()
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(SvgBackgroundView())
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    NavigationLink {
-                        if(UIDevice.isIPad) {
-                            SettingsView()
-                        } else if(UIDevice.isIPhone) {
-                            SettingsIphoneView()
-                        }
-                    } label: {
-                        Label("Settings", systemImage: "gear")
-                    }
-                }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        showCreateSheet = true
-                    } label: {
-                        Label("Add Theme", systemImage: "plus")
-                    }
-                }
-            }
+            .scrollContentBackground(.hidden)
+#if os(iOS)
+            .listStyle(.insetGrouped)
+            .navigationBarHidden(true)
+#endif
             .sheet(isPresented: $showCreateSheet) {
                 ThemeSheetView(theme: Theme.createEmptyTheme(), isCreating: true)
                     .accentColor(Color.getColor(colorScheme: colorScheme, setting: self.settings.first))
             }
-            .navigationTitle("Mercury")
             .navigationBarTitleDisplayMode(.inline)
         }
         .accentColor(Color.getColor(colorScheme: colorScheme, setting: self.settings.first))

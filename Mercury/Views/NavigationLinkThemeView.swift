@@ -72,9 +72,12 @@ struct NavigationLinkThemeView: View {
         .alert(item: $alertInfo, content: { info in
             showAlert(info: info, viewModel: viewModel, theme: theme)
         })
-        .listRowSeparatorTint(Color.accentColor)
+        .listRowSeparator(.hidden)
         .listRowBackground(
-            PanelColor
+            TertiaryColor
+                .opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity)
+                .clipped()
+                .cornerRadius(CornerRadius)
         )
     }
 }

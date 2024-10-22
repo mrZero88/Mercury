@@ -15,6 +15,7 @@ struct AlertInfo: Identifiable {
         case deleteTopic
         case deleteSection
         case reset
+        case resyncSettings
     }
     
     let id: AlertType
@@ -51,6 +52,15 @@ func showAlert(info: AlertInfo, viewModel: ViewModel, theme: Theme? = nil, topic
                 withAnimation {
                     viewModel.reset()
                 }
+            case .resyncSettings:
+                withAnimation {
+                    
+                }
+                PlaySound(sound: .delete)
+                PlayHaptic()
+                if(dismiss != nil) {
+                    dismiss?.callAsFunction()
+                }
             }
             if(dismiss != nil) {
                 dismiss?.callAsFunction()
@@ -58,6 +68,13 @@ func showAlert(info: AlertInfo, viewModel: ViewModel, theme: Theme? = nil, topic
         },
                      secondaryButton: .cancel())
     }
+}
+
+func ShowResyncSettingsAlert() -> AlertInfo {
+    let message = "Are you sure you want to re-sync the settings? The settings will be reseted and syncronized across all devices."
+    PlaySound(sound: .alert)
+    PlayHaptic()
+    return AlertInfo(id: .resyncSettings, title: "Re-Sync Settings", message: message)
 }
 
 func ShowDeleteThemeAlert() -> AlertInfo {

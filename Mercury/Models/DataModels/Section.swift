@@ -26,6 +26,7 @@ public class Section: NSManagedObject, Encodable, Decodable {
         updatedAt = try values.decode(Date.self, forKey: .updatedAt)
         isActive = try values.decode(Bool.self, forKey: .isActive)
         order = try values.decode(Int16.self, forKey: .order)
+        iconName = try values.decode(String.self, forKey: .iconName)
         //image = try values.decode(Data.self, forKey: .image)
     }
     
@@ -38,7 +39,8 @@ public class Section: NSManagedObject, Encodable, Decodable {
              updatedAt,
              isActive,
              order,
-             image
+             image,
+             iconName
     }
     
     public func encode(to encoder: Encoder) throws {
@@ -51,6 +53,7 @@ public class Section: NSManagedObject, Encodable, Decodable {
         try container.encode(isActive, forKey: .isActive)
         try container.encode(order, forKey: .order)
         try container.encode(image, forKey: .image)
+        try container.encode(iconName, forKey: .iconName)
     }
     
 }

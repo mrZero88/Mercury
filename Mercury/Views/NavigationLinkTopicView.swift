@@ -19,6 +19,13 @@ struct NavigationLinkTopicView: View {
         sortDescriptors: [
             SortDescriptor(\.order, order: SortOrder.forward)
         ],
+        predicate: NSPredicate(format: "key == %@", "tertiaryColorOpacity")
+    ) var settingsTertiaryOpacity: FetchedResults<Setting>
+    
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
         predicate: NSPredicate(format: "key == %@", "accentColor")
     ) var settings: FetchedResults<Setting>
     
@@ -67,9 +74,12 @@ struct NavigationLinkTopicView: View {
         .alert(item: $alertInfo, content: { info in
             showAlert(info: info, viewModel: viewModel, topic: topic)
         })
-        .listRowSeparatorTint(Color.accentColor)
+        .listRowSeparator(.hidden)
         .listRowBackground(
-            PanelColor
+            TertiaryColor
+                .opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity)
+                .clipped()
+                .cornerRadius(CornerRadius)
         )
     }
 }

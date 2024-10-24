@@ -11,7 +11,15 @@ struct TopicView: View {
     @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var viewModel: ViewModel
     @ObservedObject var topic: Topic
+    @Environment(\.dismiss) var dismiss
     @State var showCreateSheet: Bool = false
+    
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
+        predicate: NSPredicate(format: "key == %@", "tertiaryColorOpacity")
+    ) var settingsTertiaryOpacity: FetchedResults<Setting>
     
     @FetchRequest(
         sortDescriptors: [
@@ -21,35 +29,75 @@ struct TopicView: View {
     ) var settings: FetchedResults<Setting>
     
     var body: some View {
-        VStack {
-            if(!topic.activeSections.isEmpty) {
-                List {
-                    ForEach(topic.activeSections) { section in
-                        SectionView(section: section)
-                    }
-                    .onMove(perform: move)
-                }
-                .scrollContentBackground(.hidden)
-                .scrollIndicators(.hidden)
-            }
-        }
-        .toolbar {
-            ToolbarItem {
+        VStack(spacing: BorderPadding) {
+            HStack {
                 Button {
+                    PlaySound(sound: .navigation)
+                    PlayHaptic()
+                    dismiss()
+                } label: {
+                    ZStack {
+                        Label("Back", systemImage: "sidebar.left").labelStyle(.iconOnly).frame(maxHeight: .infinity).foregroundColor(Color.accentColor)
+                        Label("", systemImage: "star").labelStyle(.iconOnly).opacity(0)
+                    }
+                }
+                .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
+                Spacer()
+                Button {
+                    PlaySound(sound: .navigation)
+                    PlayHaptic()
+                    /*presentedStack = []
+                    presentedStack.append("home//home")*/
+                } label: {
+                    ZStack {
+                        Label("Sections", systemImage: "house").frame(maxWidth: .infinity, maxHeight: .infinity).foregroundColor(Color.accentColor)
+                        Label("", systemImage: "star").labelStyle(.iconOnly).opacity(0)
+                    }
+                }
+                .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
+                Spacer()
+                Button {
+                    PlaySound(sound: .openSheet)
+                    PlayHaptic()
                     showCreateSheet = true
                 } label: {
-                    Label("Add Section", systemImage: "plus")
+                    ZStack {
+                        Label("Add Topic", systemImage: "plus").labelStyle(.iconOnly).frame(maxHeight: .infinity).foregroundColor(Color.accentColor)
+                        Label("", systemImage: "star").labelStyle(.iconOnly).opacity(0)
+                    }
                 }
+                .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
             }
+            .buttonStyle(.borderedProminent)
+            .frame(maxWidth: .infinity)
+            .padding(BorderPadding)
+            .bgPanelStyle()
+            .fixedSize(horizontal: false, vertical: true)
+            
+            List {
+                ForEach(topic.activeSections) { section in
+                    SectionView(section: section)
+                }
+                .onMove(perform: move)
+            }
+            .padding(BorderPadding)
+            .bgPanelStyle()
+            .scrollIndicators(.hidden)
+            .listStyle(.plain)
+            .listRowSpacing(BorderPadding)
         }
         .sheet(isPresented: $showCreateSheet) {
             SectionSheetView(section: Section.createEmptySection(topic: topic), isCreating: true)
                 .accentColor(Color.getColor(colorScheme: colorScheme, setting: settings.first))
         }
-        .scrollContentBackground(.hidden)
+        .padding(.horizontal, BorderPadding)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(SvgBackgroundView())
-        .navigationTitle(topic.title ?? "")
+        .scrollContentBackground(.hidden)
+#if os(iOS)
+        .listStyle(.insetGrouped)
+        .navigationBarHidden(true)
+#endif
     }
     
     func move(from source: IndexSet, to destination: Int) {

@@ -21,7 +21,7 @@ public class SettingsViewModel: ObservableObject {
     init() {
         //DataUtils.wipeSettings(context: PersistenceController.shared.container.viewContext)
         //DataUtils.wipeSettingGroups(context: PersistenceController.shared.container.viewContext)
-        let beginningDate = SettingsController.getDateValue(key: "beginningDate")
+        let beginningDate = SettingsController.getDateValue(key: "firstOnDate")
         if(beginningDate == nil) {
             self.settingsController.addSettings()
         }

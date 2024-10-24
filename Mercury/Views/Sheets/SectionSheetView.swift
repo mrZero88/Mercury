@@ -44,12 +44,19 @@ struct SectionSheetView: View {
                 }
             }
             GridRow {
-                TextFieldView(textValue: Binding<String> (
+                TextFieldIconView(textValue: Binding<String> (
                     get: {
                         return section.title ?? ""
                     },
                     set: {
                         section.title = $0
+                    }
+                ), iconValue: Binding<String> (
+                    get: {
+                        return section.iconName ?? DefaultThemeIconName
+                    },
+                    set: {
+                        section.iconName = $0
                     }
                 ), help: String(localized: String.LocalizationValue("Section title")), textLimit: SectionValidation.titleMaxChars)
             }

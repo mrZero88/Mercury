@@ -84,7 +84,6 @@ struct ContentView: View {
                 .bgPanelStyle()
                 .fixedSize(horizontal: false, vertical: true)
                 
-                
                 List {
                     ForEach(themes) { theme in
                         NavigationLinkThemeView(theme: theme)

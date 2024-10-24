@@ -26,7 +26,7 @@ public class SectionDao {
         return objects!
     }
     
-    public static func createSection(title: String, text: String, order: Int16 = 1, topic: Topic) -> Section {
+    public static func createSection(title: String, text: String, iconName: String, order: Int16 = 1, topic: Topic) -> Section {
         let newSection = Section(context: PersistenceController.shared.container.viewContext)
         let date = Date()
         newSection.id = UUID()
@@ -37,6 +37,7 @@ public class SectionDao {
         newSection.isActive = false
         newSection.order = order
         newSection.topic = topic
+        newSection.iconName = iconName
         return newSection
     }
 }

@@ -19,16 +19,38 @@ struct SectionView: View {
         sortDescriptors: [
             SortDescriptor(\.order, order: SortOrder.forward)
         ],
+        predicate: NSPredicate(format: "key == %@", "tertiaryColorOpacity")
+    ) var settingsTertiaryOpacity: FetchedResults<Setting>
+    
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
         predicate: NSPredicate(format: "key == %@", "accentColor")
     ) var settings: FetchedResults<Setting>
     
-    var body: some View {
-        SwiftUI.Section(section.title ?? "") {
-            Text(section.text ?? "")
+    var colorTheme: Color {
+        get {
+            return colorScheme == .dark ? Color("White") : Color("Black")
         }
-        .listRowBackground(
-            PanelColor
-        )
+    }
+    
+    var body: some View {
+        HStack {
+            if(!(section.iconName?.isEmpty ?? true)) {
+                VStack {
+                    Image(section.iconName ?? "").resizable().scaledToFit().foregroundColor(Color.accentColor).frame(width: 40, height: 40, alignment: .center).padding(.vertical)
+                    Spacer()
+                }
+            }
+            VStack(alignment: .leading) {
+                Text(section.title ?? "").padding(.leading, BorderPadding).foregroundColor(colorTheme)
+                if(!(section.text?.isEmpty ?? true)) {
+                    Text(section.text ?? "").padding(.leading, BorderPadding).foregroundColor(.secondary).font(.footnote)
+                }
+            }
+            Spacer()
+        }
         .swipeActions(edge: .trailing, allowsFullSwipe: true) {
             Button {
                 alertInfo = ShowDeleteSectionAlert()
@@ -56,7 +78,13 @@ struct SectionView: View {
         .alert(item: $alertInfo, content: { info in
             showAlert(info: info, viewModel: viewModel, section: section)
         })
-        .navigationTitle(section.topic?.title ?? "")
+        .listRowSeparator(.hidden)
+        .listRowBackground(
+            TertiaryColor
+                .opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity)
+                .clipped()
+                .cornerRadius(CornerRadius)
+        )
     }
 }
 

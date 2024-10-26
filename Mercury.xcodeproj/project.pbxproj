@@ -25,6 +25,7 @@
 		B226EABA2CC425A200A9B6BB /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B226EAB92CC425A200A9B6BB /* Haptics.swift */; };
 		B226EABB2CC4283F00A9B6BB /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80B72A3C44E50071FDAC /* Period.swift */; };
 		B226EABD2CC4296100A9B6BB /* ToArrayUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B226EABC2CC4296100A9B6BB /* ToArrayUtils.swift */; };
+		B254743C2CCD1BA7007CCD00 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254743B2CCD1B9C007CCD00 /* UINavigationController.swift */; };
 		B26165702CC81FCE009C183E /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B261656F2CC81FCE009C183E /* ColorExtension.swift */; };
 		B26165722CC8227B009C183E /* Utils in Frameworks */ = {isa = PBXBuildFile; productRef = B26165712CC8227B009C183E /* Utils */; };
 		B2679E012A9E751600F34EC6 /* JsonDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2679E002A9E751600F34EC6 /* JsonDocument.swift */; };
@@ -256,6 +257,7 @@
 		B226EAA22CC4038E00A9B6BB /* UUIDSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDSettingView.swift; sourceTree = "<group>"; };
 		B226EAB92CC425A200A9B6BB /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		B226EABC2CC4296100A9B6BB /* ToArrayUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToArrayUtils.swift; sourceTree = "<group>"; };
+		B254743B2CCD1B9C007CCD00 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		B25BEBA52B4322F4008F387B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B261656F2CC81FCE009C183E /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		B2679E002A9E751600F34EC6 /* JsonDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonDocument.swift; sourceTree = "<group>"; };
@@ -606,6 +608,7 @@
 		B27D809E2A3C44E50071FDAC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B254743B2CCD1B9C007CCD00 /* UINavigationController.swift */,
 				B261656F2CC81FCE009C183E /* ColorExtension.swift */,
 				B27D80AA2A3C44E50071FDAC /* Structural */,
 				B27D809F2A3C44E50071FDAC /* NSSetExtension.swift */,
@@ -1239,6 +1242,7 @@
 				B27D81AE2A3C44E60071FDAC /* ThemeView.swift in Sources */,
 				B27D81962A3C44E60071FDAC /* SectionValidation.swift in Sources */,
 				B26E43552A9B9EA800A982BF /* HumanCivilization.swift in Sources */,
+				B254743C2CCD1BA7007CCD00 /* UINavigationController.swift in Sources */,
 				B26E43592A9B9EDF00A982BF /* AppIconGroups.swift in Sources */,
 				B26E434F2A9B9EA800A982BF /* ClothesAndAccessory.swift in Sources */,
 				B27D81AF2A3C44E60071FDAC /* TextFieldIconView.swift in Sources */,

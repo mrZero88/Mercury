@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		B20FB56A2CC4FE0700F764A1 /* ToArrayUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B226EABC2CC4296100A9B6BB /* ToArrayUtils.swift */; };
+		B2190BE02CD7E82C006A3698 /* openSheet3.wav in Resources */ = {isa = PBXBuildFile; fileRef = B2190BDA2CD7E82C006A3698 /* openSheet3.wav */; };
+		B2190BE12CD7E82C006A3698 /* SoundPack4 - Select 3Variation_01.wav in Resources */ = {isa = PBXBuildFile; fileRef = B2190BDE2CD7E82C006A3698 /* SoundPack4 - Select 3Variation_01.wav */; };
+		B2190BE22CD7E82C006A3698 /* UI_soundPack5_Back_v1_01.wav in Resources */ = {isa = PBXBuildFile; fileRef = B2190BDF2CD7E82C006A3698 /* UI_soundPack5_Back_v1_01.wav */; };
+		B2190BE32CD7E82C006A3698 /* SoundPack4 - Back 1Variation_01.wav in Resources */ = {isa = PBXBuildFile; fileRef = B2190BDB2CD7E82C006A3698 /* SoundPack4 - Back 1Variation_01.wav */; };
+		B2190BE42CD7E82C006A3698 /* SoundPack4 - Scroll 2Variation_01.wav in Resources */ = {isa = PBXBuildFile; fileRef = B2190BDD2CD7E82C006A3698 /* SoundPack4 - Scroll 2Variation_01.wav */; };
+		B2190BE52CD7E82C006A3698 /* SoundPack4 - Back 4Variation_01.wav in Resources */ = {isa = PBXBuildFile; fileRef = B2190BDC2CD7E82C006A3698 /* SoundPack4 - Back 4Variation_01.wav */; };
 		B226EAA32CC4038E00A9B6BB /* BoolSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B226EA982CC4038E00A9B6BB /* BoolSettingView.swift */; };
 		B226EAA42CC4038E00A9B6BB /* StringSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B226EAA12CC4038E00A9B6BB /* StringSettingView.swift */; };
 		B226EAA52CC4038E00A9B6BB /* IntSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B226EA9B2CC4038E00A9B6BB /* IntSettingView.swift */; };
@@ -25,7 +31,6 @@
 		B226EABA2CC425A200A9B6BB /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B226EAB92CC425A200A9B6BB /* Haptics.swift */; };
 		B226EABB2CC4283F00A9B6BB /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80B72A3C44E50071FDAC /* Period.swift */; };
 		B226EABD2CC4296100A9B6BB /* ToArrayUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B226EABC2CC4296100A9B6BB /* ToArrayUtils.swift */; };
-		B254743C2CCD1BA7007CCD00 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254743B2CCD1B9C007CCD00 /* UINavigationController.swift */; };
 		B26165702CC81FCE009C183E /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B261656F2CC81FCE009C183E /* ColorExtension.swift */; };
 		B26165722CC8227B009C183E /* Utils in Frameworks */ = {isa = PBXBuildFile; productRef = B26165712CC8227B009C183E /* Utils */; };
 		B2679E012A9E751600F34EC6 /* JsonDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2679E002A9E751600F34EC6 /* JsonDocument.swift */; };
@@ -116,21 +121,6 @@
 		B27D81652A3C44E60071FDAC /* builderPattern.png in Resources */ = {isa = PBXBuildFile; fileRef = B27D80C82A3C44E50071FDAC /* builderPattern.png */; };
 		B27D81662A3C44E60071FDAC /* SingletonPattern.png in Resources */ = {isa = PBXBuildFile; fileRef = B27D80C92A3C44E50071FDAC /* SingletonPattern.png */; };
 		B27D81672A3C44E60071FDAC /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80CA2A3C44E50071FDAC /* Config.swift */; };
-		B27D81762A3C44E60071FDAC /* openModal_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B27D80DB2A3C44E50071FDAC /* openModal_1.wav */; };
-		B27D81772A3C44E60071FDAC /* bt6.wav in Resources */ = {isa = PBXBuildFile; fileRef = B27D80DC2A3C44E50071FDAC /* bt6.wav */; };
-		B27D81782A3C44E60071FDAC /* bt7.wav in Resources */ = {isa = PBXBuildFile; fileRef = B27D80DD2A3C44E50071FDAC /* bt7.wav */; };
-		B27D81792A3C44E60071FDAC /* bt5.wav in Resources */ = {isa = PBXBuildFile; fileRef = B27D80DE2A3C44E50071FDAC /* bt5.wav */; };
-		B27D817A2A3C44E60071FDAC /* navigation_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B27D80DF2A3C44E50071FDAC /* navigation_1.wav */; };
-		B27D817B2A3C44E60071FDAC /* click2.wav in Resources */ = {isa = PBXBuildFile; fileRef = B27D80E12A3C44E50071FDAC /* click2.wav */; };
-		B27D817C2A3C44E60071FDAC /* click3.wav in Resources */ = {isa = PBXBuildFile; fileRef = B27D80E22A3C44E50071FDAC /* click3.wav */; };
-		B27D817D2A3C44E60071FDAC /* click1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B27D80E32A3C44E50071FDAC /* click1.wav */; };
-		B27D817E2A3C44E60071FDAC /* click4.wav in Resources */ = {isa = PBXBuildFile; fileRef = B27D80E42A3C44E50071FDAC /* click4.wav */; };
-		B27D817F2A3C44E60071FDAC /* click5.wav in Resources */ = {isa = PBXBuildFile; fileRef = B27D80E52A3C44E50071FDAC /* click5.wav */; };
-		B27D81802A3C44E60071FDAC /* click7.wav in Resources */ = {isa = PBXBuildFile; fileRef = B27D80E62A3C44E50071FDAC /* click7.wav */; };
-		B27D81812A3C44E60071FDAC /* click6.wav in Resources */ = {isa = PBXBuildFile; fileRef = B27D80E72A3C44E50071FDAC /* click6.wav */; };
-		B27D81822A3C44E60071FDAC /* bt1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B27D80E82A3C44E50071FDAC /* bt1.wav */; };
-		B27D81832A3C44E60071FDAC /* bt2.wav in Resources */ = {isa = PBXBuildFile; fileRef = B27D80E92A3C44E50071FDAC /* bt2.wav */; };
-		B27D81842A3C44E60071FDAC /* confirm_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B27D80EA2A3C44E50071FDAC /* confirm_1.wav */; };
 		B27D81862A3C44E60071FDAC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B27D80EF2A3C44E50071FDAC /* Localizable.strings */; };
 		B27D81872A3C44E60071FDAC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B27D80F22A3C44E50071FDAC /* Localizable.strings */; };
 		B27D81882A3C44E60071FDAC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B27D80F52A3C44E50071FDAC /* Localizable.strings */; };
@@ -243,6 +233,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B2190BDA2CD7E82C006A3698 /* openSheet3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = openSheet3.wav; sourceTree = "<group>"; };
+		B2190BDB2CD7E82C006A3698 /* SoundPack4 - Back 1Variation_01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "SoundPack4 - Back 1Variation_01.wav"; sourceTree = "<group>"; };
+		B2190BDC2CD7E82C006A3698 /* SoundPack4 - Back 4Variation_01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "SoundPack4 - Back 4Variation_01.wav"; sourceTree = "<group>"; };
+		B2190BDD2CD7E82C006A3698 /* SoundPack4 - Scroll 2Variation_01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "SoundPack4 - Scroll 2Variation_01.wav"; sourceTree = "<group>"; };
+		B2190BDE2CD7E82C006A3698 /* SoundPack4 - Select 3Variation_01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "SoundPack4 - Select 3Variation_01.wav"; sourceTree = "<group>"; };
+		B2190BDF2CD7E82C006A3698 /* UI_soundPack5_Back_v1_01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = UI_soundPack5_Back_v1_01.wav; sourceTree = "<group>"; };
 		B226EA972CC4038E00A9B6BB /* BackgroundSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSettingView.swift; sourceTree = "<group>"; };
 		B226EA982CC4038E00A9B6BB /* BoolSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolSettingView.swift; sourceTree = "<group>"; };
 		B226EA992CC4038E00A9B6BB /* ColorSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSettingView.swift; sourceTree = "<group>"; };
@@ -257,7 +253,6 @@
 		B226EAA22CC4038E00A9B6BB /* UUIDSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDSettingView.swift; sourceTree = "<group>"; };
 		B226EAB92CC425A200A9B6BB /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		B226EABC2CC4296100A9B6BB /* ToArrayUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToArrayUtils.swift; sourceTree = "<group>"; };
-		B254743B2CCD1B9C007CCD00 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		B25BEBA52B4322F4008F387B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B261656F2CC81FCE009C183E /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		B2679E002A9E751600F34EC6 /* JsonDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonDocument.swift; sourceTree = "<group>"; };
@@ -348,21 +343,6 @@
 		B27D80C82A3C44E50071FDAC /* builderPattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = builderPattern.png; sourceTree = "<group>"; };
 		B27D80C92A3C44E50071FDAC /* SingletonPattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SingletonPattern.png; sourceTree = "<group>"; };
 		B27D80CA2A3C44E50071FDAC /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		B27D80DB2A3C44E50071FDAC /* openModal_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = openModal_1.wav; sourceTree = "<group>"; };
-		B27D80DC2A3C44E50071FDAC /* bt6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bt6.wav; sourceTree = "<group>"; };
-		B27D80DD2A3C44E50071FDAC /* bt7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bt7.wav; sourceTree = "<group>"; };
-		B27D80DE2A3C44E50071FDAC /* bt5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bt5.wav; sourceTree = "<group>"; };
-		B27D80DF2A3C44E50071FDAC /* navigation_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = navigation_1.wav; sourceTree = "<group>"; };
-		B27D80E12A3C44E50071FDAC /* click2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click2.wav; sourceTree = "<group>"; };
-		B27D80E22A3C44E50071FDAC /* click3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click3.wav; sourceTree = "<group>"; };
-		B27D80E32A3C44E50071FDAC /* click1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click1.wav; sourceTree = "<group>"; };
-		B27D80E42A3C44E50071FDAC /* click4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click4.wav; sourceTree = "<group>"; };
-		B27D80E52A3C44E50071FDAC /* click5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click5.wav; sourceTree = "<group>"; };
-		B27D80E62A3C44E50071FDAC /* click7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click7.wav; sourceTree = "<group>"; };
-		B27D80E72A3C44E50071FDAC /* click6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click6.wav; sourceTree = "<group>"; };
-		B27D80E82A3C44E50071FDAC /* bt1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bt1.wav; sourceTree = "<group>"; };
-		B27D80E92A3C44E50071FDAC /* bt2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bt2.wav; sourceTree = "<group>"; };
-		B27D80EA2A3C44E50071FDAC /* confirm_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = confirm_1.wav; sourceTree = "<group>"; };
 		B27D80F02A3C44E50071FDAC /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B27D80F32A3C44E50071FDAC /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B27D80F62A3C44E50071FDAC /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -608,7 +588,6 @@
 		B27D809E2A3C44E50071FDAC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B254743B2CCD1B9C007CCD00 /* UINavigationController.swift */,
 				B261656F2CC81FCE009C183E /* ColorExtension.swift */,
 				B27D80AA2A3C44E50071FDAC /* Structural */,
 				B27D809F2A3C44E50071FDAC /* NSSetExtension.swift */,
@@ -645,13 +624,13 @@
 		B27D80B42A3C44E50071FDAC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B226EAB92CC425A200A9B6BB /* Haptics.swift */,
 				B2679E072A9E762200F34EC6 /* DataModels */,
 				B2679E022A9E756400F34EC6 /* ImportExport */,
 				B27D80B52A3C44E50071FDAC /* InfoItem.swift */,
 				B27D80B62A3C44E50071FDAC /* DesignPatternS.swift */,
 				B27D80B72A3C44E50071FDAC /* Period.swift */,
 				B27D80B82A3C44E50071FDAC /* DrawingCanvasView.swift */,
+				B226EAB92CC425A200A9B6BB /* Haptics.swift */,
 				B27D80B92A3C44E50071FDAC /* Array.swift */,
 				B27D80BA2A3C44E50071FDAC /* Range.swift */,
 				B27D80BB2A3C44E50071FDAC /* Sounds.swift */,
@@ -702,31 +681,14 @@
 		B27D80DA2A3C44E50071FDAC /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				B27D80DB2A3C44E50071FDAC /* openModal_1.wav */,
-				B27D80DC2A3C44E50071FDAC /* bt6.wav */,
-				B27D80DD2A3C44E50071FDAC /* bt7.wav */,
-				B27D80DE2A3C44E50071FDAC /* bt5.wav */,
-				B27D80DF2A3C44E50071FDAC /* navigation_1.wav */,
-				B27D80E02A3C44E50071FDAC /* Button */,
-				B27D80E82A3C44E50071FDAC /* bt1.wav */,
-				B27D80E92A3C44E50071FDAC /* bt2.wav */,
-				B27D80EA2A3C44E50071FDAC /* confirm_1.wav */,
+				B2190BDA2CD7E82C006A3698 /* openSheet3.wav */,
+				B2190BDB2CD7E82C006A3698 /* SoundPack4 - Back 1Variation_01.wav */,
+				B2190BDC2CD7E82C006A3698 /* SoundPack4 - Back 4Variation_01.wav */,
+				B2190BDD2CD7E82C006A3698 /* SoundPack4 - Scroll 2Variation_01.wav */,
+				B2190BDE2CD7E82C006A3698 /* SoundPack4 - Select 3Variation_01.wav */,
+				B2190BDF2CD7E82C006A3698 /* UI_soundPack5_Back_v1_01.wav */,
 			);
 			path = Sounds;
-			sourceTree = "<group>";
-		};
-		B27D80E02A3C44E50071FDAC /* Button */ = {
-			isa = PBXGroup;
-			children = (
-				B27D80E12A3C44E50071FDAC /* click2.wav */,
-				B27D80E22A3C44E50071FDAC /* click3.wav */,
-				B27D80E32A3C44E50071FDAC /* click1.wav */,
-				B27D80E42A3C44E50071FDAC /* click4.wav */,
-				B27D80E52A3C44E50071FDAC /* click5.wav */,
-				B27D80E62A3C44E50071FDAC /* click7.wav */,
-				B27D80E72A3C44E50071FDAC /* click6.wav */,
-			);
-			path = Button;
 			sourceTree = "<group>";
 		};
 		B27D80EB2A3C44E50071FDAC /* AppIcon */ = {
@@ -1111,34 +1073,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B27D817C2A3C44E60071FDAC /* click3.wav in Resources */,
 				B27D81862A3C44E60071FDAC /* Localizable.strings in Resources */,
-				B27D81842A3C44E60071FDAC /* confirm_1.wav in Resources */,
 				B27D818B2A3C44E60071FDAC /* CreateDeleteBoard.mov in Resources */,
 				B27D818C2A3C44E60071FDAC /* createMoveDeleteTask.mov in Resources */,
-				B27D817F2A3C44E60071FDAC /* click5.wav in Resources */,
-				B27D81812A3C44E60071FDAC /* click6.wav in Resources */,
-				B27D81762A3C44E60071FDAC /* openModal_1.wav in Resources */,
 				B27D81632A3C44E60071FDAC /* designPatterns.json in Resources */,
-				B27D81792A3C44E60071FDAC /* bt5.wav in Resources */,
 				B27D81892A3C44E60071FDAC /* Localizable.strings in Resources */,
-				B27D817E2A3C44E60071FDAC /* click4.wav in Resources */,
 				B27D81882A3C44E60071FDAC /* Localizable.strings in Resources */,
-				B27D81822A3C44E60071FDAC /* bt1.wav in Resources */,
 				B27D81652A3C44E60071FDAC /* builderPattern.png in Resources */,
-				B27D817D2A3C44E60071FDAC /* click1.wav in Resources */,
 				B27D81872A3C44E60071FDAC /* Localizable.strings in Resources */,
 				B27D81662A3C44E60071FDAC /* SingletonPattern.png in Resources */,
+				B2190BE02CD7E82C006A3698 /* openSheet3.wav in Resources */,
+				B2190BE12CD7E82C006A3698 /* SoundPack4 - Select 3Variation_01.wav in Resources */,
+				B2190BE22CD7E82C006A3698 /* UI_soundPack5_Back_v1_01.wav in Resources */,
+				B2190BE32CD7E82C006A3698 /* SoundPack4 - Back 1Variation_01.wav in Resources */,
+				B2190BE42CD7E82C006A3698 /* SoundPack4 - Scroll 2Variation_01.wav in Resources */,
+				B2190BE52CD7E82C006A3698 /* SoundPack4 - Back 4Variation_01.wav in Resources */,
 				B27D818A2A3C44E60071FDAC /* createDeletePhase.mov in Resources */,
 				B27D807C2A3C44980071FDAC /* Preview Assets.xcassets in Resources */,
-				B27D817B2A3C44E60071FDAC /* click2.wav in Resources */,
-				B27D817A2A3C44E60071FDAC /* navigation_1.wav in Resources */,
 				B27D80782A3C44980071FDAC /* Assets.xcassets in Resources */,
-				B27D81832A3C44E60071FDAC /* bt2.wav in Resources */,
-				B27D81782A3C44E60071FDAC /* bt7.wav in Resources */,
 				B27D81642A3C44E60071FDAC /* PrototypePattern.png in Resources */,
-				B27D81772A3C44E60071FDAC /* bt6.wav in Resources */,
-				B27D81802A3C44E60071FDAC /* click7.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1242,7 +1195,6 @@
 				B27D81AE2A3C44E60071FDAC /* ThemeView.swift in Sources */,
 				B27D81962A3C44E60071FDAC /* SectionValidation.swift in Sources */,
 				B26E43552A9B9EA800A982BF /* HumanCivilization.swift in Sources */,
-				B254743C2CCD1BA7007CCD00 /* UINavigationController.swift in Sources */,
 				B26E43592A9B9EDF00A982BF /* AppIconGroups.swift in Sources */,
 				B26E434F2A9B9EA800A982BF /* ClothesAndAccessory.swift in Sources */,
 				B27D81AF2A3C44E60071FDAC /* TextFieldIconView.swift in Sources */,
@@ -1543,6 +1495,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mercury/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -1583,6 +1536,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mercury/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

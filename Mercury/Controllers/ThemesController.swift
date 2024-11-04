@@ -23,12 +23,14 @@ class ThemesController: ObservableObject {
             }
         }
         PlaySound(sound: .navigation)
+        PlayHaptic()
         PersistenceController.save()
         self.objectWillChange.send()
     }
     
     func cancelSaveTheme(theme: Theme) {
         PlaySound(sound: .navigation)
+        PlayHaptic()
         theme.objectWillChange.send()
     }
     
@@ -41,6 +43,7 @@ class ThemesController: ObservableObject {
         }
         orderThemes(themes: themes)
         PlaySound(sound: .navigation)
+        PlayHaptic()
         PersistenceController.save()
         self.objectWillChange.send()
     }

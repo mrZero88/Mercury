@@ -23,6 +23,7 @@ class TopicsController: ObservableObject {
             }
         }
         PlaySound(sound: .navigation)
+        PlayHaptic()
         PersistenceController.save()
         self.objectWillChange.send()
     }
@@ -40,6 +41,7 @@ class TopicsController: ObservableObject {
         }
         orderTopics(topics: topics)
         PlaySound(sound: .navigation)
+        PlayHaptic()
         PersistenceController.save()
         self.objectWillChange.send()
     }

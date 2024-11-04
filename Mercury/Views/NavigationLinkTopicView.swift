@@ -62,6 +62,7 @@ struct NavigationLinkTopicView: View {
             Button {
                 showEditSheet = true
                 PlaySound(sound: .openSheet)
+                PlayHaptic()
             } label: {
                 Label("Edit", systemImage: "pencil.circle").labelStyle(.iconOnly)
             }

@@ -56,14 +56,13 @@ struct ContentView: View {
                     Button {
                         PlaySound(sound: .navigation)
                         PlayHaptic()
-                        presentedStack = []
-                        presentedStack.append("home//home")
                     } label: {
                         ZStack {
-                            Label("Mercury", systemImage: "house").frame(maxWidth: .infinity, maxHeight: .infinity).foregroundColor(Color.accentColor)
+                            Label("Themes", systemImage: "house").frame(maxWidth: .infinity, maxHeight: .infinity).labelStyle(.titleOnly).foregroundColor(Color.accentColor)
                             Label("", systemImage: "star").labelStyle(.iconOnly).opacity(0)
                         }
                     }
+                    .disabled(true)
                     .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
                     Spacer()
                     Button {
@@ -132,6 +131,7 @@ struct ContentView: View {
                 presentedStack.append("topic//" + selectedTopic!.id!.description)
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     func move(from source: IndexSet, to destination: Int) {

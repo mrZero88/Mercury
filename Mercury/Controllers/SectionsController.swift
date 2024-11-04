@@ -18,12 +18,14 @@ class SectionsController: ObservableObject {
             }
         }
         PlaySound(sound: .navigation)
+        PlayHaptic()
         PersistenceController.save()
         self.objectWillChange.send()
     }
     
     func cancelSaveSection(section: Section) {
         PlaySound(sound: .navigation)
+        PlayHaptic()
         section.objectWillChange.send()
     }
     
@@ -36,6 +38,7 @@ class SectionsController: ObservableObject {
         }
         orderSections(sections: sections)
         PlaySound(sound: .navigation)
+        PlayHaptic()
         PersistenceController.save()
         self.objectWillChange.send()
     }

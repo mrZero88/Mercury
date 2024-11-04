@@ -27,4 +27,16 @@ class WidgetViewModel: ObservableObject {
         }
     }
     
+    var topics: [Topic] {
+        get {
+            var topics: [Topic] = []
+            for theme in self.themes {
+                for topic in theme.activeTopics {
+                    topics.append(topic)
+                }
+            }
+            return topics
+        }
+    }
+    
 }

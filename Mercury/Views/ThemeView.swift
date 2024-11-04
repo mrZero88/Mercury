@@ -51,10 +51,11 @@ struct ThemeView: View {
                     presentedStack.append("home//home")*/
                 } label: {
                     ZStack {
-                        Label("Topics", systemImage: "house").frame(maxWidth: .infinity, maxHeight: .infinity).foregroundColor(Color.accentColor)
+                        Label("Topics", systemImage: "house").frame(maxWidth: .infinity, maxHeight: .infinity).labelStyle(.titleOnly).foregroundColor(Color.accentColor)
                         Label("", systemImage: "star").labelStyle(.iconOnly).opacity(0)
                     }
                 }
+                .disabled(true)
                 .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
                 Spacer()
                 Button {
@@ -101,7 +102,10 @@ struct ThemeView: View {
             TopicSheetView(topic: Topic.createEmptyTopic(theme: theme), isCreating: true)
                 .accentColor(Color.getColor(colorScheme: colorScheme, setting: self.settings.first))
         }
-        .navigationTitle(theme.title ?? "")
+        .onAppear {
+            PlaySound(sound: .navigation)
+            PlayHaptic()
+        }
     }
     
     func move(from source: IndexSet, to destination: Int) {

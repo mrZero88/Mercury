@@ -47,7 +47,7 @@ struct SettingView: View {
                     .fileExporter(isPresented: $isExporting,
                                   document: document,
                                   contentType: .json,
-                                  defaultFilename: "Alien_" + Date().localDateTimeZoneDateDescription) { result in
+                                  defaultFilename: "Mercury_" + Date().localDateTimeZoneDateDescription) { result in
                         switch result {
                         case .success(_):
                             break

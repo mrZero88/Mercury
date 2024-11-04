@@ -27,4 +27,8 @@ public class SettingsViewModel: ObservableObject {
         }
         settingGroups = SettingsGroupDao.fetchSettingGroups()
     }
+    
+    func fetchSettingGroups() {
+        settingGroups = Array(SettingsGroupDao.fetchSettingGroups()[...1])
+    }
 }

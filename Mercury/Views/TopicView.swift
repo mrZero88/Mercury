@@ -50,10 +50,11 @@ struct TopicView: View {
                     presentedStack.append("home//home")*/
                 } label: {
                     ZStack {
-                        Label("Sections", systemImage: "house").frame(maxWidth: .infinity, maxHeight: .infinity).foregroundColor(Color.accentColor)
+                        Label("Sections", systemImage: "house").frame(maxWidth: .infinity, maxHeight: .infinity).labelStyle(.titleOnly).foregroundColor(Color.accentColor)
                         Label("", systemImage: "star").labelStyle(.iconOnly).opacity(0)
                     }
                 }
+                .disabled(true)
                 .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
                 Spacer()
                 Button {
@@ -98,6 +99,10 @@ struct TopicView: View {
         .listStyle(.insetGrouped)
         .navigationBarHidden(true)
 #endif
+        .onAppear {
+            PlaySound(sound: .navigation)
+            PlayHaptic()
+        }
     }
     
     func move(from source: IndexSet, to destination: Int) {

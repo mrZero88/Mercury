@@ -44,19 +44,8 @@ struct ThemeView: View {
                 }
                 .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
                 Spacer()
-                Button {
-                    PlaySound(sound: .navigation)
-                    PlayHaptic()
-                    /*presentedStack = []
-                    presentedStack.append("home//home")*/
-                } label: {
-                    ZStack {
-                        Label("Topics", systemImage: "house").frame(maxWidth: .infinity, maxHeight: .infinity).labelStyle(.titleOnly).foregroundColor(Color.accentColor)
-                        Label("", systemImage: "star").labelStyle(.iconOnly).opacity(0)
-                    }
-                }
-                .disabled(true)
-                .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
+                Label("Topics", systemImage: "house").frame(maxWidth: .infinity, maxHeight: .infinity).labelStyle(.titleOnly).foregroundColor(Color.accentColor)
+                    .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
                 Spacer()
                 Button {
                     PlaySound(sound: .openSheet)

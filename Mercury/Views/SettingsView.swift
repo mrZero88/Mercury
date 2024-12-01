@@ -89,9 +89,9 @@ struct SettingsView: View {
 #if os(iOS)
         .navigationBarHidden(true)
 #endif
-        /*TODO: DO LATER: Improve Alerts!.alert(item: $alertInfo, content: { info in
+        .alert(item: $alertInfo, content: { info in
             showAlert(info: info, viewModel: viewModel, settingsChangedTrigger: settingsChangedTrigger)
-        })*/
+        })
     }
 }
 

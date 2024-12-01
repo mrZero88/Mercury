@@ -53,17 +53,8 @@ struct ContentView: View {
                     }
                     .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
                     Spacer()
-                    Button {
-                        PlaySound(sound: .navigation)
-                        PlayHaptic()
-                    } label: {
-                        ZStack {
-                            Label("Themes", systemImage: "house").frame(maxWidth: .infinity, maxHeight: .infinity).labelStyle(.titleOnly).foregroundColor(Color.accentColor)
-                            Label("", systemImage: "star").labelStyle(.iconOnly).opacity(0)
-                        }
-                    }
-                    .disabled(true)
-                    .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
+                    Label("Themes", systemImage: "house").frame(maxWidth: .infinity, maxHeight: .infinity).labelStyle(.titleOnly).foregroundColor(Color.accentColor)
+                        .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
                     Spacer()
                     Button {
                         PlaySound(sound: .openSheet)

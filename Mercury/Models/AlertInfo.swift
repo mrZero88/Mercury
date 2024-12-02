@@ -97,7 +97,7 @@ func showAlert(info: AlertInfo, viewModel: ViewModel, theme: Theme? = nil, topic
     case .reset:
         return Alert(title: Text(String(localized: String.LocalizationValue(info.title))),
                      message: Text(String(localized: String.LocalizationValue(info.message))),
-                     primaryButton: .default(Text("Reset")) {
+                     primaryButton: .destructive(Text("Reset")) {
             withAnimation {
                 viewModel.reset()
             }
@@ -140,7 +140,7 @@ func ShowDeleteSectionAlert() -> AlertInfo {
 }
 
 func ShowResetAlert() -> AlertInfo {
-    let message = "Are you sure you want to delete all the boards, phases and tasks?"
+    let message = "Are you sure you want to delete all the themes, topics and sections?"
     PlaySound(sound: .alert)
     PlayHaptic()
     return AlertInfo(id: .reset, title: "Reset", message: message)

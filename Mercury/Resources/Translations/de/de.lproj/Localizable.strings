@@ -1,59 +1,26 @@
 /* No comment provided by engineer. */
-"New Board" = "Neue Board";
-
-/* No comment provided by engineer. */
-"Edit Board" = "Board bearbeiten";
-
-/* No comment provided by engineer. */
-"Board name" = "Boardname";
-
-/* No comment provided by engineer. */
-"Phase name" = "Phasenname";
-
-/* No comment provided by engineer. */
-"Task name" = "Aufgabenname";
-
-/* No comment provided by engineer. */
-"New Phase" = "Neue Phase";
-
-/* No comment provided by engineer. */
-"New Task" = "Neue Aufgabe";
-
-/* No comment provided by engineer. */
-"Edit Task" = "Aufgabe bearbeiten";
-
-/* No comment provided by engineer. */
-"Planned" = "Geplant";
-
-/* No comment provided by engineer. */
-"In Work" = "In Arbeit";
-
-/* No comment provided by engineer. */
-"In Review" = "In Prüfung";
-
-/* No comment provided by engineer. */
-"Finished" = "Erledigt";
-
-/* No comment provided by engineer. */
-"Finish" = "Fertig";
-
-/* No comment provided by engineer. */
-"Settings" = "Einstellungen";
-
-/* No comment provided by engineer. */
-"User" = "Benutzer";
-
-/* No comment provided by engineer. */
-"Customization" = "Personalisierung";
-
-/* No comment provided by engineer. */
 "Username" = "Benutzername";
 
 /* No comment provided by engineer. */
-"Beginning Date" = "Anfangsdatum";
+"Onboarding" = "Onboarding";
+
+/* No comment provided by engineer. */
+"First Use Date" = "Datum der ersten Verwendung";
+
+/* No comment provided by engineer. */
+"Last Use Date" = "Datum der letzten Verwendung";
 
 /* No comment provided by engineer. */
 "Background" = "Hintergrund";
+
+/* No comment provided by engineer. */
+"Opacity" = "Opazität";
+
+/* No comment provided by engineer. */
+"Tertiary Opacity" = "Tertiäre Opazität";
+
+/* No comment provided by engineer. */
+"Haptics" = "Haptik";
 
 /* No comment provided by engineer. */
 "Sounds" = "Sounds";
@@ -62,7 +29,31 @@
 "Volume" = "Lautstärke";
 
 /* No comment provided by engineer. */
-"Skip" = "Überspringen";
+"Export Data" = "Daten exportieren";
+
+/* No comment provided by engineer. */
+"Import Data" = "Daten importieren";
+
+/* No comment provided by engineer. */
+"Reset Data" = "Daten zurücksetzen";
+
+/* No comment provided by engineer. */
+"Re-Sync Settings" = "Re-Sync-Einstellungen";
+
+/* No comment provided by engineer. */
+"Re-Sync" = "Re-Sync";
+
+/* No comment provided by engineer. */
+"Are you sure you want to re-sync the settings? The settings will be reseted and syncronized across all devices." = "Sind Sie sicher, dass Sie die Einstellungen erneut synchronisieren möchten? Die Einstellungen werden zurückgesetzt und mit allen Geräten synchronisiert.";
+
+/* No comment provided by engineer. */
+"Reset" = "Zurücksetzen";
+
+/* No comment provided by engineer. */
+"Are you sure you want to delete all the themes, topics and sections?" = "Sind Sie sicher, dass Sie alle Themen, Rubriken und Abschnitte löschen wollen?";
+
+/* No comment provided by engineer. */
+"Delete" = "Löschen";
 
 /* No comment provided by engineer. */
 "Cancel" = "Abbrechen";
@@ -71,85 +62,100 @@
 "Save" = "Speichern";
 
 /* No comment provided by engineer. */
-"Next" = "Weiter";
+"Themes" = "Themen";
 
 /* No comment provided by engineer. */
-"Previous" = "Vorherige";
+"Theme" = "Thema";
 
 /* No comment provided by engineer. */
-"Welcome" = "Willkommen";
+"Delete Theme" = "Thema löschen";
 
 /* No comment provided by engineer. */
-"Delete" = "Entfernen";
+"Are you sure you want to delete this theme? All It's topics and sections will be deleted." = "Sind Sie sicher, dass Sie dieses Thema löschen möchten? Alle seine Ihnalten und Abschnitte werden gelöscht.";
 
 /* No comment provided by engineer. */
-"Create and delete Boards" = "Boards erstellen und entfernen";
+"Theme title" = "Titel des Themas";
 
 /* No comment provided by engineer. */
-"Create and delete Phases" = "Phasen erstellen und entfernen";
+"New Theme" = "Neues Thema";
 
 /* No comment provided by engineer. */
-"Create, move and delete Tasks" = "Aufgaben erstellen, verschieben und entfernen";
+"Edit Theme" = "Thema bearbeiten";
 
 /* No comment provided by engineer. */
-"Welcome to Alien, your simple kanban board." = "Willkommen bei Alien, Ihrer einfachen Kanban-Board.";
+"Topics" = "Ihnalten";
 
 /* No comment provided by engineer. */
-"Enter your name..." = "Geben Sie Ihren Namen ein...";
+"Topic" = "Ihnalt";
 
 /* No comment provided by engineer. */
-"Here you can plan your tasks and move them around the phases you customize. By default there are four phases (Planned, In Work, In Review and Finished), but you can rename them and add/remove phases as you want to a minimum of 2 and a maximum of 8." =
-"Hier können Sie Ihre Aufgaben planen und sie in den von Ihnen angepassten Phasen verschieben. Standardmäßig gibt es 4 Phasen (Geplant, In Arbeit, In Prüfung und Erledigt). Diese können Sie nach Ihren Wünschen umbenennen und nach Belieben Phasen hinzufügen/entfernen, bis zu einem Minimum von 2 und einem Maximum von 8 Phasen.";
+"Delete Topic" = "Ihnalt löschen";
 
 /* No comment provided by engineer. */
-"In the below textfield please enter your name so that we can refer to you when needed (You can always change it in the settings later). In the next slides you will see a simple tutorial around the possible actions you can do here in Alien." =
-"Bitte geben Sie in das untere Textfeld Ihren Namen ein, damit wir uns bei Bedarf auf Sie beziehen können (Sie können ihn später in den Einstellungen jederzeit ändern). Auf den nächsten Folien sehen Sie eine einfache Anleitung zu den möglichen Aktionen, die Sie hier in Alien durchführen können.";
+"Are you sure you want to delete this Topic? All It's sections will be deleted." = "Sind Sie sicher, dass Sie dieses Ihnalt löschen möchten? Alle seine Abschnitte werden gelöscht.";
 
 /* No comment provided by engineer. */
-"In the settings you can give a different look to the app like changing the color or enabling sounds, as well as changing the wallpapers." =
-"In den Einstellungen können Sie der App ein anderes Aussehen verleihen, z. B. die Farbe ändern oder Töne aktivieren, sowie die Hintergrundbilder ändern.";
+"Topic title" = "Titel des Ihnalts";
 
 /* No comment provided by engineer. */
-"Delete Board" = "Board entfernen";
+"Topic subtitle" = "Untertitel des Ihnalts";
 
 /* No comment provided by engineer. */
-"Are you sure you want to delete this board? All It's phases and tasks will be deleted." = "Sind Sie sicher, dass Sie dieses Board entfernen wollen? Es werden alle Phasen und Aufgaben in diesem Board entfernt.";
+"New Topic" = "Neues Ihnalt";
 
 /* No comment provided by engineer. */
-"Delete Phase" = "Phase entfernen";
+"Edit Topic" = "Ihnalt bearbeiten";
 
 /* No comment provided by engineer. */
-"Are you sure you want to delete this Phase? All It's tasks will be deleted." = "Sind Sie sicher, dass Sie diese Phase entfernen wollen? Es werden alle Aufgaben in dieser Phase entfernt.";
+"Sections" = "Sektionen";
 
 /* No comment provided by engineer. */
-"Delete Task" = "Aufgabe entfernen";
+"Section" = "Sektion";
 
 /* No comment provided by engineer. */
-"Are you sure you want to delete this task?" = "Sind Sie sicher, dass Sie diese Aufgabe entfernen wollen?";
+"Delete Section" = "Sektion löschen";
 
 /* No comment provided by engineer. */
-"Board from the last finished task" = "Board von letzter erledigter Aufgabe";
+"Are you sure you want to delete this section?" = "Sind Sie sicher, dass Sie diesen Sektion löschen wollen?";
 
 /* No comment provided by engineer. */
-"No Tasks Finished" = "Keine erledigten Aufgaben";
+"Section title" = "Titel der Sektion";
 
 /* No comment provided by engineer. */
-"Total Finished Tasks" = "Erledigte Aufgaben insgesamt";
+"New Section" = "Neue Sektion";
 
 /* No comment provided by engineer. */
-"today" = "heute";
+"Edit Section" = "Sektion bearbeiten";
 
 /* No comment provided by engineer. */
-"week" = "woche";
+"Mercury" = "Merkur";
 
 /* No comment provided by engineer. */
-"month" = "monat";
+"planet" = "Planet";
 
 /* No comment provided by engineer. */
-"year" = "jahr";
+"Universe" = "Universum";
 
 /* No comment provided by engineer. */
-"Reset" = "Zurücksetzen";
+"Mercury is the first planet from the Sun and the smallest planet in the Solar System." = "Merkur ist der erste Planet von der Sonne und der kleinste Planet im Sonnensystem.";
 
 /* No comment provided by engineer. */
-"Are you sure you want to delete all the boards, phases and tasks?" = "Sind Sie sicher, dass Sie alle Boards, Phasen und Aufgaben löschen wollen?";
+"It is a terrestrial planet with a heavily cratered surface due to the planet having no geological activity and an extremely tenuous atmosphere (called an exosphere)." = "Es handelt sich um einen terrestrischen Planeten mit einer stark zerkraterten Oberfläche, da der Planet keine geologische Aktivität aufweist und eine extrem dünne Atmosphäre (Exosphäre genannt) besitzt.";
+
+/* No comment provided by engineer. */
+"No Topics" = "Keine Ihnalten";
+
+/* No comment provided by engineer. */
+"Welcome to Mercury!" = "Willkommen bei Merkur!";
+
+/* No comment provided by engineer. */
+"Hello" = "Hallo";
+
+/* No comment provided by engineer. */
+"At the moment you don't have any topics to be shown here in the widgets." = "Im Moment haben Sie keine Ihnalten, die hier in den Widgets angezeigt werden können.";
+
+/* No comment provided by engineer. */
+"To be able to see your created topic widgets, please create them in the app interface.\n\nYou can click here in the widget to open the app and start customizing it with useful information." = "Um die von Ihnen erstellten Themen-Widgets zu sehen, erstellen Sie sie bitte in der App-Oberfläche.\n\nSie können hier in das Widget klicken, um die App zu öffnen und sie mit nützlichen Informationen zu versehen.";
+
+/* No comment provided by engineer. */
+"Settings" = "Einstellungen";

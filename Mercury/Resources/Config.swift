@@ -19,16 +19,16 @@ public let PanelColor = Color("PanelColor")
 public let DefaultThemeIconName = "7082272_image_photo_photography_picture"
 public let DefaultTopicIconName = "7082272_image_photo_photography_picture"
 
-public let DefaultWidgetCardTitle = "Mercury"
-public let DefaultWidgetCardSubtitle = "planet"
-public let DefaultWidgetCardThemeTitle = "Universe"
-public let DefaultWidgetCardText1 = "Mercury is the first planet from the Sun and the smallest planet in the Solar System."
-public let DefaultWidgetCardText2 = "It is a terrestrial planet with a heavily cratered surface due to the planet having no geological activity and an extremely tenuous atmosphere (called an exosphere)."
+public let DefaultWidgetCardTitle = String(localized: String.LocalizationValue("Mercury"))
+public let DefaultWidgetCardSubtitle = String(localized: String.LocalizationValue("planet"))
+public let DefaultWidgetCardThemeTitle = String(localized: String.LocalizationValue("Universe"))
+public let DefaultWidgetCardText1 = String(localized: String.LocalizationValue("Mercury is the first planet from the Sun and the smallest planet in the Solar System."))
+public let DefaultWidgetCardText2 = String(localized: String.LocalizationValue("It is a terrestrial planet with a heavily cratered surface due to the planet having no geological activity and an extremely tenuous atmosphere (called an exosphere)."))
 
-public let DefaultNoTopicTitle = "No Topics"
-public let DefaultNoTopicSubtitle = "Welcome to Mercury!"
-public let DefaultNoTopicText1 = "Hello" + (UserName.isEmpty ? "" : " " + UserName) + "! At the moment you don't have any topics to be shown here in the widgets."
-public let DefaultNoTopicText2 = "To be able to see your created topic widgets, please create them in the app interface.\n\nYou can click here in the widget to open the app and start customizing it with useful information."
+public let DefaultNoTopicTitle = String(localized: String.LocalizationValue("No Topics"))
+public let DefaultNoTopicSubtitle = String(localized: String.LocalizationValue("Welcome to Mercury!"))
+public let DefaultNoTopicText1 = String(localized: String.LocalizationValue("Hello")) + (UserName.isEmpty ? "" : " " + UserName) + "! " + String(localized: String.LocalizationValue("At the moment you don't have any topics to be shown here in the widgets."))
+public let DefaultNoTopicText2 = String(localized: String.LocalizationValue("To be able to see your created topic widgets, please create them in the app interface.\n\nYou can click here in the widget to open the app and start customizing it with useful information."))
 
 public let DefautSelectedGroup: String = "Animal Kingdom"
 

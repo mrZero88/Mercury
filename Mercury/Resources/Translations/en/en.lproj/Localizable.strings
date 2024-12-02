@@ -1,59 +1,26 @@
 /* No comment provided by engineer. */
-"New Board" = "New Board";
-
-/* No comment provided by engineer. */
-"Edit Board" = "Edit Board";
-
-/* No comment provided by engineer. */
-"Board name" = "Board name";
-
-/* No comment provided by engineer. */
-"Phase name" = "Phase name";
-
-/* No comment provided by engineer. */
-"Task name" = "Task name";
-
-/* No comment provided by engineer. */
-"New Phase" = "New Phase";
-
-/* No comment provided by engineer. */
-"New Task" = "New Task";
-
-/* No comment provided by engineer. */
-"Edit Task" = "Edit Task";
-
-/* No comment provided by engineer. */
-"Planned" = "Planned";
-
-/* No comment provided by engineer. */
-"In Work" = "In Work";
-
-/* No comment provided by engineer. */
-"In Review" = "In Review";
-
-/* No comment provided by engineer. */
-"Finished" = "Finished";
-
-/* No comment provided by engineer. */
-"Finish" = "Finish";
-
-/* No comment provided by engineer. */
-"Settings" = "Settings";
-
-/* No comment provided by engineer. */
-"User" = "User";
-
-/* No comment provided by engineer. */
-"Customization" = "Customization";
-
-/* No comment provided by engineer. */
 "Username" = "Username";
 
 /* No comment provided by engineer. */
-"Beginning Date" = "Beginning Date";
+"Onboarding" = "Onboarding";
+
+/* No comment provided by engineer. */
+"First Use Date" = "First Use Date";
+
+/* No comment provided by engineer. */
+"Last Use Date" = "Last Use Date";
 
 /* No comment provided by engineer. */
 "Background" = "Background";
+
+/* No comment provided by engineer. */
+"Opacity" = "Opacity";
+
+/* No comment provided by engineer. */
+"Tertiary Opacity" = "Tertiary Opacity";
+
+/* No comment provided by engineer. */
+"Haptics" = "Haptics";
 
 /* No comment provided by engineer. */
 "Sounds" = "Sounds";
@@ -62,7 +29,31 @@
 "Volume" = "Volume";
 
 /* No comment provided by engineer. */
-"Skip" = "Skip";
+"Export Data" = "Export Data";
+
+/* No comment provided by engineer. */
+"Import Data" = "Import Data";
+
+/* No comment provided by engineer. */
+"Reset Data" = "Reset Data";
+
+/* No comment provided by engineer. */
+"Re-Sync Settings" = "Re-Sync Settings";
+
+/* No comment provided by engineer. */
+"Re-Sync" = "Re-Sync";
+
+/* No comment provided by engineer. */
+"Are you sure you want to re-sync the settings? The settings will be reseted and syncronized across all devices." = "Are you sure you want to re-sync the settings? The settings will be reseted and syncronized across all devices.";
+
+/* No comment provided by engineer. */
+"Reset" = "Reset";
+
+/* No comment provided by engineer. */
+"Are you sure you want to delete all the themes, topics and sections?" = "Are you sure you want to delete all the themes, topics and sections?";
+
+/* No comment provided by engineer. */
+"Delete" = "Delete";
 
 /* No comment provided by engineer. */
 "Cancel" = "Cancel";
@@ -71,85 +62,100 @@
 "Save" = "Save";
 
 /* No comment provided by engineer. */
-"Next" = "Next";
+"Themes" = "Themes";
 
 /* No comment provided by engineer. */
-"Previous" = "Previous";
+"Theme" = "Theme";
 
 /* No comment provided by engineer. */
-"Welcome" = "Welcome";
+"Delete Theme" = "Delete Theme";
 
 /* No comment provided by engineer. */
-"Delete" = "Delete";
+"Are you sure you want to delete this theme? All It's topics and sections will be deleted." = "Are you sure you want to delete this theme? All It's topics and sections will be deleted.";
 
 /* No comment provided by engineer. */
-"Create and delete Boards" = "Create and delete Boards";
+"Theme title" = "Theme title";
 
 /* No comment provided by engineer. */
-"Create and delete Phases" = "Create and delete Phases";
+"New Theme" = "New Theme";
 
 /* No comment provided by engineer. */
-"Create, move and delete Tasks" = "Create, move and delete Tasks";
+"Edit Theme" = "Edit Theme";
 
 /* No comment provided by engineer. */
-"Welcome to Alien, your simple kanban board." = "Welcome to Alien, your simple kanban board.";
+"Topics" = "Topics";
 
 /* No comment provided by engineer. */
-"Enter your name..." = "Enter your name...";
+"Topic" = "Topic";
 
 /* No comment provided by engineer. */
-"Here you can plan your tasks and move them around the phases you customize. By default there are four phases (Planned, In Work, In Review and Finished), but you can rename them and add/remove phases as you want to a minimum of 2 and a maximum of 8." =
-"Here you can plan your tasks and move them around the phases you customize. By default there are four phases (Planned, In Work, In Review and Finished), but you can rename them and add/remove phases as you want to a minimum of 2 and a maximum of 8.";
+"Delete Topic" = "Delete Topic";
 
 /* No comment provided by engineer. */
-"In the below textfield please enter your name so that we can refer to you when needed (You can always change it in the settings later). In the next slides you will see a simple tutorial around the possible actions you can do here in Alien." =
-"In the below textfield please enter your name so that we can refer to you when needed (You can always change it in the settings later). In the next slides you will see a simple tutorial around the possible actions you can do here in Alien.";
+"Are you sure you want to delete this Topic? All It's sections will be deleted." = "Are you sure you want to delete this Topic? All It's sections will be deleted.";
 
 /* No comment provided by engineer. */
-"In the settings you can give a different look to the app like changing the color or enabling sounds, as well as changing the wallpapers." =
-"In the settings you can give a different look to the app like changing the color or enabling sounds, as well as changing the wallpapers.";
+"Topic title" = "Topic title";
 
 /* No comment provided by engineer. */
-"Delete Board" = "Delete Board";
+"Topic subtitle" = "Topic subtitle";
 
 /* No comment provided by engineer. */
-"Are you sure you want to delete this board? All It's phases and tasks will be deleted." = "Are you sure you want to delete this board? It's phases and tasks will be deleted.";
+"New Topic" = "New Topic";
 
 /* No comment provided by engineer. */
-"Delete Phase" = "Delete Phase";
+"Edit Topic" = "Edit Topic";
 
 /* No comment provided by engineer. */
-"Are you sure you want to delete this Phase? All It's tasks will be deleted." = "Are you sure you want to delete this Phase? It's tasks will be deleted.";
+"Sections" = "Sections";
 
 /* No comment provided by engineer. */
-"Delete Task" = "Delete Task";
+"Section" = "Section";
 
 /* No comment provided by engineer. */
-"Are you sure you want to delete this task?" = "Are you sure you want to delete this task?";
+"Delete Section" = "Delete Section";
 
 /* No comment provided by engineer. */
-"Board from the last finished task" = "Board from the last finished task";
+"Are you sure you want to delete this section?" = "Are you sure you want to delete this section?";
 
 /* No comment provided by engineer. */
-"No Tasks Finished" = "No Tasks Finished";
+"Section title" = "Section Section";
 
 /* No comment provided by engineer. */
-"Total Finished Tasks" = "Total Finished Tasks";
+"New Section" = "New Section";
 
 /* No comment provided by engineer. */
-"today" = "today";
+"Edit Section" = "Edit Section";
 
 /* No comment provided by engineer. */
-"week" = "week";
+"Mercury" = "Mercury";
 
 /* No comment provided by engineer. */
-"month" = "month";
+"planet" = "planet";
 
 /* No comment provided by engineer. */
-"year" = "year";
+"Universe" = "Universe";
 
 /* No comment provided by engineer. */
-"Reset" = "Reset";
+"Mercury is the first planet from the Sun and the smallest planet in the Solar System." = "Mercury is the first planet from the Sun and the smallest planet in the Solar System.";
 
 /* No comment provided by engineer. */
-"Are you sure you want to delete all the boards, phases and tasks?" = "Are you sure you want to delete all the boards, phases and tasks?";
+"It is a terrestrial planet with a heavily cratered surface due to the planet having no geological activity and an extremely tenuous atmosphere (called an exosphere)." = "It is a terrestrial planet with a heavily cratered surface due to the planet having no geological activity and an extremely tenuous atmosphere (called an exosphere).";
+
+/* No comment provided by engineer. */
+"No Topics" = "No Topics";
+
+/* No comment provided by engineer. */
+"Welcome to Mercury!" = "Welcome to Mercury!";
+
+/* No comment provided by engineer. */
+"Hello" = "Hello";
+
+/* No comment provided by engineer. */
+"At the moment you don't have any topics to be shown here in the widgets." = "At the moment you don't have any topics to be shown here in the widgets.";
+
+/* No comment provided by engineer. */
+"To be able to see your created topic widgets, please create them in the app interface.\n\nYou can click here in the widget to open the app and start customizing it with useful information." = "To be able to see your created topic widgets, please create them in the app interface.\n\nYou can click here in the widget to open the app and start customizing it with useful information.";
+
+/* No comment provided by engineer. */
+"Settings" = "Settings";

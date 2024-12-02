@@ -1,155 +1,161 @@
 /* No comment provided by engineer. */
-"New Board" = "New Board";
+"Username" = "ユーザー名";
 
 /* No comment provided by engineer. */
-"Edit Board" = "Edit Board";
+"Onboarding" = "オンボーディング";
 
 /* No comment provided by engineer. */
-"Board name" = "Board name";
+"First Use Date" = "初回使用日";
 
 /* No comment provided by engineer. */
-"Phase name" = "Phase name";
+"Last Use Date" = "最終使用日";
 
 /* No comment provided by engineer. */
-"Task name" = "Task name";
+"Background" = "背景";
 
 /* No comment provided by engineer. */
-"New Phase" = "New Phase";
+"Opacity" = "不透明度";
 
 /* No comment provided by engineer. */
-"New Task" = "New Task";
+"Tertiary Opacity" = "三次不透明度";
 
 /* No comment provided by engineer. */
-"Edit Task" = "Edit Task";
+"Haptics" = "ハプティクス";
 
 /* No comment provided by engineer. */
-"Planned" = "Planned";
+"Sounds" = "サウンド";
 
 /* No comment provided by engineer. */
-"In Work" = "In Work";
+"Volume" = "ボリューム";
 
 /* No comment provided by engineer. */
-"In Review" = "In Review";
+"Export Data" = "輸出データ";
 
 /* No comment provided by engineer. */
-"Finished" = "Finished";
+"Import Data" = "インポートデータ";
 
 /* No comment provided by engineer. */
-"Finish" = "Finish";
+"Reset Data" = "リセットデータ";
 
 /* No comment provided by engineer. */
-"Settings" = "Settings";
+"Re-Sync Settings" = "再同期設定";
 
 /* No comment provided by engineer. */
-"User" = "User";
+"Re-Sync" = "再同期";
 
 /* No comment provided by engineer. */
-"Customization" = "Customization";
+"Are you sure you want to re-sync the settings? The settings will be reseted and syncronized across all devices." = "本当に設定を再同期しますか？設定はリセットされ、すべてのデバイスで同期されます。";
 
 /* No comment provided by engineer. */
-"Username" = "Username";
+"Reset" = "リセット";
 
 /* No comment provided by engineer. */
-"Beginning Date" = "Beginning Date";
+"Are you sure you want to delete all the themes, topics and sections?" = "本当にすべてのテーマ、トピック、セクションを削除しますか？";
 
 /* No comment provided by engineer. */
-"Background" = "Background";
+"Delete" = "削除";
 
 /* No comment provided by engineer. */
-"Sounds" = "Sounds";
+"Cancel" = "キャンセル";
 
 /* No comment provided by engineer. */
-"Volume" = "Volume";
+"Save" = "セーブ";
 
 /* No comment provided by engineer. */
-"Skip" = "Skip";
+"Themes" = "テーマ";
 
 /* No comment provided by engineer. */
-"Cancel" = "Cancel";
+"Theme" = "テーマ";
 
 /* No comment provided by engineer. */
-"Save" = "Save";
+"Delete Theme" = "テーマの削除";
 
 /* No comment provided by engineer. */
-"Next" = "Next";
+"Are you sure you want to delete this theme? All It's topics and sections will be deleted." = "本当にこのテーマを削除しますか？すべてのトピックとセクションが削除されます。";
 
 /* No comment provided by engineer. */
-"Previous" = "Previous";
+"Theme title" = "テーマ・タイトル";
 
 /* No comment provided by engineer. */
-"Welcome" = "Welcome";
+"New Theme" = "新しいテーマ";
 
 /* No comment provided by engineer. */
-"Delete" = "Delete";
+"Edit Theme" = "編集テーマ";
 
 /* No comment provided by engineer. */
-"Create and delete Boards" = "Create and delete Boards";
+"Topics" = "トピックス";
 
 /* No comment provided by engineer. */
-"Create and delete Phases" = "Create and delete Phases";
+"Topic" = "トピック";
 
 /* No comment provided by engineer. */
-"Create, move and delete Tasks" = "Create, move and delete Tasks";
+"Delete Topic" = "トピックの削除";
 
 /* No comment provided by engineer. */
-"Welcome to Alien, your simple kanban board." = "Welcome to Alien, your simple kanban board.";
+"Are you sure you want to delete this Topic? All It's sections will be deleted." = "本当にこのトピックを削除しますか？すべてのセクションが削除されます。";
 
 /* No comment provided by engineer. */
-"Enter your name..." = "Enter your name...";
+"Topic title" = "トピックタイトル";
 
 /* No comment provided by engineer. */
-"Here you can plan your tasks and move them around the phases you customize. By default there are four phases (Planned, In Work, In Review and Finished), but you can rename them and add/remove phases as you want to a minimum of 2 and a maximum of 8." =
-"Here you can plan your tasks and move them around the phases you customize. By default there are four phases (Planned, In Work, In Review and Finished), but you can rename them and add/remove phases as you want to a minimum of 2 and a maximum of 8.";
+"Topic subtitle" = "トピックのサブタイトル";
 
 /* No comment provided by engineer. */
-"In the below textfield please enter your name so that we can refer to you when needed (You can always change it in the settings later). In the next slides you will see a simple tutorial around the possible actions you can do here in Alien." =
-"In the below textfield please enter your name so that we can refer to you when needed (You can always change it in the settings later). In the next slides you will see a simple tutorial around the possible actions you can do here in Alien.";
+"New Topic" = "新しいトピック";
 
 /* No comment provided by engineer. */
-"In the settings you can give a different look to the app like changing the color or enabling sounds, as well as changing the wallpapers." =
-"In the settings you can give a different look to the app like changing the color or enabling sounds, as well as changing the wallpapers.";
+"Edit Topic" = "トピックを編集する";
 
 /* No comment provided by engineer. */
-"Delete Board" = "Delete Board";
+"Sections" = "セクション";
 
 /* No comment provided by engineer. */
-"Are you sure you want to delete this board? All It's phases and tasks will be deleted." = "Are you sure you want to delete this board? It's phases and tasks will be deleted.";
+"Section" = "セクション";
 
 /* No comment provided by engineer. */
-"Delete Phase" = "Delete Phase";
+"Delete Section" = "セクションの削除";
 
 /* No comment provided by engineer. */
-"Are you sure you want to delete this Phase? All It's tasks will be deleted." = "Are you sure you want to delete this Phase? It's tasks will be deleted.";
+"Are you sure you want to delete this section?" = "このセクションを削除してもよろしいですか？";
 
 /* No comment provided by engineer. */
-"Delete Task" = "Delete Task";
+"Section title" = "セクション名";
 
 /* No comment provided by engineer. */
-"Are you sure you want to delete this task?" = "Are you sure you want to delete this task?";
+"New Section" = "新セクション";
 
 /* No comment provided by engineer. */
-"Board from the last finished task" = "Board from the last finished task";
+"Edit Section" = "編集セクション";
 
 /* No comment provided by engineer. */
-"No Tasks Finished" = "No Tasks Finished";
+"Mercury" = "水銀";
 
 /* No comment provided by engineer. */
-"Total Finished Tasks" = "Total Finished Tasks";
+"planet" = "プラネット";
 
 /* No comment provided by engineer. */
-"today" = "today";
+"Universe" = "ユニバース";
 
 /* No comment provided by engineer. */
-"week" = "week";
+"Mercury is the first planet from the Sun and the smallest planet in the Solar System." = "水星は太陽から最初に来た惑星で、太陽系最小の惑星である。";
 
 /* No comment provided by engineer. */
-"month" = "month";
+"It is a terrestrial planet with a heavily cratered surface due to the planet having no geological activity and an extremely tenuous atmosphere (called an exosphere)." = "この惑星は、地質学的な活動がなく、大気（外気圏と呼ばれる）が非常に希薄なため、地表は激しくクレーター化している。";
 
 /* No comment provided by engineer. */
-"year" = "year";
+"No Topics" = "トピックスなし";
 
 /* No comment provided by engineer. */
-"Reset" = "Reset";
+"Welcome to Mercury!" = "マーキュリーへようこそ！";
 
 /* No comment provided by engineer. */
-"Are you sure you want to delete all the boards, phases and tasks?" = "Are you sure you want to delete all the boards, phases and tasks?";
+"Hello" = "こんにちは";
+
+/* No comment provided by engineer. */
+"At the moment you don't have any topics to be shown here in the widgets." = "今のところ、ウィジェットに表示するトピックはありません。";
+
+/* No comment provided by engineer. */
+"To be able to see your created topic widgets, please create them in the app interface.\n\nYou can click here in the widget to open the app and start customizing it with useful information." = "作成したトピックウィジェットを表示するには、アプリのインターフェイスでウィジェットを作成してください。";
+
+/* No comment provided by engineer. */
+"Settings" = "設定";

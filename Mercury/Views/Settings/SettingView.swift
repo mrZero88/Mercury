@@ -40,7 +40,7 @@ struct SettingView: View {
                     Button {
                         doFunction(function: setting.function)
                     } label: {
-                        Label(setting.title ?? "", systemImage: "").labelStyle(.titleOnly).foregroundColor(setting.function == "reset" ? .red : .primary).frame(maxWidth: .infinity)
+                        Label(String(localized: String.LocalizationValue(setting.title ?? "")), systemImage: "").labelStyle(.titleOnly).foregroundColor(setting.function == "reset" ? .red : .primary).frame(maxWidth: .infinity)
                     }
                     .tint(.accentColor.opacity(0.5))
                     .buttonStyle(.borderedProminent)
@@ -76,7 +76,7 @@ struct SettingView: View {
                         }
                     ))
                 } else if (setting.type == "Slider") {
-                    SliderSettingView(title: setting.title ?? "", value: Binding<Double> (
+                    SliderSettingView(title: String(localized: String.LocalizationValue(setting.title ?? "")), value: Binding<Double> (
                         get: {
                             return setting.doubleValue
                         },

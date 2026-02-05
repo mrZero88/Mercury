@@ -8,7 +8,7 @@
 import SwiftUI
 import Foundation
 
-class SettingsController: ObservableObject {
+class SettingsController: ObservableObject {                   
     
     func addSettings() {
         

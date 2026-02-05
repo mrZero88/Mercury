@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 public let PanelHeight = CGFloat(280)
+public let BorderPaddingSmall = CGFloat(5)
 public let BorderPadding = CGFloat(10)
 public let CornerRadius = CGFloat(5)
 public let Border5 = CGFloat(5)

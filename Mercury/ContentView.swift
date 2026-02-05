@@ -79,11 +79,8 @@ struct ContentView: View {
                         NavigationLinkThemeView(theme: theme)
                     }
                 }
-                .padding(BorderPadding)
                 .bgPanelStyle()
                 .scrollIndicators(.hidden)
-                .listStyle(.plain)
-                .listRowSpacing(BorderPadding)
             }
             .padding(.horizontal, BorderPadding)
             .navigationDestination(for: String.self) { link in

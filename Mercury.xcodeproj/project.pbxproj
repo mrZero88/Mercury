@@ -192,6 +192,7 @@
 		B27D82082A3C49B50071FDAC /* SSettingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80AB2A3C44E50071FDAC /* SSettingExtension.swift */; };
 		B27D82092A3C49C00071FDAC /* SSettingsGroupExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80AF2A3C44E50071FDAC /* SSettingsGroupExtension.swift */; };
 		B2C25D412A9F52F3005415E7 /* ExportUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C25D402A9F52F3005415E7 /* ExportUtils.swift */; };
+		B2DEDB9D2F389D290032DA58 /* MercuryIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = B2DEDB9C2F389D290032DA58 /* MercuryIcon.icon */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -400,6 +401,7 @@
 		B27D81F22A3C48500071FDAC /* WidgetCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetCardView.swift; sourceTree = "<group>"; };
 		B27D81F42A3C48500071FDAC /* WidgetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetViewModel.swift; sourceTree = "<group>"; };
 		B2C25D402A9F52F3005415E7 /* ExportUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportUtils.swift; sourceTree = "<group>"; };
+		B2DEDB9C2F389D290032DA58 /* MercuryIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = MercuryIcon.icon; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -553,6 +555,7 @@
 				B27D806E2A3C44970071FDAC /* MercuryApp.swift */,
 				B27D80752A3C44970071FDAC /* ContentView.swift */,
 				B27D80772A3C44980071FDAC /* Assets.xcassets */,
+				B2DEDB9C2F389D290032DA58 /* MercuryIcon.icon */,
 				B27D80792A3C44980071FDAC /* Mercury.entitlements */,
 				B27D80722A3C44970071FDAC /* Mercury.xcdatamodeld */,
 				B27D807A2A3C44980071FDAC /* Preview Content */,
@@ -649,7 +652,6 @@
 				B26E43182A9B9CAF00A982BF /* AppBackgrounds */,
 				B27D80C52A3C44E50071FDAC /* Images */,
 				B27D80DA2A3C44E50071FDAC /* Sounds */,
-				B27D80EB2A3C44E50071FDAC /* AppIcon */,
 				B27D80ED2A3C44E50071FDAC /* Translations */,
 				B27D80FB2A3C44E50071FDAC /* Onboarding */,
 				B26E43162A9B9C7400A982BF /* AppBackgroundGroups.swift */,
@@ -689,13 +691,6 @@
 				B2190BDF2CD7E82C006A3698 /* UI_soundPack5_Back_v1_01.wav */,
 			);
 			path = Sounds;
-			sourceTree = "<group>";
-		};
-		B27D80EB2A3C44E50071FDAC /* AppIcon */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AppIcon;
 			sourceTree = "<group>";
 		};
 		B27D80ED2A3C44E50071FDAC /* Translations */ = {
@@ -1023,7 +1018,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1600;
+				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					B27D806A2A3C44970071FDAC = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -1076,6 +1071,7 @@
 				B27D81862A3C44E60071FDAC /* Localizable.strings in Resources */,
 				B27D818B2A3C44E60071FDAC /* CreateDeleteBoard.mov in Resources */,
 				B27D818C2A3C44E60071FDAC /* createMoveDeleteTask.mov in Resources */,
+				B2DEDB9D2F389D290032DA58 /* MercuryIcon.icon in Resources */,
 				B27D81632A3C44E60071FDAC /* designPatterns.json in Resources */,
 				B27D81892A3C44E60071FDAC /* Localizable.strings in Resources */,
 				B27D81882A3C44E60071FDAC /* Localizable.strings in Resources */,
@@ -1400,6 +1396,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = M27L5G35Q6;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -1420,6 +1417,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1462,6 +1460,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = M27L5G35Q6;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -1475,6 +1474,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
@@ -1483,16 +1483,18 @@
 		B27D80962A3C44980071FDAC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = MercuryIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Mercury/Mercury.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Mercury/Preview Content\"";
-				DEVELOPMENT_TEAM = M27L5G35Q6;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mercury/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -1505,7 +1507,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -1513,6 +1515,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flyzerosky.Mercury;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1524,16 +1527,18 @@
 		B27D80972A3C44980071FDAC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = MercuryIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Mercury/Mercury.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Mercury/Preview Content\"";
-				DEVELOPMENT_TEAM = M27L5G35Q6;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mercury/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -1546,7 +1551,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -1554,6 +1559,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flyzerosky.Mercury;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1569,7 +1575,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = M27L5G35Q6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -1592,7 +1597,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = M27L5G35Q6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -1614,7 +1618,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = M27L5G35Q6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -1636,7 +1639,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = M27L5G35Q6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -1660,7 +1662,6 @@
 				CODE_SIGN_ENTITLEMENTS = MercuryWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M27L5G35Q6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MercuryWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MercuryWidget;
@@ -1690,7 +1691,6 @@
 				CODE_SIGN_ENTITLEMENTS = MercuryWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M27L5G35Q6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MercuryWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MercuryWidget;

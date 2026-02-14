@@ -4,10 +4,10 @@
     {
       "layers" : [
         {
-          "image-name" : "mercury.svg",
-          "name" : "mercury",
+          "image-name" : "mercury (1).svg",
+          "name" : "mercury (1)",
           "position" : {
-            "scale" : 1.4,
+            "scale" : 1.5,
             "translation-in-points" : [
               0,
               0

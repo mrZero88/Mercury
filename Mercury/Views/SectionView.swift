@@ -32,7 +32,7 @@ struct SectionView: View {
     
     var colorTheme: Color {
         get {
-            return colorScheme == .dark ? Color("White") : Color("Black")
+            return colorScheme == .dark ? Color("appWhite") : Color("appBlack")
         }
     }
     

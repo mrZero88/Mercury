@@ -17,13 +17,13 @@ extension Color {
     
     static var ColorWhite: Color {
         get {
-            return SwiftUI.Color("White")
+            return SwiftUI.Color("appWhite")
         }
     }
     
     static var ColorBlack: Color {
         get {
-            return SwiftUI.Color("Black")
+            return SwiftUI.Color("appBlack")
         }
     }
 }

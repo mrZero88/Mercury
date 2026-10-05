@@ -28,7 +28,7 @@ class SettingsController: ObservableObject {
         let _ = addStringSetting(key: "background", title: "Background", group: customization1, value: "wwwhirl", type: "Background", order: 2)
         let _ = addDoubleSetting(key: "opacity", title: "Opacity", group: customization1, value: 0.5, minDouble: 0.2, maxDouble: 0.8, type: "Slider", order: 3)
         let _ = addDoubleSetting(key: "tertiaryColorOpacity", title: "Tertiary Opacity", group: customization1, value: 1.0, minDouble: 0.8, maxDouble: 1.0, type: "Slider", order: 4)
-        _ = addStringSetting(key: "accentColor", title: "Accent Color", group: customization1, value: "Orange", type: "Color", order: 5)
+        _ = addStringSetting(key: "accentColor", title: "Accent Color", group: customization1, value: "appOrange", type: "Color", order: 5)
         _ = addBoolSetting(key: "hapticsOn", title: "Haptics", group: customization1, order: 6)
         let sO = addBoolSetting(key: "soundsOn", title: "Sounds", group: customization1, order: 7)
         let v = addDoubleSetting(key: "soundsVolume", title: "Volume", group: customization1, value: 0.5, minDouble: 0.01, maxDouble: 0.5, type: "Slider", order: 8, enabled: false)
@@ -156,7 +156,7 @@ public var ShowBg: Bool {
 
 public var AccentColor: String {
     get {
-        return SettingsController.getStringValue(key: "accentColor") ?? "Orange"
+        return SettingsController.getStringValue(key: "accentColor") ?? "appOrange"
     }
 }
 

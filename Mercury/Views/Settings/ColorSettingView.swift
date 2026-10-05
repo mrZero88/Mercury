@@ -23,8 +23,8 @@ struct ColorSettingView: View {
     
     var colorsNames: [String] {
         get {
-            let blackOrWhite = colorScheme == .dark ? "White" : "Black"
-            return ["Pink", "Purple", "Orange", "Yellow", "Red", "Cyan", blackOrWhite, "Green"]
+            let blackOrWhite = colorScheme == .dark ? "appWhite" : "appBlack"
+            return ["appPink", "appPurple", "appOrange", "appYellow", "appRed", "appCyan", blackOrWhite, "appGreen"]
         }
     }
     
@@ -38,7 +38,7 @@ struct ColorSettingView: View {
                             PlaySound(sound: .navigation)
                             PlayHaptic()
                         } label: {
-                            Circle().strokeBorder(value == colorName ? (colorScheme == .dark ? Color("Black") : Color("White")) : Color.clear, lineWidth: lineWidth).background(Circle().fill(Color(colorName))).frame(width:50, height:50)
+                            Circle().strokeBorder(value == colorName ? (colorScheme == .dark ? Color("appBlack") : Color("appWhite")) : Color.clear, lineWidth: lineWidth).background(Circle().fill(Color(colorName))).frame(width:50, height:50)
                         }
                         .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
                         .id(colorName.lowercased())

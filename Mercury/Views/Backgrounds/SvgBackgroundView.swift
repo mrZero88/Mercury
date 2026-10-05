@@ -29,16 +29,16 @@ struct SvgBackgroundView: View {
     var svgName: String {
         get {
             switch(AccentColor) {
-            case "Orange": return getColor(color: "Orange")
-            case "Cyan": return getColor(color: "Cyan")
-            case "Green": return getColor(color: "Green")
-            case "Pink": return getColor(color: "Pink")
-            case "Yellow": return getColor(color: "Yellow")
-            case "Purple": return getColor(color: "Purple")
-            case "Red": return getColor(color: "Red")
-            case "Black": return getColor(color: "Black")
-            case "White": return getColor(color: "White")
-            default: return getColor(color: "Cyan")
+            case "appOrange": return getColor(color: "appOrange")
+            case "appCyan": return getColor(color: "appCyan")
+            case "appGreen": return getColor(color: "appGreen")
+            case "appPink": return getColor(color: "appPink")
+            case "appYellow": return getColor(color: "appYellow")
+            case "appPurple": return getColor(color: "appPurple")
+            case "appRed": return getColor(color: "appRed")
+            case "appBlack": return getColor(color: "appBlack")
+            case "appWhite": return getColor(color: "appWhite")
+            default: return getColor(color: "appCyan")
             }
         }
     }

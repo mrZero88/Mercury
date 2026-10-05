@@ -56,7 +56,7 @@ class Config {
         switch(priority) {
         case 1: return Color("red1")
         case 2: return Color("orange1")
-        case 3: return Color("White")
+        case 3: return Color("appWhite")
         case 4: return Color("blue1")
         case 5: return Color("green1")
         default:

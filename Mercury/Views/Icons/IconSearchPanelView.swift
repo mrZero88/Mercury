@@ -27,7 +27,7 @@ struct IconSearchPanelView: View {
                                 dismiss()
                             } label: {
                                 if(!icon.isEmpty) {
-                                    Image(icon).resizable().scaledToFit().frame(maxWidth: .infinity).padding().foregroundColor(ColorUtils.getColor(colorScheme: colorScheme, colorName: "White"))
+                                    Image(icon).resizable().scaledToFit().frame(maxWidth: .infinity).padding().foregroundColor(ColorUtils.getColor(colorScheme: colorScheme, colorName: "appWhite"))
                                 }
                             }
                         }

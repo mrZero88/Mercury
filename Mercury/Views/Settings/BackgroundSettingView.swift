@@ -32,7 +32,7 @@ struct BackgroundSettingView: View {
                             PlaySound(sound: .navigation)
                             PlayHaptic()
                         } label: {
-                            Image(bg).resizable().scaledToFit().frame(width: 50, height: 50).foregroundColor(colorScheme == .dark ? Color("White") : Color("Black"))
+                            Image(bg).resizable().scaledToFit().frame(width: 50, height: 50).foregroundColor(colorScheme == .dark ? Color("appWhite") : Color("appBlack"))
                                 .border(value == bg.lowercased() ? Color.accentColor : Color.clear)
                         }
                         .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))

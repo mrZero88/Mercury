@@ -28,9 +28,9 @@ struct IconGroupView: View {
                 PlayHaptic()
             } label: {
                 if(selectedIconsGroup == title) {
-                    Label(title, systemImage: "checkmark.circle.fill").foregroundColor(ColorUtils.getColor(colorScheme: colorScheme, colorName: "White"))
+                    Label(title, systemImage: "checkmark.circle.fill").foregroundColor(ColorUtils.getColor(colorScheme: colorScheme, colorName: "appWhite"))
                 } else {
-                    Label(title, systemImage: "checkmark.circle.fill").foregroundColor(ColorUtils.getColor(colorScheme: colorScheme, colorName: "White")).labelStyle(.titleOnly)
+                    Label(title, systemImage: "checkmark.circle.fill").foregroundColor(ColorUtils.getColor(colorScheme: colorScheme, colorName: "appWhite")).labelStyle(.titleOnly)
                 }
             }
             .font(.footnote)

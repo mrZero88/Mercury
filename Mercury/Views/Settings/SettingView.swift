@@ -68,7 +68,7 @@ struct SettingView: View {
                 } else if(setting.type == "Color") {
                     ColorSettingView(value: Binding<String> (
                         get: {
-                            return setting.stringValue ?? "Orange"
+                            return setting.stringValue ?? "appOrange"
                         },
                         set: {
                             setting.stringValue = $0

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct PeriodSettingView: View {
     @EnvironmentObject var settingsChangedTrigger: SettingsChangedTrigger

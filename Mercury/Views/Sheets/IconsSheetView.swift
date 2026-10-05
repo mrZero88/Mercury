@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import CoreData
 
 struct IconsSheetView: View {
     @Environment(\.colorScheme) var colorScheme

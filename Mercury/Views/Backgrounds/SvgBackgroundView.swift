@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct SvgBackgroundView: View {
     @EnvironmentObject var settingsChangedTrigger: SettingsChangedTrigger

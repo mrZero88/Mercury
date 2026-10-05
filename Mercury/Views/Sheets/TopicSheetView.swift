@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct TopicSheetView: View {
     @Environment(\.colorScheme) var colorScheme

@@ -27,7 +27,7 @@ struct Provider: IntentTimelineProvider {
         let text2 = topic?.activeSections.first(where: {$0.order == 2})?.text ?? DefaultWidgetCardText2
         let icon = topic?.theme?.iconName ?? ""
         
-        let entry = SimpleEntry(id: nil, title: title, subtitle: type, themeTitle: themeTitle, text1: text1!, text2: text2!, date: Date(), currentWidgetIndex: 1, totalWidgetsCount: 1, icon: icon, configuration: configuration)
+        let entry = SimpleEntry(id: nil, title: title, subtitle: type, themeTitle: themeTitle, text1: text1, text2: text2, date: Date(), currentWidgetIndex: 1, totalWidgetsCount: 1, icon: icon, configuration: configuration)
         
         completion(entry)
     }
@@ -55,11 +55,11 @@ struct Provider: IntentTimelineProvider {
             let title = topic.title ?? ""
             let type = topic.subtitle ?? ""
             let themeTitle = topic.theme?.title ?? ""
-            let text1 = topic.activeSections.first(where: {$0.order == 1})?.text ?? ""
-            let text2 = topic.activeSections.first(where: {$0.order == 2})?.text ?? ""
+            let text1 = topic.activeSections.first(where: {$0.order == 1})?.text
+            let text2 = topic.activeSections.first(where: {$0.order == 2})?.text
             let icon = topic.theme?.iconName ?? ""
             
-            let entry = SimpleEntry(id: topic.id, title: title, subtitle: type, themeTitle: themeTitle, text1: text1, text2: text2, date: entryDate, currentWidgetIndex: hourOffset + 1, totalWidgetsCount: topicsCount, icon: icon, configuration: configuration)
+            let entry = SimpleEntry(id: topic.id, title: title, subtitle: type, themeTitle: themeTitle, text1: (text1 ?? ""), text2: (text2 ?? ""), date: entryDate, currentWidgetIndex: hourOffset + 1, totalWidgetsCount: topicsCount, icon: icon, configuration: configuration)
             entries.append(entry)
         }
         

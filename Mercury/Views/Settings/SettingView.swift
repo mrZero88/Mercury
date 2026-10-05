@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Utils
+import CoreData
 
 struct SettingView: View {
     @Environment(\.dismiss) var dismiss

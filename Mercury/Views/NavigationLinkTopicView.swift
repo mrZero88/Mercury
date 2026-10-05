@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Utils
+import CoreData
 
 struct NavigationLinkTopicView: View {
     @Environment(\.colorScheme) var colorScheme

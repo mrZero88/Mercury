@@ -7,6 +7,7 @@
 
 import SwiftUI
 import UniformTypeIdentifiers
+import CoreData
 
 struct ThemeView: View {
     @Environment(\.colorScheme) var colorScheme

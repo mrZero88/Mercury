@@ -254,7 +254,7 @@
 		B226EAA22CC4038E00A9B6BB /* UUIDSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDSettingView.swift; sourceTree = "<group>"; };
 		B226EAB92CC425A200A9B6BB /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		B226EABC2CC4296100A9B6BB /* ToArrayUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToArrayUtils.swift; sourceTree = "<group>"; };
-		B25BEBA52B4322F4008F387B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B25BEBA52B4322F4008F387B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B261656F2CC81FCE009C183E /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		B2679E002A9E751600F34EC6 /* JsonDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonDocument.swift; sourceTree = "<group>"; };
 		B2679E032A9E758300F34EC6 /* MercuryData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MercuryData.swift; sourceTree = "<group>"; };
@@ -540,7 +540,6 @@
 		B27D806D2A3C44970071FDAC /* Mercury */ = {
 			isa = PBXGroup;
 			children = (
-				B25BEBA52B4322F4008F387B /* Info.plist */,
 				B26E43112A9B9BFE00A982BF /* Modifiers */,
 				B27D81C32A3C461E0071FDAC /* Controllers */,
 				B27D810E2A3C44E60071FDAC /* Daos */,
@@ -556,6 +555,7 @@
 				B27D80752A3C44970071FDAC /* ContentView.swift */,
 				B27D80772A3C44980071FDAC /* Assets.xcassets */,
 				B2DEDB9C2F389D290032DA58 /* MercuryIcon.icon */,
+				B25BEBA52B4322F4008F387B /* Info.plist */,
 				B27D80792A3C44980071FDAC /* Mercury.entitlements */,
 				B27D80722A3C44970071FDAC /* Mercury.xcdatamodeld */,
 				B27D807A2A3C44980071FDAC /* Preview Content */,
@@ -1018,7 +1018,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 2620;
+				LastUpgradeCheck = 2700;
 				TargetAttributes = {
 					B27D806A2A3C44970071FDAC = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -1578,8 +1578,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flyzerosky.MercuryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1600,8 +1600,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flyzerosky.MercuryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1621,8 +1621,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flyzerosky.MercuryUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1642,8 +1642,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flyzerosky.MercuryUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

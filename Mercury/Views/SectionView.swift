@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Utils
+import CoreData
 
 struct SectionView: View {
     @Environment(\.colorScheme) var colorScheme

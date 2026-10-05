@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct IconFieldView: View {
     @Environment(\.colorScheme) var colorScheme

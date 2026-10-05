@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ColorSettingView: View {
     @Environment(\.colorScheme) var colorScheme

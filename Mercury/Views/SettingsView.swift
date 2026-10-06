@@ -34,6 +34,16 @@ struct SettingsView: View {
         })
     }
     
+    var allSettings: [Setting] {
+        var settings: [Setting] = []
+        for settingGroup in viewModel.settingsViewModel.settingGroups {
+            for setting in settingGroup.allSettings {
+                settings.append(setting)
+            }
+        }
+        return settings
+    }
+    
     var body: some View {
         Grid(horizontalSpacing: BorderPadding, verticalSpacing: BorderPadding) {
             GridRow {
@@ -72,19 +82,36 @@ struct SettingsView: View {
                 .bgPanelStyle()
             }
             GridRow {
-                List(viewModel.settingsViewModel.settingGroups) { settingGroup in
-                    ForEach(self.getSettings(settingGroup: settingGroup)) { setting in
-                        SettingView(setting: setting)
+                VStack(alignment: .leading, spacing: 0) {
+                    HStack {
+                        Text(String(localized: String.LocalizationValue("Settings")) + " (" + String(allSettings.count) + ")").foregroundColor(.secondary).font(.footnote)
+                        Spacer()
+                        Button {
+                        } label: {
+                            ZStack {
+                                Label("", systemImage: "star").labelStyle(.iconOnly).frame(maxHeight: .infinity).opacity(0)
+                            }
+                        }
+                        .fixedSize(horizontal: false, vertical: true)
+                        .opacity(0)
                     }
+                    .buttonStyle(.bordered)
+                    .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
+                    .padding(BorderPadding)
+                    List(viewModel.settingsViewModel.settingGroups) { settingGroup in
+                        ForEach(self.getSettings(settingGroup: settingGroup)) { setting in
+                            SettingView(setting: setting)
+                        }
+                    }
+                    .padding(BorderPadding)
+                    .scrollIndicators(.hidden)
+                    .scrollContentBackground(.hidden)
+                    .listStyle(.plain)
+                    .listRowSpacing(BorderPadding)
                 }
-                .padding(BorderPadding)
-                .scrollIndicators(.hidden)
-                .scrollContentBackground(.hidden)
                 .background(PanelColor)
                 .overlay((showBorder.first?.boolValue ?? false) ? RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.accentColor, lineWidth: 1): RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.clear, lineWidth: 0))
                 .cornerRadius(CornerRadius)
-                .listStyle(.plain)
-                .listRowSpacing(BorderPadding)
             }
         }
         .padding(.horizontal, BorderPadding)

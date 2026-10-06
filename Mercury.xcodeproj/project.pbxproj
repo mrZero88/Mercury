@@ -108,10 +108,6 @@
 		B27D815E2A3C44E60071FDAC /* DayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80BE2A3C44E50071FDAC /* DayItem.swift */; };
 		B27D815F2A3C44E60071FDAC /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80BF2A3C44E50071FDAC /* Sound.swift */; };
 		B27D81602A3C44E60071FDAC /* AlertInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80C02A3C44E50071FDAC /* AlertInfo.swift */; };
-		B27D81632A3C44E60071FDAC /* designPatterns.json in Resources */ = {isa = PBXBuildFile; fileRef = B27D80C42A3C44E50071FDAC /* designPatterns.json */; };
-		B27D81642A3C44E60071FDAC /* PrototypePattern.png in Resources */ = {isa = PBXBuildFile; fileRef = B27D80C72A3C44E50071FDAC /* PrototypePattern.png */; };
-		B27D81652A3C44E60071FDAC /* builderPattern.png in Resources */ = {isa = PBXBuildFile; fileRef = B27D80C82A3C44E50071FDAC /* builderPattern.png */; };
-		B27D81662A3C44E60071FDAC /* SingletonPattern.png in Resources */ = {isa = PBXBuildFile; fileRef = B27D80C92A3C44E50071FDAC /* SingletonPattern.png */; };
 		B27D81672A3C44E60071FDAC /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80CA2A3C44E50071FDAC /* Config.swift */; };
 		B27D81862A3C44E60071FDAC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B27D80EF2A3C44E50071FDAC /* Localizable.strings */; };
 		B27D81872A3C44E60071FDAC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B27D80F22A3C44E50071FDAC /* Localizable.strings */; };
@@ -205,6 +201,7 @@
 		B2CCC8943074FBD10061C0AA /* IconGroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC8903074FBD10061C0AA /* IconGroupsView.swift */; };
 		B2CCC8963074FC070061C0AA /* IconsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC8953074FC070061C0AA /* IconsSheetView.swift */; };
 		B2CCC8983074FC660061C0AA /* IconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC8973074FC660061C0AA /* IconModel.swift */; };
+		B2CCC89D307539500061C0AA /* mercury.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CCC89C307539500061C0AA /* mercury.png */; };
 		B2DEDB9D2F389D290032DA58 /* MercuryIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = B2DEDB9C2F389D290032DA58 /* MercuryIcon.icon */; };
 /* End PBXBuildFile section */
 
@@ -344,10 +341,6 @@
 		B27D80BE2A3C44E50071FDAC /* DayItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayItem.swift; sourceTree = "<group>"; };
 		B27D80BF2A3C44E50071FDAC /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		B27D80C02A3C44E50071FDAC /* AlertInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertInfo.swift; sourceTree = "<group>"; };
-		B27D80C42A3C44E50071FDAC /* designPatterns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = designPatterns.json; sourceTree = "<group>"; };
-		B27D80C72A3C44E50071FDAC /* PrototypePattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PrototypePattern.png; sourceTree = "<group>"; };
-		B27D80C82A3C44E50071FDAC /* builderPattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = builderPattern.png; sourceTree = "<group>"; };
-		B27D80C92A3C44E50071FDAC /* SingletonPattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SingletonPattern.png; sourceTree = "<group>"; };
 		B27D80CA2A3C44E50071FDAC /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		B27D80F02A3C44E50071FDAC /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B27D80F32A3C44E50071FDAC /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -427,6 +420,7 @@
 		B2CCC8903074FBD10061C0AA /* IconGroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconGroupsView.swift; sourceTree = "<group>"; };
 		B2CCC8953074FC070061C0AA /* IconsSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsSheetView.swift; sourceTree = "<group>"; };
 		B2CCC8973074FC660061C0AA /* IconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconModel.swift; sourceTree = "<group>"; };
+		B2CCC89C307539500061C0AA /* mercury.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mercury.png; sourceTree = "<group>"; };
 		B2DEDB9C2F389D290032DA58 /* MercuryIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = MercuryIcon.icon; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -684,37 +678,18 @@
 		B27D80C22A3C44E50071FDAC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B2CCC89A307538A40061C0AA /* AppIcon */,
 				B26E43212A9B9EA800A982BF /* AppIcons */,
 				B26E43182A9B9CAF00A982BF /* AppBackgrounds */,
-				B27D80C52A3C44E50071FDAC /* Images */,
 				B27D80DA2A3C44E50071FDAC /* Sounds */,
 				B27D80ED2A3C44E50071FDAC /* Translations */,
 				B27D80FB2A3C44E50071FDAC /* Onboarding */,
 				B26E43162A9B9C7400A982BF /* AppBackgroundGroups.swift */,
 				B2CCC8973074FC660061C0AA /* IconModel.swift */,
 				B26E43582A9B9EDF00A982BF /* AppIconGroups.swift */,
-				B27D80C42A3C44E50071FDAC /* designPatterns.json */,
 				B27D80CA2A3C44E50071FDAC /* Config.swift */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		B27D80C52A3C44E50071FDAC /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				B27D80C62A3C44E50071FDAC /* ClassDiagrams */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
-		B27D80C62A3C44E50071FDAC /* ClassDiagrams */ = {
-			isa = PBXGroup;
-			children = (
-				B27D80C72A3C44E50071FDAC /* PrototypePattern.png */,
-				B27D80C82A3C44E50071FDAC /* builderPattern.png */,
-				B27D80C92A3C44E50071FDAC /* SingletonPattern.png */,
-			);
-			path = ClassDiagrams;
 			sourceTree = "<group>";
 		};
 		B27D80DA2A3C44E50071FDAC /* Sounds */ = {
@@ -982,6 +957,14 @@
 			path = Icons;
 			sourceTree = "<group>";
 		};
+		B2CCC89A307538A40061C0AA /* AppIcon */ = {
+			isa = PBXGroup;
+			children = (
+				B2CCC89C307539500061C0AA /* mercury.png */,
+			);
+			path = AppIcon;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1119,12 +1102,9 @@
 				B27D818B2A3C44E60071FDAC /* CreateDeleteBoard.mov in Resources */,
 				B27D818C2A3C44E60071FDAC /* createMoveDeleteTask.mov in Resources */,
 				B2DEDB9D2F389D290032DA58 /* MercuryIcon.icon in Resources */,
-				B27D81632A3C44E60071FDAC /* designPatterns.json in Resources */,
 				B27D81892A3C44E60071FDAC /* Localizable.strings in Resources */,
 				B27D81882A3C44E60071FDAC /* Localizable.strings in Resources */,
-				B27D81652A3C44E60071FDAC /* builderPattern.png in Resources */,
 				B27D81872A3C44E60071FDAC /* Localizable.strings in Resources */,
-				B27D81662A3C44E60071FDAC /* SingletonPattern.png in Resources */,
 				B2190BE02CD7E82C006A3698 /* openSheet3.wav in Resources */,
 				B2190BE12CD7E82C006A3698 /* SoundPack4 - Select 3Variation_01.wav in Resources */,
 				B2190BE22CD7E82C006A3698 /* UI_soundPack5_Back_v1_01.wav in Resources */,
@@ -1132,9 +1112,9 @@
 				B2190BE42CD7E82C006A3698 /* SoundPack4 - Scroll 2Variation_01.wav in Resources */,
 				B2190BE52CD7E82C006A3698 /* SoundPack4 - Back 4Variation_01.wav in Resources */,
 				B27D818A2A3C44E60071FDAC /* createDeletePhase.mov in Resources */,
+				B2CCC89D307539500061C0AA /* mercury.png in Resources */,
 				B27D807C2A3C44980071FDAC /* Preview Assets.xcassets in Resources */,
 				B27D80782A3C44980071FDAC /* Assets.xcassets in Resources */,
-				B27D81642A3C44E60071FDAC /* PrototypePattern.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

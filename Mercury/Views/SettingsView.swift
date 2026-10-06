@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import Utils
 
 struct SettingsView: View {
     @EnvironmentObject var settingsChangedTrigger: SettingsChangedTrigger
@@ -79,7 +80,9 @@ struct SettingsView: View {
                 }
                 .frame(maxWidth: .infinity)
                 .padding(BorderPadding)
-                .bgPanelStyle()
+                .background(PanelColor)
+                .overlay((showBorder.first?.boolValue ?? false) ? RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.accentColor, lineWidth: 1): RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.clear, lineWidth: 0))
+                .cornerRadius(CornerRadius)
             }
             GridRow {
                 VStack(alignment: .leading, spacing: 0) {
@@ -114,7 +117,7 @@ struct SettingsView: View {
                 .cornerRadius(CornerRadius)
             }
         }
-        .padding(.horizontal, BorderPadding)
+        .padding(.horizontal, BorderPadding6)
         .background(SvgBackgroundView())
 #if os(iOS)
         .navigationBarHidden(true)

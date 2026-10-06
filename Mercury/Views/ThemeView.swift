@@ -8,6 +8,7 @@
 import SwiftUI
 import UniformTypeIdentifiers
 import CoreData
+import Utils
 
 struct ThemeView: View {
     @Environment(\.colorScheme) var colorScheme
@@ -29,6 +30,13 @@ struct ThemeView: View {
         ],
         predicate: NSPredicate(format: "key == %@", "accentColor")
     ) var settings: FetchedResults<Setting>
+    
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
+        predicate: NSPredicate(format: "key == %@", "showBorder")
+    ) var showBorder: FetchedResults<Setting>
     
     var body: some View {
         VStack(spacing: BorderPadding) {
@@ -63,7 +71,9 @@ struct ThemeView: View {
             .buttonStyle(.borderedProminent)
             .frame(maxWidth: .infinity)
             .padding(BorderPadding)
-            .bgPanelStyle()
+            .background(PanelColor)
+            .overlay((showBorder.first?.boolValue ?? false) ? RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.accentColor, lineWidth: 1): RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.clear, lineWidth: 0))
+            .cornerRadius(CornerRadius)
             .fixedSize(horizontal: false, vertical: true)
             VStack(alignment: .leading, spacing: 0) {
                 HStack {
@@ -92,9 +102,11 @@ struct ThemeView: View {
                 .listStyle(.plain)
                 .listRowSpacing(BorderPadding)
             }
-            .bgPanelStyle()
+            .background(PanelColor)
+            .overlay((showBorder.first?.boolValue ?? false) ? RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.accentColor, lineWidth: 1): RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.clear, lineWidth: 0))
+            .cornerRadius(CornerRadius)
         }
-        .padding(.horizontal, BorderPadding)
+        .padding(.horizontal, BorderPadding6)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(SvgBackgroundView())
         .scrollContentBackground(.hidden)

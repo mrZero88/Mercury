@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import Utils
 
 struct ContentView: View {
     @Environment(\.colorScheme) var colorScheme
@@ -35,6 +36,13 @@ struct ContentView: View {
         ],
         predicate: NSPredicate(format: "isActive == true")
     ) var themes: FetchedResults<Theme>
+    
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
+        predicate: NSPredicate(format: "key == %@", "showBorder")
+    ) var showBorder: FetchedResults<Setting>
     
     var firstName: String {
         Name.split(separator: " ").first.map(String.init) ?? "Player 1"
@@ -85,7 +93,9 @@ struct ContentView: View {
                 .buttonStyle(.borderedProminent)
                 .frame(maxWidth: .infinity)
                 .padding(BorderPadding)
-                .bgPanelStyle()
+                .background(PanelColor)
+                .overlay((showBorder.first?.boolValue ?? false) ? RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.accentColor, lineWidth: 1): RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.clear, lineWidth: 0))
+                .cornerRadius(CornerRadius)
                 .fixedSize(horizontal: false, vertical: true)
                 VStack(alignment: .leading, spacing: 0) {
                     HStack {
@@ -113,7 +123,9 @@ struct ContentView: View {
                     .listStyle(.plain)
                     .listRowSpacing(BorderPadding)
                 }
-                .bgPanelStyle()
+                .background(PanelColor)
+                .overlay((showBorder.first?.boolValue ?? false) ? RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.accentColor, lineWidth: 1): RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.clear, lineWidth: 0))
+                .cornerRadius(CornerRadius)
                 HStack {
                     Button {
                     } label: {
@@ -138,10 +150,12 @@ struct ContentView: View {
                 .buttonStyle(.borderedProminent)
                 .frame(maxWidth: .infinity)
                 .padding(BorderPadding)
-                .bgPanelStyle()
+                .background(PanelColor)
+                .overlay((showBorder.first?.boolValue ?? false) ? RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.accentColor, lineWidth: 1): RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.clear, lineWidth: 0))
+                .cornerRadius(CornerRadius)
                 .fixedSize(horizontal: false, vertical: true)
             }
-            .padding(.horizontal, BorderPadding)
+            .padding(.horizontal, BorderPadding6)
             .navigationDestination(for: String.self) { link in
                 let items = link.split(separator: "//")
                 let type = String(items[0])

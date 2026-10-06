@@ -22,6 +22,8 @@ class ViewModel: ObservableObject {
         topicsController.objectWillChange.sink(receiveValue: {self.objectWillChange.send()}).store(in: &ViewModel.cancellables)
         sectionsController.objectWillChange.sink(receiveValue: {self.objectWillChange.send()}).store(in: &ViewModel.cancellables)
         usersController.objectWillChange.sink(receiveValue: {self.objectWillChange.send()}).store(in: &ViewModel.cancellables)
+        
+        settingsViewModel.startConfigSettings()
     }
     
     func reset() {

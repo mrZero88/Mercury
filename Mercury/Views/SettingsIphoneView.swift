@@ -6,27 +6,94 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct SettingsIphoneView: View {
     @EnvironmentObject var settingsChangedTrigger: SettingsChangedTrigger
     @EnvironmentObject var viewModel: ViewModel
+    @Environment(\.dismiss) var dismiss
+    @State var alertInfo: AlertInfo?
+    
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
+        predicate: NSPredicate(format: "key == %@", "tertiaryColorOpacity")
+    ) var settingsTertiaryOpacity: FetchedResults<Setting>
+    
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
+        predicate: NSPredicate(format: "key == %@", "showBorder")
+    ) var showBorder: FetchedResults<Setting>
+    
+    func getSettings(settingGroup: SettingsGroup) -> [ Setting] {
+        return SettingsUtils.settings(set: settingGroup.settings).sorted(by: {first,second in
+            return first.order < second.order
+        })
+    }
     
     var body: some View {
         Grid(horizontalSpacing: BorderPadding, verticalSpacing: BorderPadding) {
-            List(viewModel.settingsViewModel.settingGroups) { settingGroup in
-                SwiftUI.Section(settingGroup.title ?? "") {
-                    SettingGroupIphoneView(settingGroup: settingGroup)
+            GridRow {
+                HStack {
+                    Button {
+                        withAnimation(ShowAnimation ? .easeInOut(duration: AnimationDuration) : nil) {
+                            PlaySound(sound: .navigation)
+                            PlayHaptic()
+                            dismiss()
+                        }
+                    } label: {
+                        ZStack {
+                            Label("Settings", systemImage: "sidebar.left").labelStyle(.iconOnly).frame(maxHeight: .infinity).foregroundColor(Color.accentColor)
+                            Label("", systemImage: "star").labelStyle(.iconOnly).opacity(0)
+                        }
+                    }
+                    .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
+                    .buttonStyle(.borderedProminent)
+                    .fixedSize(horizontal: false, vertical: true)
+                    Text("Settings").font(.footnote).fontWeight(.bold).foregroundColor(Color.accentColor)
+                    Spacer()
+                    Button {
+                        alertInfo = ShowResyncSettingsAlert()
+                    } label: {
+                        ZStack {
+                            Label("Re-Sync Settings", systemImage: "arrow.triangle.2.circlepath").labelStyle(.iconOnly).frame(maxHeight: .infinity).foregroundColor(Color.accentColor)
+                            Label("", systemImage: "star").labelStyle(.iconOnly).opacity(0)
+                        }
+                    }
+                    .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
+                    .buttonStyle(.borderedProminent)
+                    .fixedSize(horizontal: false, vertical: true)
                 }
-                .listRowBackground(Color("PanelColor"))
+                .frame(maxWidth: .infinity)
+                .padding(BorderPadding)
+                .background(PanelColor)
+                .overlay((showBorder.first?.boolValue ?? false) ? RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.accentColor, lineWidth: 1): RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.clear, lineWidth: 0))
+                .cornerRadius(CornerRadius)
             }
-            .scrollIndicators(.hidden)
-            .scrollContentBackground(.hidden)
+            GridRow {
+                List(viewModel.settingsViewModel.settingGroups) { settingGroup in
+                    ForEach(self.getSettings(settingGroup: settingGroup)) { setting in
+                        SettingView(setting: setting)
+                    }
+                }
+                .scrollIndicators(.hidden)
+                .scrollContentBackground(.hidden)
+                .background(PanelColor)
+                .overlay((showBorder.first?.boolValue ?? false) ? RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.accentColor, lineWidth: 1): RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.clear, lineWidth: 0))
+                .cornerRadius(CornerRadius)
+            }
         }
-        .navigationBarTitleDisplayMode(.inline)
-        .padding([.bottom])
+        .padding(.horizontal, BorderPadding)
         .background(SvgBackgroundView())
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationTitle("Settings")
+#if os(iOS)
+        .navigationBarHidden(true)
+#endif
+        .alert(item: $alertInfo, content: { info in
+            showAlert(info: info, viewModel: viewModel, settingsChangedTrigger: settingsChangedTrigger)
+        })
     }
 }
 

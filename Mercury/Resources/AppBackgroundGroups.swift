@@ -10,7 +10,17 @@ public let AppBackgroundGroups: [(String, [String])] =
     Ooorganize,
     Ccchaos,
     Uuundulate,
-    Wwwhirl
+    Wwwhirl,
+    Qqquad,
+    Oooscillate,
+    Cccoil,
+    Ssspiral,
+    Ttten,
+    Ssscribble,
+    Sssquiggly,
+    Vvvortex,
+    Gggyrate,
+    Rrreflection
 ]
 
 public func getAllBackgrounds() -> [String] {

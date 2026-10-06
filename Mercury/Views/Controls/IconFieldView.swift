@@ -31,7 +31,7 @@ struct IconFieldView: View {
             }
         }
         .sheet(isPresented: $showingIconstSheet) {
-            IconsSheetView(iconName: $iconName).accentColor(Color.getColor(colorScheme: colorScheme, setting: settings.first))
+            IconsSheetView(iconName: $iconName).accentColor(Color.getColor(colorScheme: colorScheme, setting: settings.first)).interactiveDismissDisabled(true)
         }
         .padding(.horizontal)
         .frame(maxHeight: .infinity)

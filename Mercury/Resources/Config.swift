@@ -19,6 +19,8 @@ public let MaxPhasesCountPerBoard = 8
 public let PanelColor = Color("PanelColor")
 public let DefaultThemeIconName = "7082272_image_photo_photography_picture"
 public let DefaultTopicIconName = "7082272_image_photo_photography_picture"
+public let AnimationDuration = CGFloat(0.35)
+public let ShowAnimation = false
 
 public let DefaultWidgetCardTitle = String(localized: String.LocalizationValue("Mercury"))
 public let DefaultWidgetCardSubtitle = String(localized: String.LocalizationValue("planet"))
@@ -28,7 +30,7 @@ public let DefaultWidgetCardText2 = String(localized: String.LocalizationValue("
 
 public let DefaultNoTopicTitle = String(localized: String.LocalizationValue("No Topics"))
 public let DefaultNoTopicSubtitle = String(localized: String.LocalizationValue("Welcome to Mercury!"))
-public let DefaultNoTopicText1 = String(localized: String.LocalizationValue("Hello")) + (UserName.isEmpty ? "" : " " + UserName) + "! " + String(localized: String.LocalizationValue("At the moment you don't have any topics to be shown here in the widgets."))
+public let DefaultNoTopicText1 = String(localized: String.LocalizationValue("Hello")) + (Name.isEmpty ? "" : " " + Name) + "! " + String(localized: String.LocalizationValue("At the moment you don't have any topics to be shown here in the widgets."))
 public let DefaultNoTopicText2 = String(localized: String.LocalizationValue("To be able to see your created topic widgets, please create them in the app interface.\n\nYou can click here in the widget to open the app and start customizing it with useful information."))
 
 public let DefautSelectedGroup: String = "Animal Kingdom"

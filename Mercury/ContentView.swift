@@ -36,6 +36,10 @@ struct ContentView: View {
         predicate: NSPredicate(format: "isActive == true")
     ) var themes: FetchedResults<Theme>
     
+    var firstName: String {
+        Name.split(separator: " ").first.map(String.init) ?? "Player 1"
+    }
+    
     var body: some View {
         NavigationStack(path: $presentedStack) {
             VStack(spacing: BorderPadding) {
@@ -53,8 +57,18 @@ struct ContentView: View {
                     }
                     .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
                     Spacer()
-                    Label("Themes", systemImage: "house").frame(maxWidth: .infinity, maxHeight: .infinity).labelStyle(.titleOnly).foregroundColor(Color.accentColor)
-                        .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
+                    Button {
+                        PlaySound(sound: .navigation)
+                        PlayHaptic()
+                        presentedStack = []
+                        presentedStack.append("home//home")
+                    } label: {
+                        ZStack {
+                            Label("zMercury", systemImage: "house").frame(maxWidth: .infinity, maxHeight: .infinity).foregroundColor(Color.accentColor)
+                            Label("", systemImage: "star").labelStyle(.iconOnly).opacity(0)
+                        }
+                    }
+                    .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
                     Spacer()
                     Button {
                         PlaySound(sound: .openSheet)
@@ -73,14 +87,59 @@ struct ContentView: View {
                 .padding(BorderPadding)
                 .bgPanelStyle()
                 .fixedSize(horizontal: false, vertical: true)
-                
-                List {
-                    ForEach(themes) { theme in
-                        NavigationLinkThemeView(theme: theme)
+                VStack(alignment: .leading, spacing: 0) {
+                    HStack {
+                        Text(String(localized: String.LocalizationValue("Themes")) + " (" + String(themes.count) + ")").foregroundColor(.secondary).font(.footnote)
+                        Spacer()
+                        Button {
+                        } label: {
+                            ZStack {
+                                Label("", systemImage: "star").labelStyle(.iconOnly).frame(maxHeight: .infinity).opacity(0)
+                            }
+                        }
+                        .fixedSize(horizontal: false, vertical: true)
+                        .opacity(0)
                     }
+                    .buttonStyle(.bordered)
+                    .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
+                    .padding(BorderPadding)
+                    List {
+                        ForEach(themes) { theme in
+                            NavigationLinkThemeView(theme: theme)
+                        }
+                    }
+                    .padding(BorderPadding)
+                    .scrollIndicators(.hidden)
+                    .listStyle(.plain)
+                    .listRowSpacing(BorderPadding)
                 }
                 .bgPanelStyle()
-                .scrollIndicators(.hidden)
+                HStack {
+                    Button {
+                    } label: {
+                        ZStack {
+                            Label("Settings", systemImage: "gear").labelStyle(.iconOnly).frame(maxHeight: .infinity).foregroundColor(Color.accentColor)
+                            Label("", systemImage: "star").labelStyle(.iconOnly).opacity(0)
+                        }
+                    }
+                    .opacity(0)
+                    Spacer()
+                    Label("Welcome \(firstName)!", systemImage: "figure.wave")
+                    Spacer()
+                    Button {
+                    } label: {
+                        ZStack {
+                            Label("Add Board", systemImage: "plus").labelStyle(.iconOnly).frame(maxHeight: .infinity).foregroundColor(Color.accentColor)
+                            Label("", systemImage: "star").labelStyle(.iconOnly).opacity(0)
+                        }
+                    }
+                    .opacity(0)
+                }
+                .buttonStyle(.borderedProminent)
+                .frame(maxWidth: .infinity)
+                .padding(BorderPadding)
+                .bgPanelStyle()
+                .fixedSize(horizontal: false, vertical: true)
             }
             .padding(.horizontal, BorderPadding)
             .navigationDestination(for: String.self) { link in
@@ -93,6 +152,8 @@ struct ContentView: View {
                     TopicView(topic: viewModel.topicsController.getTopicById(id: id))
                 } else if (type == "settings") {
                     SettingsView()
+                } else if(type == "home") {
+                    ZMercuryIphoneView()
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -9,23 +9,25 @@ import Foundation
 import Combine
 
 public class SettingsViewModel: ObservableObject {
+    static var cancellables = Set<AnyCancellable>()
     @Published var settingGroups: [SettingsGroup] = []
     @Published var settingsController: SettingsController = SettingsController()
     
     var settings: [Setting] {
         get {
-            return SettingDao.fetchSettings()
+            return SettingDao.fetchAllSettings()
         }
     }
     
-    init() {
-        //DataUtils.wipeSettings(context: PersistenceController.shared.container.viewContext)
-        //DataUtils.wipeSettingGroups(context: PersistenceController.shared.container.viewContext)
-        let firstOnDate = SettingsController.getDateValue(key: "firstOnDate")
-        if(firstOnDate == nil) {
+    func startConfigSettings() {
+        let startUsingDate = SettingsController.getDateValue(key: "firstUse")
+        if(startUsingDate == nil) {
             self.settingsController.addSettings()
+            SetFirstUse(date: Date())
         }
-        settingGroups = SettingsGroupDao.fetchSettingGroups()
+        // SetFirstUse(date: DateUtils.getDate(year: 2023, month: 1, day: 1))
+        SetLastUse(date: Date())
+        self.fetchSettingGroups()
     }
     
     func fetchSettingGroups() {

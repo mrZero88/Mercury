@@ -26,7 +26,7 @@ public class MonthUtils {
     ]
     
     static func getMonthsAfterStart(viewModel: ViewModel) -> [Month] {
-        let months = months.filter({Date().getMonthFirstDateByYear(by: $0.number) >= FirstOnDate.startOfYear() && $0.number <= Date().month})
+        let months = months.filter({Date().getMonthFirstDateByYear(by: $0.number) >= FirstUse.startOfYear() && $0.number <= Date().month})
         
         for month in months {
             month.days = getMonth(viewModel: viewModel, year: Date().year, monthNumber: month.number)

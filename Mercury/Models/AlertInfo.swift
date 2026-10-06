@@ -78,12 +78,10 @@ func showAlert(info: AlertInfo, viewModel: ViewModel, theme: Theme? = nil, topic
             withAnimation {
                 PlaySound(sound: .navigation)
                 PlayHaptic()
-                let uuid = UserUuid
-                let startDate = FirstOnDate
+                let startDate = FirstUse
                 viewModel.settingsViewModel.settingsController.addSettings()
                 viewModel.settingsViewModel.fetchSettingGroups()
-                SetFirstOnDate(date: startDate)
-                SetUserUuid(uuid: uuid)
+                SetFirstUse(date: startDate)
                 SetOnboard(onboard: true)
                 settingsChangedTrigger?.objectWillChange.send()
             }

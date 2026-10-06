@@ -1,6 +1,6 @@
 //
 //  Ooorganize.swift
-//  Alien
+//  SaturnX
 //
 //  Created by Daniel Correia on 18.06.23.
 //
@@ -22,5 +22,7 @@ public let Ooorganize: (String, [String]) =
     "ooorganize12",
     "ooorganize13",
     "ooorganize14",
-    "ooorganize15"
+    "ooorganize15",
+    "ooorganize16",
+    "ooorganize17"
 ])

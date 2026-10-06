@@ -25,14 +25,8 @@ struct SliderSettingView: View {
     }
     
     var body: some View {
-        VStack {
-            HStack {
-                Text(title + ": ")
-                Text("\(value, specifier: "%.2f")")
-            }
-            Slider(value: $value, in: min...max, step: 0.01)
-        }
-        .disabled(!enabled)
+        Slider(value: $value, in: min...max, step: 0.01)
+            .disabled(!enabled)
     }
 }
 

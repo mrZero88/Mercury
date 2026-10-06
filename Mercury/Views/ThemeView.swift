@@ -45,7 +45,7 @@ struct ThemeView: View {
                 }
                 .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
                 Spacer()
-                Label("Topics", systemImage: "house").frame(maxWidth: .infinity, maxHeight: .infinity).labelStyle(.titleOnly).foregroundColor(Color.accentColor)
+                Label(theme.title ?? "", systemImage: "house").frame(maxWidth: .infinity, maxHeight: .infinity).labelStyle(.titleOnly).foregroundColor(Color.accentColor)
                     .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
                 Spacer()
                 Button {
@@ -65,20 +65,34 @@ struct ThemeView: View {
             .padding(BorderPadding)
             .bgPanelStyle()
             .fixedSize(horizontal: false, vertical: true)
-            
-            List {
-                ForEach(theme.activeTopics) { topic in
-                    NavigationLinkTopicView(topic: topic)
+            VStack(alignment: .leading, spacing: 0) {
+                HStack {
+                    Text(String(localized: String.LocalizationValue("Topics")) + " (" + String(theme.activeTopics.count) + ")").foregroundColor(.secondary).font(.footnote)
+                    Spacer()
+                    Button {
+                    } label: {
+                        ZStack {
+                            Label("", systemImage: "star").labelStyle(.iconOnly).frame(maxHeight: .infinity).opacity(0)
+                        }
+                    }
+                    .fixedSize(horizontal: false, vertical: true)
+                    .opacity(0)
                 }
-                .onMove(perform: move)
+                .buttonStyle(.bordered)
+                .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
+                .padding(BorderPadding)
+                List {
+                    ForEach(theme.activeTopics) { topic in
+                        NavigationLinkTopicView(topic: topic)
+                    }
+                    .onMove(perform: move)
+                }
+                .padding(BorderPadding)
+                .scrollIndicators(.hidden)
+                .listStyle(.plain)
+                .listRowSpacing(BorderPadding)
             }
-            .padding(BorderPadding)
             .bgPanelStyle()
-            .scrollIndicators(.hidden)
-            .listStyle(.plain)
-            .listRowSpacing(BorderPadding)
-            
-            
         }
         .padding(.horizontal, BorderPadding)
         .frame(maxWidth: .infinity, maxHeight: .infinity)

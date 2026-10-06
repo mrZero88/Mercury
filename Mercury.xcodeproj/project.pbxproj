@@ -47,10 +47,6 @@
 		B26E430E2A9B9B2100A982BF /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E430C2A9B9A4700A982BF /* SettingsController.swift */; };
 		B26E43132A9B9BFE00A982BF /* ViewModifierBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E43122A9B9BFE00A982BF /* ViewModifierBackground.swift */; };
 		B26E43172A9B9C7400A982BF /* AppBackgroundGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E43162A9B9C7400A982BF /* AppBackgroundGroups.swift */; };
-		B26E431D2A9B9CAF00A982BF /* Ooorganize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E43192A9B9CAF00A982BF /* Ooorganize.swift */; };
-		B26E431E2A9B9CAF00A982BF /* Ccchaos.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E431A2A9B9CAF00A982BF /* Ccchaos.swift */; };
-		B26E431F2A9B9CAF00A982BF /* Wwwhirl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E431B2A9B9CAF00A982BF /* Wwwhirl.swift */; };
-		B26E43202A9B9CAF00A982BF /* Uuundulate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E431C2A9B9CAF00A982BF /* Uuundulate.swift */; };
 		B26E433D2A9B9EA800A982BF /* FileAndDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E43222A9B9EA800A982BF /* FileAndDocument.swift */; };
 		B26E433E2A9B9EA800A982BF /* BusinessAndFinance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E43232A9B9EA800A982BF /* BusinessAndFinance.swift */; };
 		B26E433F2A9B9EA800A982BF /* FamilyAndBaby.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E43242A9B9EA800A982BF /* FamilyAndBaby.swift */; };
@@ -80,10 +76,6 @@
 		B26E43572A9B9EA800A982BF /* LoveAndWedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E433C2A9B9EA800A982BF /* LoveAndWedding.swift */; };
 		B26E43592A9B9EDF00A982BF /* AppIconGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E43582A9B9EDF00A982BF /* AppIconGroups.swift */; };
 		B26E435B2A9BA1BE00A982BF /* SvgBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E435A2A9BA1BE00A982BF /* SvgBackgroundView.swift */; };
-		B26E435F2A9BA7C400A982BF /* IconSearchPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E435C2A9BA7C400A982BF /* IconSearchPanelView.swift */; };
-		B26E43602A9BA7C400A982BF /* IconsGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E435D2A9BA7C400A982BF /* IconsGroupView.swift */; };
-		B26E43612A9BA7C400A982BF /* IconGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E435E2A9BA7C400A982BF /* IconGroupView.swift */; };
-		B26E43632A9BA7E200A982BF /* IconsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E43622A9BA7E200A982BF /* IconsSheetView.swift */; };
 		B27D806F2A3C44970071FDAC /* MercuryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D806E2A3C44970071FDAC /* MercuryApp.swift */; };
 		B27D80742A3C44970071FDAC /* Mercury.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B27D80722A3C44970071FDAC /* Mercury.xcdatamodeld */; };
 		B27D80762A3C44970071FDAC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80752A3C44970071FDAC /* ContentView.swift */; };
@@ -192,6 +184,27 @@
 		B27D82082A3C49B50071FDAC /* SSettingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80AB2A3C44E50071FDAC /* SSettingExtension.swift */; };
 		B27D82092A3C49C00071FDAC /* SSettingsGroupExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80AF2A3C44E50071FDAC /* SSettingsGroupExtension.swift */; };
 		B2C25D412A9F52F3005415E7 /* ExportUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C25D402A9F52F3005415E7 /* ExportUtils.swift */; };
+		B2CCC86E3074055C0061C0AA /* ZMercuryIphoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC86D3074055C0061C0AA /* ZMercuryIphoneView.swift */; };
+		B2CCC8713074E2540061C0AA /* DataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC8703074E2540061C0AA /* DataUtils.swift */; };
+		B2CCC8803074EC100061C0AA /* Wwwhirl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC8743074EC100061C0AA /* Wwwhirl.swift */; };
+		B2CCC8813074EC100061C0AA /* Uuundulate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC8753074EC100061C0AA /* Uuundulate.swift */; };
+		B2CCC8823074EC100061C0AA /* Ooorganize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC8723074EC100061C0AA /* Ooorganize.swift */; };
+		B2CCC8833074EC100061C0AA /* Ttten.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC87A3074EC100061C0AA /* Ttten.swift */; };
+		B2CCC8843074EC100061C0AA /* Qqquad.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC8763074EC100061C0AA /* Qqquad.swift */; };
+		B2CCC8853074EC100061C0AA /* Ssspiral.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC8793074EC100061C0AA /* Ssspiral.swift */; };
+		B2CCC8863074EC100061C0AA /* Vvvortex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC87D3074EC100061C0AA /* Vvvortex.swift */; };
+		B2CCC8873074EC100061C0AA /* Sssquiggly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC87C3074EC100061C0AA /* Sssquiggly.swift */; };
+		B2CCC8883074EC100061C0AA /* Rrreflection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC87F3074EC100061C0AA /* Rrreflection.swift */; };
+		B2CCC8893074EC100061C0AA /* Ccchaos.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC8733074EC100061C0AA /* Ccchaos.swift */; };
+		B2CCC88A3074EC100061C0AA /* Ssscribble.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC87B3074EC100061C0AA /* Ssscribble.swift */; };
+		B2CCC88B3074EC100061C0AA /* Cccoil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC8783074EC100061C0AA /* Cccoil.swift */; };
+		B2CCC88C3074EC100061C0AA /* Oooscillate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC8773074EC100061C0AA /* Oooscillate.swift */; };
+		B2CCC88D3074EC100061C0AA /* Gggyrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC87E3074EC100061C0AA /* Gggyrate.swift */; };
+		B2CCC8923074FBD10061C0AA /* IconSearchPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC88E3074FBD10061C0AA /* IconSearchPanelView.swift */; };
+		B2CCC8933074FBD10061C0AA /* IconsGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC88F3074FBD10061C0AA /* IconsGroupView.swift */; };
+		B2CCC8943074FBD10061C0AA /* IconGroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC8903074FBD10061C0AA /* IconGroupsView.swift */; };
+		B2CCC8963074FC070061C0AA /* IconsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC8953074FC070061C0AA /* IconsSheetView.swift */; };
+		B2CCC8983074FC660061C0AA /* IconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC8973074FC660061C0AA /* IconModel.swift */; };
 		B2DEDB9D2F389D290032DA58 /* MercuryIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = B2DEDB9C2F389D290032DA58 /* MercuryIcon.icon */; };
 /* End PBXBuildFile section */
 
@@ -266,10 +279,6 @@
 		B26E430C2A9B9A4700A982BF /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		B26E43122A9B9BFE00A982BF /* ViewModifierBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModifierBackground.swift; sourceTree = "<group>"; };
 		B26E43162A9B9C7400A982BF /* AppBackgroundGroups.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppBackgroundGroups.swift; sourceTree = "<group>"; };
-		B26E43192A9B9CAF00A982BF /* Ooorganize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ooorganize.swift; sourceTree = "<group>"; };
-		B26E431A2A9B9CAF00A982BF /* Ccchaos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ccchaos.swift; sourceTree = "<group>"; };
-		B26E431B2A9B9CAF00A982BF /* Wwwhirl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wwwhirl.swift; sourceTree = "<group>"; };
-		B26E431C2A9B9CAF00A982BF /* Uuundulate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uuundulate.swift; sourceTree = "<group>"; };
 		B26E43222A9B9EA800A982BF /* FileAndDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileAndDocument.swift; sourceTree = "<group>"; };
 		B26E43232A9B9EA800A982BF /* BusinessAndFinance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessAndFinance.swift; sourceTree = "<group>"; };
 		B26E43242A9B9EA800A982BF /* FamilyAndBaby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyAndBaby.swift; sourceTree = "<group>"; };
@@ -299,10 +308,6 @@
 		B26E433C2A9B9EA800A982BF /* LoveAndWedding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoveAndWedding.swift; sourceTree = "<group>"; };
 		B26E43582A9B9EDF00A982BF /* AppIconGroups.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIconGroups.swift; sourceTree = "<group>"; };
 		B26E435A2A9BA1BE00A982BF /* SvgBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SvgBackgroundView.swift; sourceTree = "<group>"; };
-		B26E435C2A9BA7C400A982BF /* IconSearchPanelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconSearchPanelView.swift; sourceTree = "<group>"; };
-		B26E435D2A9BA7C400A982BF /* IconsGroupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconsGroupView.swift; sourceTree = "<group>"; };
-		B26E435E2A9BA7C400A982BF /* IconGroupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconGroupView.swift; sourceTree = "<group>"; };
-		B26E43622A9BA7E200A982BF /* IconsSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconsSheetView.swift; sourceTree = "<group>"; };
 		B27D806B2A3C44970071FDAC /* Mercury.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mercury.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27D806E2A3C44970071FDAC /* MercuryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercuryApp.swift; sourceTree = "<group>"; };
 		B27D80732A3C44970071FDAC /* Mercury.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mercury.xcdatamodel; sourceTree = "<group>"; };
@@ -401,6 +406,27 @@
 		B27D81F22A3C48500071FDAC /* WidgetCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetCardView.swift; sourceTree = "<group>"; };
 		B27D81F42A3C48500071FDAC /* WidgetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetViewModel.swift; sourceTree = "<group>"; };
 		B2C25D402A9F52F3005415E7 /* ExportUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportUtils.swift; sourceTree = "<group>"; };
+		B2CCC86D3074055C0061C0AA /* ZMercuryIphoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZMercuryIphoneView.swift; sourceTree = "<group>"; };
+		B2CCC8703074E2540061C0AA /* DataUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUtils.swift; sourceTree = "<group>"; };
+		B2CCC8723074EC100061C0AA /* Ooorganize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ooorganize.swift; sourceTree = "<group>"; };
+		B2CCC8733074EC100061C0AA /* Ccchaos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ccchaos.swift; sourceTree = "<group>"; };
+		B2CCC8743074EC100061C0AA /* Wwwhirl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wwwhirl.swift; sourceTree = "<group>"; };
+		B2CCC8753074EC100061C0AA /* Uuundulate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uuundulate.swift; sourceTree = "<group>"; };
+		B2CCC8763074EC100061C0AA /* Qqquad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Qqquad.swift; sourceTree = "<group>"; };
+		B2CCC8773074EC100061C0AA /* Oooscillate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oooscillate.swift; sourceTree = "<group>"; };
+		B2CCC8783074EC100061C0AA /* Cccoil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cccoil.swift; sourceTree = "<group>"; };
+		B2CCC8793074EC100061C0AA /* Ssspiral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ssspiral.swift; sourceTree = "<group>"; };
+		B2CCC87A3074EC100061C0AA /* Ttten.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ttten.swift; sourceTree = "<group>"; };
+		B2CCC87B3074EC100061C0AA /* Ssscribble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ssscribble.swift; sourceTree = "<group>"; };
+		B2CCC87C3074EC100061C0AA /* Sssquiggly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sssquiggly.swift; sourceTree = "<group>"; };
+		B2CCC87D3074EC100061C0AA /* Vvvortex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vvvortex.swift; sourceTree = "<group>"; };
+		B2CCC87E3074EC100061C0AA /* Gggyrate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gggyrate.swift; sourceTree = "<group>"; };
+		B2CCC87F3074EC100061C0AA /* Rrreflection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rrreflection.swift; sourceTree = "<group>"; };
+		B2CCC88E3074FBD10061C0AA /* IconSearchPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconSearchPanelView.swift; sourceTree = "<group>"; };
+		B2CCC88F3074FBD10061C0AA /* IconsGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsGroupView.swift; sourceTree = "<group>"; };
+		B2CCC8903074FBD10061C0AA /* IconGroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconGroupsView.swift; sourceTree = "<group>"; };
+		B2CCC8953074FC070061C0AA /* IconsSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsSheetView.swift; sourceTree = "<group>"; };
+		B2CCC8973074FC660061C0AA /* IconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconModel.swift; sourceTree = "<group>"; };
 		B2DEDB9C2F389D290032DA58 /* MercuryIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = MercuryIcon.icon; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -471,10 +497,20 @@
 		B26E43182A9B9CAF00A982BF /* AppBackgrounds */ = {
 			isa = PBXGroup;
 			children = (
-				B26E43192A9B9CAF00A982BF /* Ooorganize.swift */,
-				B26E431A2A9B9CAF00A982BF /* Ccchaos.swift */,
-				B26E431B2A9B9CAF00A982BF /* Wwwhirl.swift */,
-				B26E431C2A9B9CAF00A982BF /* Uuundulate.swift */,
+				B2CCC8723074EC100061C0AA /* Ooorganize.swift */,
+				B2CCC8733074EC100061C0AA /* Ccchaos.swift */,
+				B2CCC8743074EC100061C0AA /* Wwwhirl.swift */,
+				B2CCC8753074EC100061C0AA /* Uuundulate.swift */,
+				B2CCC8763074EC100061C0AA /* Qqquad.swift */,
+				B2CCC8773074EC100061C0AA /* Oooscillate.swift */,
+				B2CCC8783074EC100061C0AA /* Cccoil.swift */,
+				B2CCC8793074EC100061C0AA /* Ssspiral.swift */,
+				B2CCC87A3074EC100061C0AA /* Ttten.swift */,
+				B2CCC87B3074EC100061C0AA /* Ssscribble.swift */,
+				B2CCC87C3074EC100061C0AA /* Sssquiggly.swift */,
+				B2CCC87D3074EC100061C0AA /* Vvvortex.swift */,
+				B2CCC87E3074EC100061C0AA /* Gggyrate.swift */,
+				B2CCC87F3074EC100061C0AA /* Rrreflection.swift */,
 			);
 			path = AppBackgrounds;
 			sourceTree = "<group>";
@@ -655,6 +691,7 @@
 				B27D80ED2A3C44E50071FDAC /* Translations */,
 				B27D80FB2A3C44E50071FDAC /* Onboarding */,
 				B26E43162A9B9C7400A982BF /* AppBackgroundGroups.swift */,
+				B2CCC8973074FC660061C0AA /* IconModel.swift */,
 				B26E43582A9B9EDF00A982BF /* AppIconGroups.swift */,
 				B27D80C42A3C44E50071FDAC /* designPatterns.json */,
 				B27D80CA2A3C44E50071FDAC /* Config.swift */,
@@ -792,14 +829,15 @@
 		B27D81152A3C44E60071FDAC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B2CCC8913074FBD10061C0AA /* Icons */,
 				B27D81162A3C44E60071FDAC /* Settings */,
 				B27D81212A3C44E60071FDAC /* Sheets */,
 				B27D81282A3C44E60071FDAC /* Controls */,
 				B27D812E2A3C44E60071FDAC /* Backgrounds */,
-				B27D81302A3C44E60071FDAC /* Icons */,
 				B27D813C2A3C44E60071FDAC /* Onboarding */,
 				B26E43092A9B99DE00A982BF /* SettingsView.swift */,
 				B26E43082A9B99DE00A982BF /* SettingsIphoneView.swift */,
+				B2CCC86D3074055C0061C0AA /* ZMercuryIphoneView.swift */,
 				B27D81202A3C44E60071FDAC /* NavigationLinkThemeView.swift */,
 				B27D81352A3C44E60071FDAC /* NavigationLinkTopicView.swift */,
 				B27D81272A3C44E60071FDAC /* ThemeView.swift */,
@@ -831,7 +869,7 @@
 		B27D81212A3C44E60071FDAC /* Sheets */ = {
 			isa = PBXGroup;
 			children = (
-				B26E43622A9BA7E200A982BF /* IconsSheetView.swift */,
+				B2CCC8953074FC070061C0AA /* IconsSheetView.swift */,
 				B27D81232A3C44E60071FDAC /* ThemeSheetView.swift */,
 				B27D81252A3C44E60071FDAC /* TopicSheetView.swift */,
 				B27D81242A3C44E60071FDAC /* SectionSheetView.swift */,
@@ -857,16 +895,6 @@
 				B26E435A2A9BA1BE00A982BF /* SvgBackgroundView.swift */,
 			);
 			path = Backgrounds;
-			sourceTree = "<group>";
-		};
-		B27D81302A3C44E60071FDAC /* Icons */ = {
-			isa = PBXGroup;
-			children = (
-				B26E435E2A9BA7C400A982BF /* IconGroupView.swift */,
-				B26E435C2A9BA7C400A982BF /* IconSearchPanelView.swift */,
-				B26E435D2A9BA7C400A982BF /* IconsGroupView.swift */,
-			);
-			path = Icons;
 			sourceTree = "<group>";
 		};
 		B27D813C2A3C44E60071FDAC /* Onboarding */ = {
@@ -907,6 +935,7 @@
 		B27D81DC2A3C481F0071FDAC /* MercuryWidget */ = {
 			isa = PBXGroup;
 			children = (
+				B2CCC86F3074E2460061C0AA /* Utils */,
 				B27D81F32A3C48500071FDAC /* ViewModels */,
 				B27D81F12A3C48500071FDAC /* Views */,
 				B27D81DD2A3C481F0071FDAC /* MercuryWidgetBundle.swift */,
@@ -933,6 +962,24 @@
 				B27D81F42A3C48500071FDAC /* WidgetViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B2CCC86F3074E2460061C0AA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B2CCC8703074E2540061C0AA /* DataUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B2CCC8913074FBD10061C0AA /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				B2CCC88E3074FBD10061C0AA /* IconSearchPanelView.swift */,
+				B2CCC88F3074FBD10061C0AA /* IconsGroupView.swift */,
+				B2CCC8903074FBD10061C0AA /* IconGroupsView.swift */,
+			);
+			path = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1120,21 +1167,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B26E431E2A9B9CAF00A982BF /* Ccchaos.swift in Sources */,
 				B27D81602A3C44E60071FDAC /* AlertInfo.swift in Sources */,
-				B26E435F2A9BA7C400A982BF /* IconSearchPanelView.swift in Sources */,
 				B26E435B2A9BA1BE00A982BF /* SvgBackgroundView.swift in Sources */,
 				B27D81482A3C44E60071FDAC /* SettingsControllerExtension.swift in Sources */,
-				B26E431F2A9B9CAF00A982BF /* Wwwhirl.swift in Sources */,
 				B27D815F2A3C44E60071FDAC /* Sound.swift in Sources */,
 				B26E43532A9B9EA800A982BF /* Tasks.swift in Sources */,
 				B27D819B2A3C44E60071FDAC /* SettingDao.swift in Sources */,
 				B26E43412A9B9EA800A982BF /* BeautyAndCosmetics.swift in Sources */,
 				B26E430B2A9B99DE00A982BF /* SettingsView.swift in Sources */,
-				B26E43612A9BA7C400A982BF /* IconGroupView.swift in Sources */,
 				B27D81B82A3C44E60071FDAC /* TopicView.swift in Sources */,
 				B27D81942A3C44E60071FDAC /* AppGroup.swift in Sources */,
 				B27D81442A3C44E60071FDAC /* UIApplicationExtension.swift in Sources */,
+				B2CCC8983074FC660061C0AA /* IconModel.swift in Sources */,
 				B26E433F2A9B9EA800A982BF /* FamilyAndBaby.swift in Sources */,
 				B27D81C22A3C44E60071FDAC /* OnboardingPage3View.swift in Sources */,
 				B26E43482A9B9EA800A982BF /* CommunicationAndMultimedia.swift in Sources */,
@@ -1151,6 +1195,7 @@
 				B226EABA2CC425A200A9B6BB /* Haptics.swift in Sources */,
 				B26E43172A9B9C7400A982BF /* AppBackgroundGroups.swift in Sources */,
 				B27D81592A3C44E60071FDAC /* Array.swift in Sources */,
+				B2CCC8963074FC070061C0AA /* IconsSheetView.swift in Sources */,
 				B27D815B2A3C44E60071FDAC /* Sounds.swift in Sources */,
 				B27D81582A3C44E60071FDAC /* DrawingCanvasView.swift in Sources */,
 				B26E43502A9B9EA800A982BF /* SportAndFitness.swift in Sources */,
@@ -1163,7 +1208,6 @@
 				B26E430D2A9B9A4700A982BF /* SettingsController.swift in Sources */,
 				B2679E0B2A9E775F00F34EC6 /* Topic.swift in Sources */,
 				B27D81C02A3C44E60071FDAC /* OnboardingPage2View.swift in Sources */,
-				B26E43632A9BA7E200A982BF /* IconsSheetView.swift in Sources */,
 				B26E434E2A9B9EA800A982BF /* EngineerAndConstruction.swift in Sources */,
 				B27D81572A3C44E60071FDAC /* Period.swift in Sources */,
 				B27D81D02A3C461E0071FDAC /* DrawingCanvasViewController.swift in Sources */,
@@ -1203,6 +1247,10 @@
 				B26E43472A9B9EA800A982BF /* MusicAndInstrument.swift in Sources */,
 				B27D80742A3C44970071FDAC /* Mercury.xcdatamodeld in Sources */,
 				B27D815E2A3C44E60071FDAC /* DayItem.swift in Sources */,
+				B2CCC86E3074055C0061C0AA /* ZMercuryIphoneView.swift in Sources */,
+				B2CCC8923074FBD10061C0AA /* IconSearchPanelView.swift in Sources */,
+				B2CCC8933074FBD10061C0AA /* IconsGroupView.swift in Sources */,
+				B2CCC8943074FBD10061C0AA /* IconGroupsView.swift in Sources */,
 				B27D80762A3C44970071FDAC /* ContentView.swift in Sources */,
 				B2679E0D2A9E77F900F34EC6 /* Section.swift in Sources */,
 				B26E43422A9B9EA800A982BF /* NatureAndLandscape.swift in Sources */,
@@ -1224,13 +1272,11 @@
 				B27D819D2A3C44E60071FDAC /* SettingsGroupDao.swift in Sources */,
 				B26E43522A9B9EA800A982BF /* WeatherForecast.swift in Sources */,
 				B27D818F2A3C44E60071FDAC /* MonthUtils.swift in Sources */,
-				B26E43202A9B9CAF00A982BF /* Uuundulate.swift in Sources */,
 				B27D81502A3C44E60071FDAC /* SThemeExtension.swift in Sources */,
 				B27D81B32A3C44E60071FDAC /* TextEditorView.swift in Sources */,
 				B27D81672A3C44E60071FDAC /* Config.swift in Sources */,
 				B26E430A2A9B99DE00A982BF /* SettingsIphoneView.swift in Sources */,
 				B26E43132A9B9BFE00A982BF /* ViewModifierBackground.swift in Sources */,
-				B26E43602A9BA7C400A982BF /* IconsGroupView.swift in Sources */,
 				B26E433E2A9B9EA800A982BF /* BusinessAndFinance.swift in Sources */,
 				B26E43512A9B9EA800A982BF /* Japan.swift in Sources */,
 				B26E43452A9B9EA800A982BF /* LifestyleAndEntertainment.swift in Sources */,
@@ -1244,10 +1290,23 @@
 				B27D81952A3C44E60071FDAC /* UserValidation.swift in Sources */,
 				B27D81AD2A3C44E60071FDAC /* SectionView.swift in Sources */,
 				B27D81CD2A3C461E0071FDAC /* Persistence.swift in Sources */,
+				B2CCC8803074EC100061C0AA /* Wwwhirl.swift in Sources */,
+				B2CCC8813074EC100061C0AA /* Uuundulate.swift in Sources */,
+				B2CCC8823074EC100061C0AA /* Ooorganize.swift in Sources */,
+				B2CCC8833074EC100061C0AA /* Ttten.swift in Sources */,
+				B2CCC8843074EC100061C0AA /* Qqquad.swift in Sources */,
+				B2CCC8853074EC100061C0AA /* Ssspiral.swift in Sources */,
+				B2CCC8863074EC100061C0AA /* Vvvortex.swift in Sources */,
+				B2CCC8873074EC100061C0AA /* Sssquiggly.swift in Sources */,
+				B2CCC8883074EC100061C0AA /* Rrreflection.swift in Sources */,
+				B2CCC8893074EC100061C0AA /* Ccchaos.swift in Sources */,
+				B2CCC88A3074EC100061C0AA /* Ssscribble.swift in Sources */,
+				B2CCC88B3074EC100061C0AA /* Cccoil.swift in Sources */,
+				B2CCC88C3074EC100061C0AA /* Oooscillate.swift in Sources */,
+				B2CCC88D3074EC100061C0AA /* Gggyrate.swift in Sources */,
 				B27D815A2A3C44E60071FDAC /* Range.swift in Sources */,
 				B27D81AA2A3C44E60071FDAC /* ThemeSheetView.swift in Sources */,
 				B2679E092A9E765B00F34EC6 /* Theme.swift in Sources */,
-				B26E431D2A9B9CAF00A982BF /* Ooorganize.swift in Sources */,
 				B26165702CC81FCE009C183E /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1290,6 +1349,7 @@
 				B27D82032A3C497D0071FDAC /* SectionDao.swift in Sources */,
 				B27D82062A3C499E0071FDAC /* SettingsGroupDao.swift in Sources */,
 				B27D81FB2A3C48B10071FDAC /* STopicExtension.swift in Sources */,
+				B2CCC8713074E2540061C0AA /* DataUtils.swift in Sources */,
 				B2679E0E2A9E789E00F34EC6 /* Theme.swift in Sources */,
 				B27D81E22A3C481F0071FDAC /* MercuryWidget.swift in Sources */,
 				B27D82042A3C49890071FDAC /* AppGroup.swift in Sources */,
@@ -1509,7 +1569,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
@@ -1554,7 +1614,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.0;

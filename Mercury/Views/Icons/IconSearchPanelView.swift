@@ -1,36 +1,25 @@
 //
 //  IconSearchPanelView.swift
-//  Saturn
+//  SaturnX
 //
 //  Created by Daniel Correia on 23.03.23.
 //
 
 import SwiftUI
-import Combine
 import Utils
 
 struct IconSearchPanelView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
-    @Binding var searchText: String
     @Binding var iconName: String
-    @Binding var iconNames: [String]
+    @State var iconModels: [IconModel] = []
     
     var body: some View {
         ScrollView(showsIndicators: false) {
-            Grid(horizontalSpacing: BorderPadding, verticalSpacing: BorderPadding) {
-                ForEach(iconNames.chunked(into: 5), id: \.self) { iconsChunk in
-                    GridRow {
-                        ForEach(iconsChunk, id: \.self) { icon in
-                            Button {
-                                iconName = icon
-                                dismiss()
-                            } label: {
-                                if(!icon.isEmpty) {
-                                    Image(icon).resizable().scaledToFit().frame(maxWidth: .infinity).padding().foregroundColor(ColorUtils.getColor(colorScheme: colorScheme, colorName: "appWhite"))
-                                }
-                            }
-                        }
+            VStack(spacing: BorderPadding) {
+                ForEach(getAllIcons().chunked(into: IconsPerRow), id: \.self) { iconsChunk in
+                    ForEach(iconsChunk, id: \.self) { icon in
+                        Image(icon).resizable().scaledToFit().frame(maxWidth: .infinity).padding().foregroundColor(ColorUtils.getColor(colorScheme: colorScheme, colorName: "appWhite")).drawingGroup()
                     }
                 }
             }
@@ -40,10 +29,45 @@ struct IconSearchPanelView: View {
         .background(PanelColor)
         .cornerRadius(CornerRadius)
     }
+    
+    func setIcon(fileName: String) {
+        self.iconName = fileName
+        PlaySound(sound: .navigation)
+        PlayHaptic()
+        dismiss()
+    }
+    
+    func filterByTranslationStartsWith(iconModel: IconModel, text: String) -> Bool {
+        let lowerCasedText = text.lowercased()
+        for translation in iconModel.translations {
+            if(translation.languageCode.contains(Locale.current.language.languageCode?.identifier ?? "")) {
+                for key in translation.translation.split(separator: "_") {
+                    if(key.starts(with: lowerCasedText)) {
+                        return true
+                    }
+                }
+            }
+        }
+        return false
+    }
+    
+    func filterByTranslationEqual(iconModel: IconModel, text: String) -> Bool {
+        let lowerCasedText = text.lowercased()
+        for translation in iconModel.translations {
+            if(translation.languageCode.contains(Locale.current.language.languageCode?.identifier ?? "")) {
+                for key in translation.translation.split(separator: "_") {
+                    if(key.lowercased() == lowerCasedText) {
+                        return true
+                    }
+                }
+            }
+        }
+        return false
+    }
 }
 
 struct IconSearchPanelView_Previews: PreviewProvider {
     static var previews: some View {
-        IconSearchPanelView(searchText: .constant(""), iconName: .constant(""), iconNames: .constant([]))
+        IconSearchPanelView(iconName: .constant(""))
     }
 }

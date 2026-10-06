@@ -13,6 +13,7 @@ struct IconsSheetView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
     @Binding var iconName: String
+    @State var iconNames: [String]  = AppIconGroups[0].1
     
     @FetchRequest(
         sortDescriptors: [
@@ -31,7 +32,10 @@ struct IconsSheetView: View {
                 }
             }
             GridRow {
-                IconsGroupView(iconName: $iconName)
+                IconsGroupView(iconName: $iconName, iconNames: iconNames)
+            }
+            GridRow {
+                IconGroupsView(iconNames: $iconNames)
             }
             GridRow {
                 HStack(spacing: BorderPadding) {

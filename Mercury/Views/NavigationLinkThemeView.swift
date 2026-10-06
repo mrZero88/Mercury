@@ -55,7 +55,7 @@ struct NavigationLinkThemeView: View {
             } label: {
                 Label("Delete", systemImage: "minus.circle").labelStyle(.iconOnly)
             }
-            .tint(ColorUtils.getColor(colorScheme: colorScheme, colorName: "Red").opacity(0.5))
+            .tint(ColorUtils.getColor(colorScheme: colorScheme, colorName: "appRed").opacity(0.5))
         }
         .swipeActions(edge: .leading, allowsFullSwipe: true) {
             Button {
@@ -65,7 +65,7 @@ struct NavigationLinkThemeView: View {
             } label: {
                 Label("Edit", systemImage: "pencil.circle").labelStyle(.iconOnly)
             }
-            .tint((colorScheme == .dark) ? Color("Yellow").opacity(0.5) : Color("yellow4").opacity(0.5))
+            .tint(ColorUtils.getColor(colorScheme: colorScheme, colorName: "appYellow").opacity(0.5))
         }
         .sheet(isPresented: $showEditSheet) {
             ThemeSheetView(theme: theme, isCreating: false)
@@ -74,9 +74,12 @@ struct NavigationLinkThemeView: View {
         .alert(item: $alertInfo, content: { info in
             showAlert(info: info, viewModel: viewModel, theme: theme)
         })
-        .listRowSeparatorTint(Color.accentColor)
+        .listRowSeparator(.hidden)
         .listRowBackground(
             TertiaryColor
+                .opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity)
+                .clipped()
+                .cornerRadius(CornerRadius)
         )
     }
 }

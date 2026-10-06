@@ -38,12 +38,6 @@ struct SectionView: View {
     
     var body: some View {
         HStack {
-            if(!(section.iconName?.isEmpty ?? true)) {
-                VStack {
-                    Image(section.iconName ?? "").resizable().scaledToFit().foregroundColor(Color.accentColor).frame(width: 40, height: 40, alignment: .center).padding(.vertical)
-                    Spacer()
-                }
-            }
             VStack(alignment: .leading) {
                 Text(section.title ?? "").padding(.leading, BorderPadding).foregroundColor(colorTheme)
                 if(!(section.text?.isEmpty ?? true)) {
@@ -68,7 +62,7 @@ struct SectionView: View {
             } label: {
                 Label("Edit", systemImage: "pencil.circle").labelStyle(.iconOnly)
             }
-            .tint((colorScheme == .dark) ? Color("Yellow").opacity(0.5) : Color("yellow4").opacity(0.5))
+            .tint(ColorUtils.getColor(colorScheme: colorScheme, colorName: "appYellow").opacity(0.5))
         }
         .onTapGesture(count: 2) {
             showEditSheet = true

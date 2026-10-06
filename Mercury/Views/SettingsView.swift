@@ -21,6 +21,13 @@ struct SettingsView: View {
         predicate: NSPredicate(format: "key == %@", "tertiaryColorOpacity")
     ) var settingsTertiaryOpacity: FetchedResults<Setting>
     
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
+        predicate: NSPredicate(format: "key == %@", "showBorder")
+    ) var showBorder: FetchedResults<Setting>
+    
     func getSettings(settingGroup: SettingsGroup) -> [ Setting] {
         return SettingsUtils.settings(set: settingGroup.settings).sorted(by: {first,second in
             return first.order < second.order
@@ -69,18 +76,13 @@ struct SettingsView: View {
                     ForEach(self.getSettings(settingGroup: settingGroup)) { setting in
                         SettingView(setting: setting)
                     }
-                    .listRowBackground(
-                        TertiaryColor
-                            .opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity)
-                            .clipped()
-                            .cornerRadius(CornerRadius)
-                    )
-                    .listRowSeparator(.hidden)
                 }
                 .padding(BorderPadding)
                 .scrollIndicators(.hidden)
                 .scrollContentBackground(.hidden)
-                .bgPanelStyle()
+                .background(PanelColor)
+                .overlay((showBorder.first?.boolValue ?? false) ? RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.accentColor, lineWidth: 1): RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.clear, lineWidth: 0))
+                .cornerRadius(CornerRadius)
                 .listStyle(.plain)
                 .listRowSpacing(BorderPadding)
             }

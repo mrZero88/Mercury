@@ -44,7 +44,7 @@ struct TopicView: View {
                 }
                 .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
                 Spacer()
-                Label("Sections", systemImage: "house").frame(maxWidth: .infinity, maxHeight: .infinity).labelStyle(.titleOnly).foregroundColor(Color.accentColor)
+                Label(topic.title ?? "", systemImage: "house").frame(maxWidth: .infinity, maxHeight: .infinity).labelStyle(.titleOnly).foregroundColor(Color.accentColor)
                     .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
                 Spacer()
                 Button {
@@ -64,18 +64,34 @@ struct TopicView: View {
             .padding(BorderPadding)
             .bgPanelStyle()
             .fixedSize(horizontal: false, vertical: true)
-            
-            List {
-                ForEach(topic.activeSections) { section in
-                    SectionView(section: section)
+            VStack(alignment: .leading, spacing: 0) {
+                HStack {
+                    Text(String(localized: String.LocalizationValue("Sections")) + " (" + String(topic.activeSections.count) + ")").foregroundColor(.secondary).font(.footnote)
+                    Spacer()
+                    Button {
+                    } label: {
+                        ZStack {
+                            Label("", systemImage: "star").labelStyle(.iconOnly).frame(maxHeight: .infinity).opacity(0)
+                        }
+                    }
+                    .fixedSize(horizontal: false, vertical: true)
+                    .opacity(0)
                 }
-                .onMove(perform: move)
+                .buttonStyle(.bordered)
+                .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
+                .padding(BorderPadding)
+                List {
+                    ForEach(topic.activeSections) { section in
+                        SectionView(section: section)
+                    }
+                    .onMove(perform: move)
+                }
+                .padding(BorderPadding)
+                .scrollIndicators(.hidden)
+                .listStyle(.plain)
+                .listRowSpacing(BorderPadding)
             }
-            .padding(BorderPadding)
             .bgPanelStyle()
-            .scrollIndicators(.hidden)
-            .listStyle(.plain)
-            .listRowSpacing(BorderPadding)
         }
         .sheet(isPresented: $showCreateSheet) {
             SectionSheetView(section: Section.createEmptySection(topic: topic), isCreating: true)

@@ -37,10 +37,10 @@ struct OnboardingPage1View: View {
             GridRow {
                 TextFieldView(textValue: Binding<String> (
                     get: {
-                        return UserName
+                        return Name
                     },
                     set: {
-                        viewModel.settingsViewModel.settingsController.setUserName(userName: $0)
+                        viewModel.settingsViewModel.settingsController.setName(name: $0)
                     }
                 ), help: "Enter your name...", textLimit: UserValidation.nameMaxChars)
             }

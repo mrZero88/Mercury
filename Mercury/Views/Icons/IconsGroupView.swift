@@ -1,6 +1,6 @@
 //
 //  IconsGroupView.swift
-//  Saturn
+//  SaturnX
 //
 //  Created by Daniel Correia on 22.03.23.
 //
@@ -12,19 +12,22 @@ struct IconsGroupView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
     @Binding var iconName: String
+    var iconNames: [String]
     
     var body: some View {
         ScrollView(showsIndicators: false) {
             LazyVStack(spacing: BorderPadding) {
-                ForEach(Array(AllIcons[0...199]).chunked(into: IconsPerRow), id: \.self) { iconsChunk in
+                ForEach(Array(iconNames).chunked(into: IconsPerRow), id: \.self) { iconsChunk in
                     HStack(spacing: BorderPadding) {
                         ForEach(iconsChunk, id: \.self) { icon in
                             Button {
                                 iconName = icon
+                                PlaySound(sound: .navigation)
+                                PlayHaptic()
                                 dismiss()
                             } label: {
                                 if(!icon.isEmpty) {
-                                    Image(icon).resizable().scaledToFit().frame(maxWidth: .infinity).padding().foregroundColor(ColorUtils.getColor(colorScheme: colorScheme, colorName: "appWhite"))
+                                    Image(icon).resizable().scaledToFit().frame(maxWidth: .infinity).padding().foregroundColor(ColorUtils.getColor(colorScheme: colorScheme, colorName: "White")).drawingGroup()
                                 }
                             }
                         }
@@ -41,6 +44,6 @@ struct IconsGroupView: View {
 
 struct IconsGroupView_Previews: PreviewProvider {
     static var previews: some View {
-        IconsGroupView(iconName: .constant(""))
+        IconsGroupView(iconName: .constant(""), iconNames: [])
     }
 }

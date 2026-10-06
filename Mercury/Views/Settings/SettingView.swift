@@ -28,9 +28,9 @@ struct SettingView: View {
     
     var body: some View {
         ZStack {
-            Image("6960589_gear_settings_mechanics_process").resizable().scaledToFit().foregroundColor(Color.accentColor).frame(width: 40, height: 40, alignment: .center).padding(.vertical).opacity(0)
+            Image("6960589_gear_settings_mechanics_process").resizable().scaledToFit().foregroundColor(Color.accentColor).frame(width: 40, height: 40, alignment: .center).padding(.vertical).opacity(0).drawingGroup()
             HStack(spacing: 0) {
-                if(setting.type == "") {
+                if(setting.type == "" || setting.type == "Period" || setting.type == "Slider") {
                     ZStack(alignment: .leading) {
                         Toggle("", isOn: .constant(false)).opacity(0)
                         Text(String(localized: String.LocalizationValue(setting.title ?? ""))).lineLimit(1)
@@ -48,7 +48,7 @@ struct SettingView: View {
                     .fileExporter(isPresented: $isExporting,
                                   document: document,
                                   contentType: .json,
-                                  defaultFilename: "Mercury_" + Date().localDateTimeZoneDateDescription) { result in
+                                  defaultFilename: "SaturnX_" + Date().localDateTimeZoneDateDescription) { result in
                         switch result {
                         case .success(_):
                             break
@@ -196,6 +196,9 @@ struct SettingView: View {
     
     func doFunction(function: String?) {
         switch(function) {
+        case "reportProblem":
+            openEmailClient()
+            break
         case "reset":
             alertInfo = ShowResetAlert()
             break
@@ -220,16 +223,27 @@ struct SettingView: View {
         }
         
         do {
-            
             let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
             let _ = try decoder.decode(MercuryData.self, from: data)
-            withAnimation {
+            withAnimation(ShowAnimation ? .easeInOut(duration: AnimationDuration) : nil) {
                 viewModel.objectWillChange.send()
             }
             PersistenceController.save()
         } catch {
             print("Error on Import!", error.localizedDescription)
+        }
+    }
+    
+    func openEmailClient() {
+        let email = "danielcorreia1988@outlook.com"
+        let subject = "Problem Report"
+        
+        let urlString = "mailto:\(email)?subject=\(subject)"
+            .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        
+        if let url = URL(string: urlString) {
+            UIApplication.shared.open(url)
         }
     }
 }

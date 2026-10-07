@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 
-struct ThemeSheetView: View {
+struct NewThemeSheetView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var viewModel: ViewModel
@@ -106,6 +106,6 @@ struct ThemeSheetView: View {
 
 struct ThemeSheetView_Previews: PreviewProvider {
     static var previews: some View {
-        ThemeSheetView(theme: Theme(), isCreating: false)
+        NewThemeSheetView(theme: Theme(), isCreating: false)
     }
 }

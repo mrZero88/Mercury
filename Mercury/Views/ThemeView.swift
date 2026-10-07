@@ -115,7 +115,7 @@ struct ThemeView: View {
         .navigationBarHidden(true)
 #endif
         .sheet(isPresented: $showCreateSheet) {
-            TopicSheetView(topic: Topic.createEmptyTopic(theme: theme), isCreating: true)
+            NewTopicSheetView(theme: theme)
                 .accentColor(Color.getColor(colorScheme: colorScheme, setting: self.settings.first))
         }
         .onAppear {

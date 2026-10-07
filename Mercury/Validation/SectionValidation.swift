@@ -12,8 +12,8 @@ public class SectionValidation {
     static var titleMaxChars = 100
     static var textMaxChars = 20000
     
-    public static func validate(title: String, text: String) -> Bool {
-        return !title.isEmpty && title.count <= titleMaxChars && title.hasLettersOrNumbers && text.count <= textMaxChars && !text.isEmpty
+    public static func validate(title: String) -> Bool {
+        return !title.isEmpty && title.count <= titleMaxChars && title.hasLettersOrNumbers
     }
     
     private static func sectionExists(title: String) -> Bool {

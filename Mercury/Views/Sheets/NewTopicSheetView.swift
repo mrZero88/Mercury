@@ -1,5 +1,5 @@
 //
-//  EditThemeSheetView.swift
+//  NewTopicSheetView.swift
 //  Mercury
 //
 //  Created by Daniel Correia on 03.06.23.
@@ -8,13 +8,14 @@
 import SwiftUI
 import CoreData
 
-struct EditThemeSheetView: View {
+struct NewTopicSheetView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var viewModel: ViewModel
     @ObservedObject var theme: Theme
     
     @State var title: String = ""
+    @State var subtitle: String = ""
     @State var iconName: String = DefaultThemeIconName
     @State var text: String = ""
     
@@ -27,7 +28,7 @@ struct EditThemeSheetView: View {
     
     var body: some View {
         VStack(spacing: BorderPadding) {
-            SheetHeader(title: "Edit Theme")
+            SheetHeader(title: "New Topic")
             Grid(horizontalSpacing: BorderPadding, verticalSpacing: BorderPadding) {
                 GridRow {
                     TextFieldIconView(textValue: Binding<String> (
@@ -44,7 +45,17 @@ struct EditThemeSheetView: View {
                         set: {
                             iconName = $0
                         }
-                    ), help: String(localized: String.LocalizationValue("Theme title")), textLimit: ThemeValidation.titleMaxChars)
+                    ), help: String(localized: String.LocalizationValue("Topic title")), textLimit: TopicValidation.titleMaxChars)
+                }
+                GridRow {
+                    TextFieldView(textValue: Binding<String> (
+                        get: {
+                            return subtitle
+                        },
+                        set: {
+                            subtitle = $0
+                        }
+                    ), help: String(localized: String.LocalizationValue("Topic subtitle")), textLimit: TopicValidation.titleMaxChars)
                 }
                 GridRow {
                     TextEditorView(text: Binding<String> (
@@ -60,7 +71,7 @@ struct EditThemeSheetView: View {
                     HStack {
                         SheetButtonView(title: "Cancel", clickFunction: cancel)
                         SheetButtonView(title: "Save", clickFunction: save)
-                            .disabled(title.isEmpty || title.count > ThemeValidation.titleMaxChars)
+                            .disabled(title.isEmpty || title.count > TopicValidation.titleMaxChars)
                     }
                     .fixedSize(horizontal: false, vertical: true)
                 }
@@ -72,18 +83,17 @@ struct EditThemeSheetView: View {
         .onDisappear {
             onCloseSheet()
         }
-        .onAppear {
-            onOpenSheet()
-        }
     }
     
     func save() {
         withAnimation(ShowAnimation ? .easeInOut(duration: AnimationDuration) : nil) {
-            theme.title = title
-            theme.text = text
-            theme.iconName = iconName
+            let topic = Topic.createEmptyTopic(theme: theme)
+            topic.title = title
+            topic.subtitle = title
+            topic.text = text
+            topic.iconName = iconName
             
-            viewModel.themesController.saveTheme(theme: theme)
+            viewModel.topicsController.saveTopic(topic: topic)
             dismiss()
         }
     }
@@ -94,19 +104,13 @@ struct EditThemeSheetView: View {
         dismiss()
     }
     
-    func onOpenSheet() {
-        self.title = theme.title ?? ""
-        self.iconName = theme.iconName ?? DefaultThemeIconName
-        self.text = theme.text ?? ""
-    }
-    
     func onCloseSheet() {
         PersistenceController.discardChanges()
     }
 }
 
-struct EditThemeSheetView_Previews: PreviewProvider {
+struct NewTopicSheetView_Previews: PreviewProvider {
     static var previews: some View {
-        EditThemeSheetView(theme: Theme())
+        NewTopicSheetView(theme: Theme())
     }
 }

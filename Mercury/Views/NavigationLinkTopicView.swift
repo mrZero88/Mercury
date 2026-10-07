@@ -70,7 +70,7 @@ struct NavigationLinkTopicView: View {
             .tint(ColorUtils.getColor(colorScheme: colorScheme, colorName: "appYellow").opacity(0.5))
         }
         .sheet(isPresented: $showEditSheet) {
-            TopicSheetView(topic: topic, isCreating: false)
+            EditTopicSheetView(topic: topic)
                 .accentColor(Color.getColor(colorScheme: colorScheme, setting: self.settings.first))
         }
         .alert(item: $alertInfo, content: { info in

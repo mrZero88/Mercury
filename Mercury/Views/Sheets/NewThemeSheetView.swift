@@ -1,5 +1,5 @@
 //
-//  ThemeSheetView.swift
+//  NewThemeSheetView.swift
 //  Mercury
 //
 //  Created by Daniel Correia on 03.06.23.
@@ -59,7 +59,7 @@ struct NewThemeSheetView: View {
                     HStack {
                         SheetButtonView(title: "Cancel", clickFunction: cancel)
                         SheetButtonView(title: "Save", clickFunction: save)
-                            .disabled(title.isEmpty && title.count <= ThemeValidation.titleMaxChars)
+                            .disabled(title.isEmpty || title.count > ThemeValidation.titleMaxChars)
                     }
                     .fixedSize(horizontal: false, vertical: true)
                 }
@@ -83,7 +83,6 @@ struct NewThemeSheetView: View {
             viewModel.themesController.saveTheme(theme: theme)
             dismiss()
         }
-        dismiss()
     }
     
     func cancel() {

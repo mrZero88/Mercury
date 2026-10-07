@@ -9,24 +9,13 @@ import Foundation
 
 class SectionsController: ObservableObject {
     
-    func saveSection(section: Section, isCreating: Bool) {
-        section.isActive = true
-        section.updatedAt = Date()
-        if(isCreating) {
-            if(!SectionValidation.validate(title: section.title ?? "", text: section.text ?? "")) {
-                self.deleteSection(section: section)
-            }
+    func saveSection(section: Section) {
+        if(SectionValidation.validate(title: section.title ?? "")) {
+            PersistenceController.save()
         }
         PlaySound(sound: .navigation)
         PlayHaptic()
-        PersistenceController.save()
         self.objectWillChange.send()
-    }
-    
-    func cancelSaveSection(section: Section) {
-        PlaySound(sound: .navigation)
-        PlayHaptic()
-        section.objectWillChange.send()
     }
     
     func moveSection(originIndex: Int, destinationIndex: Int, topic: Topic) {

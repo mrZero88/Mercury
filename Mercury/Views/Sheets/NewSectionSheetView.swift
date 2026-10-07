@@ -1,5 +1,5 @@
 //
-//  EditThemeSheetView.swift
+//  SectionSheetView.swift
 //  Mercury
 //
 //  Created by Daniel Correia on 03.06.23.
@@ -8,15 +8,21 @@
 import SwiftUI
 import CoreData
 
-struct EditThemeSheetView: View {
+struct NewSectionSheetView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var viewModel: ViewModel
-    @ObservedObject var theme: Theme
+    @ObservedObject var topic: Topic
     
     @State var title: String = ""
-    @State var iconName: String = DefaultThemeIconName
     @State var text: String = ""
+    
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
+        predicate: NSPredicate(format: "key == %@", "accentColor")
+    ) var settings: FetchedResults<Setting>
     
     @FetchRequest(
         sortDescriptors: [
@@ -27,24 +33,17 @@ struct EditThemeSheetView: View {
     
     var body: some View {
         VStack(spacing: BorderPadding) {
-            SheetHeader(title: "Edit Theme")
+            SheetHeader(title: "New Topic")
             Grid(horizontalSpacing: BorderPadding, verticalSpacing: BorderPadding) {
                 GridRow {
-                    TextFieldIconView(textValue: Binding<String> (
+                    TextFieldView(textValue: Binding<String> (
                         get: {
                             return title
                         },
                         set: {
                             title = $0
                         }
-                    ), iconValue: Binding<String> (
-                        get: {
-                            return iconName
-                        },
-                        set: {
-                            iconName = $0
-                        }
-                    ), help: String(localized: String.LocalizationValue("Theme title")), textLimit: ThemeValidation.titleMaxChars)
+                    ), help: String(localized: String.LocalizationValue("Section title")), textLimit: SectionValidation.titleMaxChars)
                 }
                 GridRow {
                     TextEditorView(text: Binding<String> (
@@ -57,10 +56,13 @@ struct EditThemeSheetView: View {
                     ))
                 }
                 GridRow {
+                    // Image
+                }
+                GridRow {
                     HStack {
                         SheetButtonView(title: "Cancel", clickFunction: cancel)
                         SheetButtonView(title: "Save", clickFunction: save)
-                            .disabled(title.isEmpty || title.count > ThemeValidation.titleMaxChars)
+                            .disabled(title.isEmpty || title.count > SectionValidation.titleMaxChars || text.isEmpty)
                     }
                     .fixedSize(horizontal: false, vertical: true)
                 }
@@ -72,18 +74,15 @@ struct EditThemeSheetView: View {
         .onDisappear {
             onCloseSheet()
         }
-        .onAppear {
-            onOpenSheet()
-        }
     }
     
     func save() {
         withAnimation(ShowAnimation ? .easeInOut(duration: AnimationDuration) : nil) {
-            theme.title = title
-            theme.text = text
-            theme.iconName = iconName
+            let section = Section.createEmptySection(topic: topic)
+            section.title = title
+            section.text = text
             
-            viewModel.themesController.saveTheme(theme: theme)
+            viewModel.sectionsController.saveSection(section: section)
             dismiss()
         }
     }
@@ -94,19 +93,13 @@ struct EditThemeSheetView: View {
         dismiss()
     }
     
-    func onOpenSheet() {
-        self.title = theme.title ?? ""
-        self.iconName = theme.iconName ?? DefaultThemeIconName
-        self.text = theme.text ?? ""
-    }
-    
     func onCloseSheet() {
         PersistenceController.discardChanges()
     }
 }
 
-struct EditThemeSheetView_Previews: PreviewProvider {
+struct SectionSheetView_Previews: PreviewProvider {
     static var previews: some View {
-        EditThemeSheetView(theme: Theme())
+        NewSectionSheetView(topic: Topic())
     }
 }

@@ -14,22 +14,13 @@ class TopicsController: ObservableObject {
         return TopicDao.fetchTopics().first(where: {$0.id!.description == id})!
     }
     
-    func saveTopic(topic: Topic, isCreating: Bool) {
-        topic.isActive = true
-        topic.updatedAt = Date()
-        if(isCreating) {
-            if(!TopicValidation.validate(title: topic.title ?? "", text: topic.text ?? "")) {
-                self.deleteTopic(topic: topic)
-            }
+    func saveTopic(topic: Topic) {
+        if(TopicValidation.validate(title: topic.title ?? "")) {
+            PersistenceController.save()
         }
         PlaySound(sound: .navigation)
         PlayHaptic()
-        PersistenceController.save()
         self.objectWillChange.send()
-    }
-    
-    func cancelSaveTopic(topic: Topic) {
-        topic.objectWillChange.send()
     }
     
     func moveTopic(originIndex: Int, destinationIndex: Int, theme: Theme) {

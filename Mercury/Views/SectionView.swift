@@ -68,7 +68,7 @@ struct SectionView: View {
             showEditSheet = true
         }
         .sheet(isPresented: $showEditSheet) {
-            SectionSheetView(section: section, isCreating: false)
+            EditSectionSheetView(section: section)
                 .accentColor(Color.getColor(colorScheme: colorScheme, setting: self.settings.first))
         }
         .alert(item: $alertInfo, content: { info in

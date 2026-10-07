@@ -131,8 +131,8 @@
 		B27D819E2A3C44E60071FDAC /* TopicDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81142A3C44E60071FDAC /* TopicDao.swift */; };
 		B27D81A82A3C44E60071FDAC /* NavigationLinkThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81202A3C44E60071FDAC /* NavigationLinkThemeView.swift */; };
 		B27D81AA2A3C44E60071FDAC /* NewThemeSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81232A3C44E60071FDAC /* NewThemeSheetView.swift */; };
-		B27D81AB2A3C44E60071FDAC /* SectionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81242A3C44E60071FDAC /* SectionSheetView.swift */; };
-		B27D81AC2A3C44E60071FDAC /* TopicSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81252A3C44E60071FDAC /* TopicSheetView.swift */; };
+		B27D81AB2A3C44E60071FDAC /* NewSectionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81242A3C44E60071FDAC /* NewSectionSheetView.swift */; };
+		B27D81AC2A3C44E60071FDAC /* NewTopicSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81252A3C44E60071FDAC /* NewTopicSheetView.swift */; };
 		B27D81AD2A3C44E60071FDAC /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81262A3C44E60071FDAC /* SectionView.swift */; };
 		B27D81AE2A3C44E60071FDAC /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81272A3C44E60071FDAC /* ThemeView.swift */; };
 		B27D81AF2A3C44E60071FDAC /* TextFieldIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81292A3C44E60071FDAC /* TextFieldIconView.swift */; };
@@ -204,6 +204,8 @@
 		B2CCC89D307539500061C0AA /* mercury.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CCC89C307539500061C0AA /* mercury.png */; };
 		B2CCC89F3076B7000061C0AA /* SheetHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC89E3076B7000061C0AA /* SheetHeader.swift */; };
 		B2CCC8A13076BAA60061C0AA /* EditThemeSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC8A03076BAA60061C0AA /* EditThemeSheetView.swift */; };
+		B2CCC8A33076C0770061C0AA /* EditTopicSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC8A23076C0770061C0AA /* EditTopicSheetView.swift */; };
+		B2CCC8A53076C5BE0061C0AA /* EditSectionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC8A43076C5BE0061C0AA /* EditSectionSheetView.swift */; };
 		B2DEDB9D2F389D290032DA58 /* MercuryIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = B2DEDB9C2F389D290032DA58 /* MercuryIcon.icon */; };
 /* End PBXBuildFile section */
 
@@ -366,8 +368,8 @@
 		B27D81142A3C44E60071FDAC /* TopicDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicDao.swift; sourceTree = "<group>"; };
 		B27D81202A3C44E60071FDAC /* NavigationLinkThemeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationLinkThemeView.swift; sourceTree = "<group>"; };
 		B27D81232A3C44E60071FDAC /* NewThemeSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewThemeSheetView.swift; sourceTree = "<group>"; };
-		B27D81242A3C44E60071FDAC /* SectionSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionSheetView.swift; sourceTree = "<group>"; };
-		B27D81252A3C44E60071FDAC /* TopicSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicSheetView.swift; sourceTree = "<group>"; };
+		B27D81242A3C44E60071FDAC /* NewSectionSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewSectionSheetView.swift; sourceTree = "<group>"; };
+		B27D81252A3C44E60071FDAC /* NewTopicSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTopicSheetView.swift; sourceTree = "<group>"; };
 		B27D81262A3C44E60071FDAC /* SectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		B27D81272A3C44E60071FDAC /* ThemeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
 		B27D81292A3C44E60071FDAC /* TextFieldIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldIconView.swift; sourceTree = "<group>"; };
@@ -425,6 +427,8 @@
 		B2CCC89C307539500061C0AA /* mercury.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mercury.png; sourceTree = "<group>"; };
 		B2CCC89E3076B7000061C0AA /* SheetHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetHeader.swift; sourceTree = "<group>"; };
 		B2CCC8A03076BAA60061C0AA /* EditThemeSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditThemeSheetView.swift; sourceTree = "<group>"; };
+		B2CCC8A23076C0770061C0AA /* EditTopicSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTopicSheetView.swift; sourceTree = "<group>"; };
+		B2CCC8A43076C5BE0061C0AA /* EditSectionSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSectionSheetView.swift; sourceTree = "<group>"; };
 		B2DEDB9C2F389D290032DA58 /* MercuryIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = MercuryIcon.icon; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -852,8 +856,10 @@
 				B2CCC8953074FC070061C0AA /* IconsSheetView.swift */,
 				B27D81232A3C44E60071FDAC /* NewThemeSheetView.swift */,
 				B2CCC8A03076BAA60061C0AA /* EditThemeSheetView.swift */,
-				B27D81252A3C44E60071FDAC /* TopicSheetView.swift */,
-				B27D81242A3C44E60071FDAC /* SectionSheetView.swift */,
+				B27D81252A3C44E60071FDAC /* NewTopicSheetView.swift */,
+				B2CCC8A23076C0770061C0AA /* EditTopicSheetView.swift */,
+				B27D81242A3C44E60071FDAC /* NewSectionSheetView.swift */,
+				B2CCC8A43076C5BE0061C0AA /* EditSectionSheetView.swift */,
 			);
 			path = Sheets;
 			sourceTree = "<group>";
@@ -1228,7 +1234,7 @@
 				B27D814D2A3C44E60071FDAC /* SSettingExtension.swift in Sources */,
 				B27D81E82A3C481F0071FDAC /* MercuryWidget.intentdefinition in Sources */,
 				B26E434A2A9B9EA800A982BF /* EducationAndScience.swift in Sources */,
-				B27D81AC2A3C44E60071FDAC /* TopicSheetView.swift in Sources */,
+				B27D81AC2A3C44E60071FDAC /* NewTopicSheetView.swift in Sources */,
 				B27D81BE2A3C44E60071FDAC /* OnboardingPage1View.swift in Sources */,
 				B27D81B12A3C44E60071FDAC /* SheetButtonView.swift in Sources */,
 				B26E43472A9B9EA800A982BF /* MusicAndInstrument.swift in Sources */,
@@ -1251,7 +1257,8 @@
 				B27D819A2A3C44E60071FDAC /* SectionDao.swift in Sources */,
 				B27D81B22A3C44E60071FDAC /* IconFieldView.swift in Sources */,
 				B26E43432A9B9EA800A982BF /* InteriorAndHomedecor.swift in Sources */,
-				B27D81AB2A3C44E60071FDAC /* SectionSheetView.swift in Sources */,
+				B27D81AB2A3C44E60071FDAC /* NewSectionSheetView.swift in Sources */,
+				B2CCC8A33076C0770061C0AA /* EditTopicSheetView.swift in Sources */,
 				B27D81C12A3C44E60071FDAC /* OnboardingPage4View.swift in Sources */,
 				B26E43492A9B9EA800A982BF /* BasicDesign.swift in Sources */,
 				B2679E042A9E758300F34EC6 /* MercuryData.swift in Sources */,
@@ -1263,6 +1270,7 @@
 				B27D81B32A3C44E60071FDAC /* TextEditorView.swift in Sources */,
 				B27D81672A3C44E60071FDAC /* Config.swift in Sources */,
 				B26E430A2A9B99DE00A982BF /* SettingsIphoneView.swift in Sources */,
+				B2CCC8A53076C5BE0061C0AA /* EditSectionSheetView.swift in Sources */,
 				B26E43132A9B9BFE00A982BF /* ViewModifierBackground.swift in Sources */,
 				B26E433E2A9B9EA800A982BF /* BusinessAndFinance.swift in Sources */,
 				B26E43512A9B9EA800A982BF /* Japan.swift in Sources */,

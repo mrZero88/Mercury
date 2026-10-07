@@ -106,7 +106,7 @@ struct TopicView: View {
             .cornerRadius(CornerRadius)
         }
         .sheet(isPresented: $showCreateSheet) {
-            SectionSheetView(section: Section.createEmptySection(topic: topic), isCreating: true)
+            NewSectionSheetView(topic: topic)
                 .accentColor(Color.getColor(colorScheme: colorScheme, setting: settings.first))
         }
         .padding(.horizontal, BorderPadding6)

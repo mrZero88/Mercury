@@ -23,12 +23,6 @@ class ThemesController: ObservableObject {
         self.objectWillChange.send()
     }
     
-    func cancelSaveTheme(theme: Theme) {
-        PlaySound(sound: .navigation)
-        PlayHaptic()
-        theme.objectWillChange.send()
-    }
-    
     func moveTheme(originIndex: Int, destinationIndex: Int) {
         var themes = ThemeDao.fetchThemes()
         if(destinationIndex >= originIndex) {

@@ -68,7 +68,7 @@ struct NavigationLinkThemeView: View {
             .tint(ColorUtils.getColor(colorScheme: colorScheme, colorName: "appYellow").opacity(0.5))
         }
         .sheet(isPresented: $showEditSheet) {
-            ThemeSheetView(theme: theme, isCreating: false)
+            EditThemeSheetView(theme: theme)
                 .accentColor(Color.getColor(colorScheme: colorScheme, setting: self.settings.first))
         }
         .alert(item: $alertInfo, content: { info in

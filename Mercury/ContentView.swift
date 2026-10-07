@@ -178,7 +178,7 @@ struct ContentView: View {
             .navigationBarHidden(true)
 #endif
             .sheet(isPresented: $showCreateSheet) {
-                ThemeSheetView(theme: Theme.createEmptyTheme(), isCreating: true)
+                NewThemeSheetView()
                     .accentColor(Color.getColor(colorScheme: colorScheme, setting: self.settings.first))
             }
             .navigationBarTitleDisplayMode(.inline)

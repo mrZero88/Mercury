@@ -85,4 +85,8 @@ public struct PersistenceController {
     public static func delete(object: NSManagedObject,context: NSManagedObjectContext = PersistenceController.shared.container.viewContext) {
         context.delete(object)
     }
+    
+    public static func discardChanges(context: NSManagedObjectContext = PersistenceController.shared.container.viewContext) {
+        context.rollback()
+    }
 }

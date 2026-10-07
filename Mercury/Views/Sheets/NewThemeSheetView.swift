@@ -12,8 +12,10 @@ struct NewThemeSheetView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var viewModel: ViewModel
-    @StateObject var theme: Theme
-    var isCreating: Bool
+    
+    @State var title: String = ""
+    @State var iconName: String = DefaultThemeIconName
+    @State var text: String = ""
     
     @FetchRequest(
         sortDescriptors: [
@@ -23,54 +25,44 @@ struct NewThemeSheetView: View {
     ) var settingsTertiaryOpacity: FetchedResults<Setting>
     
     var body: some View {
-        Grid(horizontalSpacing: BorderPadding, verticalSpacing: BorderPadding) {
-            GridRow {
-                HStack {
-                    Text(theme.createdAt?.formatted(date: .numeric, time: .omitted) ?? "").font(.footnote).foregroundColor(.secondary)
-                    Spacer()
-                    if(UIDevice.isIPad) {
-                        Text(isCreating ? "New Theme" : "Edit Theme").font(.title)
-                    } else {
-                        Text(isCreating ? "New Theme" : "Edit Theme")
-                    }
-                    Spacer()
-                    Text(theme.updatedAt?.formatted(date: .numeric, time: .omitted) ?? "").font(.footnote).foregroundColor(.secondary)
+        VStack(spacing: BorderPadding) {
+            SheetHeader(title: "New Theme")
+            Grid(horizontalSpacing: BorderPadding, verticalSpacing: BorderPadding) {
+                GridRow {
+                    TextFieldIconView(textValue: Binding<String> (
+                        get: {
+                            return title
+                        },
+                        set: {
+                            title = $0
+                        }
+                    ), iconValue: Binding<String> (
+                        get: {
+                            return iconName
+                        },
+                        set: {
+                            iconName = $0
+                        }
+                    ), help: String(localized: String.LocalizationValue("Theme title")), textLimit: ThemeValidation.titleMaxChars)
                 }
-            }
-            GridRow {
-                TextFieldIconView(textValue: Binding<String> (
-                    get: {
-                        return theme.title ?? ""
-                    },
-                    set: {
-                        theme.title = $0
-                    }
-                ), iconValue: Binding<String> (
-                    get: {
-                        return theme.iconName ?? DefaultThemeIconName
-                    },
-                    set: {
-                        theme.iconName = $0
-                    }
-                ), help: String(localized: String.LocalizationValue("Theme title")), textLimit: ThemeValidation.titleMaxChars)
-            }
-            GridRow {
-                TextEditorView(text: Binding<String> (
-                    get: {
-                        return theme.text ?? ""
-                    },
-                    set: {
-                        theme.text = $0
-                    }
-                ))
-            }
-            GridRow {
-                HStack {
-                    SheetButtonView(title: "Cancel", clickFunction: cancel)
-                    SheetButtonView(title: "Save", clickFunction: saveTheme)
-                        .disabled(theme.title?.isEmpty ?? true && (theme.title?.count ?? 0) <= ThemeValidation.titleMaxChars)
+                GridRow {
+                    TextEditorView(text: Binding<String> (
+                        get: {
+                            return text
+                        },
+                        set: {
+                            text = $0
+                        }
+                    ))
                 }
-                .fixedSize(horizontal: false, vertical: true)
+                GridRow {
+                    HStack {
+                        SheetButtonView(title: "Cancel", clickFunction: cancel)
+                        SheetButtonView(title: "Save", clickFunction: save)
+                            .disabled(title.isEmpty && title.count <= ThemeValidation.titleMaxChars)
+                    }
+                    .fixedSize(horizontal: false, vertical: true)
+                }
             }
         }
         .padding()
@@ -81,31 +73,32 @@ struct NewThemeSheetView: View {
         }
     }
     
-    func saveTheme() {
-        withAnimation {
-            viewModel.themesController.saveTheme(theme: theme, isCreating: isCreating)
+    func save() {
+        withAnimation(ShowAnimation ? .easeInOut(duration: AnimationDuration) : nil) {
+            let theme = Theme.createEmptyTheme()
+            theme.title = title
+            theme.text = text
+            theme.iconName = iconName
+            
+            viewModel.themesController.saveTheme(theme: theme)
+            dismiss()
         }
         dismiss()
     }
     
     func cancel() {
-        withAnimation {
-            viewModel.themesController.cancelSaveTheme(theme: theme)
-        }
+        PlaySound(sound: .navigation)
+        PlayHaptic()
         dismiss()
     }
     
     func onCloseSheet() {
-        if(isCreating) {
-            if(theme.isInserted) {
-                theme.delete()
-            }
-        }
+        PersistenceController.discardChanges()
     }
 }
 
-struct ThemeSheetView_Previews: PreviewProvider {
+struct NewThemeSheetView_Previews: PreviewProvider {
     static var previews: some View {
-        NewThemeSheetView(theme: Theme(), isCreating: false)
+        NewThemeSheetView()
     }
 }

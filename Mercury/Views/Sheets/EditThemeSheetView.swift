@@ -8,11 +8,11 @@
 import SwiftUI
 import CoreData
 
-struct NewThemeSheetView: View {
+struct EditThemeSheetView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var viewModel: ViewModel
-    @StateObject var theme: Theme
+    @ObservedObject var theme: Theme
     
     @State var title: String = ""
     @State var iconName: String = DefaultThemeIconName
@@ -60,7 +60,7 @@ struct NewThemeSheetView: View {
                     HStack {
                         SheetButtonView(title: "Cancel", clickFunction: cancel)
                         SheetButtonView(title: "Save", clickFunction: save)
-                            .disabled(theme.title?.isEmpty ?? true && (theme.title?.count ?? 0) <= ThemeValidation.titleMaxChars)
+                            .disabled(title.isEmpty && title.count <= ThemeValidation.titleMaxChars)
                     }
                     .fixedSize(horizontal: false, vertical: true)
                 }
@@ -71,6 +71,9 @@ struct NewThemeSheetView: View {
         .background(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
         .onDisappear {
             onCloseSheet()
+        }
+        .onAppear {
+            onOpenSheet()
         }
     }
     
@@ -93,13 +96,19 @@ struct NewThemeSheetView: View {
         dismiss()
     }
     
+    func onOpenSheet() {
+        self.title = theme.title ?? ""
+        self.iconName = theme.iconName ?? DefaultThemeIconName
+        self.text = theme.text ?? ""
+    }
+    
     func onCloseSheet() {
         PersistenceController.discardChanges()
     }
 }
 
-struct ThemeSheetView_Previews: PreviewProvider {
+struct EditThemeSheetView_Previews: PreviewProvider {
     static var previews: some View {
-        NewThemeSheetView(theme: Theme())
+        EditThemeSheetView(theme: Theme())
     }
 }

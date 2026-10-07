@@ -14,17 +14,12 @@ class ThemesController: ObservableObject {
         return themes.first(where: {$0.id!.description == id})
     }
     
-    func saveTheme(theme: Theme, isCreating: Bool) {
-        theme.isActive = true
-        theme.updatedAt = Date()
-        if(isCreating) {
-            if(!ThemeValidation.validate(title: theme.title ?? "", text: theme.text ?? "")) {
-                self.deleteTheme(theme: theme)
-            }
+    func saveTheme(theme: Theme) {
+        if(ThemeValidation.validate(title: theme.title ?? "")) {
+            PersistenceController.save()
         }
         PlaySound(sound: .navigation)
         PlayHaptic()
-        PersistenceController.save()
         self.objectWillChange.send()
     }
     

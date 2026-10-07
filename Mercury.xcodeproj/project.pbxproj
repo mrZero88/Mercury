@@ -130,7 +130,7 @@
 		B27D819D2A3C44E60071FDAC /* SettingsGroupDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81132A3C44E60071FDAC /* SettingsGroupDao.swift */; };
 		B27D819E2A3C44E60071FDAC /* TopicDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81142A3C44E60071FDAC /* TopicDao.swift */; };
 		B27D81A82A3C44E60071FDAC /* NavigationLinkThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81202A3C44E60071FDAC /* NavigationLinkThemeView.swift */; };
-		B27D81AA2A3C44E60071FDAC /* ThemeSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81232A3C44E60071FDAC /* ThemeSheetView.swift */; };
+		B27D81AA2A3C44E60071FDAC /* NewThemeSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81232A3C44E60071FDAC /* NewThemeSheetView.swift */; };
 		B27D81AB2A3C44E60071FDAC /* SectionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81242A3C44E60071FDAC /* SectionSheetView.swift */; };
 		B27D81AC2A3C44E60071FDAC /* TopicSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81252A3C44E60071FDAC /* TopicSheetView.swift */; };
 		B27D81AD2A3C44E60071FDAC /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D81262A3C44E60071FDAC /* SectionView.swift */; };
@@ -202,6 +202,8 @@
 		B2CCC8963074FC070061C0AA /* IconsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC8953074FC070061C0AA /* IconsSheetView.swift */; };
 		B2CCC8983074FC660061C0AA /* IconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC8973074FC660061C0AA /* IconModel.swift */; };
 		B2CCC89D307539500061C0AA /* mercury.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CCC89C307539500061C0AA /* mercury.png */; };
+		B2CCC89F3076B7000061C0AA /* SheetHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC89E3076B7000061C0AA /* SheetHeader.swift */; };
+		B2CCC8A13076BAA60061C0AA /* EditThemeSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC8A03076BAA60061C0AA /* EditThemeSheetView.swift */; };
 		B2DEDB9D2F389D290032DA58 /* MercuryIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = B2DEDB9C2F389D290032DA58 /* MercuryIcon.icon */; };
 /* End PBXBuildFile section */
 
@@ -363,7 +365,7 @@
 		B27D81132A3C44E60071FDAC /* SettingsGroupDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsGroupDao.swift; sourceTree = "<group>"; };
 		B27D81142A3C44E60071FDAC /* TopicDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicDao.swift; sourceTree = "<group>"; };
 		B27D81202A3C44E60071FDAC /* NavigationLinkThemeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationLinkThemeView.swift; sourceTree = "<group>"; };
-		B27D81232A3C44E60071FDAC /* ThemeSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeSheetView.swift; sourceTree = "<group>"; };
+		B27D81232A3C44E60071FDAC /* NewThemeSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewThemeSheetView.swift; sourceTree = "<group>"; };
 		B27D81242A3C44E60071FDAC /* SectionSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionSheetView.swift; sourceTree = "<group>"; };
 		B27D81252A3C44E60071FDAC /* TopicSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicSheetView.swift; sourceTree = "<group>"; };
 		B27D81262A3C44E60071FDAC /* SectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
@@ -421,6 +423,8 @@
 		B2CCC8953074FC070061C0AA /* IconsSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsSheetView.swift; sourceTree = "<group>"; };
 		B2CCC8973074FC660061C0AA /* IconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconModel.swift; sourceTree = "<group>"; };
 		B2CCC89C307539500061C0AA /* mercury.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mercury.png; sourceTree = "<group>"; };
+		B2CCC89E3076B7000061C0AA /* SheetHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetHeader.swift; sourceTree = "<group>"; };
+		B2CCC8A03076BAA60061C0AA /* EditThemeSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditThemeSheetView.swift; sourceTree = "<group>"; };
 		B2DEDB9C2F389D290032DA58 /* MercuryIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = MercuryIcon.icon; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -844,8 +848,10 @@
 		B27D81212A3C44E60071FDAC /* Sheets */ = {
 			isa = PBXGroup;
 			children = (
+				B2CCC89E3076B7000061C0AA /* SheetHeader.swift */,
 				B2CCC8953074FC070061C0AA /* IconsSheetView.swift */,
-				B27D81232A3C44E60071FDAC /* ThemeSheetView.swift */,
+				B27D81232A3C44E60071FDAC /* NewThemeSheetView.swift */,
+				B2CCC8A03076BAA60061C0AA /* EditThemeSheetView.swift */,
 				B27D81252A3C44E60071FDAC /* TopicSheetView.swift */,
 				B27D81242A3C44E60071FDAC /* SectionSheetView.swift */,
 			);
@@ -1203,6 +1209,7 @@
 				B226EAA72CC4038E00A9B6BB /* ColorSettingView.swift in Sources */,
 				B226EAA82CC4038E00A9B6BB /* PeriodSettingView.swift in Sources */,
 				B226EAA92CC4038E00A9B6BB /* SettingGroupView.swift in Sources */,
+				B2CCC89F3076B7000061C0AA /* SheetHeader.swift in Sources */,
 				B226EAAA2CC4038E00A9B6BB /* SettingGroupIphoneView.swift in Sources */,
 				B226EAAB2CC4038E00A9B6BB /* UUIDSettingView.swift in Sources */,
 				B226EAAC2CC4038E00A9B6BB /* SliderSettingView.swift in Sources */,
@@ -1265,6 +1272,7 @@
 				B27D81462A3C44E60071FDAC /* BundleExtension.swift in Sources */,
 				B26E43572A9B9EA800A982BF /* LoveAndWedding.swift in Sources */,
 				B27D81982A3C44E60071FDAC /* TopicValidation.swift in Sources */,
+				B2CCC8A13076BAA60061C0AA /* EditThemeSheetView.swift in Sources */,
 				B2679E012A9E751600F34EC6 /* JsonDocument.swift in Sources */,
 				B27D81532A3C44E60071FDAC /* SettingsViewModel.swift in Sources */,
 				B27D81952A3C44E60071FDAC /* UserValidation.swift in Sources */,
@@ -1285,7 +1293,7 @@
 				B2CCC88C3074EC100061C0AA /* Oooscillate.swift in Sources */,
 				B2CCC88D3074EC100061C0AA /* Gggyrate.swift in Sources */,
 				B27D815A2A3C44E60071FDAC /* Range.swift in Sources */,
-				B27D81AA2A3C44E60071FDAC /* ThemeSheetView.swift in Sources */,
+				B27D81AA2A3C44E60071FDAC /* NewThemeSheetView.swift in Sources */,
 				B2679E092A9E765B00F34EC6 /* Theme.swift in Sources */,
 				B26165702CC81FCE009C183E /* ColorExtension.swift in Sources */,
 			);

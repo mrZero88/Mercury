@@ -118,7 +118,7 @@ struct ContentView: View {
                             NavigationLinkThemeView(theme: theme)
                         }
                     }
-                    .padding(BorderPadding)
+                    .padding([.horizontal, .bottom], BorderPadding)
                     .scrollIndicators(.hidden)
                     .listStyle(.plain)
                     .listRowSpacing(BorderPadding)

@@ -96,7 +96,7 @@ struct TopicView: View {
                     }
                     .onMove(perform: move)
                 }
-                .padding(BorderPadding)
+                .padding([.horizontal, .bottom], BorderPadding)
                 .scrollIndicators(.hidden)
                 .listStyle(.plain)
                 .listRowSpacing(BorderPadding)

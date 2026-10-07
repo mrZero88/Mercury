@@ -106,7 +106,7 @@ struct SettingsView: View {
                             SettingView(setting: setting)
                         }
                     }
-                    .padding(BorderPadding)
+                    .padding([.horizontal, .bottom], BorderPadding)
                     .scrollIndicators(.hidden)
                     .scrollContentBackground(.hidden)
                     .listStyle(.plain)

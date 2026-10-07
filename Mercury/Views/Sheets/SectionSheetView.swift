@@ -33,31 +33,22 @@ struct SectionSheetView: View {
         Grid(horizontalSpacing: BorderPadding, verticalSpacing: BorderPadding) {
             GridRow {
                 HStack {
-                    Text(section.createdAt?.formatted(date: .numeric, time: .omitted) ?? "").font(.footnote).foregroundColor(.secondary)
                     Spacer()
                     if(UIDevice.isIPad) {
                         Text(isCreating ? "New Section" : "Edit Section").font(.title)
                     } else {
-                        Text(isCreating ? "New Section" : "Edit Section")
+                        Text(isCreating ? "New Section" : "Edit Section").font(.footnote)
                     }
                     Spacer()
-                    Text(section.updatedAt?.formatted(date: .numeric, time: .omitted) ?? "").font(.footnote).foregroundColor(.secondary)
                 }
             }
             GridRow {
-                TextFieldIconView(textValue: Binding<String> (
+                TextFieldView(textValue: Binding<String> (
                     get: {
                         return section.title ?? ""
                     },
                     set: {
                         section.title = $0
-                    }
-                ), iconValue: Binding<String> (
-                    get: {
-                        return section.iconName ?? DefaultThemeIconName
-                    },
-                    set: {
-                        section.iconName = $0
                     }
                 ), help: String(localized: String.LocalizationValue("Section title")), textLimit: SectionValidation.titleMaxChars)
             }

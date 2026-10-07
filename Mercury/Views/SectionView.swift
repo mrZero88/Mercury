@@ -39,12 +39,12 @@ struct SectionView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(section.title ?? "").padding(.leading, BorderPadding).foregroundColor(colorTheme)
+                Text(section.title ?? "").foregroundColor(colorTheme)
                 if(!(section.text?.isEmpty ?? true)) {
-                    Text(section.text ?? "").padding(.leading, BorderPadding).foregroundColor(.secondary).font(.footnote)
+                    Text(section.text ?? "").foregroundColor(.secondary).font(.footnote)
                 }
             }
-            Spacer()
+            .padding(BorderPadding)
         }
         .swipeActions(edge: .trailing, allowsFullSwipe: true) {
             Button {

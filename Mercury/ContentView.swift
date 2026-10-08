@@ -126,34 +126,6 @@ struct ContentView: View {
                 .background(PanelColor)
                 .overlay((showBorder.first?.boolValue ?? false) ? RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.accentColor, lineWidth: 1): RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.clear, lineWidth: 0))
                 .cornerRadius(CornerRadius)
-                HStack {
-                    Button {
-                    } label: {
-                        ZStack {
-                            Label("Settings", systemImage: "gear").labelStyle(.iconOnly).frame(maxHeight: .infinity).foregroundColor(Color.accentColor)
-                            Label("", systemImage: "star").labelStyle(.iconOnly).opacity(0)
-                        }
-                    }
-                    .opacity(0)
-                    Spacer()
-                    Label("Welcome \(firstName)!", systemImage: "figure.wave")
-                    Spacer()
-                    Button {
-                    } label: {
-                        ZStack {
-                            Label("Add Board", systemImage: "plus").labelStyle(.iconOnly).frame(maxHeight: .infinity).foregroundColor(Color.accentColor)
-                            Label("", systemImage: "star").labelStyle(.iconOnly).opacity(0)
-                        }
-                    }
-                    .opacity(0)
-                }
-                .buttonStyle(.borderedProminent)
-                .frame(maxWidth: .infinity)
-                .padding(BorderPadding)
-                .background(PanelColor)
-                .overlay((showBorder.first?.boolValue ?? false) ? RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.accentColor, lineWidth: 1): RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.clear, lineWidth: 0))
-                .cornerRadius(CornerRadius)
-                .fixedSize(horizontal: false, vertical: true)
             }
             .padding(.horizontal, BorderPadding6)
             .navigationDestination(for: String.self) { link in

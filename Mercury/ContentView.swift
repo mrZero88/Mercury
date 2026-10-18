@@ -34,7 +34,6 @@ struct ContentView: View {
         sortDescriptors: [
             SortDescriptor(\.order, order: .forward)
         ],
-        predicate: NSPredicate(format: "isActive == true")
     ) var themes: FetchedResults<Theme>
     
     @FetchRequest(

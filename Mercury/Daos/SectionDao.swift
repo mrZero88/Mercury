@@ -21,7 +21,6 @@ public class SectionDao {
         fetchRequest = Section.fetchRequest()
         let sort = NSSortDescriptor(key: #keyPath(Section.order), ascending: true)
         fetchRequest.sortDescriptors = [sort]
-        fetchRequest.predicate = NSPredicate(format: "isActive == true")
         let objects = try? PersistenceController.shared.container.viewContext.fetch(fetchRequest)
         return objects!
     }
@@ -34,7 +33,6 @@ public class SectionDao {
         newSection.text = text
         newSection.createdAt = date
         newSection.updatedAt = date
-        newSection.isActive = false
         newSection.order = order
         newSection.topic = topic
         newSection.iconName = iconName

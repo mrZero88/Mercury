@@ -9,7 +9,7 @@ import Foundation
 
 public class ThemeValidation {
     
-    static var titleMaxChars = 100
+    static var titleMaxChars = 20
     static var textMaxChars = 20000
     
     public static func validate(title: String) -> Bool {
@@ -18,6 +18,6 @@ public class ThemeValidation {
     
     private static func themeExists(title: String) -> Bool {
         let title = title.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
-        return ThemeDao.fetchThemes().filter({$0.isActive}).contains(where: {$0.isActive && $0.title!.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() == title})
+        return ThemeDao.fetchThemes().contains(where: {$0.title!.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() == title})
     }
 }

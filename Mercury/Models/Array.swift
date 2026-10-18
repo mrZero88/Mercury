@@ -10,7 +10,9 @@ import Foundation
 func Rearrange<T>(array: Array<T>, fromIndex: Int, toIndex: Int) -> Array<T>{
     var arr = array
     let element = arr.remove(at: fromIndex)
-    arr.insert(element, at: toIndex)
+    var newIndex: Int = 0
+    newIndex = toIndex < 0 ? 0 : toIndex
+    arr.insert(element, at: newIndex)
     return arr
 }
 

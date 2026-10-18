@@ -21,7 +21,6 @@ public class TopicDao {
         fetchRequest = Topic.fetchRequest()
         let sort = NSSortDescriptor(key: #keyPath(Topic.order), ascending: true)
         fetchRequest.sortDescriptors = [sort]
-        fetchRequest.predicate = NSPredicate(format: "isActive == true")
         let objects = try? PersistenceController.shared.container.viewContext.fetch(fetchRequest)
         return objects!
     }
@@ -34,7 +33,6 @@ public class TopicDao {
         newTopic.text = text
         newTopic.createdAt = date
         newTopic.updatedAt = date
-        newTopic.isActive = false
         newTopic.order = order
         newTopic.theme = theme
         newTopic.subtitle = subtitle

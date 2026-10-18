@@ -68,6 +68,12 @@ public var Name: String {
     }
 }
 
+public func SetName(name: String) {
+    let setting = SettingsController.getSetting(key: "name")
+    setting?.stringValue = name
+    PersistenceController.save()
+}
+
 public var OnBoard: Bool {
     get {
         return SettingsController.getBoolValue(key: "onboard") ?? false

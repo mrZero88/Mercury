@@ -19,7 +19,7 @@ extension Topic {
 
     var activeSections: [Section] {
         get {
-            return self.allSections.filter({$0.isActive}).sorted(by: {first, second in
+            return self.allSections.sorted(by: {first, second in
                 return first.order < second.order
             })
         }

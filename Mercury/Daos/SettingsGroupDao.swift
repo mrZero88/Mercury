@@ -12,7 +12,6 @@ public class SettingsGroupDao {
     public static func fetchSettingGroups() -> [SettingsGroup] {
         let fetchRequest: NSFetchRequest<SettingsGroup>
         fetchRequest = SettingsGroup.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "isActive == true")
         let sort = NSSortDescriptor(key: #keyPath(SettingsGroup.order), ascending: true)
         fetchRequest.sortDescriptors = [sort]
         let objects = try? PersistenceController.shared.container.viewContext.fetch(fetchRequest)
@@ -41,9 +40,8 @@ public class SettingsGroupDao {
     public static func fetchSettingGroup(key: String) -> SettingsGroup? {
         let fetchRequest: NSFetchRequest<SettingsGroup>
         fetchRequest = SettingsGroup.fetchRequest()
-        let pActive = NSPredicate(format: "isActive == true")
         let pKey = NSPredicate(format: "key == %@", key)
-        fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [pActive, pKey])
+        fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [pKey])
         fetchRequest.fetchLimit = 1
         let appSettingsGroup = try? PersistenceController.shared.container.viewContext.fetch(fetchRequest).first
         return appSettingsGroup
@@ -62,7 +60,6 @@ public class SettingsGroupDao {
         newSettingGroup.title = title
         newSettingGroup.createdAt = now
         newSettingGroup.updatedAt = now
-        newSettingGroup.isActive = true
         newSettingGroup.order = order
         newSettingGroup.iconName = iconName
         PersistenceController.save()

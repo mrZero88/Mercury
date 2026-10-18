@@ -9,19 +9,7 @@ import Foundation
 
 extension Section {
     func delete() {
-        self.isActive = false
-        self.updatedAt = Date()
         PersistenceController.delete(object: self)
-        PersistenceController.save()
-    }
-    func activate() {
-        self.updatedAt = Date()
-        self.isActive = true
-        PersistenceController.save()
-    }
-    func deactivate() {
-        self.updatedAt = Date()
-        self.isActive = false
         PersistenceController.save()
     }
     

@@ -12,10 +12,8 @@ public class SettingDao {
     public static func fetchSettings() -> [Setting] {
         let fetchRequest: NSFetchRequest<Setting>
         fetchRequest = Setting.fetchRequest()
-        let pActive = NSPredicate(format: "isActive == true")
         let sort = NSSortDescriptor(key: #keyPath(Setting.createdAt), ascending: true)
         fetchRequest.sortDescriptors = [sort]
-        fetchRequest.predicate = pActive
         let objects = try? PersistenceController.shared.container.viewContext.fetch(fetchRequest)
         return objects!
     }
@@ -32,9 +30,8 @@ public class SettingDao {
     public static func fetchSetting(key: String) -> Setting? {
         let fetchRequest: NSFetchRequest<Setting>
         fetchRequest = Setting.fetchRequest()
-        let pActive = NSPredicate(format: "isActive == true")
         let pKey = NSPredicate(format: "key == %@", key)
-        fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [pActive, pKey])
+        fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [pKey])
         fetchRequest.fetchLimit = 1
         let appSetting = try? PersistenceController.shared.container.viewContext.fetch(fetchRequest).first
         return appSetting
@@ -43,9 +40,8 @@ public class SettingDao {
     public static func fetchSettings(key: String) -> [Setting] {
         let fetchRequest: NSFetchRequest<Setting>
         fetchRequest = Setting.fetchRequest()
-        let pActive = NSPredicate(format: "isActive == true")
         let pKey = NSPredicate(format: "key == %@", key)
-        fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [pActive, pKey])
+        fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [pKey])
         let objects = try? PersistenceController.shared.container.viewContext.fetch(fetchRequest)
         return objects ?? []
     }
@@ -69,7 +65,6 @@ public class SettingDao {
         newSetting.uuidValue = uuidValue
         newSetting.createdAt = now
         newSetting.updatedAt = now
-        newSetting.isActive = true
         newSetting.group = group
         newSetting.order = order
         newSetting.type = type

@@ -21,7 +21,6 @@ public class ThemeDao {
         fetchRequest = Theme.fetchRequest()
         let sort = NSSortDescriptor(key: #keyPath(Theme.order), ascending: true)
         fetchRequest.sortDescriptors = [sort]
-        fetchRequest.predicate = NSPredicate(format: "isActive == true")
         let objects = try? PersistenceController.shared.container.viewContext.fetch(fetchRequest)
         return objects!
     }
@@ -34,7 +33,6 @@ public class ThemeDao {
         newTheme.text = text
         newTheme.createdAt = date
         newTheme.updatedAt = date
-        newTheme.isActive = false
         newTheme.order = order
         newTheme.iconName = iconName
         return newTheme

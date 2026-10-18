@@ -79,9 +79,11 @@ func showAlert(info: AlertInfo, viewModel: ViewModel, theme: Theme? = nil, topic
                 PlaySound(sound: .navigation)
                 PlayHaptic()
                 let startDate = FirstUse
+                let name = Name
                 viewModel.settingsViewModel.settingsController.addSettings()
                 viewModel.settingsViewModel.fetchSettingGroups()
                 SetFirstUse(date: startDate)
+                SetName(name: name)
                 SetOnboard(onboard: true)
                 settingsChangedTrigger?.objectWillChange.send()
             }

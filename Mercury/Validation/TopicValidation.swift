@@ -9,7 +9,7 @@ import Foundation
 
 public class TopicValidation {
     
-    static var titleMaxChars = 100
+    static var titleMaxChars = 20
     static var textMaxChars = 20000
     
     public static func validate(title: String) -> Bool {
@@ -18,6 +18,6 @@ public class TopicValidation {
     
     private static func topicExists(title: String) -> Bool {
         let title = title.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
-        return TopicDao.fetchTopics().filter({$0.isActive}).contains(where: {$0.isActive && $0.title!.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() == title})
+        return TopicDao.fetchTopics().contains(where: {$0.title!.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() == title})
     }
 }

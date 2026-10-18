@@ -9,7 +9,7 @@ import Foundation
 
 public class SectionValidation {
     
-    static var titleMaxChars = 100
+    static var titleMaxChars = 20
     static var textMaxChars = 20000
     
     public static func validate(title: String) -> Bool {
@@ -18,6 +18,6 @@ public class SectionValidation {
     
     private static func sectionExists(title: String) -> Bool {
         let title = title.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
-        return SectionDao.fetchSections().filter({$0.isActive}).contains(where: {$0.isActive && $0.title!.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() == title})
+        return SectionDao.fetchSections().contains(where: {$0.title!.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() == title})
     }
 }

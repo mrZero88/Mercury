@@ -19,33 +19,22 @@ extension Theme {
     
     var activeTopics: [Topic] {
         get {
-            return self.allTopics.filter({$0.isActive}).sorted(by: {first, second in
+            return self.allTopics.sorted(by: {first, second in
                 return first.order < second.order
             })
         }
     }
     
     func delete() {
-        self.isActive = false
-        self.updatedAt = Date()
         self.deleteAllTopics()
         PersistenceController.delete(object: self)
         PersistenceController.save()
     }
+    
     func deleteAllTopics() {
         for topic in ThemeUtils.topics(set: self.topics) {
             topic.delete()
         }
-    }
-    func activate() {
-        self.updatedAt = Date()
-        self.isActive = true
-        PersistenceController.save()
-    }
-    func deactivate() {
-        self.updatedAt = Date()
-        self.isActive = false
-        PersistenceController.save()
     }
     
     static func createEmptyTheme() -> Theme {

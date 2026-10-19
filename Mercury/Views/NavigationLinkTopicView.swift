@@ -76,12 +76,10 @@ struct NavigationLinkTopicView: View {
         .alert(item: $alertInfo, content: { info in
             showAlert(info: info, viewModel: viewModel, topic: topic)
         })
-        .listRowSeparator(.hidden)
+        .listRowSeparatorTint(Color.accentColor)
         .listRowBackground(
             TertiaryColor
                 .opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity)
-                .clipped()
-                .cornerRadius(CornerRadius)
         )
     }
 }

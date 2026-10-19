@@ -51,7 +51,7 @@ struct SectionView: View {
             } label: {
                 Label("Delete", systemImage: "minus.circle").labelStyle(.iconOnly)
             }
-            .tint(ColorUtils.getColor(colorScheme: colorScheme, colorName: "Red").opacity(0.5))
+            .tint(ColorUtils.getColor(colorScheme: colorScheme, colorName: "appRed").opacity(0.5))
         }
         .swipeActions(edge: .leading, allowsFullSwipe: true) {
             Button {
@@ -73,12 +73,10 @@ struct SectionView: View {
         .alert(item: $alertInfo, content: { info in
             showAlert(info: info, viewModel: viewModel, section: section)
         })
-        .listRowSeparator(.hidden)
+        .listRowSeparatorTint(Color.accentColor)
         .listRowBackground(
             TertiaryColor
                 .opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity)
-                .clipped()
-                .cornerRadius(CornerRadius)
         )
     }
 }

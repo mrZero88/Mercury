@@ -52,9 +52,7 @@ struct ThemeView: View {
                     }
                 }
                 .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
-                Spacer()
-                Label(theme.title ?? "", systemImage: "house").frame(maxWidth: .infinity, maxHeight: .infinity).labelStyle(.titleOnly).foregroundColor(Color.accentColor)
-                    .tint(TertiaryColor.opacity(settingsTertiaryOpacity.first?.doubleValue ?? TertiaryColorOpacity))
+                Text(theme.title ?? "").font(.footnote).fontWeight(.bold).foregroundColor(Color.accentColor)
                 Spacer()
                 Button {
                     PlaySound(sound: .openSheet)
@@ -97,10 +95,6 @@ struct ThemeView: View {
                     }
                     .onMove(perform: move)
                 }
-                .padding([.horizontal, .bottom], BorderPadding)
-                .scrollIndicators(.hidden)
-                .listStyle(.plain)
-                .listRowSpacing(BorderPadding)
             }
             .background(PanelColor)
             .overlay((showBorder.first?.boolValue ?? false) ? RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.accentColor, lineWidth: 1): RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.clear, lineWidth: 0))

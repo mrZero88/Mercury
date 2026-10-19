@@ -94,6 +94,8 @@ struct TopicView: View {
                     }
                     .onMove(perform: move)
                 }
+                .scrollContentBackground(.hidden)
+                .scrollIndicators(.hidden)
             }
             .background(PanelColor)
             .overlay((showBorder.first?.boolValue ?? false) ? RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.accentColor, lineWidth: 1): RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.clear, lineWidth: 0))

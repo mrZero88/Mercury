@@ -106,11 +106,8 @@ struct SettingsView: View {
                             SettingView(setting: setting)
                         }
                     }
-                    .padding([.horizontal, .bottom], BorderPadding)
                     .scrollIndicators(.hidden)
                     .scrollContentBackground(.hidden)
-                    .listStyle(.plain)
-                    .listRowSpacing(BorderPadding)
                 }
                 .background(PanelColor)
                 .overlay((showBorder.first?.boolValue ?? false) ? RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.accentColor, lineWidth: 1): RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.clear, lineWidth: 0))

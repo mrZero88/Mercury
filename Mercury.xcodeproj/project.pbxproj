@@ -180,6 +180,7 @@
 		B27D82082A3C49B50071FDAC /* SSettingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80AB2A3C44E50071FDAC /* SSettingExtension.swift */; };
 		B27D82092A3C49C00071FDAC /* SSettingsGroupExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D80AF2A3C44E50071FDAC /* SSettingsGroupExtension.swift */; };
 		B2C25D412A9F52F3005415E7 /* ExportUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C25D402A9F52F3005415E7 /* ExportUtils.swift */; };
+		B2C5AB5E308938B10077D342 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C5AB5D308938B10077D342 /* ColorExtension.swift */; };
 		B2CCC86E3074055C0061C0AA /* ZMercuryIphoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC86D3074055C0061C0AA /* ZMercuryIphoneView.swift */; };
 		B2CCC8713074E2540061C0AA /* DataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC8703074E2540061C0AA /* DataUtils.swift */; };
 		B2CCC8803074EC100061C0AA /* Wwwhirl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCC8743074EC100061C0AA /* Wwwhirl.swift */; };
@@ -403,6 +404,7 @@
 		B27D81F22A3C48500071FDAC /* WidgetCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetCardView.swift; sourceTree = "<group>"; };
 		B27D81F42A3C48500071FDAC /* WidgetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetViewModel.swift; sourceTree = "<group>"; };
 		B2C25D402A9F52F3005415E7 /* ExportUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportUtils.swift; sourceTree = "<group>"; };
+		B2C5AB5D308938B10077D342 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		B2CCC86D3074055C0061C0AA /* ZMercuryIphoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZMercuryIphoneView.swift; sourceTree = "<group>"; };
 		B2CCC8703074E2540061C0AA /* DataUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUtils.swift; sourceTree = "<group>"; };
 		B2CCC8723074EC100061C0AA /* Ooorganize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ooorganize.swift; sourceTree = "<group>"; };
@@ -922,6 +924,7 @@
 		B27D81DC2A3C481F0071FDAC /* MercuryWidget */ = {
 			isa = PBXGroup;
 			children = (
+				B2C5AB5C308938AD0077D342 /* Extensions */,
 				B2CCC86F3074E2460061C0AA /* Utils */,
 				B27D81F32A3C48500071FDAC /* ViewModels */,
 				B27D81F12A3C48500071FDAC /* Views */,
@@ -949,6 +952,14 @@
 				B27D81F42A3C48500071FDAC /* WidgetViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B2C5AB5C308938AD0077D342 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B2C5AB5D308938B10077D342 /* ColorExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B2CCC86F3074E2460061C0AA /* Utils */ = {
@@ -1339,6 +1350,7 @@
 				B2679E0F2A9E789E00F34EC6 /* Section.swift in Sources */,
 				B27D81FE2A3C49220071FDAC /* SettingsControllerExtension.swift in Sources */,
 				B27D82072A3C49A70071FDAC /* TopicDao.swift in Sources */,
+				B2C5AB5E308938B10077D342 /* ColorExtension.swift in Sources */,
 				B2679E102A9E789E00F34EC6 /* Topic.swift in Sources */,
 				B27D82092A3C49C00071FDAC /* SSettingsGroupExtension.swift in Sources */,
 				B27D81FF2A3C493A0071FDAC /* Persistence.swift in Sources */,

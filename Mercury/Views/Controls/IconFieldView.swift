@@ -20,6 +20,13 @@ struct IconFieldView: View {
         predicate: NSPredicate(format: "key == %@", "accentColor")
     ) var settings: FetchedResults<Setting>
     
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
+        predicate: NSPredicate(format: "key == %@", "showBorder")
+    ) var showBorder: FetchedResults<Setting>
+    
     var body: some View {
         Button {
             showingIconstSheet = true
@@ -36,6 +43,7 @@ struct IconFieldView: View {
         .padding(.horizontal)
         .frame(maxHeight: .infinity)
         .background(PanelColor)
+        .overlay((showBorder.first?.boolValue ?? false) ? RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.accentColor, lineWidth: 1): RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.clear, lineWidth: 0))
         .cornerRadius(CornerRadius)
     }
 }

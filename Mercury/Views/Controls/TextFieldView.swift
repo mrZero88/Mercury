@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct TextFieldView: View {
     @Binding var textValue: String
@@ -14,6 +15,13 @@ struct TextFieldView: View {
     var textLimit: Int = 0
     var isFocused: FocusState<Bool>.Binding?
     var background = PanelColor
+    
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
+        predicate: NSPredicate(format: "key == %@", "showBorder")
+    ) var showBorder: FetchedResults<Setting>
     
     var body: some View {
         VStack {
@@ -34,7 +42,9 @@ struct TextFieldView: View {
                     Toggle("", isOn: .constant(false)).opacity(0)
                 }
                 .padding()
-                .background(background)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(PanelColor)
+                .overlay((showBorder.first?.boolValue ?? false) ? RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.accentColor, lineWidth: 1): RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.clear, lineWidth: 0))
                 .cornerRadius(CornerRadius)
             }
             .fixedSize(horizontal: false, vertical: true)

@@ -6,10 +6,18 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct TextEditorView: View {
     @Binding var text: String
     var isFocused: FocusState<Bool>.Binding?
+    
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
+        predicate: NSPredicate(format: "key == %@", "showBorder")
+    ) var showBorder: FetchedResults<Setting>
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -26,6 +34,7 @@ struct TextEditorView: View {
         }
         .padding()
         .background(PanelColor)
+        .overlay((showBorder.first?.boolValue ?? false) ? RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.accentColor, lineWidth: 1): RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.clear, lineWidth: 0))
         .cornerRadius(CornerRadius)
     }
 }

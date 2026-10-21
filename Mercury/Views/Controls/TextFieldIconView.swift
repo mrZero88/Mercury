@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct TextFieldIconView: View {
     @Binding var textValue: String
@@ -13,6 +14,13 @@ struct TextFieldIconView: View {
     var help: String? = ""
     var visible: Bool = true
     var textLimit: Int = 0
+    
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
+        predicate: NSPredicate(format: "key == %@", "showBorder")
+    ) var showBorder: FetchedResults<Setting>
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -27,6 +35,7 @@ struct TextFieldIconView: View {
                     }
                     .padding()
                     .background(PanelColor)
+                    .overlay((showBorder.first?.boolValue ?? false) ? RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.accentColor, lineWidth: 1): RoundedRectangle(cornerRadius: CornerRadius).stroke(Color.clear, lineWidth: 0))
                     .cornerRadius(CornerRadius)
                     IconFieldView(iconName: $iconValue)
                 }

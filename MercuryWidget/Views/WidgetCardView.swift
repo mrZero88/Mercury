@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct WidgetCardView: View {
     @Environment(\.colorScheme) var colorScheme
@@ -19,6 +20,14 @@ struct WidgetCardView: View {
     var currentWidgetIndex: Int
     var totalWidgetsCount: Int
     var icon: String
+    var color: Color?
+    
+    @FetchRequest(
+        sortDescriptors: [
+            SortDescriptor(\.order, order: SortOrder.forward)
+        ],
+        predicate: NSPredicate(format: "key == %@", "accentColor")
+    ) var settings: FetchedResults<Setting>
     
     var body: some View {
         VStack {

@@ -631,11 +631,11 @@
 		B27D809E2A3C44E50071FDAC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B261656F2CC81FCE009C183E /* ColorExtension.swift */,
 				B27D80AA2A3C44E50071FDAC /* Structural */,
 				B27D809F2A3C44E50071FDAC /* NSSetExtension.swift */,
 				B27D80A12A3C44E50071FDAC /* UIApplicationExtension.swift */,
 				B27D80A22A3C44E50071FDAC /* SceneViewExtension.swift */,
+				B261656F2CC81FCE009C183E /* ColorExtension.swift */,
 				B27D80A32A3C44E50071FDAC /* BundleExtension.swift */,
 				B27D80A52A3C44E50071FDAC /* SettingsControllerExtension.swift */,
 				B27D80A82A3C44E50071FDAC /* DrawingCanvasViewControllerExtension.swift */,

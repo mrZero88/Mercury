@@ -95,6 +95,7 @@ struct ThemeView: View {
                     }
                     .onMove(perform: move)
                 }
+                .navigationLinkIndicatorVisibility(.hidden)
                 .scrollContentBackground(.hidden)
                 .scrollIndicators(.hidden)
             }

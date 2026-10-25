@@ -117,6 +117,7 @@ struct ContentView: View {
                             NavigationLinkThemeView(theme: theme)
                         }
                     }
+                    .navigationLinkIndicatorVisibility(.hidden)
                     .scrollContentBackground(.hidden)
                     .scrollIndicators(.hidden)
                 }

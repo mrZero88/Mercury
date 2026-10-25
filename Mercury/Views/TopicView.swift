@@ -94,6 +94,7 @@ struct TopicView: View {
                     }
                     .onMove(perform: move)
                 }
+                .navigationLinkIndicatorVisibility(.hidden)
                 .scrollContentBackground(.hidden)
                 .scrollIndicators(.hidden)
             }
